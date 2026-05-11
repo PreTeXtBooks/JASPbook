@@ -9,16 +9,16 @@
   </introduction>
 
   <section xml:id="sec-factorial-anova-1">
-    <title>Factorial ANOVA 1: balanced designs, focus on main effects</title>
+    <title>Factorial ANOVA 1: balanced designs, no interactions</title>
 
     <p>When we discussed analysis of variance in <xref ref="ch-anova"/>, we assumed a fairly simple experimental design. Each person is in one of several groups and we want to know whether these groups have different mean scores on some outcome variable. In this section, I'll discuss a broader class of experimental designs known as <term>factorial designs</term>, in which we have more than one grouping variable. I gave one example of how this kind of design might arise above. Another example appears in <xref ref="ch-anova"/> in which we were looking at the effect of different drugs on the mood.gain experienced by each person. In that chapter we did find a significant effect of drug, but at the end of the chapter we also ran an analysis to see if there was an effect of therapy. We didn't find one, but there's something a bit worrying about trying to run two separate analyses trying to predict the same outcome. Maybe there actually is an effect of therapy on mood gain, but we couldn't find it because it was being "hidden" by the effect of drug? In other words, we're going to want to run a single analysis that includes both drug and therapy as predictors. For this analysis each person is cross-classified by the drug they were given (a factor with 3 levels) and what therapy they received (a factor with 2 levels). We refer to this as a <m>3 \times 2</m> factorial design.</p>
 
-    <p>If we cross-tabulate drug by therapy, using the 'Frequencies' -- 'Contingency Tables' analysis in jamovi, we get the table shown in <xref ref="fig-fig14-1"/>.</p>
+    <p>If we cross-tabulate drug by therapy, using the 'Frequencies' -- 'Contingency Tables' analysis in JASP, we get the table shown in <xref ref="fig-fig14-1"/>.</p>
 
     <figure xml:id="fig-fig14-1">
-      <caption>jamovi contingency table of drug by therapy</caption>
+      <caption>JASP contingency table of drug by therapy</caption>
       <image source="images/fig14-1.png" width="90%">
-        <description>A jamovi results table titled "Contingency Tables" with data on 'drug' types (anxifree, joyzepam, placebo) and 'therapy' types (CBT, no. therapy, Total). Each drug type has equal counts for both therapy types: 3 CBT, 3 no therapy, totaling to 6 for each drug. Total counts are 9 for CBT, 9 for no therapy, and 18 overall.</description>
+        <description>A JASP results table titled "Contingency Tables" with data on 'drug' types (anxifree, joyzepam, placebo) and 'therapy' types (CBT, no. therapy, Total). Each drug type has equal counts for both therapy types: 3 CBT, 3 no therapy, totaling to 6 for each drug. Total counts are 9 for CBT, 9 for no therapy, and 18 overall.</description>
       </image>
     </figure>
 
@@ -198,47 +198,47 @@
     </subsection>
 
     <subsection xml:id="subsec-running-analysis-jamovi">
-      <title>Running the analysis in jamovi</title>
+      <title>Running the analysis in JASP</title>
 
-      <p>The null and alternative hypotheses that I described in the last section should seem awfully familiar. They're basically the same as the hypotheses that we were testing in our simpler one-way ANOVAs in <xref ref="ch-anova"/>. So you're probably expecting that the hypothesis tests that are used in factorial ANOVA will be essentially the same as the <m>F</m>-test from <xref ref="ch-anova"/>. You're expecting to see references to sums of squares (<m>SS</m>), mean squares (<m>MS</m>), degrees of freedom (<m>df</m>), and finally an <m>F</m>-statistic that we can convert into a <m>p</m>-value, right? Well, you're absolutely and completely right. So much so that I'm going to depart from my usual approach. Throughout this book, I've generally taken the approach of describing the logic (and to an extent the mathematics) that underpins a particular analysis first and only then introducing the analysis in jamovi. This time I'm going to do it the other way around and show you how to do it in jamovi first. The reason for doing this is that I want to highlight the similarities between the simple one-way ANOVA tool that we discussed in <xref ref="ch-anova"/>, and the more complicated approach that we're going to use in this chapter.</p>
+      <p>The null and alternative hypotheses that I described in the last section should seem awfully familiar. They're basically the same as the hypotheses that we were testing in our simpler one-way ANOVAs in <xref ref="ch-anova"/>. So you're probably expecting that the hypothesis tests that are used in factorial ANOVA will be essentially the same as the <m>F</m>-test from <xref ref="ch-anova"/>. You're expecting to see references to sums of squares (<m>SS</m>), mean squares (<m>MS</m>), degrees of freedom (<m>df</m>), and finally an <m>F</m>-statistic that we can convert into a <m>p</m>-value, right? Well, you're absolutely and completely right. So much so that I'm going to depart from my usual approach. Throughout this book, I've generally taken the approach of describing the logic (and to an extent the mathematics) that underpins a particular analysis first and only then introducing the analysis in JASP. This time I'm going to do it the other way around and show you how to do it in JASP first. The reason for doing this is that I want to highlight the similarities between the simple one-way ANOVA tool that we discussed in <xref ref="ch-anova"/>, and the more complicated approach that we're going to use in this chapter.</p>
 
       <p>If the data you're trying to analyse correspond to a balanced factorial design then running your analysis of variance is easy. To see how easy it is, let's start by reproducing the original analysis from <xref ref="ch-anova"/>. In case you've forgotten, for that analysis we were using only a single factor (i.e., drug) to predict our outcome variable (i.e., mood.gain), and we got the results shown in <xref ref="fig-fig14-2"/>.</p>
 
       <figure xml:id="fig-fig14-2">
-        <caption>jamovi one-way ANOVA of mood.gain by drug</caption>
+        <caption>JASP one-way ANOVA of mood.gain by drug</caption>
         <image source="images/fig14-2.png" width="90%">
-          <description>A jamovi results table showing ANOVA results for mood gain with columns for Sum of Squares, df (degrees of freedom), Mean Square, F, p-value, and η² (eta squared). For "drug," Sum of Squares is 3.45, df is 2, Mean Square is 1.73, F is 18.61, p is 0.00009, and η² is 0.71. Residuals have a Sum of Squares of 1.39, df of 15, and Mean Square of 0.09.</description>
+          <description>A JASP results table showing ANOVA results for mood gain with columns for Sum of Squares, df (degrees of freedom), Mean Square, F, p-value, and η² (eta squared). For "drug," Sum of Squares is 3.45, df is 2, Mean Square is 1.73, F is 18.61, p is 0.00009, and η² is 0.71. Residuals have a Sum of Squares of 1.39, df of 15, and Mean Square of 0.09.</description>
         </image>
       </figure>
 
       <p>Now, suppose I'm also curious to find out if therapy has a relationship to mood.gain. In light of what we've seen from our discussion of multiple regression in <xref ref="ch-correlation-regression"/>, you probably won't be surprised that all we have to do is add therapy as a second 'Fixed Factor' in the analysis, see <xref ref="fig-fig14-3"/>.</p>
 
       <figure xml:id="fig-fig14-3">
-        <caption>jamovi two-way ANOVA of mood.gain by drug and therapy</caption>
+        <caption>JASP two-way ANOVA of mood.gain by drug and therapy</caption>
         <image source="images/fig14-3.png" width="90%">
-          <description>A jamovi results table showing ANOVA test results for mood gain with factors "drug," "therapy," and their interaction. Includes Sum of Squares, df, Mean Square, F, p-values, η², η²p, and ω². Key results indicate significant effects for "drug" and "therapy," but not their interaction.</description>
+          <description>A JASP results table showing ANOVA test results for mood gain with factors "drug," "therapy," and their interaction. Includes Sum of Squares, df, Mean Square, F, p-values, η², η²p, and ω². Key results indicate significant effects for "drug" and "therapy," but not their interaction.</description>
         </image>
       </figure>
 
-      <p>This output is pretty simple to read too. The first row of the table reports a between-group sum of squares (<m>SS</m>) value associated with the drug factor, along with a corresponding between-group <m>df</m> value. It also calculates a mean square value (<m>MS</m>), an <m>F</m>-statistic and a <m>p</m>-value. There is also a row corresponding to the therapy factor, a row corresponding to the interaction between the drug factor and the therapy factor (which we won't cover just yet -- more on interactions later), and a row corresponding to the residuals (i.e., the within groups variation).</p>
+      <p>This output is pretty simple to read too. The first row of the table reports a between-group sum of squares (<m>SS</m>) value associated with the drug factor, along with a corresponding between-group <m>df</m> value. It also calculates a mean square value (<m>MS</m>), an <m>F</m>-statistic and a <m>p</m>-value. There is also a row corresponding to the therapy factor and a row corresponding to the residuals (i.e., the within groups variation).</p>
 
-      <p>Not only are all of the individual quantities pretty familiar, the relationships between these different quantities have remained unchanged, just like we saw with the original one-way ANOVA. Note that the mean square value is calculated by dividing <m>SS</m> by the corresponding <m>df</m>. That is, it's still true that:
+      <p>Not only are all of the individual quantities pretty familiar, the relationships between these different quantities has remained unchanged, just like we saw with the original one-way ANOVA. Note that the mean square value is calculated by dividing <m>SS</m> by the corresponding <m>df</m>. That is, it's still true that
       <me>MS=\frac{SS}{df}</me>
-      regardless of whether we're talking about drug, therapy or the residuals. To see this, let's not worry about how the sums of squares values are calculated. Instead, let's take it on faith that jamovi has calculated the <m>SS</m> values correctly, and try to verify that all the rest of the numbers make sense. First, note that for the drug factor, we divide <m>3.45</m> by <m>2</m> and end up with a mean square value of <m>1.73</m>. For the therapy factor, there's only 1 degree of freedom, so our calculations are even simpler: dividing <m>0.47</m> (the <m>SS</m> value) by 1 gives us an answer of <m>0.47</m> (the <m>MS</m> value).</p>
+      regardless of whether we're talking about drug, therapy or the residuals. To see this, let's not worry about how the sums of squares values are calculated. Instead, let's take it on faith that JASP has calculated the <m>SS</m> values correctly, and try to verify that all the rest of the numbers make sense. First, note that for the drug factor, we divide <m>3.453</m> by <m>2</m> and end up with a mean square value of <m>1.727</m>. For the therapy factor, there's only 1 degree of freedom, so our calculations are even simpler: dividing <m>0.467</m> (the <m>SS</m> value) by 1 gives us an answer of <m>0.467</m> (the <m>MS</m> value).</p>
 
-      <p>Turning to the <m>F</m>-statistics and the <m>p</m>-values, notice that we have one corresponding to the drug factor and one corresponding to the therapy factor. Regardless of which one we're talking about, the <m>F</m>-statistic is calculated by dividing the mean square value associated with the factor by the mean square value associated with the residuals. If we use "A" as shorthand notation to refer to the first factor (Factor A; in this case drug) and "R" as shorthand notation to refer to the residuals, then the <m>F</m>-statistic associated with Factor A is denoted <m>F_A</m>, and is calculated as:
+      <p>Turning to the <m>F</m> statistics and the <m>p</m> values, notice that we have two of each; one corresponding to the drug factor and the other corresponding to the therapy factor. Regardless of which one we're talking about, the <m>F</m> statistic is calculated by dividing the mean square value associated with the factor by the mean square value associated with the residuals. If we use "A" as shorthand notation to refer to the first factor (factor A; in this case drug) and "R" as shorthand notation to refer to the residuals, then the <m>F</m> statistic associated with factor A is denoted <m>F_A</m>, and is calculated as follows:
       <me>F_A=\frac{MS_A}{MS_R}</me>
-      and an equivalent formula exists for Factor B (i.e., therapy). Note that this use of "R" to refer to residuals is a bit awkward, since we also used the letter R to refer to the number of rows in the table, but I'm only going to use "R" to mean residuals in the context of <m>SS_R</m> and <m>MS_R</m>, so hopefully this shouldn't be confusing. Anyway, to apply this formula to the drugs factor we take the mean square of 1.73 and divide it by the residual mean square value of <m>0.05</m>, which gives us an <m>F</m>-statistic of 31.71.<fn>NB There are some rounding errors here, the value of the mean square, to 5 decimal places, is 1.72667. And the value of the residual mean square to 5 decimal places, is 0.05444. jamovi actually uses many more decimal places in its calculations, but the figures shown in the results tables are rounded for clarity. Though you can change the number of decimal places displayed by jamovi if you want.</fn> The corresponding calculation for the therapy variable would be to divide <m>0.47</m> by <m>0.05</m> which gives <m>8.58</m> as the <m>F</m>-statistic. Not surprisingly, of course, these are the same values that jamovi has reported in the ANOVA table above.</p>
+      and an equivalent formula exists for factor B (i.e., therapy). Note that this use of "R" to refer to residuals is a bit awkward, since we also used the letter R to refer to the number of rows in the table, but I'm only going to use "R" to mean residuals in the context of <m>SS_R</m> and <m>MS_R</m>, so hopefully this shouldn't be confusing. Anyway, to apply this formula to the drug factor we take the mean square of <m>1.727</m> and divide it by the residual mean square value of <m>0.066</m>, which gives us an <m>F</m>-statistic of <m>26.149</m>. The corresponding calculation for the therapy variable would be to divide <m>0.467</m> by <m>0.066</m> which gives <m>7.076</m> as the <m>F</m>-statistic. Not surprisingly, of course, these are the same values that JASP has reported in the ANOVA table above.</p>
 
-      <p>Also in the ANOVA table is the calculation of the <m>p</m>-values. Once again, there is nothing new here. For each of our two factors what we're trying to do is test the null hypothesis that there is no relationship between the factor and the outcome variable (I'll be a bit more precise about this later on). To that end, we've (apparently) followed a similar strategy to what we did in the one-way ANOVA and have calculated an <m>F</m>-statistic for each of these hypotheses. To convert these to <m>p</m>-values, all we need to do is note that the sampling distribution for the <m>F</m>-statistic under the null hypothesis (that the factor in question is irrelevant) is an <m>F</m>-distribution. Also note that the two degrees of freedom values are those corresponding to the factor and those corresponding to the residuals. For the drug factor we're talking about an <m>F</m>-distribution with 2 and 12 degrees of freedom (I'll discuss degrees of freedom in more detail later). In contrast, for the therapy factor the sampling distribution is <m>F</m> with 1 and 12 degrees of freedom.</p>
+      <p>Also in the ANOVA table is the calculation of the <m>p</m> values. Once again, there is nothing new here. For each of our two factors what we're trying to do is test the null hypothesis that there is no relationship between the factor and the outcome variable (I'll be a bit more precise about this later on). To that end, we've (apparently) followed a similar strategy to what we did in the one-way ANOVA and have calculated an <m>F</m>-statistic for each of these hypotheses. To convert these to <m>p</m> values, all we need to do is note that the sampling distribution for the <m>F</m> <em>statistic</em> under the null hypothesis (that the factor in question is irrelevant) is an <m>F</m> <em>distribution</em>. Also note that the two degrees of freedom values are those corresponding to the factor and those corresponding to the residuals. For the drug factor we're talking about an <m>F</m> distribution with 2 and 14 degrees of freedom (I'll discuss degrees of freedom in more detail later). In contrast, for the therapy factor the sampling distribution is <m>F</m> with 1 and 14 degrees of freedom.</p>
 
-      <p>At this point, I hope you can see that the ANOVA table for this more complicated factorial analysis should be read in much the same way as the ANOVA table for the simpler one way analysis. In short, it's telling us that the factorial ANOVA for our <m>3 \times 2</m> design found a significant effect of drug (<m>F_{2,12} = 31.71, p &lt; .001</m>) as well as a significant effect of therapy (<m>F_{1,12} = 8.58, p = .013</m>). Or, to use the more technically correct terminology, we would say that there are two <term>main effects</term> of drug and therapy. At the moment, it probably seems a bit redundant to refer to these as "main" effects, but it actually does make sense. Later on, we're going to cover "interactions" between the two factors, and so we generally make a distinction between main effects and interaction effects.</p>
+      <p>At this point, I hope you can see that the ANOVA table for this more complicated factorial analysis should be read in much the same way as the ANOVA table for the simpler one-way analysis. In short, it's telling us that the factorial ANOVA for our <m>3 \times 2</m> design found a significant effect of drug (<m>F_{2,14} = 26.15, p &lt; .001</m>) as well as a significant effect of therapy (<m>F_{1,14} = 7.08, p = .02</m>). Or, to use the more technically correct terminology, we would say that there are two <term>main effects</term> of drug and therapy. At the moment, it probably seems a bit redundant to refer to these as "main" effects, but it actually does make sense. Later on, we're going to want to talk about the possibility of "interactions" between the two factors, and so we generally make a distinction between main effects and interaction effects.</p>
     </subsection>
 
     <subsection xml:id="subsec-how-sum-squares-calculated">
       <title>How are the sum of squares calculated?</title>
 
-      <p>In the previous section I had two goals. Firstly, to show you that the jamovi method needed to do factorial ANOVA is pretty much the same as what we used for a one-way ANOVA. The only difference is the addition of a second factor. Secondly, I wanted to show you what the ANOVA table looks like in this case, so that you can see from the outset that the basic logic and structure behind factorial ANOVA is the same as that which underpins one-way ANOVA. Try to hold onto that feeling. It's genuinely true, insofar as factorial ANOVA is built in more or less the same way as the simpler one-way ANOVA model. It's just that this feeling of familiarity starts to evaporate once you start digging into the details. Traditionally, this comforting sensation is replaced by an urge to hurl abuse at the authors of statistics textbooks.</p>
+      <p>In the previous section I had two goals. Firstly, to show you that the JASP method needed to do factorial ANOVA is pretty much the same as what we used for a one-way ANOVA. The only difference is the addition of a second factor. Secondly, I wanted to show you what the ANOVA table looks like in this case, so that you can see from the outset that the basic logic and structure behind factorial ANOVA is the same as that which underpins one-way ANOVA. Try to hold onto that feeling. It's genuinely true, insofar as factorial ANOVA is built in more or less the same way as the simpler one-way ANOVA model. It's just that this feeling of familiarity starts to evaporate once you start digging into the details. Traditionally, this comforting sensation is replaced by an urge to hurl abuse at the authors of statistics textbooks.</p>
 
       <p>Okay, let's start by looking at some of those details. The explanation that I gave in the last section illustrates the fact that the hypothesis tests for the main effects (of drug and therapy in this case) are <m>F</m>-tests, but what it doesn't do is show you how the sum of squares (<m>SS</m>) values are calculated. Nor does it tell you explicitly how to calculate degrees of freedom (<m>df</m> values) though that's a simple thing by comparison. Let's assume for now that we have only two predictor variables, Factor A and Factor B. If we use <m>Y</m> to refer to the outcome variable, then we would use <m>Y_{rci}</m> to refer to the outcome associated with the <m>i</m>-th member of group <m>rc</m> (i.e., level/row <m>r</m> for Factor A and level/column <m>c</m> for Factor B). Thus, if we use <m>\bar{Y}</m> to refer to a sample mean, we can use the same notation as before to refer to group means, marginal means and grand means. That is, <m>\bar{Y}_{rc}</m> is the sample mean associated with the <m>r</m>th level of Factor A and the <m>c</m>th level of Factor B, <m>\bar{Y}_{r.}</m> would be the marginal mean for the <m>r</m>th level of Factor A, <m>\bar{Y}_{.c}</m> would be the marginal mean for the <m>c</m>th level of Factor B, and <m>\bar{Y}_{..}</m> is the grand mean. In other words, our sample means can be organised into the same table as the population means. For our clinical trial data, that table is shown in <xref ref="tbl-tab14-5"/>.</p>
 
@@ -318,7 +318,7 @@
       </image>
     </figure>
 
-    <p>To give a more concrete example, suppose that the operation of Anxifree and Joyzepam is governed by quite different physiological mechanisms. One consequence of this is that while Joyzepam has more or less the same effect on mood regardless of whether one is in therapy, Anxifree is actually much more effective when administered in conjunction with CBT. The ANOVA that we developed in the previous section does not capture this idea. To get some idea of whether an interaction is actually happening it helps to plot the various group means. In jamovi this is done via the ANOVA 'Estimated Marginal Means' option -- just move drug and therapy across into the 'Marginal Means' box under 'Term 1'. This should look something like <xref ref="fig-fig14-6"/>.</p>
+    <p>To give a more concrete example, suppose that the operation of Anxifree and Joyzepam is governed by quite different physiological mechanisms. One consequence of this is that while Joyzepam has more or less the same effect on mood regardless of whether one is in therapy, Anxifree is actually much more effective when administered in conjunction with CBT. The ANOVA that we developed in the previous section does not capture this idea. To get some idea of whether an interaction is actually happening it helps to plot the various group means. In JASP this is done via the ANOVA 'Estimated Marginal Means' option -- just move drug and therapy across into the 'Marginal Means' box under 'Term 1'. This should look something like <xref ref="fig-fig14-6"/>.</p>
 
     <figure xml:id="fig-fig14-5">
       <caption>Qualitatively different interactions for a <m>2 \times 2</m> ANOVA.</caption>
@@ -330,9 +330,9 @@
     <p>Our main concern relates to the fact that the two lines aren't parallel. The effect of CBT (difference between solid line and dotted line) when the drug is Joyzepam (right side) appears to be near zero, even smaller than the effect of CBT when a placebo is used (left side). However, when Anxifree is administered, the effect of CBT is larger than the placebo (middle). Is this effect real, or is this just random variation due to chance? Our original ANOVA cannot answer this question, because we make no allowances for the idea that interactions even exist! In this section, we'll fix this problem.</p>
 
     <figure xml:id="fig-fig14-6">
-      <caption>jamovi screen showing how to generate a descriptive interaction plot in ANOVA using the clinical trial data</caption>
+      <caption>JASP screen showing how to generate a descriptive interaction plot in ANOVA using the clinical trial data</caption>
       <image source="images/fig14-6.png" width="90%">
-        <description>A jamovi screenshot of the interface for analyzing clinical trial data is shown. The screen features ANOVA outputs, with a graph displaying estimated marginal means of mood gain across different drug therapies. Therapy options are CBT and no therapy, with axes for mood gain and types of drugs.</description>
+        <description>A JASP screenshot of the interface for analyzing clinical trial data is shown. The screen features ANOVA outputs, with a graph displaying estimated marginal means of mood gain across different drug therapies. Therapy options are CBT and no therapy, with axes for mood gain and types of drugs.</description>
       </image>
     </figure>
 
@@ -359,14 +359,14 @@
     </subsection>
 
     <subsection xml:id="subsec-running-anova-jamovi">
-      <title>Running the ANOVA in jamovi</title>
+      <title>Running the ANOVA in JASP</title>
 
-      <p>Adding interaction terms to the ANOVA model in jamovi is straightforward. In fact it is more than straightforward because it is the default option for ANOVA. This means that when you specify an ANOVA with two factors, e.g., drug and therapy then the interaction component -- drug <m>\times</m> therapy -- is added automatically to the model.<fn>You may have spotted this already when looking at the main effects analysis in jamovi that we described earlier. For the purpose of the explanation in this book I removed the interaction component from the earlier model to keep things clean and simple.</fn> When we run the ANOVA with the interaction term included, then we get the results shown in <xref ref="fig-fig14-7"/>.</p>
+      <p>Adding interaction terms to the ANOVA model in JASP is straightforward. In fact it is more than straightforward because it is the default option for ANOVA. This means that when you specify an ANOVA with two factors, e.g., drug and therapy then the interaction component -- drug <m>\times</m> therapy -- is added automatically to the model.<fn>You may have spotted this already when looking at the main effects analysis in JASP that we described earlier. For the purpose of the explanation in this book I removed the interaction component from the earlier model to keep things clean and simple.</fn> When we run the ANOVA with the interaction term included, then we get the results shown in <xref ref="fig-fig14-7"/>.</p>
 
       <figure xml:id="fig-fig14-7">
         <caption>Results for the full factorial model, including the interaction component drug <m>\times</m> therapy</caption>
         <image source="images/fig14-7.png" width="90%">
-          <description>A jamovi table summarizing the results of an ANOVA test on mood gain. It shows Sum of Squares, degrees of freedom (df), Mean Square, F-value, p-value, η², η²p, and ω² for drug, therapy, their interaction, and residuals.</description>
+          <description>A JASP table summarizing the results of an ANOVA test on mood gain. It shows Sum of Squares, degrees of freedom (df), Mean Square, F-value, p-value, η², η²p, and ω² for drug, therapy, their interaction, and residuals.</description>
         </image>
       </figure>
 
@@ -457,23 +457,23 @@
     <subsection xml:id="subsec-estimated-group-means">
       <title>Estimated group means</title>
 
-      <p>In many situations you will want to report estimates of all the group means from the results of your ANOVA, as well as confidence intervals. You can use the 'Estimated Marginal Means' option in the jamovi ANOVA analysis to do this, as in <xref ref="fig-fig14-8"/>. If the ANOVA that you have run is a saturated model (i.e., contains all possible main effects and all possible interaction effects) then the estimates of the group means are actually identical to the sample means, though the confidence intervals will use a pooled estimate of the standard errors rather than use a separate one for each group.</p>
+      <p>In many situations you will want to report estimates of all the group means from the results of your ANOVA, as well as confidence intervals. You can use the 'Estimated Marginal Means' option in the JASP ANOVA analysis to do this, as in <xref ref="fig-fig14-8"/>. If the ANOVA that you have run is a saturated model (i.e., contains all possible main effects and all possible interaction effects) then the estimates of the group means are actually identical to the sample means, though the confidence intervals will use a pooled estimate of the standard errors rather than use a separate one for each group.</p>
 
       <figure xml:id="fig-fig14-8">
-        <caption>jamovi screenshot showing the marginal means for the saturated model, i.e. including the interaction component, with the clinical trial data set</caption>
+        <caption>JASP screenshot showing the marginal means for the saturated model, i.e. including the interaction component, with the clinical trial data set</caption>
         <image source="images/fig14-8.png" width="90%">
-          <description>A jamovi screenshot of a clinical trial analysis software interface displaying an ANOVA analysis. The screen shows sections for Assumptions Checks, Estimates, and Estimated Marginal Means. Data tables illustrate the ANOVA results and Estimated Marginal Means for drug therapy.</description>
+          <description>A JASP screenshot of a clinical trial analysis software interface displaying an ANOVA analysis. The screen shows sections for Assumptions Checks, Estimates, and Estimated Marginal Means. Data tables illustrate the ANOVA results and Estimated Marginal Means for drug therapy.</description>
         </image>
       </figure>
 
       <p>In the output we see that the estimated mean mood gain for the placebo group with no therapy was <m>0.300</m>, with a <m>95\%</m> confidence interval from <m>0.006</m> to <m>0.594</m>. Note that these are not the same confidence intervals that you would get if you calculated them separately for each group, because of the fact that the ANOVA model assumes homogeneity of variance and therefore uses a pooled estimate of the standard deviation.</p>
 
-      <p>When the model doesn't contain the interaction term then the estimated group means will differ from the sample means. Instead of reporting the sample mean, jamovi calculates the value of the group means that would be expected on the basis of the marginal means (i.e., assuming no interaction).</p>
+      <p>When the model doesn't contain the interaction term then the estimated group means will differ from the sample means. Instead of reporting the sample mean, JASP calculates the value of the group means that would be expected on the basis of the marginal means (i.e., assuming no interaction).</p>
 
-      <p>Using the notation we developed earlier, the estimate for <m>\mu_{rc}</m>, the mean for level <m>r</m> on the (row) Factor A and level <m>c</m> on the (column) Factor B would be <m>\mu_{..} + \alpha_r + \beta_c</m>. If there are genuinely no interactions between the two factors, this is actually a better estimate of the population mean than the raw sample mean. Removing the interaction term from the model, via the 'Model' options in the jamovi ANOVA analysis, provides the marginal means for the analysis shown in <xref ref="fig-fig14-9"/>.</p>
+      <p>Using the notation we developed earlier, the estimate for <m>\mu_{rc}</m>, the mean for level <m>r</m> on the (row) Factor A and level <m>c</m> on the (column) Factor B would be <m>\mu_{..} + \alpha_r + \beta_c</m>. If there are genuinely no interactions between the two factors, this is actually a better estimate of the population mean than the raw sample mean. Removing the interaction term from the model, via the 'Model' options in the JASP ANOVA analysis, provides the marginal means for the analysis shown in <xref ref="fig-fig14-9"/>.</p>
 
       <figure xml:id="fig-fig14-9">
-        <caption>jamovi screenshot showing the marginal means for the unsaturated model, i.e. without the interaction component, with the clinical trial data set</caption>
+        <caption>JASP screenshot showing the marginal means for the unsaturated model, i.e. without the interaction component, with the clinical trial data set</caption>
         <image source="images/fig14-9.png" width="90%">
           <description>ANOVA table and Estimated Marginal Means table for mood gain analysis. The ANOVA table shows a significant drug effect with F(3,14) = 7.08, p = 0.01866. The Estimated Marginal Means table lists means and confidence intervals for interactions between therapy and drug.</description>
         </image>
@@ -489,7 +489,7 @@
     <subsection xml:id="subsec-homogeneity-of-variance-factorial">
       <title>Homogeneity of variance</title>
 
-      <p>As mentioned in <xref ref="ch-anova"/>, it's a good idea to visually inspect a plot of the standard deviations compared across different groups/categories, and also see if the Levene test is consistent with the visual inspection. This test expects that you have a saturated model (i.e., including all of the relevant terms), because the test is primarily concerned with the within-group variance, and it doesn't really make a lot of sense to calculate this any way other than with respect to the full model. The Levene test can be specified under the ANOVA 'Assumption Checks' -- 'Homogeneity Tests' option in jamovi, with the result shown in <xref ref="fig-fig14-10"/>. The fact that the Levene test is non-significant means that, providing it is consistent with a visual inspection of the plot of standard deviations, we can safely assume that the homogeneity of variance assumption is not violated.</p>
+      <p>As mentioned in <xref ref="ch-anova"/>, it's a good idea to visually inspect a plot of the standard deviations compared across different groups/categories, and also see if the Levene test is consistent with the visual inspection. This test expects that you have a saturated model (i.e., including all of the relevant terms), because the test is primarily concerned with the within-group variance, and it doesn't really make a lot of sense to calculate this any way other than with respect to the full model. The Levene test can be specified under the ANOVA 'Assumption Checks' -- 'Homogeneity Tests' option in JASP, with the result shown in <xref ref="fig-fig14-10"/>. The fact that the Levene test is non-significant means that, providing it is consistent with a visual inspection of the plot of standard deviations, we can safely assume that the homogeneity of variance assumption is not violated.</p>
     </subsection>
 
     <subsection xml:id="subsec-normality-of-residuals-factorial">
@@ -523,21 +523,21 @@
     </figure>
 
     <subsection xml:id="subsec-running-ancova-in-jamovi">
-      <title>Running ANCOVA in jamovi</title>
+      <title>Running ANCOVA in JASP</title>
 
-      <p>A health psychologist was interested in the effect of routine cycling and stress on happiness levels, with age as a covariate. You can find the data set in the file <em>ancova.csv</em>. Open this file in jamovi and then, to undertake an ANCOVA, select Analyses -- ANOVA -- ANCOVA to open the ANCOVA analysis window (<xref ref="fig-fig14-12"/>). Highlight the dependent variable 'happiness' and transfer it into the 'Dependent Variable' text box. Highlight the independent variables 'stress' and 'commute' and transfer them into the 'Fixed Factors' text box. Highlight the covariate 'age' and transfer it into the 'Covariates' text box. Then click on Estimated Marginal Means to bring up the plots and tables options.</p>
+      <p>A health psychologist was interested in the effect of routine cycling and stress on happiness levels, with age as a covariate. You can find the data set in the file <em>ancova.csv</em>. Open this file in JASP and then, to undertake an ANCOVA, select Analyses -- ANOVA -- ANCOVA to open the ANCOVA analysis window (<xref ref="fig-fig14-12"/>). Highlight the dependent variable 'happiness' and transfer it into the 'Dependent Variable' text box. Highlight the independent variables 'stress' and 'commute' and transfer them into the 'Fixed Factors' text box. Highlight the covariate 'age' and transfer it into the 'Covariates' text box. Then click on Estimated Marginal Means to bring up the plots and tables options.</p>
 
       <figure xml:id="fig-fig14-12">
-        <caption>The jamovi ANCOVA analysis window</caption>
+        <caption>The JASP ANCOVA analysis window</caption>
         <image source="images/fig14-12.png" width="75%">
-          <description>A jamovi screenshot showing an ANCOVA setup. The window has options for adding dependent variables, fixed factors, and covariates. "Happiness" is selected as the dependent variable, with "stress" and "commute" as fixed factors, and "age" as a covariate.</description>
+          <description>A JASP screenshot showing an ANCOVA setup. The window has options for adding dependent variables, fixed factors, and covariates. "Happiness" is selected as the dependent variable, with "stress" and "commute" as fixed factors, and "age" as a covariate.</description>
         </image>
       </figure>
 
-      <p>An ANCOVA table showing 'Tests of Between Subjects Effects' is produced in the jamovi results window (<xref ref="fig-fig14-13"/>). The <m>F</m>-value for the covariate 'age' is significant at <m>p = .023</m>, suggesting that age is an important predictor of the dependent variable, happiness. When we look at the estimated marginal mean scores (<xref ref="fig-fig14-14"/>), adjustments have been made (compared to an analysis without the covariate) because of the inclusion of the covariate 'age' in this ANCOVA. A plot (<xref ref="fig-fig14-15"/>) is a good way of visualising and interpreting the significant effects.</p>
+      <p>An ANCOVA table showing 'Tests of Between Subjects Effects' is produced in the JASP results window (<xref ref="fig-fig14-13"/>). The <m>F</m>-value for the covariate 'age' is significant at <m>p = .023</m>, suggesting that age is an important predictor of the dependent variable, happiness. When we look at the estimated marginal mean scores (<xref ref="fig-fig14-14"/>), adjustments have been made (compared to an analysis without the covariate) because of the inclusion of the covariate 'age' in this ANCOVA. A plot (<xref ref="fig-fig14-15"/>) is a good way of visualising and interpreting the significant effects.</p>
 
       <figure xml:id="fig-fig14-13">
-        <caption>jamovi ANCOVA output for happiness as a function of stress and commuting method, with age as a covariate</caption>
+        <caption>JASP ANCOVA output for happiness as a function of stress and commuting method, with age as a covariate</caption>
         <image source="images/fig14-13.png" width="90%">
           <description>An ANCOVA table titled 'happiness' displays statistical results including Sum of Squares, degrees of freedom (df), Mean Square, F-ratio (F), p-values (p), eta squared (η²), partial eta squared (ηp²), and omega squared (ω²) for various factors like stress, commute, age, and interactions.</description>
         </image>
@@ -546,7 +546,7 @@
       <figure xml:id="fig-fig14-14">
         <caption>Table of mean happiness level as a function of stress and commuting method (adjusted for the covariate age) with 95% confidence intervals</caption>
         <image source="images/fig14-14.png" width="85%">
-          <description>A jamovi results table titled "Estimated Marginal Means - stress × commute" showing mean stress levels with standard errors (SE) and 95% Confidence Intervals for different commuting methods (drive, cycle) and stress levels (high, low).</description>
+          <description>A JASP results table titled "Estimated Marginal Means - stress × commute" showing mean stress levels with standard errors (SE) and 95% Confidence Intervals for different commuting methods (drive, cycle) and stress levels (high, low).</description>
         </image>
       </figure>
 
@@ -561,7 +561,7 @@
 
       <p>In <xref ref="fig-fig14-15"/> we can see the adjusted, marginal, mean happiness scores when age is a covariate in an ANCOVA. In this analysis there is a significant interaction effect, whereby people with low stress who cycle to work are happier than people with low stress who drive and people with high stress regardless of whether they cycle or drive to work. There is also a significant main effect of stress -- people with low stress are happier than those with high stress. And there is also a significant main effect of commuting behaviour -- people who cycle are happier, on average, than those who drive to work.</p>
 
-      <p>One thing to be aware of is that, if you are thinking of including a covariate in your ANOVA, there is an additional assumption: the relationship between the covariate and the dependent variable should be similar for all levels of the independent variable. This can be checked by adding an interaction term between the covariate and each independent variable in the jamovi 'Model -- Model' terms option. If the interaction effect is not significant it can be removed. If it is significant then a different and more advanced statistical technique might be appropriate (which is beyond the scope of this book so you might want to consult a friendly statistician).</p>
+      <p>One thing to be aware of is that, if you are thinking of including a covariate in your ANOVA, there is an additional assumption: the relationship between the covariate and the dependent variable should be similar for all levels of the independent variable. This can be checked by adding an interaction term between the covariate and each independent variable in the JASP 'Model -- Model' terms option. If the interaction effect is not significant it can be removed. If it is significant then a different and more advanced statistical technique might be appropriate (which is beyond the scope of this book so you might want to consult a friendly statistician).</p>
     </subsection>
   </section>
 
@@ -603,12 +603,12 @@
         </tabular>
       </table>
 
-      <p>This isn't anything particularly special, of course. It's exactly the format in which we expect to see our data! See the data file <em>rtfm.csv</em>. We can use the jamovi 'Descriptives' analysis to confirm that this data set corresponds to a balanced design, with 2 observations for each combination of attend and reading. In the same way we can also calculate the mean grade for each combination. This is shown in <xref ref="fig-fig14-16"/>. Looking at the mean scores, one gets the strong impression that reading the text and attending the class both matter a lot.</p>
+      <p>This isn't anything particularly special, of course. It's exactly the format in which we expect to see our data! See the data file <em>rtfm.csv</em>. We can use the JASP 'Descriptives' analysis to confirm that this data set corresponds to a balanced design, with 2 observations for each combination of attend and reading. In the same way we can also calculate the mean grade for each combination. This is shown in <xref ref="fig-fig14-16"/>. Looking at the mean scores, one gets the strong impression that reading the text and attending the class both matter a lot.</p>
 
       <figure xml:id="fig-fig14-16">
-        <caption>jamovi descriptives for the <em>rtfm.csv</em> data set</caption>
+        <caption>JASP descriptives for the <em>rtfm.csv</em> data set</caption>
         <image source="images/fig14-16.png" width="90%">
-          <description>A jamovi screenshot showing various tabs at the top, including Variables, Data, Analyses, and Edit. The current screen displays options for descriptives analysis with variables such as "grade." The "Results" section includes a table of descriptive statistics like mean and standard deviation. The "References" section at the bottom cites software and packages used.</description>
+          <description>A JASP screenshot showing various tabs at the top, including Variables, Data, Analyses, and Edit. The current screen displays options for descriptives analysis with variables such as "grade." The "Results" section includes a table of descriptive statistics like mean and standard deviation. The "References" section at the bottom cites software and packages used.</description>
         </image>
       </figure>
     </subsection>
@@ -618,10 +618,10 @@
 
       <p>Okay, let's get back to talking about the mathematics. We now have our data expressed in terms of three numeric variables: the continuous variable <m>Y</m> and the two binary variables <m>X_1</m> and <m>X_2</m>. What I want you to recognise is that our <m>2 \times 2</m> factorial ANOVA is exactly equivalent to the regression model:
       <me>Y_p=b_0+b_1 X_{1p} + b_2 X_{2p} + \epsilon_p</me>
-      This is, of course, the exact same equation that I used earlier to describe a two-predictor regression model! The only difference is that <m>X_1</m> and <m>X_2</m> are now binary variables (i.e., values can only be 0 or 1), whereas in a regression analysis we expect that <m>X_1</m> and <m>X_2</m> will be continuous. There's a couple of ways I could try to convince you of this. One possibility would be to do a lengthy mathematical exercise proving that the two are identical. However, I'm going to go out on a limb and guess that most of the readership of this book will find that annoying rather than helpful. Instead, I'll explain the basic ideas and then rely on jamovi to show that ANOVA analyses and regression analyses aren't just similar, they're identical for all intents and purposes. Let's start by running this as an ANOVA. To do this, we'll use the rtfm data set, and <xref ref="fig-fig14-17"/> shows what we get when we run the analysis in jamovi.</p>
+      This is, of course, the exact same equation that I used earlier to describe a two-predictor regression model! The only difference is that <m>X_1</m> and <m>X_2</m> are now binary variables (i.e., values can only be 0 or 1), whereas in a regression analysis we expect that <m>X_1</m> and <m>X_2</m> will be continuous. There's a couple of ways I could try to convince you of this. One possibility would be to do a lengthy mathematical exercise proving that the two are identical. However, I'm going to go out on a limb and guess that most of the readership of this book will find that annoying rather than helpful. Instead, I'll explain the basic ideas and then rely on JASP to show that ANOVA analyses and regression analyses aren't just similar, they're identical for all intents and purposes. Let's start by running this as an ANOVA. To do this, we'll use the rtfm data set, and <xref ref="fig-fig14-17"/> shows what we get when we run the analysis in JASP.</p>
 
       <figure xml:id="fig-fig14-17">
-        <caption>ANOVA of the <em>rtfm.csv</em> data set in jamovi, without the interaction term</caption>
+        <caption>ANOVA of the <em>rtfm.csv</em> data set in JASP, without the interaction term</caption>
         <image source="images/fig14-17.png" width="90%">
           <description>ANOVA table presenting the results for "grade" with variables "attend" and "reading." It includes columns for Sum of Squares, df, Mean Square, F, p, η², η²p, and ω². Notable values include "attend" with an F of 21.60, p of 0.00559, and "reading" with an F of 52.27, p of 0.00079.</description>
         </image>
@@ -687,12 +687,12 @@
 
       <p>As you can see, the intercept term <m>b_0</m> acts like a kind of "baseline" grade that you would expect from those students who don't take the time to attend class or read the textbook. Similarly, <m>b_1</m> represents the boost that you're expected to get if you come to class, and <m>b_2</m> represents the boost that comes from reading the textbook. In fact, if this were an ANOVA you might very well want to characterise <m>b_1</m> as the main effect of attendance, and <m>b_2</m> as the main effect of reading! In fact, for a simple <m>2 \times 2</m> ANOVA that's exactly how it plays out.</p>
 
-      <p>Okay, now that we're really starting to see why ANOVA and regression are basically the same thing, let's actually run our regression using the rtfm data and the jamovi regression analysis to convince ourselves that this is really true. Running the regression in the usual way gives the results shown in <xref ref="fig-fig14-18"/>.</p>
+      <p>Okay, now that we're really starting to see why ANOVA and regression are basically the same thing, let's actually run our regression using the rtfm data and the JASP regression analysis to convince ourselves that this is really true. Running the regression in the usual way gives the results shown in <xref ref="fig-fig14-18"/>.</p>
 
       <figure xml:id="fig-fig14-18">
-        <caption>Regression analysis of the <em>rtfm.csv</em> data set in jamovi, without the interaction term</caption>
+        <caption>Regression analysis of the <em>rtfm.csv</em> data set in JASP, without the interaction term</caption>
         <image source="images/fig14-18.png" width="80%">
-          <description>A jamovi results table titled "Model Coefficients - grade" displays the estimate, standard error (SE), t-value, and p-value for three predictors: Intercept, attend, and reading. The Intercept values are 43.50, 3.35, 12.97, 0.00005. Attend: 18.00, 3.87, 4.65, 0.00559. Reading: 28.00, 3.87, 7.23, 0.00079.</description>
+          <description>A JASP results table titled "Model Coefficients - grade" displays the estimate, standard error (SE), t-value, and p-value for three predictors: Intercept, attend, and reading. The Intercept values are 43.50, 3.35, 12.97, 0.00005. Attend: 18.00, 3.87, 4.65, 0.00559. Reading: 28.00, 3.87, 7.23, 0.00079.</description>
         </image>
       </figure>
 
@@ -700,12 +700,12 @@
 
       <p>Actually, we can push a little further in establishing the equivalence of our ANOVA and our regression. Look at the <m>p</m>-values associated with the attend variable and the reading variable in the regression output. They're identical to the ones we encountered earlier when running the ANOVA. This might seem a little surprising, since the test used when running our regression model calculates a <m>t</m>-statistic and the ANOVA calculates an <m>F</m>-statistic. However, if you can remember all the way back to <xref ref="ch-probability"/>, I mentioned that there's a relationship between the <m>t</m>-distribution and the <m>F</m>-distribution. If you have some quantity that is distributed according to a <m>t</m>-distribution with <m>k</m> degrees of freedom and you square it, then this new squared quantity follows an <m>F</m>-distribution whose degrees of freedom are 1 and <m>k</m>. We can check this with respect to the <m>t</m>-statistics in our regression model. For the attend variable we get a <m>t</m>-value of 4.65. If we square this number we end up with 21.6, which matches the corresponding <m>F</m>-statistic in our ANOVA.</p>
 
-      <p>Finally, one last thing you should know. Because jamovi understands the fact that ANOVA and regression are both examples of linear models, it lets you extract the classic ANOVA table from your regression model using the 'Linear Regression' -- 'Model Coefficients' -- 'Omnibus Test' -- 'ANOVA Test', and this will give you the table shown in <xref ref="fig-fig14-19"/>.</p>
+      <p>Finally, one last thing you should know. Because JASP understands the fact that ANOVA and regression are both examples of linear models, it lets you extract the classic ANOVA table from your regression model using the 'Linear Regression' -- 'Model Coefficients' -- 'Omnibus Test' -- 'ANOVA Test', and this will give you the table shown in <xref ref="fig-fig14-19"/>.</p>
 
       <figure xml:id="fig-fig14-19">
-        <caption>Omnibus ANOVA Test results from the jamovi regression analysis</caption>
+        <caption>Omnibus ANOVA Test results from the JASP regression analysis</caption>
         <image source="images/fig14-19.png" width="80%">
-          <description>A jamovi results table titled "Omnibus ANOVA Test" showing values for Sum of Squares, df, Mean Square, F, and p across three rows: attend, reading, and Residuals. Note indicates "Type 3 sum of squares".</description>
+          <description>A JASP results table titled "Omnibus ANOVA Test" showing values for Sum of Squares, df, Mean Square, F, and p across three rows: attend, reading, and Residuals. Note indicates "Type 3 sum of squares".</description>
         </image>
       </figure>
     </subsection>
@@ -745,7 +745,7 @@
 
       <p>If the drug administered to a patient is a placebo then both of the two contrast variables will equal 0. If the drug is Anxifree then the druganxifree variable will equal 1, and drugjoyzepam will be 0. The reverse is true for Joyzepam: drugjoyzepam is 1 and druganxifree is 0.</p>
 
-      <p>Creating contrast variables is not too difficult to do using the jamovi compute new variable command. For example, to create the druganxifree variable, write this logical expression in the compute new variable formula box:</p>
+      <p>Creating contrast variables is not too difficult to do using the JASP compute new variable command. For example, to create the druganxifree variable, write this logical expression in the compute new variable formula box:</p>
 
       <blockquote>
         <p>IF(drug == 'anxifree', 1, 0)</p>
@@ -763,7 +763,7 @@
         <p>IF(therapy == 'CBT', 1, 0)</p>
       </blockquote>
 
-      <p>You can see these new variables, and the corresponding logical expressions, in the jamovi data file <em>clinicaltrial2.omv</em>.</p>
+      <p>You can see these new variables, and the corresponding logical expressions, in the JASP data file <em>clinicaltrial2.jasp</em>.</p>
 
       <p>We have now recoded our three-level factor in terms of two binary variables, and we've already seen that ANOVA and regression behave the same way for binary variables. However, there are some additional complexities that arise in this case, which we'll discuss in the next section.</p>
     </subsection>
@@ -774,7 +774,7 @@
       <p>Now we have two different versions of the same data set. Our original data in which the drug variable from the <em>clinicaltrial.csv</em> file is expressed as a single three-level factor, and the expanded data <em>clinicaltrial2.omv</em> in which it is expanded into two binary contrasts. Once again, the thing that we want to demonstrate is that our original <m>3 \times 2</m> factorial ANOVA is equivalent to a regression model applied to the contrast variables. Let's start by re-running the ANOVA, with results shown in <xref ref="fig-fig14-20"/>.</p>
 
       <figure xml:id="fig-fig14-20">
-        <caption>jamovi ANOVA results, without interaction component</caption>
+        <caption>JASP ANOVA results, without interaction component</caption>
         <image source="images/fig14-20.png" width="90%">
           <description>ANOVA table displaying the sum of squares, degrees of freedom (df), mean square, F-value, p-value, eta squared (η²), partial eta squared (η²p), and omega squared (ω²) for factors 'drug' and 'therapy' in relation to the residuals for mood gain.</description>
         </image>
@@ -783,31 +783,31 @@
       <p>Obviously, there are no surprises here. That's the exact same ANOVA that we ran earlier. Next, let's run a regression using druganxifree, drugjoyzepam and CBTtherapy as the predictors. The results are shown in <xref ref="fig-fig14-21"/>.</p>
 
       <figure xml:id="fig-fig14-21">
-        <caption>jamovi regression results, with contrast variables druganxifree and drugjoyzepam</caption>
+        <caption>JASP regression results, with contrast variables druganxifree and drugjoyzepam</caption>
         <image source="images/fig14-21.png" width="70%">
-          <description>A jamovi results table displays the model coefficients for mood.gain. Predictors include Intercept, druganxifree, drugjoyzepam, and CBTherapy, with respective estimates, standard errors, t-values, and p-values. Notably, drugjoyzepam has a highly significant p-value (&lt;.00001).</description>
+          <description>A JASP results table displays the model coefficients for mood.gain. Predictors include Intercept, druganxifree, drugjoyzepam, and CBTherapy, with respective estimates, standard errors, t-values, and p-values. Notably, drugjoyzepam has a highly significant p-value (&lt;.00001).</description>
         </image>
       </figure>
 
       <p>Hmm. This isn't the same output that we got last time. Not surprisingly, the regression output prints out the results for each of the three predictors separately, just like it did every other time we conducted a regression analysis. On the one hand we can see that the <m>p</m>-value for the CBTtherapy variable is exactly the same as the one for the therapy factor in our original ANOVA, so we can be reassured that the regression model is doing the same thing as the ANOVA did. On the other hand, this regression model is testing the druganxifree contrast and the drugjoyzepam contrast <em>separately</em>, as if they were two completely unrelated variables.</p>
 
-      <p>It's not surprising of course, because the poor regression analysis has no way of knowing that drugjoyzepam and druganxifree are actually the two different contrasts that we used to encode our three-level drug factor. As far as it knows, drugjoyzepam and druganxifree are no more related to one another than drugjoyzepam and CBTtherapy. However, you and I know better. At this stage we're not at all interested in determining whether these two contrasts are individually significant. We just want to know if there's an "overall" effect of drug. That is, what we want jamovi to do is to run some kind of "model comparison" test, one in which the two "drug related" contrasts are lumped together for the purpose of the test. Sound familiar? All we need to do is specify our null model, which in this case would include the CBTtherapy predictor, and omit both of the drug-related variables, as in <xref ref="fig-fig14-22"/>.</p>
+      <p>It's not surprising of course, because the poor regression analysis has no way of knowing that drugjoyzepam and druganxifree are actually the two different contrasts that we used to encode our three-level drug factor. As far as it knows, drugjoyzepam and druganxifree are no more related to one another than drugjoyzepam and CBTtherapy. However, you and I know better. At this stage we're not at all interested in determining whether these two contrasts are individually significant. We just want to know if there's an "overall" effect of drug. That is, what we want JASP to do is to run some kind of "model comparison" test, one in which the two "drug related" contrasts are lumped together for the purpose of the test. Sound familiar? All we need to do is specify our null model, which in this case would include the CBTtherapy predictor, and omit both of the drug-related variables, as in <xref ref="fig-fig14-22"/>.</p>
 
       <figure xml:id="fig-fig14-22">
-        <caption>Model comparison in jamovi regression, null model 1 versus contrasts model 2</caption>
+        <caption>Model comparison in JASP regression, null model 1 versus contrasts model 2</caption>
         <image source="images/fig14-22.png" width="90%">
-          <description>An image displaying jamovi results from a linear regression analysis for a clinical trial. The screen shows model measures, comparisons, and specific results, with variables including 'drug' and 'CBTherapy'.</description>
+          <description>An image displaying JASP results from a linear regression analysis for a clinical trial. The screen shows model measures, comparisons, and specific results, with variables including 'drug' and 'CBTherapy'.</description>
         </image>
       </figure>
 
       <p>Ah, that's better. Our <m>F</m>-statistic is 26.15, the degrees of freedom are 2 and 14, and the <m>p</m>-value is 0.00002. The numbers are identical to the ones we obtained for the main effect of drug in our original ANOVA. Once again we see that ANOVA and regression are essentially the same. They are both linear models, and the underlying statistical machinery for ANOVA is identical to the machinery used in regression. The importance of this fact should not be understated. Throughout the rest of this chapter we're going to rely heavily on this idea.</p>
 
-      <p>Although we went through all the faff of computing new variables in jamovi for the contrasts druganxifree and drugjoyzepam, just to show that ANOVA and regression are essentially the same, in the jamovi linear regression analysis there is actually a nifty shortcut to get these contrasts, see <xref ref="fig-fig14-23"/>. What jamovi is doing here is allowing you to enter the predictor variables that are factors as, wait for it...factors! Smart, eh. You can also specify which group to use as the reference level, via the 'Reference Levels' option. We've changed this to 'placebo' and 'no.therapy', respectively, because this makes most sense.</p>
+      <p>Although we went through all the faff of computing new variables in JASP for the contrasts druganxifree and drugjoyzepam, just to show that ANOVA and regression are essentially the same, in the JASP linear regression analysis there is actually a nifty shortcut to get these contrasts, see <xref ref="fig-fig14-23"/>. What JASP is doing here is allowing you to enter the predictor variables that are factors as, wait for it...factors! Smart, eh. You can also specify which group to use as the reference level, via the 'Reference Levels' option. We've changed this to 'placebo' and 'no.therapy', respectively, because this makes most sense.</p>
 
       <figure xml:id="fig-fig14-23">
-        <caption>Regression analysis with factors and contrasts in jamovi, including omnibus ANOVA test results</caption>
+        <caption>Regression analysis with factors and contrasts in JASP, including omnibus ANOVA test results</caption>
         <image source="images/fig14-23.png" width="90%">
-          <description>A jamovi screenshot displaying linear regression analysis within a software interface. The interface shows data inputs and settings on the left, while the right side displays output results including ANOVA and model coefficients. Sections for data, analyses, edit, and more are visible.</description>
+          <description>A JASP screenshot displaying linear regression analysis within a software interface. The interface shows data inputs and settings on the left, while the right side displays output results including ANOVA and model coefficients. Sections for data, analyses, edit, and more are visible.</description>
         </image>
       </figure>
 
@@ -844,7 +844,7 @@
       </tabular>
     </table>
 
-    <p>Each row in the table corresponds to one of the factor levels, and each column corresponds to one of the contrasts. This table, which always has one more row than columns, has a special name. It is called a contrast matrix. However, there are lots of different ways to specify a contrast matrix. In this section I discuss a few of the standard contrast matrices that statisticians use and how you can use them in jamovi. If you're planning to read the section on <xref ref="sec-factorial-anova-3-unbalanced"/> later on, it's worth reading this section carefully. If not, you can get away with skimming it, because the choice of contrasts doesn't matter much for balanced designs.</p>
+    <p>Each row in the table corresponds to one of the factor levels, and each column corresponds to one of the contrasts. This table, which always has one more row than columns, has a special name. It is called a contrast matrix. However, there are lots of different ways to specify a contrast matrix. In this section I discuss a few of the standard contrast matrices that statisticians use and how you can use them in JASP. If you're planning to read the section on <xref ref="sec-factorial-anova-3-unbalanced"/> later on, it's worth reading this section carefully. If not, you can get away with skimming it, because the choice of contrasts doesn't matter much for balanced designs.</p>
 
     <subsection xml:id="subsec-treatment-contrasts">
       <title>Treatment contrasts</title>
@@ -873,13 +873,13 @@
         </tabular>
       </table>
 
-      <p>In this example, the first contrast is level 2 compared with level 1, the second contrast is level 3 compared with level 1, and so on. Notice that, by default, the <em>first</em> level of the factor is always treated as the baseline category (i.e., it's the one that has all zeros and doesn't have an explicit contrast associated with it). In jamovi you can change which category is the first level of the factor by manipulating the order of the levels of the variable shown in the 'Data Variable' window (double click on the name of the variable in the spreadsheet column to bring up the 'Data Variable' view.</p>
+      <p>In this example, the first contrast is level 2 compared with level 1, the second contrast is level 3 compared with level 1, and so on. Notice that, by default, the <em>first</em> level of the factor is always treated as the baseline category (i.e., it's the one that has all zeros and doesn't have an explicit contrast associated with it). In JASP you can change which category is the first level of the factor by manipulating the order of the levels of the variable shown in the 'Data Variable' window (double click on the name of the variable in the spreadsheet column to bring up the 'Data Variable' view.</p>
     </subsection>
 
     <subsection xml:id="subsec-helmert-contrasts">
       <title>Helmert contrasts</title>
 
-      <p>Treatment contrasts are useful for a lot of situations. However, they make most sense in the situation when there really is a baseline category, and you want to assess all the other groups in relation to that one. In other situations, however, no such baseline category exists, and it may make more sense to compare each group to the mean of the other groups. This is where we meet Helmert contrasts, generated by the 'helmert' option in the jamovi 'ANOVA' -- 'Contrasts' selection box. The idea behind Helmert contrasts is to compare each group to the mean of the "previous" ones. That is, the first contrast represents the difference between group 2 and group 1, the second contrast represents the difference between group 3 and the mean of groups 1 and 2, and so on. This translates to a contrast matrix that looks like <xref ref="tbl-tab14-13"/> for a factor with five levels.</p>
+      <p>Treatment contrasts are useful for a lot of situations. However, they make most sense in the situation when there really is a baseline category, and you want to assess all the other groups in relation to that one. In other situations, however, no such baseline category exists, and it may make more sense to compare each group to the mean of the other groups. This is where we meet Helmert contrasts, generated by the 'helmert' option in the JASP 'ANOVA' -- 'Contrasts' selection box. The idea behind Helmert contrasts is to compare each group to the mean of the "previous" ones. That is, the first contrast represents the difference between group 2 and group 1, the second contrast represents the difference between group 3 and the mean of groups 1 and 2, and so on. This translates to a contrast matrix that looks like <xref ref="tbl-tab14-13"/> for a factor with five levels.</p>
 
       <table xml:id="tbl-tab14-13">
         <title>Matrix of helmert contrasts with 5 levels</title>
@@ -905,7 +905,7 @@
     <subsection xml:id="subsec-sum-to-zero-contrasts">
       <title>Sum to zero contrasts</title>
 
-      <p>The third option that I should briefly mention are "sum to zero" contrasts, called "Simple" contrasts in jamovi, which are used to construct pairwise comparisons between groups. Specifically, each contrast encodes the difference between one of the groups and a baseline category, which in this case corresponds to the first group (<xref ref="tbl-tab14-14"/>).</p>
+      <p>The third option that I should briefly mention are "sum to zero" contrasts, called "Simple" contrasts in JASP, which are used to construct pairwise comparisons between groups. Specifically, each contrast encodes the difference between one of the groups and a baseline category, which in this case corresponds to the first group (<xref ref="tbl-tab14-14"/>).</p>
 
       <table xml:id="tbl-tab14-14">
         <title>Matrix of "sum to zero" contrasts with 5 levels</title>
@@ -929,12 +929,12 @@
     </subsection>
 
     <subsection xml:id="subsec-optional-contrasts-jamovi">
-      <title>Optional contrasts in jamovi</title>
+      <title>Optional contrasts in JASP</title>
 
-      <p>There are options in jamovi that can generate different kinds of contrasts in ANOVA. See the 'Contrasts' option in the main ANOVA analysis window; <xref ref="tbl-tab14-15"/> lists these contrast options.</p>
+      <p>There are options in JASP that can generate different kinds of contrasts in ANOVA. See the 'Contrasts' option in the main ANOVA analysis window; <xref ref="tbl-tab14-15"/> lists these contrast options.</p>
 
       <table xml:id="tbl-tab14-15">
-        <title>Contrasts available in the jamovi ANOVA analysis</title>
+        <title>Contrasts available in the JASP ANOVA analysis</title>
         <tabular>
           <row header="yes">
             <cell>Contrast type</cell>
@@ -985,16 +985,16 @@
 
     <p>For any one of these comparisons, we're interested in the true difference between (population) group means. Tukey's HSD constructs simultaneous confidence intervals for all four of these comparisons. What we mean by 95% "simultaneous" confidence interval is that, if we were to repeat this study many times, then in 95% of the study results the confidence intervals would contain the relevant true value. Moreover, we can use these confidence intervals to calculate an adjusted <m>p</m>-value for any specific comparison.</p>
 
-    <p>The TukeyHSD function in jamovi is pretty easy to use. You simply specify the ANOVA model term that you want to run the post hoc tests for. For example, if we were looking to run post hoc tests for the main effects but not the interaction, we would open up the 'Post Hoc Tests' option in the ANOVA analysis screen, move the drug and therapy variables across to the box on the right, and then select the 'Tukey' checkbox in the list of possible post hoc corrections that could be applied. This, along with the corresponding results table, is shown in <xref ref="fig-fig14-24"/>.</p>
+    <p>The TukeyHSD function in JASP is pretty easy to use. You simply specify the ANOVA model term that you want to run the post hoc tests for. For example, if we were looking to run post hoc tests for the main effects but not the interaction, we would open up the 'Post Hoc Tests' option in the ANOVA analysis screen, move the drug and therapy variables across to the box on the right, and then select the 'Tukey' checkbox in the list of possible post hoc corrections that could be applied. This, along with the corresponding results table, is shown in <xref ref="fig-fig14-24"/>.</p>
 
-    <p>The output shown in the 'Post Hoc Tests' results table is (I hope) pretty straightforward. The first comparison, for example, is the Anxifree versus placebo difference, and the first part of the output indicates that the observed difference in group means is .27. The next number is the standard error for the difference, from which we could calculate the 95% confidence interval if we wanted, though jamovi does not currently provide this option. Then there is a column with the degrees of freedom, a column with the <m>t</m>-value, and finally a column with the <m>p</m>-value. For the first comparison the adjusted <m>p</m>-value is .21. In contrast, if you look at the next line, we see that the observed difference between joyzepam and the placebo is 1.03, and this result is significant (<m>p &lt; .001</m>).</p>
+    <p>The output shown in the 'Post Hoc Tests' results table is (I hope) pretty straightforward. The first comparison, for example, is the Anxifree versus placebo difference, and the first part of the output indicates that the observed difference in group means is .27. The next number is the standard error for the difference, from which we could calculate the 95% confidence interval if we wanted, though JASP does not currently provide this option. Then there is a column with the degrees of freedom, a column with the <m>t</m>-value, and finally a column with the <m>p</m>-value. For the first comparison the adjusted <m>p</m>-value is .21. In contrast, if you look at the next line, we see that the observed difference between joyzepam and the placebo is 1.03, and this result is significant (<m>p &lt; .001</m>).</p>
 
-    <p>So far, so good. What about the situation where your model includes interaction terms? For instance, the default option in jamovi is to allow for the possibility that there is an interaction between drug and therapy. If that's the case, the number of pairwise comparisons that we need to consider starts to increase. As before, we need to consider the three comparisons that are relevant to the main effect of drug and the one comparison that is relevant to the main effect of therapy.</p>
+    <p>So far, so good. What about the situation where your model includes interaction terms? For instance, the default option in JASP is to allow for the possibility that there is an interaction between drug and therapy. If that's the case, the number of pairwise comparisons that we need to consider starts to increase. As before, we need to consider the three comparisons that are relevant to the main effect of drug and the one comparison that is relevant to the main effect of therapy.</p>
 
     <figure xml:id="fig-fig14-24">
-      <caption>Tukey HSD post hoc test in jamovi factorial ANOVA, without an interaction term</caption>
+      <caption>Tukey HSD post hoc test in JASP factorial ANOVA, without an interaction term</caption>
       <image source="images/fig14-24.png" width="90%">
-        <description>A jamovi screenshot showing ANOVA results. The interface has sections for setting variables and analyzing data, with specific fields selected for "drug" and "therapy." A window on the right shows detailed ANOVA test results and post hoc comparisons.</description>
+        <description>A JASP screenshot showing ANOVA results. The interface has sections for setting variables and analyzing data, with specific fields selected for "drug" and "therapy." A window on the right shows detailed ANOVA test results and post hoc comparisons.</description>
       </image>
     </figure>
 
@@ -1009,9 +1009,9 @@
     <p>There are quite a lot of these comparisons that you need to consider. So, when we run the Tukey post hoc analysis for this ANOVA model, we see that it has made a lot of pairwise comparisons (19 in total), as shown in <xref ref="fig-fig14-25"/>. You can see that it looks pretty similar to before, but with a lot more comparisons made.</p>
 
     <figure xml:id="fig-fig14-25">
-      <caption>Tukey HSD post hoc test in jamovi factorial ANOVA with an interaction term</caption>
+      <caption>Tukey HSD post hoc test in JASP factorial ANOVA with an interaction term</caption>
       <image source="images/fig14-25.png" width="90%">
-        <description>A jamovi table showing post hoc test results for drug and therapy comparisons. The table includes columns for drug, therapy, comparison, mean difference, SE, df, t-value, and p-value, with values provided for each comparison.</description>
+        <description>A JASP table showing post hoc test results for drug and therapy comparisons. The table includes columns for drug, therapy, comparison, mean difference, SE, df, t-value, and p-value, with values provided for each comparison.</description>
       </image>
     </figure>
   </section>
@@ -1034,12 +1034,12 @@
     <subsection xml:id="subsec-the-coffee-data">
       <title>The coffee data</title>
 
-      <p>As usual, it will help us to work with some data. The <em>coffee.csv</em> file contains a hypothetical data set that produces an unbalanced <m>3 \times 2</m> ANOVA. Suppose we were interested in finding out whether or not the tendency of people to babble when they have too much coffee is purely an effect of the coffee itself, or whether there's some effect of the milk and sugar that people add to the coffee. Suppose we took 18 people and gave them some coffee to drink. The amount of coffee/caffeine was held constant, and we varied whether or not milk was added, so milk is a binary factor with two levels, "yes" and "no". We also varied the kind of sugar involved. The coffee might contain "real" sugar or it might contain "fake" sugar (i.e., artificial sweetener) or it might contain "none" at all, so the sugar variable is a three level factor. Our outcome variable is a continuous variable that presumably refers to some psychologically sensible measure of the extent to which someone is "babbling". The details don't really matter for our purpose. Take a look at the data in the jamovi spreadsheet view, as in <xref ref="fig-fig14-26"/>.</p>
+      <p>As usual, it will help us to work with some data. The <em>coffee.csv</em> file contains a hypothetical data set that produces an unbalanced <m>3 \times 2</m> ANOVA. Suppose we were interested in finding out whether or not the tendency of people to babble when they have too much coffee is purely an effect of the coffee itself, or whether there's some effect of the milk and sugar that people add to the coffee. Suppose we took 18 people and gave them some coffee to drink. The amount of coffee/caffeine was held constant, and we varied whether or not milk was added, so milk is a binary factor with two levels, "yes" and "no". We also varied the kind of sugar involved. The coffee might contain "real" sugar or it might contain "fake" sugar (i.e., artificial sweetener) or it might contain "none" at all, so the sugar variable is a three level factor. Our outcome variable is a continuous variable that presumably refers to some psychologically sensible measure of the extent to which someone is "babbling". The details don't really matter for our purpose. Take a look at the data in the JASP spreadsheet view, as in <xref ref="fig-fig14-26"/>.</p>
 
       <figure xml:id="fig-fig14-26">
-        <caption>The <em>coffee.csv</em> data set in jamovi, with descriptive information aggregated by factor levels</caption>
+        <caption>The <em>coffee.csv</em> data set in JASP, with descriptive information aggregated by factor levels</caption>
         <image source="images/fig14-26.png" width="90%">
-          <description>A jamovi screenshot with the left side showing raw data in a table format with columns like 'milk,' 'sugar,' and 'bubble.' The right side shows the analysis results, including descriptive statistics like the mean and standard deviation.</description>
+          <description>A JASP screenshot with the left side showing raw data in a table format with columns like 'milk,' 'sugar,' and 'bubble.' The right side shows the analysis results, including descriptive statistics like the mean and standard deviation.</description>
         </image>
       </figure>
 
@@ -1101,10 +1101,10 @@
         </tabular>
       </table>
 
-      <p>Type III sum of squares is the default hypothesis testing method used by jamovi ANOVA, so to run a type I sum of squares analysis we have to select 'Type 1' in the 'Sum of squares' selection box in the jamovi 'ANOVA' -- 'Model' options. This gives us the ANOVA table shown in <xref ref="fig-fig14-27"/>.</p>
+      <p>Type III sum of squares is the default hypothesis testing method used by JASP ANOVA, so to run a type I sum of squares analysis we have to select 'Type 1' in the 'Sum of squares' selection box in the JASP 'ANOVA' -- 'Model' options. This gives us the ANOVA table shown in <xref ref="fig-fig14-27"/>.</p>
 
       <figure xml:id="fig-fig14-27">
-        <caption>ANOVA results table using type I sum of squares in jamovi</caption>
+        <caption>ANOVA results table using type I sum of squares in JASP</caption>
         <image source="images/fig14-27.png" width="90%">
           <description>ANOVA table showing data for the effects of sugar and milk on a dependent variable. Columns include Sum of Squares, df, Mean Square, F, and p-values for sugar, milk, their interaction (sugar * milk), and residuals with respective values.</description>
         </image>
@@ -1113,9 +1113,9 @@
       <p>The big problem with using type I sum of squares is the fact that it really does depend on the order in which you enter the variables. Yet, in many situations the researcher has no reason to prefer one ordering over another. This is presumably the case for our milk and sugar problem. Should we add milk first or sugar first? It feels exactly as arbitrary as a data analysis question as it does as a coffee-making question. There may in fact be some people with firm opinions about ordering, but it's hard to imagine a principled answer to the question. Yet, look what happens when we change the ordering, as in <xref ref="fig-fig14-28"/>.</p>
 
       <figure xml:id="fig-fig14-28">
-        <caption>ANOVA results table using type I sum of squares in jamovi, but with factors entered in a different order (milk first)</caption>
+        <caption>ANOVA results table using type I sum of squares in JASP, but with factors entered in a different order (milk first)</caption>
         <image source="images/fig14-28.png" width="90%">
-          <description>A jamovi table displaying ANOVA results with columns labeled Sum of Squares, df (degrees of freedom), Mean Square, F, and p. Rows correspond to milk, sugar, milk × sugar interaction, and residuals. Values are provided for each entry.</description>
+          <description>A JASP table displaying ANOVA results with columns labeled Sum of Squares, df (degrees of freedom), Mean Square, F, and p. Rows correspond to milk, sugar, milk × sugar interaction, and residuals. Values are provided for each entry.</description>
         </image>
       </figure>
 
@@ -1129,7 +1129,7 @@
     <subsection xml:id="subsec-type-iii-sum-of-squares">
       <title>Type III sum of squares</title>
 
-      <p>Having just finished talking about type I tests, you might think that the natural thing to do next would be to talk about type II tests. However, I think it's actually a bit more natural to discuss type III tests (which are simple and the default in jamovi ANOVA) before talking about type II tests (which are trickier). The basic idea behind type III tests is extremely simple. Regardless of which term you're trying to evaluate, run the <m>F</m>-test in which the alternative hypothesis corresponds to the full ANOVA model as specified by the user, and the null model just deletes that one term that you're testing. For instance, in the coffee example, in which our full model was babble ~ sugar + milk + sugar <m>\times</m> milk, the test for a main effect of sugar would correspond to a comparison between the following two models (<xref ref="tbl-tab14-19"/>).</p>
+      <p>Having just finished talking about type I tests, you might think that the natural thing to do next would be to talk about type II tests. However, I think it's actually a bit more natural to discuss type III tests (which are simple and the default in JASP ANOVA) before talking about type II tests (which are trickier). The basic idea behind type III tests is extremely simple. Regardless of which term you're trying to evaluate, run the <m>F</m>-test in which the alternative hypothesis corresponds to the full ANOVA model as specified by the user, and the null model just deletes that one term that you're testing. For instance, in the coffee example, in which our full model was babble ~ sugar + milk + sugar <m>\times</m> milk, the test for a main effect of sugar would correspond to a comparison between the following two models (<xref ref="tbl-tab14-19"/>).</p>
 
       <table xml:id="tbl-tab14-19">
         <title>Null and alternative hypotheses with the outcome variable "babble", with type III sum of squares</title>
@@ -1228,15 +1228,15 @@
       <p>Later on, we'll see that type III tests can be redeemed in some contexts, but first let's take a look at the ANOVA results table using type III sum of squares, see <xref ref="fig-fig14-29"/>.</p>
 
       <figure xml:id="fig-fig14-29">
-        <caption>ANOVA results table using type III sum of squares in jamovi</caption>
+        <caption>ANOVA results table using type III sum of squares in JASP</caption>
         <image source="images/fig14-29.png" width="90%">
-          <description>A jamovi table titled "ANOVA - babble" shows statistical data with columns: Sum of Squares, df, Mean Square, F, and p. Rows include milk, sugar, milk * sugar, and Residuals. Notable values include F = 11.28 for milk * sugar, and p = 0.00175 for the same interaction.</description>
+          <description>A JASP table titled "ANOVA - babble" shows statistical data with columns: Sum of Squares, df, Mean Square, F, and p. Rows include milk, sugar, milk * sugar, and Residuals. Notable values include F = 11.28 for milk * sugar, and p = 0.00175 for the same interaction.</description>
         </image>
       </figure>
 
-      <p>But be aware, one of the perverse features of the type III testing strategy is that typically the results turn out to depend on the contrasts that you use to encode your factors (see <xref ref="sec-different-ways-to-specify-contrasts"/> if you've forgotten what the different types of contrasts are).<fn>However, in jamovi the results for type III sum of squares ANOVA are the same regardless of the contrast selected, so jamovi is obviously doing something different!</fn></p>
+      <p>But be aware, one of the perverse features of the type III testing strategy is that typically the results turn out to depend on the contrasts that you use to encode your factors (see <xref ref="sec-different-ways-to-specify-contrasts"/> if you've forgotten what the different types of contrasts are).<fn>However, in JASP the results for type III sum of squares ANOVA are the same regardless of the contrast selected, so JASP is obviously doing something different!</fn></p>
 
-      <p>Okay, so if the <m>p</m>-values that typically come out of type III analyses (but not in jamovi) are so sensitive to the choice of contrasts, does that mean that type III tests are essentially arbitrary and not to be trusted? To some extent that's true, and when we turn to a discussion of type II tests we'll see that type II analyses avoid this arbitrariness entirely, but I think that's too strong a conclusion. Firstly, it's important to recognise that some choices of contrasts will always produce the same answers (ah, so this is what is happening in jamovi). Of particular importance is the fact that if the columns of our contrast matrix are all constrained to sum to zero, then the type III analysis will always give the same answers.</p>
+      <p>Okay, so if the <m>p</m>-values that typically come out of type III analyses (but not in JASP) are so sensitive to the choice of contrasts, does that mean that type III tests are essentially arbitrary and not to be trusted? To some extent that's true, and when we turn to a discussion of type II tests we'll see that type II analyses avoid this arbitrariness entirely, but I think that's too strong a conclusion. Firstly, it's important to recognise that some choices of contrasts will always produce the same answers (ah, so this is what is happening in JASP). Of particular importance is the fact that if the columns of our contrast matrix are all constrained to sum to zero, then the type III analysis will always give the same answers.</p>
     </subsection>
 
     <subsection xml:id="subsec-type-ii-sum-of-squares">
@@ -1362,10 +1362,10 @@
         </tabular>
       </table>
 
-      <p>Running the tests are again straightforward. Just select 'Type 2' in the 'Sum of squares' selection box in the jamovi 'ANOVA' -- 'Model' options. This gives us the ANOVA table shown in <xref ref="fig-fig14-30"/>.</p>
+      <p>Running the tests are again straightforward. Just select 'Type 2' in the 'Sum of squares' selection box in the JASP 'ANOVA' -- 'Model' options. This gives us the ANOVA table shown in <xref ref="fig-fig14-30"/>.</p>
 
       <figure xml:id="fig-fig14-30">
-        <caption>ANOVA results table using type II sum of squares in jamovi</caption>
+        <caption>ANOVA results table using type II sum of squares in JASP</caption>
         <image source="images/fig14-30.png" width="90%">
           <description>Table displaying ANOVA results for an interaction between milk and sugar. Columns include Sum of Squares, df, Mean Square, F, p, η², η²p, and ω² for milk, sugar, milk * sugar, and residuals. The interaction shows significant results.</description>
         </image>
@@ -1373,13 +1373,13 @@
 
       <p>Type II tests have some clear advantages over type I and type III tests. They don't depend on the order in which you specify factors (unlike type I), and they don't depend on the contrasts that you use to specify your factors (unlike type III). And although opinions may differ on this last point, and it will definitely depend on what you're trying to do with your data, I do think that the hypothesis tests that they specify are more likely to correspond to something that you actually care about.</p>
 
-      <p>As a consequence, I find that it's usually easier to interpret the results of a type II test than the results of a type I or type III test. For this reason my tentative advice is that, if you can't think of any obvious model comparisons that directly map onto your research questions but you still want to run an ANOVA in an unbalanced design, type II tests are probably a better choice than type I or type III.<fn>I find it amusing to note that the default in R is type I and the default in SPSS and jamovi is type III. Neither of these appeals to me all that much. Relatedly, I find it depressing that almost nobody in the psychological literature ever bothers to report which type is used either. The only way I can ever make any sense of what people typically report is to try to guess from auxiliary cues which software they were using, and to assume that they never changed the default settings. Please don't do this! Now that you know about these issues make sure you indicate what software you used, and if you're reporting ANOVA results for unbalanced data, then specify what Type of tests you ran, specify order information if you've done type I tests and specify contrasts if you've done type III tests. Or, even better, do hypotheses tests that correspond to things you really care about and then report those!</fn></p>
+      <p>As a consequence, I find that it's usually easier to interpret the results of a type II test than the results of a type I or type III test. For this reason my tentative advice is that, if you can't think of any obvious model comparisons that directly map onto your research questions but you still want to run an ANOVA in an unbalanced design, type II tests are probably a better choice than type I or type III.<fn>I find it amusing to note that the default in R is type I and the default in SPSS and JASP is type III. Neither of these appeals to me all that much. Relatedly, I find it depressing that almost nobody in the psychological literature ever bothers to report which type is used either. The only way I can ever make any sense of what people typically report is to try to guess from auxiliary cues which software they were using, and to assume that they never changed the default settings. Please don't do this! Now that you know about these issues make sure you indicate what software you used, and if you're reporting ANOVA results for unbalanced data, then specify what Type of tests you ran, specify order information if you've done type I tests and specify contrasts if you've done type III tests. Or, even better, do hypotheses tests that correspond to things you really care about and then report those!</fn></p>
     </subsection>
 
     <subsection xml:id="subsec-effect-sizes-non-additive">
       <title>Effect sizes (and non-additive sums of squares)</title>
 
-      <p>jamovi also provides the effect sizes <m>\eta^2</m> and partial <m>\eta^2</m> when you select these options, as in <xref ref="fig-fig14-30"/>. However, when you've got an unbalanced design there's a bit of extra complexity involved.</p>
+      <p>JASP also provides the effect sizes <m>\eta^2</m> and partial <m>\eta^2</m> when you select these options, as in <xref ref="fig-fig14-30"/>. However, when you've got an unbalanced design there's a bit of extra complexity involved.</p>
 
       <p>If you remember back to our very early discussions of ANOVA, one of the key ideas behind the sums of squares calculations is that if we add up all the <m>SS</m> terms associated with the effects in the model, and add that to the residual <m>SS</m>, they're supposed to add up to the total sum of squares.</p>
 
@@ -1427,7 +1427,7 @@
     <title>Summary</title>
 
     <p><ul>
-      <li>Factorial ANOVA for balanced designs, with a focus on main effects (<xref ref="sec-factorial-anova-1"/>) and with interactions considered (<xref ref="sec-factorial-anova-balanced-interactions"/>).</li>
+      <li>Factorial ANOVA for balanced designs, without interactions (<xref ref="sec-factorial-anova-1"/>) and with interactions considered (<xref ref="sec-factorial-anova-balanced-interactions"/>).</li>
       <li>Effect size (<xref ref="sec-effect-size-factorial"/>), estimated means, and confidence intervals in a factorial ANOVA.</li>
       <li>Assumption checking (<xref ref="sec-assumption-checking-factorial"/>) in ANOVA.</li>
       <li>Analysis of Covariance (ANCOVA) (<xref ref="sec-analysis-of-covariance-ancova"/>).</li>
