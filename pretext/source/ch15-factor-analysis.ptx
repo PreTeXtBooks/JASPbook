@@ -5,7 +5,7 @@
   <introduction>
     <p>Previous chapters have covered statistical tests for differences between two or more groups. However, sometimes when conducting research, we may wish to examine how multiple variables <em>co-vary</em>. That is, how they are related to each other and whether the patterns of relatedness suggest anything interesting and meaningful. For example, we are often interested in exploring whether there are any underlying unobserved latent factors that are represented by the observed, directly measured, variables in our data set. In statistics, latent factors are initially hidden variables that are not directly observed but are rather inferred (through statistical analysis) from other variables that are observed (directly measured). For a more technical and useful geometric explanation of the essentials of Factor Analysis take a look at <xref ref="Child1990"/>. <xref ref="Kline1994"/> also provides a helpful introduction to the basic theory of Factor Analysis.</p>
 
-    <p>In this chapter we will cover how to undertake a number of different Factor Analysis and related techniques, starting with Exploratory Factor Analysis (EFA). EFA is a statistical technique for identifying underlying latent factors in a data set. Then we will cover Principal Component Analysis (PCA) which is a data reduction technique which, strictly speaking, does not identify underlying latent factors. Instead, PCA simply produces a linear combination of observed variables. Following this, the section on Confirmatory Factor Analysis (CFA) shows that, unlike EFA, with CFA you start with an idea -- a model -- of how the variables in your data are related to each other. You then test your model against the observed data and assess how good a fit the model is. A more sophisticated version of CFA is the so-called Multi-Trait Multi-Method CFA approach in which both latent factor and method variance are included in the model. This is useful when there are different methodological approaches used for measurement and therefore method variance is an important consideration. Finally, we will cover a related analysis: Internal consistency reliability analysis tests how consistently a scale measures a psychological construct.</p>
+    <p>In this chapter we will consider a number of different Factor Analysis and related techniques, starting with Exploratory Factor Analysis (EFA). EFA is a statistical technique for identifying underlying latent factors in a data set. Then we will cover Principal Component Analysis (PCA) which is a data reduction technique which, strictly speaking, does not identify underlying latent factors. Instead, PCA simply produces a linear combination of observed variables. Following this, the section on Confirmatory Factor Analysis (CFA) shows that, unlike EFA, with CFA you start with an idea -- a model -- of how the variables in your data are related to each other. You then test your model against the observed data and assess how good a fit the model is. A more sophisticated version of CFA is the so-called Multi-Trait Multi-Method (MTMM) approach in which both latent factor and method variance are included in the model. This is useful when there are different methodological approaches used for measurement and therefore method variance is an important consideration. Finally, we will cover a related analysis: internal consistency reliability analysis tests how consistently a scale measures a psychological construct.</p>
   </introduction>
 
   <section xml:id="sec-efa">
@@ -26,7 +26,7 @@
 
     <p>Here's another example: we may not be able to directly measure statistics anxiety, but we can measure whether statistics anxiety is high or low with a set of questions in a questionnaire. For example, "<m>Q1</m>: Doing the assignment for a statistics course", "<m>Q2</m>: Trying to understand the statistics described in a journal article", and "<m>Q3</m>: Asking the lecturer for help in understanding something from the course", etc., each rated from low anxiety to high anxiety. People with high statistics anxiety will tend to give similarly high responses on these observed variables because of their high statistics anxiety. Likewise, people with low statistics anxiety will give similar low responses to these variables because of their low statistics anxiety.</p>
 
-    <p>In Exploratory Factor Analysis (EFA), we are essentially exploring the correlations between observed variables to uncover any interesting, important underlying (latent) factors that are identified when observed variables co-vary. We can use statistical software to estimate any latent factors and to identify which of our variables have a high loading<fn>Quite helpfully, factor loadings can be interpreted like standardized regression coefficients.</fn> (e.g., loading &gt; 0.5) on each factor, suggesting they are a useful measure, or indicator, of the latent factor. Part of this process includes a step called rotation, which to be honest is a pretty weird idea but luckily we don't have to worry about understanding it; we just need to know that it is helpful because it makes the pattern of loadings on different factors much clearer. As such, rotation helps with seeing more clearly which variables are linked substantively to each factor. We also need to decide how many factors are reasonable given our data, and helpful in this regard is something called Eigen values. We'll come back to this in a moment, after we have covered some of the main assumptions of EFA.</p>
+    <p>In Exploratory Factor Analysis (EFA), we are essentially exploring the correlations between observed variables to uncover any interesting, important underlying (latent) factors that are identified when observed variables co-vary. We can use statistical software to estimate any latent factors and to identify which of our variables have a high loading<fn>Quite helpfully, factor loadings can be interpreted like standardized regression coefficients.</fn> (e.g., loading &gt; 0.5) on each factor, suggesting they are a useful measure, or indicator, of the latent factor. Part of this process includes a step called rotation, which to be honest is a pretty weird idea but luckily we don't have to worry about understanding it; we just need to know that it is helpful because it makes the pattern of loadings on different factors much clearer. As such, rotation helps with seeing more clearly which variables are linked substantively to each factor. We also need to decide how many factors are reasonable given our data, and helpful in this regard is something called eigenvalues. We'll come back to this in a moment, after we have covered some of the main assumptions of EFA.</p>
 
     <subsection xml:id="subsec-efa-checking-assumptions">
       <title>Checking assumptions</title>
@@ -50,11 +50,11 @@
 
       <p>In the first option each item's contribution to the combined score depends on how strongly it relates to the factor. In the second option we typically just average across all the items that contribute substantively to a factor to create the combined scale score variable. Which to choose is a matter of preference, though a disadvantage with the first option is that loadings can vary quite a bit from sample to sample, and in behavioural and health sciences we are often interested in developing and using composite questionnaire scale scores across different studies and different samples. In which case it is reasonable to use a composite measure that is based on the substantive items contributing equally rather than weighting by sample specific loadings from a different sample. In any case, understanding a combined variable measure as an average of items is simpler and more intuitive than using a sample specific optimally-weighted combination.</p>
 
-      <p>But let's not get ahead of ourselves; what we should really focus on now is how to do an EFA in jamovi.</p>
+      <p>But let's not get ahead of ourselves; what we should really focus on now is how to do an EFA in JASP.</p>
     </subsection>
 
     <subsection xml:id="subsec-efa-in-jamovi">
-      <title>EFA in jamovi</title>
+      <title>EFA in JASP</title>
 
       <p>First, we need some data. Twenty-five personality self-report items (see <xref ref="tbl-tab15-1"/>) taken from the International Personality Item Pool (<url href="http://ipip.ori.org">http://ipip.ori.org</url>) were included as part of the Synthetic Aperture Personality Assessment (SAPA) web-based personality assessment (<url href="http://sapa-project.org">http://sapa-project.org</url>) project. The 25 items are organized by five putative factors: Agreeableness, Conscientiousness, Extraversion, Neuroticism, and Openness.</p>
 
@@ -69,7 +69,7 @@
         <li><p>Very Accurate</p></li>
       </ol>
 
-      <p>A sample of <m>N=250</m> responses is contained in the data set <em>bfi_sample.csv</em>. As researchers, we are interested in exploring the data to see whether there are some underlying latent factors that are measured reasonably well by the <m>25</m> observed variables in the <em>bfi_sample.csv</em> data file. Open up the data set and check that the <m>25</m> variables are coded as continuous variables (technically they are ordinal though for EFA in jamovi it mostly doesn't matter, except if you decide to calculate weighted factor scores in which case continuous variables are needed).</p>
+      <p>A sample of <m>N=250</m> responses is contained in the data set <em>bfi_sample.csv</em>. As researchers, we are interested in exploring the data to see whether there are some underlying latent factors that are measured reasonably well by the <m>25</m> observed variables in the <em>bfi_sample.csv</em> data file. Open up the data set and check that the <m>25</m> variables are coded as continuous variables (technically they are ordinal though for EFA in JASP it mostly doesn't matter, except if you decide to calculate weighted factor scores in which case continuous variables are needed).</p>
 
       <table xml:id="tbl-tab15-1">
         <title>Twenty-five observed variable items organised by five putative personality factors in the data set <em>bfi_sample.csv</em></title>
@@ -207,40 +207,40 @@
         </tabular>
       </table>
 
-      <p>To perform EFA in jamovi:</p>
+      <p>To perform EFA in JASP:</p>
 
       <ul>
-        <li><p>Select 'Factor' -- 'Exploratory Factor Analysis' from the main jamovi button bar to open the EFA analysis window (<xref ref="fig-fig15-2"/>).</p></li>
+        <li><p>Select 'Factor' -- 'Exploratory Factor Analysis' from the main JASP button bar to open the EFA analysis window (<xref ref="fig-fig15-2"/>).</p></li>
         <li><p>Select the 25 personality questions and transfer them into the 'Variables' box.</p></li>
         <li><p>Check appropriate options, including 'Assumption Checks', but also Rotation 'Method', 'Number of Factors' to extract, and 'Additional Output' options. See <xref ref="fig-fig15-2"/> for suggested options for this illustrative EFA, and please note that the Rotation 'Method' and 'Number of Factors' extracted is typically adjusted by the researcher during the analysis to find the best result, as described below.</p></li>
       </ul>
 
       <figure xml:id="fig-fig15-2">
-        <caption>The jamovi EFA analysis window</caption>
+        <caption>The JASP EFA analysis window</caption>
         <image source="images/fig15-2.png" width="100%">
-          <description>A jamovi screenshot of an Exploratory Factor Analysis. The interface shows options and variables for analysis, methods for factor extraction and rotation, assumption checks, factor loadings, and additional output settings like factor summary and scree plot.</description>
+          <description>A JASP screenshot of an Exploratory Factor Analysis. The interface shows options and variables for analysis, methods for factor extraction and rotation, assumption checks, factor loadings, and additional output settings like factor summary and scree plot.</description>
         </image>
       </figure>
 
       <p>First, check the assumptions (<xref ref="fig-fig15-3"/>). You can see that (1) Bartlett's test of sphericity is significant, so this assumption is satisfied; and (2) the KMO measure of sampling adequacy (MSA) is <m>0.81</m> overall, suggesting good sampling adequacy. No problems here then!</p>
 
       <figure xml:id="fig-fig15-3">
-        <caption>jamovi EFA assumption checks for the personality questionnaire data</caption>
+        <caption>JASP EFA assumption checks for the personality questionnaire data</caption>
         <image source="images/fig15-3.png" width="80%">
-          <description>A jamovi table displaying the results of assumption checks. It includes "Bartlett's Test of Sphericity" with values χ² = 2204.28, df = 300, and p &lt; .00001. Below is the "KMO Measure of Sampling Adequacy" with individual item MSA values ranging from 0.59 to 0.85.</description>
+          <description>A JASP table displaying the results of assumption checks. It includes "Bartlett's Test of Sphericity" with values χ² = 2204.28, df = 300, and p &lt; .00001. Below is the "KMO Measure of Sampling Adequacy" with individual item MSA values ranging from 0.59 to 0.85.</description>
         </image>
       </figure>
 
       <p>The next thing to check is how many factors to use (or "extract" from the data). Three different approaches are available:</p>
 
       <ul>
-        <li><p>One convention is to choose all components with Eigen values greater than 1.<fn>An Eigen value indicates how much of the variance in the observed variables a factor accounts for. A factor with an Eigen value &gt; 1 accounts for more variance than a single observed variable.</fn> This would give us four factors with our data (try it and see).</p></li>
+        <li><p>One convention is to choose all components with eigenvalues greater than 1.<fn>An eigenvalue indicates how much of the variance in the observed variables a factor accounts for. A factor with an eigenvalue &gt; 1 accounts for more variance than a single observed variable.</fn> This would give us four factors with our data (try it and see).</p></li>
         <li><p>Examination of the scree plot, as in <xref ref="fig-fig15-4"/>, lets you identify the "point of inflection". This is the point at which the slope of the scree curve clearly levels off, below the "elbow". This would give us five factors with our data. Interpreting scree plots is a bit of an art: in <xref ref="fig-fig15-4"/> there is a noticeable step from <m>5</m> to <m>6</m> factors, but in other scree plots you look at it will not be so clear cut.</p></li>
-        <li><p>Using a parallel analysis technique, the obtained Eigen values are compared to those that would be obtained from random data. The number of factors extracted is the number with Eigen values greater than what would be found with random data.</p></li>
+        <li><p>Using a parallel analysis technique, the obtained eigenvalues are compared to those that would be obtained from random data. The number of factors extracted is the number with eigenvalues greater than what would be found with random data.</p></li>
       </ul>
 
       <figure xml:id="fig-fig15-4">
-        <caption>Scree plot of the personality data in jamovi EFA, showing a noticeable inflection and levelling off after point 5 (the "elbow")</caption>
+        <caption>Scree plot of the personality data in JASP EFA, showing a noticeable inflection and levelling off after point 5 (the "elbow")</caption>
         <image source="images/fig15-4.png" width="90%">
           <description>A scree plot showing the eigenvalues of factors from 1 to 25. Blue dots represent actual data, and orange dots represent simulations. The plot shows a steep decline in eigenvalues from factors 1 to 5, then levels off around factor 6.</description>
         </image>
@@ -248,14 +248,14 @@
 
       <p>The third approach is a good one according to <xref ref="Fabrigar1999"/>, although in practice researchers tend to look at all three and then make a judgement about the number of factors that are most easily or helpfully interpreted. This can be understood as the "meaningfulness criterion", and researchers will typically examine, in addition to the solution from one of the approaches above, solutions with one or two more or fewer factors. They then adopt the solution which makes the most sense to them.</p>
 
-      <p>At the same time, we should also consider the best way to rotate the final solution. There are two main approaches to rotation: orthogonal (e.g., "varimax") rotation forces the selected factors to be uncorrelated, whereas oblique (e.g. "oblimin") rotation allows the selected factors to be correlated. Dimensions of interest to psychologists and behavioural scientists are not often dimensions we would expect to be orthogonal, so oblique solutions are arguably more sensible.<fn>Oblique rotations provide two factor matrices, one called a structure matrix and one called a pattern matrix. In jamovi just the pattern matrix is shown in the results as this is typically the most useful for interpretation, though some experts suggest that both can be helpful. In a structure matrix coefficients show the relationship between the variable and the factors whilst ignoring the relationship of that factor with all the other factors (i.e. a zero-order correlation). Pattern matrix coefficients show the unique contribution of a factor to a variable whilst controlling for the effects of other factors on that variable (akin to standardized partial regression coefficient). Under orthogonal rotation, structure and pattern coefficients are the same.</fn></p>
+      <p>At the same time, we should also consider the best way to rotate the final solution. There are two main approaches to rotation: orthogonal (e.g., "varimax") rotation forces the selected factors to be uncorrelated, whereas oblique (e.g. "oblimin") rotation allows the selected factors to be correlated. Dimensions of interest to psychologists and behavioural scientists are not often dimensions we would expect to be orthogonal, so oblique solutions are arguably more sensible.<fn>Oblique rotations provide two factor matrices, one called a structure matrix and one called a pattern matrix. In JASP just the pattern matrix is shown in the results as this is typically the most useful for interpretation, though some experts suggest that both can be helpful. In a structure matrix coefficients show the relationship between the variable and the factors whilst ignoring the relationship of that factor with all the other factors (i.e. a zero-order correlation). Pattern matrix coefficients show the unique contribution of a factor to a variable whilst controlling for the effects of other factors on that variable (akin to standardized partial regression coefficient). Under orthogonal rotation, structure and pattern coefficients are the same.</fn></p>
 
-      <p>Practically, if in an oblique rotation the factors are found to be substantially correlated (positive or negative, and &gt; 0.3), as in <xref ref="fig-fig15-5"/> where a correlation between two of the extracted factors is 0.31, then this would confirm our intuition to prefer oblique rotation. If the factors are, in fact, correlated, then an oblique rotation will produce a better estimate of the true factors and a better simple structure than will an orthogonal rotation. And, if the oblique rotation indicates that the factors have close to zero correlations between one another, then the researcher can go ahead and conduct an orthogonal rotation (which should then give about the same solution as the oblique rotation).</p>
+      <p>Practically, if in an oblique rotation the factors are found to be substantially correlated (positive or negative, and &gt; 0.3), as in <xref ref="fig-fig15-5"/> where a correlation between two of the extracted factors is -0.398, then this would confirm our intuition to prefer oblique rotation. If the factors are, in fact, correlated, then an oblique rotation will produce a better estimate of the true factors and a better simple structure than will an orthogonal rotation. And, if the oblique rotation indicates that the factors have close to zero correlations between one another, then the researcher can go ahead and conduct an orthogonal rotation (which should then give about the same solution as the oblique rotation).</p>
 
       <p>On checking the correlation between the extracted factors at least one correlation was greater than 0.3 (<xref ref="fig-fig15-5"/>), so an oblique ("oblimin") rotation of the five extracted factors is preferred. We can also see in <xref ref="fig-fig15-5"/> that the proportion of overall variance in the data that is accounted for by the five factors is 46%. Factor 1 accounts for around 10% of the variance, factors 2 to 4 around 9% each, and factor 5 just over 7%. This isn't great; it would have been better if the overall solution accounted for a more substantive proportion of the variance in our data.</p>
 
       <figure xml:id="fig-fig15-5">
-        <caption>Factor summary statistics and correlations for a five factor solution in jamovi EFA</caption>
+        <caption>Factor summary statistics and correlations for a five factor solution in JASP EFA</caption>
         <image source="images/fig15-5.png" width="70%">
           <description>An image titled "Factor Statistics" displays two tables. The "Summary" table lists five factors with SS Loadings, % of Variance, and Cumulative %. The "Inter-Factor Correlations" table displays factor correlation values between five factors.</description>
         </image>
@@ -266,58 +266,58 @@
       <p><xref ref="fig-fig15-6"/> shows the factor loadings. That is, how the 25 different personality items load onto each of the five selected factors. We have hidden loadings less than <m>0.3</m> (set in the options shown in <xref ref="fig-fig15-2"/>).</p>
 
       <figure xml:id="fig-fig15-6">
-        <caption>Factor loadings for a five factor solution in jamovi EFA</caption>
+        <caption>Factor loadings for a five factor solution in JASP EFA</caption>
         <image source="images/fig15-6.png" width="90%">
-          <description>A jamovi table depicting the results of an exploratory factor analysis. The table lists items A1 to A6, C1 to C6, E1 to E5, N1 to N6, and O1 to O5 against five factors showing their respective loadings and uniqueness values. A note at the bottom mentions using the "minimum residual" extraction method with an "oblimin" rotation.</description>
+          <description>A JASP table depicting the results of an exploratory factor analysis. The table lists items A1 to A6, C1 to C6, E1 to E5, N1 to N6, and O1 to O5 against five factors showing their respective loadings and uniqueness values. A note at the bottom mentions using the "minimum residual" extraction method with an "oblimin" rotation.</description>
         </image>
       </figure>
 
-      <p>For Factors <m>1, 2, 3</m> and <m>4</m> the pattern of factor loadings closely matches the putative factors specified in <xref ref="tbl-tab15-1"/>. Phew! And Factor <m>5</m> is pretty close, with four of the five observed variables that putatively measure "openness" loading pretty well onto the factor. Variable <m>04</m> doesn't quite seem to fit though, as the factor solution in <xref ref="fig-fig15-6"/> suggests that it loads onto Factor <m>4</m> (albeit with a relatively low loading) but not substantively onto Factor <m>5</m>.</p>
+      <p>For Factors <m>1, 2, 3</m> and <m>4</m> the pattern of factor loadings closely matches the putative factors specified in <xref ref="tbl-tab15-1"/>. Phew! And Factor <m>5</m> is pretty close, with four of the five observed variables that putatively measure "openness" loading pretty well onto the factor. Variable <m>O4</m> doesn't quite seem to fit though, as the factor solution in <xref ref="fig-fig15-6"/> suggests that it loads onto Factor <m>3</m> (albeit with a relatively low loading) but not substantively onto Factor <m>5</m>.</p>
 
       <p>The other thing to note is that those variables that were denoted as "R: reverse coding" in <xref ref="tbl-tab15-1"/> are those that have negative factor loadings. Take a look at the items A1 ("Am indifferent to the feelings of others") and A2 ("Inquire about others' well-being"). We can see that a high score on 'A1' indicates low Agreeableness, whereas a high score on <m>A2</m> (and all the other "A" variables for that matter) indicates high Agreeableness. Therefore A1 will be negatively correlated with the other "A" variables, and this is why it has a negative factor loading, as shown in <xref ref="fig-fig15-6"/>.</p>
 
-      <p>We can also see in <xref ref="fig-fig15-6"/> the 'uniqueness' of each variable. Uniqueness is the proportion of variance that is 'unique' to the variable and not explained by the factors.<fn>Sometimes reported in Factor Analysis is "communality" which is the amount of variance in a variable that is accounted for by the factor solution. Uniqueness is equal to (1 <m>-</m> communality).</fn> For example, 72% of the variance in 'A1' is not explained by the factors in the five factor solution. In contrast, 'N1' has relatively low variance not accounted for by the factor solution (35%). Note that the greater the 'uniqueness', the lower the relevance or contribution of the variable in the factor model.</p>
+      <p>We can also see in <xref ref="fig-fig15-6"/> the 'uniqueness' of each variable. Uniqueness is the proportion of variance that is 'unique' to the variable and not explained by the factors.<fn>Sometimes reported in Factor Analysis is "communality" which is the amount of variance in a variable that is accounted for by the factor solution. Uniqueness is equal to (1 <m>-</m> communality).</fn> For example, 74% of the variance in 'A1' is not explained by the factors in the five factor solution. In contrast, 'N1' has relatively low variance not accounted for by the factor solution (31%). Note that the greater the 'uniqueness', the lower the relevance or contribution of the variable in the factor model.</p>
 
       <p>To be honest, it's unusual to get such a neat solution in EFA. It's typically quite a bit more messy than this, and often interpreting the meaning of the factors is more challenging. It's not often that you have such a clearly delineated item pool. More often you will have a whole heap of observed variables that you think may be indicators of a few underlying latent factors, but you don't have such a strong sense of which variables are going to go where!</p>
 
-      <p>So, we seem to have a pretty good five factor solution, albeit accounting for a relatively low overall proportion of the observed variance. Let's assume we are happy with this solution and want to use our factors in further analysis. The straightforward option is to calculate an overall (average) score for each factor by adding together the score for each variable that loads substantively onto the factor and then dividing by the number of variables (in other words create a "mean score" for each person across the items for each scale). For each person in our data set that entails, for example for the Agreeableness factor, adding together <m>A1 + A2 + A3 + A4 + A5</m>, and then dividing by 5.<fn>Remembering to first reverse score some variables if necessary.</fn> In essence, the factor score we have calculated is based on equally weighted scores from each of the included variables/items. We can do this in jamovi in two steps:</p>
+      <p>So, we seem to have a pretty good five factor solution, albeit accounting for a relatively low overall proportion of the observed variance. Let's assume we are happy with this solution and want to use our factors in further analysis. The straightforward option is to calculate an overall (average) score for each factor by adding together the score for each variable that loads substantively onto the factor and then dividing by the number of variables (in other words create a "mean score" for each person across the items for each scale). For each person in our data set that entails, for example for the Agreeableness factor, adding together <m>A1 + A2 + A3 + A4 + A5</m>, and then dividing by 5.<fn>Remembering to first reverse score some variables if necessary.</fn> In essence, the factor score we have calculated is based on equally weighted scores from each of the included variables/items. We can do this in JASP in two steps:</p>
 
       <ul>
-        <li><p>Recode A1 into "A1R" by reverse scoring the values in the variable (i.e. <m>6 = 1</m>; <m>5 = 2</m>; <m>4 = 3</m>; <m>3 = 4</m>; <m>2 = 5</m>; <m>1 = 6</m>) using the jamovi transform variable command (see <xref ref="fig-fig15-7"/>).</p></li>
-        <li><p>Compute a new variable, called "Agreeableness", by calculating the mean of A1R, A2, A3, A4 and A5. Do this using the jamovi compute new variable command (see <xref ref="fig-fig15-8"/>).</p></li>
+        <li><p>Recode A1 into "A1R" by reverse scoring the values in the variable (i.e. <m>6 = 1</m>; <m>5 = 2</m>; <m>4 = 3</m>; <m>3 = 4</m>; <m>2 = 5</m>; <m>1 = 6</m>) using the JASP transform variable command (see <xref ref="fig-fig15-7"/>).</p></li>
+        <li><p>Compute a new variable, called "Agreeableness", by calculating the mean of A1R, A2, A3, A4 and A5. Do this using the JASP compute new variable command (see <xref ref="fig-fig15-8"/>).</p></li>
       </ul>
 
       <figure xml:id="fig-fig15-7">
-        <caption>Recode variable using the jamovi Transform command</caption>
+        <caption>Recode variable using the JASP Transform command</caption>
         <image source="images/fig15-7.png" width="97%">
-          <description>A jamovi screenshot that shows toolbar options, a transformation setup for variable recoding, and a data set table with several columns labeled A1R, A1, A2, A3, A4, and more, containing numerical data.</description>
+          <description>A JASP screenshot that shows toolbar options, a transformation setup for variable recoding, and a data set table with several columns labeled A1R, A1, A2, A3, A4, and more, containing numerical data.</description>
         </image>
       </figure>
 
       <figure xml:id="fig-fig15-8">
-        <caption>Compute new scale score variable using the jamovi Computed variable command</caption>
+        <caption>Compute new scale score variable using the JASP Computed variable command</caption>
         <image source="images/fig15-8.png" width="97%">
-          <description>A jamovi screenshot with the 'Data' tab open, showing various data columns including participant IDs, responses, and computed variable 'Agreeableness'. There are options to add, delete, and transform variables and data.</description>
+          <description>A JASP screenshot with the 'Data' tab open, showing various data columns including participant IDs, responses, and computed variable 'Agreeableness'. There are options to add, delete, and transform variables and data.</description>
         </image>
       </figure>
 
       <p>Another option is to create an <term>optimally-weighted</term> factor score index. To do this, save the factor scores to the data set, using the 'Save' -- 'Factor scores' checkbox. Once you have done this you will see that five new variables (columns) have been added to the data, one for each factor extracted. See <xref ref="fig-fig15-9"/> and <xref ref="fig-fig15-10"/>.</p>
 
       <figure xml:id="fig-fig15-9">
-        <caption>jamovi option for factor scores for the five factor solution, using the 'Bartlett' optimal weighting method</caption>
+        <caption>JASP option for factor scores for the five factor solution, using the 'Bartlett' optimal weighting method</caption>
         <image source="images/fig15-9.png" width="90%">
-          <description>A jamovi screenshot of the interface for conducting exploratory factor analysis. The left pane shows analysis options and settings, including factor extraction, rotation, and assumption checks. The right pane displays the results, including factor loadings and uniqueness values.</description>
+          <description>A JASP screenshot of the interface for conducting exploratory factor analysis. The left pane shows analysis options and settings, including factor extraction, rotation, and assumption checks. The right pane displays the results, including factor loadings and uniqueness values.</description>
         </image>
       </figure>
 
       <figure xml:id="fig-fig15-10">
         <caption>Data sheet view showing the five newly created factor score variables</caption>
         <image source="images/fig15-10.png" width="90%">
-          <description>A jamovi screenshot displays a personality questionnaire analysis with a table of score factors on the left and an exploratory factor analysis result on the right. The analysis includes various data points and factor loadings. The interface has tabs for Variables, Data, Analyses, and Edit.</description>
+          <description>A JASP screenshot displays a personality questionnaire analysis with a table of score factors on the left and an exploratory factor analysis result on the right. The analysis includes various data points and factor loadings. The interface has tabs for Variables, Data, Analyses, and Edit.</description>
         </image>
       </figure>
 
-      <p>Now you can go ahead and undertake further analyses, using either the mean score based factor scales (e.g., as in <xref ref="fig-fig15-8"/>) or using the optimally-weighted factor scores calculated by jamovi. Your choice! For example, one thing you might like to do is see whether there are any gender differences in each of our personality scales. We did this for the Agreeableness score that we calculated using the mean score approach, and although the <m>t</m>-test plot (<xref ref="fig-fig15-11"/>) showed that males were less agreeable than females, this was not a significant difference (Mann-Whitney <m>U = 5768</m>, <m>p = .075</m>).</p>
+      <p>Now you can go ahead and undertake further analyses, using either the mean score based factor scales (e.g., as in <xref ref="fig-fig15-8"/>) or using the optimally-weighted factor scores calculated by JASP. Your choice! For example, one thing you might like to do is see whether there are any gender differences in each of our personality scales. We did this for the Agreeableness score that we calculated using the mean score approach, and although the <m>t</m>-test plot (<xref ref="fig-fig15-11"/>) showed that males were less agreeable than females, this was not a significant difference (Mann-Whitney <m>U = 5768</m>, <m>p = .075</m>).</p>
 
       <figure xml:id="fig-fig15-11">
         <caption>Comparing differences in Agreeableness factor-based scores between males and females</caption>
@@ -330,7 +330,7 @@
     <subsection xml:id="subsec-writing-up-an-efa">
       <title>Writing up an EFA</title>
 
-      <p>Hopefully, so far we have given you some sense of EFA and how to undertake EFA in jamovi. So, once you have completed your EFA, how do you write it up? There is not a formal standard way to write up an EFA, and examples tend to vary by discipline and researcher. That said, there are some fairly standard pieces of information to include in your write-up:</p>
+      <p>Hopefully, so far we have given you some sense of EFA and how to undertake EFA in JASP. So, once you have completed your EFA, how do you write it up? There is not a formal standard way to write up an EFA, and examples tend to vary by discipline and researcher. That said, there are some fairly standard pieces of information to include in your write-up:</p>
 
       <ol>
         <li><p>What are the theoretical underpinnings for the area you are studying, and specifically for the constructs that you are interested in uncovering through EFA.</p></li>
@@ -357,7 +357,7 @@
 
     <p>PCA has been popular in Psychology for a number of reasons, and therefore it's worth mentioning, although nowadays EFA is just as easy to do given the power of desktop computers and can be less susceptible to bias than PCA, especially with a small number of factors and variables. Much of the procedure is similar to EFA, so although there are some conceptual differences, practically the steps are the same, and with large samples and a sufficient number of factors and variables, the results from PCA and EFA should be fairly similar.</p>
 
-    <p>To undertake PCA in jamovi, all you need to do is select 'Factor' -- 'Principal Component Analysis' from the main jamovi button bar to open the PCA analysis window. Then you can follow the same steps from the EFA in jamovi section above.</p>
+    <p>To undertake PCA in JASP, all you need to do is select 'Factor' -- 'Principal Component Analysis' from the main JASP button bar to open the PCA analysis window. Then you can follow the same steps from the EFA in JASP section above.</p>
   </section>
 
   <section xml:id="sec-cfa">
@@ -382,38 +382,38 @@
 
     <p>Without any correlated error terms, the model we are testing to see how well it fits with our observed data is just as specified in <xref ref="fig-fig15-12"/>. Only parameters that are included in the model are expected to be found in the data, so in CFA all other possible parameters (coefficients) are set to zero. So, if these other parameters are not zero (for example there may be a substantial loading from A1 onto the latent factor Extraversion in the observed data, but not in our model) then we may find a poor fit between our model and the observed data.</p>
 
-    <p>Right, let's take a look at how we set this CFA analysis up in jamovi.</p>
+    <p>Right, let's take a look at how we set this CFA analysis up in JASP.</p>
 
     <subsection xml:id="subsec-cfa-in-jamovi">
-      <title>CFA in jamovi</title>
+      <title>CFA in JASP</title>
 
-      <p>Open up the <em>bfi_sample2.csv</em> file, check that the 25 variables are coded as ordinal (or continuous; it won't make any difference for this analysis). To perform CFA in jamovi:</p>
+      <p>Open up the <em>bfi_sample2.csv</em> file, check that the 25 variables are coded as ordinal (or continuous; it won't make any difference for this analysis). To perform CFA in JASP:</p>
 
       <ul>
-        <li><p>Select 'Factor - Confirmatory Factor Analysis' from the main jamovi button bar to open the CFA analysis window (<xref ref="fig-fig15-13"/>).</p></li>
+        <li><p>Select 'Factor - Confirmatory Factor Analysis' from the main JASP button bar to open the CFA analysis window (<xref ref="fig-fig15-13"/>).</p></li>
         <li><p>Select the 5 A variables and transfer them into the 'Factors' box and give them the label "Agreeableness".</p></li>
         <li><p>Create a new Factor in the 'Factors' box and label it "Conscientiousness". Select the 5 C variables and transfer them into the 'Factors' box under the "Conscientiousness" label.</p></li>
         <li><p>Create another new Factor in the 'Factors' box and label it "Extraversion". Select the 5 E variables and transfer them into the 'Factors' box under the "Extraversion" label.</p></li>
         <li><p>Create another new Factor in the 'Factors' box and label it "Neuroticism". Select the 5 "N" variables and transfer them into the 'Factors' box under the "Neuroticism" label.</p></li>
         <li><p>Create another new Factor in the 'Factors' box and label it "Openness". Select the 5 O variables and transfer them into the 'Factors' box under the "Openness" label.</p></li>
-        <li><p>Check other appropriate options, the defaults are ok for this initial work through, though you might want to check the "Path diagram" option under 'Plots' to see jamovi produce a (fairly) similar diagram to our <xref ref="fig-fig15-12"/>.</p></li>
+        <li><p>Check other appropriate options, the defaults are ok for this initial work through, though you might want to check the "Path diagram" option under 'Plots' to see JASP produce a (fairly) similar diagram to our <xref ref="fig-fig15-12"/>.</p></li>
       </ul>
 
-      <p>Once we have set up the analysis we can turn our attention to the jamovi results window and see what's what. The first thing to look at is <term>model fit</term> (<xref ref="fig-fig15-14"/>) as this tells us how good a fit our model is to the observed data. NB in our model only the pre-specified covariances are estimated, including the factor correlations by default. Everything else is set to zero.</p>
+      <p>Once we have set up the analysis we can turn our attention to the JASP results window and see what's what. The first thing to look at is <term>model fit</term> (<xref ref="fig-fig15-14"/>) as this tells us how good a fit our model is to the observed data. NB in our model only the pre-specified covariances are estimated, including the factor correlations by default. Everything else is set to zero.</p>
 
       <p>There are several ways of assessing model fit. The first is a chi-square statistic that, if small, indicates that the model is a good fit to the data. However, the chi-squared statistic used for assessing model fit is pretty sensitive to sample size, meaning that with a large sample a good enough fit between the model and the data almost always produces a large and significant (<m>p &lt; .05</m>) chi-square value.</p>
 
-      <p>So, we need some other ways of assessing model fit. In jamovi several are provided by default. These are the Comparative Fit Index (CFI), the Tucker Lewis Index (TLI) and the Root Mean Square Error of Approximation (RMSEA) together with the 90% confidence interval for the RMSEA. Some useful rules of thumb are that a satisfactory fit is indicated by CFI &gt; 0.9, TLI &gt; 0.9, and RMSEA of about 0.05 to 0.08. A good fit is CFI &gt; 0.95, TLI &gt; 0.95, and RMSEA and upper CI for RMSEA &lt; 0.05.</p>
+      <p>So, we need some other ways of assessing model fit. In JASP several are provided by default. These are the Comparative Fit Index (CFI), the Tucker Lewis Index (TLI) and the Root Mean Square Error of Approximation (RMSEA) together with the 90% confidence interval for the RMSEA. Some useful rules of thumb are that a satisfactory fit is indicated by CFI &gt; 0.9, TLI &gt; 0.9, and RMSEA of about 0.05 to 0.08. A good fit is CFI &gt; 0.95, TLI &gt; 0.95, and RMSEA and upper CI for RMSEA &lt; 0.05.</p>
 
       <figure xml:id="fig-fig15-13">
-        <caption>The jamovi CFA analysis window</caption>
+        <caption>The JASP CFA analysis window</caption>
         <image source="images/fig15-13.png" width="90%">
-          <description>A jamovi screenshot of the interface for Confirmatory Factor Analysis. Various options and statistics are shown, including factor covariances, residual covariances, and modification indices. The right pane lists factors and items. A path diagram option is available.</description>
+          <description>A JASP screenshot of the interface for Confirmatory Factor Analysis. Various options and statistics are shown, including factor covariances, residual covariances, and modification indices. The right pane lists factors and items. A path diagram option is available.</description>
         </image>
       </figure>
 
       <figure xml:id="fig-fig15-14">
-        <caption>The jamovi CFA Model Fit results for our CFA model</caption>
+        <caption>The JASP CFA Model Fit results for our CFA model</caption>
         <image source="images/fig15-14.png" width="80%">
           <description>A statistical table is shown with headings "Model Fit" and "Test for Exact Fit." It displays a chi-square value of 739.73, degrees of freedom (df) of 265, and p-value of less than 0.00001. Fit measures include CFI=0.76, TLI=0.73, RMSEA=0.08, RMSEA 90% CI Lower=0.08, Upper=0.09.</description>
         </image>
@@ -425,7 +425,7 @@
 
       <p>Let's go on to look at the factor loadings and the factor covariance estimates, shown in <xref ref="fig-fig15-15"/> and <xref ref="fig-fig15-16"/>. The <m>Z</m>-statistic and <m>p</m>-value for each of these parameters indicates they make a reasonable contribution to the model (i.e. they are not zero) so there doesn't appear to be any reason to remove any of the specified variable-factor paths, or factor-factor correlations from the model. Often the standardized estimates are easier to interpret, and these can be specified under the 'Estimates' option. These tables can usefully be incorporated into a written report or scientific article.</p>
 
-      <p>How could we improve the model? One option is to go back a few stages and think again about the items / measures we are using and how they might be improved or changed. Another option is to make some post hoc tweaks to the model to improve the fit. One way of doing this is to use "modification indices" (<xref ref="fig-fig15-17"/>), specified as an 'Additional output' option in jamovi.</p>
+      <p>How could we improve the model? One option is to go back a few stages and think again about the items / measures we are using and how they might be improved or changed. Another option is to make some post hoc tweaks to the model to improve the fit. One way of doing this is to use "modification indices" (<xref ref="fig-fig15-17"/>), specified as an 'Additional output' option in JASP.</p>
 
       <p>What we are looking for is the highest modification index (MI) value. We would then judge whether it makes sense to add that additional term into the model, using a post hoc rationalisation. For example, we can see in <xref ref="fig-fig15-17"/> that the largest MI for the factor loadings that are not already in the model is a value of 28.786 for the loading of N4 ("Often feel blue") onto the latent factor Extraversion. This indicates that if we add this path into the model then the chi-square value will reduce by around the same amount.</p>
 
@@ -434,34 +434,34 @@
       <p>If you do find yourself adding new parameters to a model using the MI values then always re-check the MI tables after each new addition, as the MIs are refreshed each time.</p>
 
       <figure xml:id="fig-fig15-15">
-        <caption>The jamovi CFA Factor Loadings table for our CFA model</caption>
+        <caption>The JASP CFA Factor Loadings table for our CFA model</caption>
         <image source="images/fig15-15.png" width="95%">
-          <description>A jamovi table shows confirmatory factor analysis results for five personality traits: Agreeableness, Conscientiousness, Extraversion, Neuroticism, Openness. It includes columns for Factor, Indicator, Estimate, SE, Z, p, and Stand. Estimate. Indicators are labeled from A1 to O5.</description>
+          <description>A JASP table shows confirmatory factor analysis results for five personality traits: Agreeableness, Conscientiousness, Extraversion, Neuroticism, Openness. It includes columns for Factor, Indicator, Estimate, SE, Z, p, and Stand. Estimate. Indicators are labeled from A1 to O5.</description>
         </image>
       </figure>
 
       <figure xml:id="fig-fig15-16">
-        <caption>The jamovi CFA Factor Covariances table for our CFA model</caption>
+        <caption>The JASP CFA Factor Covariances table for our CFA model</caption>
         <image source="images/fig15-16.png" width="90%">
-          <description>A jamovi table titled "Factor Estimates" showing factor covariances between five traits: Agreeableness, Conscientiousness, Extraversion, Neuroticism, and Openness. Columns display Estimate, SE, Z, p, and Standard Estimate. Some estimates are fixed, indicated by a superscript 'a'.</description>
+          <description>A JASP table titled "Factor Estimates" showing factor covariances between five traits: Agreeableness, Conscientiousness, Extraversion, Neuroticism, and Openness. Columns display Estimate, SE, Z, p, and Standard Estimate. Some estimates are fixed, indicated by a superscript 'a'.</description>
         </image>
       </figure>
 
       <figure xml:id="fig-fig15-17">
-        <caption>The jamovi CFA Factor Loadings Modification Indices</caption>
+        <caption>The JASP CFA Factor Loadings Modification Indices</caption>
         <image source="images/fig15-17.png" width="80%">
-          <description>A jamovi results table titled "Factor Loadings Modification Indices" with rows labeled A1 to O5 and columns labeled Agreeableness, Conscientiousness, Extraversion, Neuroticism, and Openness. Various numerical values are filled in the cells, with some in red to highlight key indices.</description>
+          <description>A JASP results table titled "Factor Loadings Modification Indices" with rows labeled A1 to O5 and columns labeled Agreeableness, Conscientiousness, Extraversion, Neuroticism, and Openness. Various numerical values are filled in the cells, with some in red to highlight key indices.</description>
         </image>
       </figure>
 
-      <p>There is also a Table of Residual Covariance Modification Indices produced by jamovi (<xref ref="fig-fig15-18"/>). In other words, a table showing which correlated errors, if added to the model, would improve the model fit the most.</p>
+      <p>There is also a Table of Residual Covariance Modification Indices produced by JASP (<xref ref="fig-fig15-18"/>). In other words, a table showing which correlated errors, if added to the model, would improve the model fit the most.</p>
 
       <p>It's a good idea to look across both MI tables at the same time, spot the largest MI, think about whether the addition of the suggested parameter can be reasonably justified and, if it can, add it to the model. And then you can start again looking for the biggest MI in the re-calculated results.</p>
 
       <figure xml:id="fig-fig15-18">
-        <caption>Residual Covariance Modification Indices produced by jamovi</caption>
+        <caption>Residual Covariance Modification Indices produced by JASP</caption>
         <image source="images/fig15-18.png" width="100%">
-          <description>A jamovi results table shown with a vertical sequence of numbers organized into multiple columns and rows. Numbers are primarily black, with several numbers in red scattered throughout. A sideways text on the left reads "Residual Covariances - Modification Indices".</description>
+          <description>A JASP results table shown with a vertical sequence of numbers organized into multiple columns and rows. Numbers are primarily black, with several numbers in red scattered throughout. A sideways text on the left reads "Residual Covariances - Modification Indices".</description>
         </image>
       </figure>
 
@@ -591,39 +591,39 @@
 
     <p>For example, the errors associated with INT1, STAB1 and GLOB1 should be correlated with each other to reflect the distinct and shared methodological variance of Q1a, Q1b and Q1c. Looking at <xref ref="tbl-tab15-2"/>, this means that as well as the latent factors represented by the columns, we will have correlated measurement errors for the variables in each row of the Table.</p>
 
-    <p>Whilst a basic CFA model like the one shown in <xref ref="fig-fig15-20"/> could be tested against our observed data, we have in fact come up with a more sophisticated model, as shown in the diagram in <xref ref="fig-fig15-21"/>. This more sophisticated CFA model is known as a <term>Multi-Trait Multi-Method (MTMM)</term> model, and it is the one we will test in jamovi.</p>
+    <p>Whilst a basic CFA model like the one shown in <xref ref="fig-fig15-20"/> could be tested against our observed data, we have in fact come up with a more sophisticated model, as shown in the diagram in <xref ref="fig-fig15-21"/>. This more sophisticated CFA model is known as a <term>Multi-Trait Multi-Method (MTMM)</term> model, and it is the one we will test in JASP.</p>
 
     <subsection xml:id="subsec-mtmm-cfa-in-jamovi">
-      <title>MTMM CFA in jamovi</title>
+      <title>MTMM CFA in JASP</title>
 
       <p>Open up the <em>ASQ.csv</em> file and check that the 18 variables (six "Internality", six "Stability" and six "Globality" variables) are specified as continuous variables.</p>
 
-      <p>To perform MTMM CFA in jamovi:</p>
+      <p>To perform MTMM CFA in JASP:</p>
 
       <ul>
-        <li><p>Select 'Factor' -- 'Confirmatory Factor Analysis' from the main jamovi button bar to open the CFA analysis window (<xref ref="fig-fig15-22"/>).</p></li>
+        <li><p>Select 'Factor' -- 'Confirmatory Factor Analysis' from the main JASP button bar to open the CFA analysis window (<xref ref="fig-fig15-22"/>).</p></li>
         <li><p>Select the 6 INT variables and transfer them into the 'Factors' box and give them the label "Internality".</p></li>
         <li><p>Create a new Factor in the 'Factors' box and label it "Stability". Select the 6 STAB variables and transfer them into the 'Factors' box under the "Stability" label.</p></li>
         <li><p>Create another new Factor in the 'Factors' box and label it "Globality". Select the 6 GLOB variables and transfer them into the 'Factors' box under the "Globality" label.</p></li>
         <li><p>Open up the Residual Covariances options, and for each of our pre-specified correlations move the associated variables across into the 'Residual Covariances' box on the right. For example, highlight both INT1 and STAB1 and then click the arrow to move these across. Now do the same for INT1 and GLOB1, for STAB1 and GLOB1, for INT2 and STAB2, for INT2 and GLOB2, for STAB2 and GLOB2, for INT3 and STAB3, and so on.</p></li>
-        <li><p>Check other appropriate options. The defaults are ok for this initial work through, though you might want to check the "Path diagram" option under 'Plots' to see jamovi produce a (fairly) similar diagram to our <xref ref="fig-fig15-21"/>, and including all the error term correlations that we have added above.</p></li>
+        <li><p>Check other appropriate options. The defaults are ok for this initial work through, though you might want to check the "Path diagram" option under 'Plots' to see JASP produce a (fairly) similar diagram to our <xref ref="fig-fig15-21"/>, and including all the error term correlations that we have added above.</p></li>
       </ul>
 
       <figure xml:id="fig-fig15-22">
-        <caption>The jamovi CFA analysis window</caption>
+        <caption>The JASP CFA analysis window</caption>
         <image source="images/fig15-22.png" width="90%">
-          <description>A jamovi screenshot showing a Confirmatory Factor Analysis setup. The screen includes options to select variables, factors, and residual covariances for the analysis. Menus for adding new factors and configuring analysis options are also visible.</description>
+          <description>A JASP screenshot showing a Confirmatory Factor Analysis setup. The screen includes options to select variables, factors, and residual covariances for the analysis. Menus for adding new factors and configuring analysis options are also visible.</description>
         </image>
       </figure>
 
-      <p>Once we have set up the analysis we can turn our attention to the jamovi results window and see what's what. The first thing to look at is "Model fit" as this tells us how good a fit our model is to the observed data (<xref ref="fig-fig15-23"/>). NB in our model only the pre-specified covariances are estimated, everything else is set to zero, so model fit is testing both whether the pre-specified "free" parameters are not zero, and conversely whether the other relationships in the data -- the ones we have not specified in the model -- can be held at zero.</p>
+      <p>Once we have set up the analysis we can turn our attention to the JASP results window and see what's what. The first thing to look at is "Model fit" as this tells us how good a fit our model is to the observed data (<xref ref="fig-fig15-23"/>). NB in our model only the pre-specified covariances are estimated, everything else is set to zero, so model fit is testing both whether the pre-specified "free" parameters are not zero, and conversely whether the other relationships in the data -- the ones we have not specified in the model -- can be held at zero.</p>
 
       <p>Looking at <xref ref="fig-fig15-23"/> we can see that the chi-square value is highly significant, which is not a surprise given the large sample size (<m>N = 2748</m>). The CFI is <m>0.98</m> and the TLI is also <m>0.98</m>, indicating a very good fit. The RMSEA is <m>0.02</m> with a <m>90\%</m> confidence interval from <m>0.02</m> to <m>0.02</m> -- pretty tight!</p>
 
       <figure xml:id="fig-fig15-23">
-        <caption>The jamovi CFA Model Fit results for our CFA MTMM model</caption>
+        <caption>The JASP CFA Model Fit results for our CFA MTMM model</caption>
         <image source="images/fig15-23.png" width="70%">
-          <description>A jamovi table titled "Model Fit" displays "Test for Exact Fit" with χ² = 243.97, df = 114, p &lt; .00001. Another section shows "Fit Measures" with CFI = 0.98, TLI = 0.98, RMSEA = 0.02, and RMSEA 90% CI: Lower = 0.02, Upper = 0.02.</description>
+          <description>A JASP table titled "Model Fit" displays "Test for Exact Fit" with χ² = 243.97, df = 114, p &lt; .00001. Another section shows "Fit Measures" with CFI = 0.98, TLI = 0.98, RMSEA = 0.02, and RMSEA 90% CI: Lower = 0.02, Upper = 0.02.</description>
         </image>
       </figure>
 
@@ -632,9 +632,9 @@
       <p>We can now go on to look at the factor loadings and the factor covariance estimates, as in <xref ref="fig-fig15-24"/>. Often the standardized estimates are easier to interpret, and these can be specified under the 'Estimates' option. These tables can usefully be incorporated into a written report or scientific article.</p>
 
       <figure xml:id="fig-fig15-24">
-        <caption>The jamovi CFA Factor Loadings and Covariances tables for our CFA MTMM model</caption>
+        <caption>The JASP CFA Factor Loadings and Covariances tables for our CFA MTMM model</caption>
         <image source="images/fig15-24.png" width="95%">
-          <description>A jamovi table from a confirmatory factor analysis shows factor loadings and estimates. It includes columns for factors, indicators, estimates, standard errors (SE), z-values, p-values, and standardized estimates. Factors listed are INTERNALITY, STABILITY, and GLOBALITY.</description>
+          <description>A JASP table from a confirmatory factor analysis shows factor loadings and estimates. It includes columns for factors, indicators, estimates, standard errors (SE), z-values, p-values, and standardized estimates. Factors listed are INTERNALITY, STABILITY, and GLOBALITY.</description>
         </image>
       </figure>
 
@@ -657,37 +657,37 @@
 
     <p>Further, another feature of <m>\alpha</m> is that it tends to be sample specific: it is not a characteristic of the scale, but rather a characteristic of the sample in which the scale has been used. A biased, unrepresentative, or small sample could produce a very different <m>\alpha</m> coefficient than a large, representative sample. <m>\alpha</m> can even vary from large sample to large sample. Nevertheless, despite these limitations, Cronbach's <m>\alpha</m> has been popular in Psychology for estimating internal consistency reliability. It's pretty easy to calculate, understand and interpret, and therefore it can be a useful initial check on scale performance when you administer a scale with a different sample, from a different setting or population, for example.</p>
 
-    <p>An alternative is <term>McDonald's omega</term> (<m>\omega</m>), and jamovi also provides this statistic. Whereas <m>\alpha</m> makes the following assumptions: (a) no residual correlations, (b) items have identical loadings, and (c) the scale is unidimensional, <m>\omega</m> does not and is therefore a more robust reliability statistic. If these assumptions are not violated then <m>\alpha</m> and <m>\omega</m> will be similar, but if they are then <m>\omega</m> is to be preferred.</p>
+    <p>An alternative is <term>McDonald's omega</term> (<m>\omega</m>), and JASP also provides this statistic. Whereas <m>\alpha</m> makes the following assumptions: (a) no residual correlations, (b) items have identical loadings, and (c) the scale is unidimensional, <m>\omega</m> does not and is therefore a more robust reliability statistic. If these assumptions are not violated then <m>\alpha</m> and <m>\omega</m> will be similar, but if they are then <m>\omega</m> is to be preferred.</p>
 
     <p>Sometimes a threshold for <m>\alpha</m> or <m>\omega</m> is provided, suggesting a "good enough" value. This might be something like <m>\alpha</m>s of <m>0.70</m> or <m>0.80</m> representing "acceptable" and "good" reliability, respectively. However, this does depend on what exactly the scale is supposed to be measuring, so thresholds like this should be used cautiously. It could be better to simply state that an <m>\alpha</m> or <m>\omega</m> of <m>0.70</m> is associated with 30% error variance in a scale, and an <m>\alpha</m> or <m>\omega</m> of <m>0.80</m> is associated with 20%.</p>
 
     <p>Can <m>\alpha</m> be too high? Probably: if you are getting an <m>\alpha</m> coefficient above <m>0.95</m> then this indicates high inter-correlations between the items and that there might be too much overly redundant specificity in the measurement, with a risk that the construct being measured is perhaps overly narrow.</p>
 
     <subsection xml:id="subsec-reliability-analysis-in-jamovi">
-      <title>Reliability analysis in jamovi</title>
+      <title>Reliability analysis in JASP</title>
 
-      <p>We have a third sample of personality data to use to undertake reliability analysis: in the <em>bfi_sample3.csv</em> file. Once again, check that the 25 personality item variables are coded as continuous. To perform reliability analysis in jamovi:</p>
+      <p>We have a third sample of personality data to use to undertake reliability analysis: in the <em>bfi_sample3.csv</em> file. Once again, check that the 25 personality item variables are coded as continuous. To perform reliability analysis in JASP:</p>
 
       <ul>
-        <li><p>Select 'Factor' -- 'Reliability Analysis' from the main jamovi button bar to open the reliability analysis window (<xref ref="fig-fig15-25"/>).</p></li>
+        <li><p>Select 'Factor' -- 'Reliability Analysis' from the main JASP button bar to open the reliability analysis window (<xref ref="fig-fig15-25"/>).</p></li>
         <li><p>Select the 5 A variables and transfer them into the 'Items' box.</p></li>
         <li><p>Under the "Reverse Scaled Items" option, select variable A1 in the "Normal Scaled Items" box and move it across to the "Reverse Scaled Items" box.</p></li>
         <li><p>Check other appropriate options, as in <xref ref="fig-fig15-25"/>.</p></li>
       </ul>
 
       <figure xml:id="fig-fig15-25">
-        <caption>The jamovi 'Reliability Analysis' window</caption>
+        <caption>The JASP 'Reliability Analysis' window</caption>
         <image source="images/fig15-25.png" width="90%">
-          <description>A jamovi screenshot of the interface for reliability analysis is displayed. The interface shows options for choosing and analyzing items with various statistics, including Cronbach's α, McDonald's ω, mean, and standard deviation. There are settings for normal and reverse-scaled items.</description>
+          <description>A JASP screenshot of the interface for reliability analysis is displayed. The interface shows options for choosing and analyzing items with various statistics, including Cronbach's α, McDonald's ω, mean, and standard deviation. There are settings for normal and reverse-scaled items.</description>
         </image>
       </figure>
 
-      <p>Once done, look across at the jamovi results window. You should see something like <xref ref="fig-fig15-26"/>. This tells us that the Cronbach's <m>\alpha</m> coefficient for the Agreeableness scale is 0.72. This means that just under 30% of the Agreeableness scale score is error variance. McDonald's <m>\omega</m> is also given, and this is 0.74, not much different from <m>\alpha</m>.</p>
+      <p>Once done, look across at the JASP results window. You should see something like <xref ref="fig-fig15-26"/>. This tells us that the Cronbach's <m>\alpha</m> coefficient for the Agreeableness scale is 0.72. This means that just under 30% of the Agreeableness scale score is error variance. McDonald's <m>\omega</m> is also given, and this is 0.74, not much different from <m>\alpha</m>.</p>
 
       <figure xml:id="fig-fig15-26">
-        <caption>The jamovi Reliability Analysis results for the Agreeableness factor</caption>
+        <caption>The JASP Reliability Analysis results for the Agreeableness factor</caption>
         <image source="images/fig15-26.png" width="95%">
-          <description>A jamovi table showing the results of a reliability analysis. The first section shows overall scale reliability statistics with mean, SD, Cronbach's α, and McDonald's ω values. The second section presents item reliability statistics for five items, including their individual reliability if dropped.</description>
+          <description>A JASP table showing the results of a reliability analysis. The first section shows overall scale reliability statistics with mean, SD, Cronbach's α, and McDonald's ω values. The second section presents item reliability statistics for five items, including their individual reliability if dropped.</description>
         </image>
       </figure>
 

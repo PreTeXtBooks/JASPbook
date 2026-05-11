@@ -51,7 +51,7 @@
     <subsection xml:id="subsec-likelihoods-theories-about-the-data">
       <title>Likelihoods: theories about the data</title>
 
-      <p>To solve the reasoning problem you need a theory about my behaviour. When does Danielle carry an umbrella? You might guess that I'm not a complete idiot,<fn>It's a leap of faith, I know, but let's run with it okay?</fn> and I try to carry umbrellas only on rainy days. On the other hand, you also know that I have young kids, and you wouldn't be all that surprised to know that I'm pretty forgetful about this sort of thing. Let's suppose that on rainy days I remember my umbrella about 30% of the time (I really am awful at this). But let's say that on dry days I'm only about 5% likely to be carrying an umbrella. So you might write this out as in <xref ref="tbl-tab16-2"/>.</p>
+      <p>To solve the reasoning problem you need a theory about my behaviour. When does Dan carry an umbrella? You might guess that I'm not a complete idiot,<fn>It's a leap of faith, I know, but let's run with it okay?</fn> and I try to carry umbrellas only on rainy days. On the other hand, you also know that I have young kids, and you wouldn't be all that surprised to know that I'm pretty forgetful about this sort of thing. Let's suppose that on rainy days I remember my umbrella about 30% of the time (I really am awful at this). But let's say that on dry days I'm only about 5% likely to be carrying an umbrella. So you might write this out as in <xref ref="tbl-tab16-2"/>.</p>
 
       <table xml:id="tbl-tab16-2">
         <title>How likely am I to be carrying an umbrella on rainy and dry days</title>
@@ -219,7 +219,7 @@
     <subsection xml:id="subsec-updating-beliefs-using-bayes-rule">
       <title>Updating beliefs using Bayes' rule</title>
 
-      <p>The table we laid out in the last section is a very powerful tool for solving the rainy day problem, because it considers all four logical possibilities and states exactly how confident you are in each of them before being given any data. It's now time to consider what happens to our beliefs when we are actually given the data. In the rainy day problem, you are told that I really am carrying an umbrella. This is something of a surprising event. According to our table, the probability of me carrying an umbrella is only 8.75%. But that makes sense, right? A woman carrying an umbrella on a summer day in a hot dry city is pretty unusual, and so you really weren't expecting that. Nevertheless, the data tells you that it is true. No matter how unlikely you thought it was, you must now adjust your beliefs to accommodate the fact that you now <em>know</em> that I have an umbrella.<fn>If we were being a bit more sophisticated, we could extend the example to accommodate the possibility that I'm lying about the umbrella. But let's keep things simple, shall we?</fn> To reflect this new knowledge, our <em>revised</em> table must have the following numbers. (see <xref ref="tbl-tab16-7"/>).</p>
+      <p>The table we laid out in the last section is a very powerful tool for solving the rainy day problem, because it considers all four logical possibilities and states exactly how confident you are in each of them before being given any data. It's now time to consider what happens to our beliefs when we are actually given the data. In the rainy day problem, you are told that I really am carrying an umbrella. This is something of a surprising event. According to our table, the probability of me carrying an umbrella is only 8.75%. But that makes sense, right? A guy carrying an umbrella on a summer day in a hot dry city is pretty unusual, and so you really weren't expecting that. Nevertheless, the data tells you that it is true. No matter how unlikely you thought it was, you must now adjust your beliefs to accommodate the fact that you now <em>know</em> that I have an umbrella.<fn>If we were being a bit more sophisticated, we could extend the example to accommodate the possibility that I'm lying about the umbrella. But let's keep things simple, shall we?</fn> To reflect this new knowledge, our <em>revised</em> table must have the following numbers. (see <xref ref="tbl-tab16-7"/>).</p>
 
       <table xml:id="tbl-tab16-7">
         <title>Revising beliefs given new data about umbrella carrying</title>
@@ -557,12 +557,12 @@
     <subsection xml:id="subsec-independent-samples-t-test-bayesian">
       <title>Independent samples <m>t</m>-test</title>
 
-      <p>The most common type of <m>t</m>-test is the independent samples <m>t</m>-test, and it arises when you have data as in the <em>harpo.csv</em> data set that we used in <xref ref="ch-comparing-two-means"/> on <m>t</m>-tests. In this data set, we have two groups of students, those who received lessons from Anastasia and those who took their classes with Bernadette. The question we want to answer is whether there's any difference in the grades received by these two groups of students. Back in <xref ref="ch-comparing-two-means"/> I suggested you could analyse this kind of data using the Independent Samples <m>t</m>-test in jamovi, which gave us the results in <xref ref="fig-fig16-2"/>. As we obtain a <m>p</m>-value less than <m>0.05</m>, we reject the null hypothesis.</p>
+      <p>The most common type of <m>t</m>-test is the independent samples <m>t</m>-test, and it arises when you have data as in the <em>harpo.csv</em> data set that we used in <xref ref="ch-comparing-two-means"/> on <m>t</m>-tests. In this data set, we have two groups of students, those who received lessons from Anastasia and those who took their classes with Bernadette. The question we want to answer is whether there's any difference in the grades received by these two groups of students. Back in <xref ref="ch-comparing-two-means"/> I suggested you could analyse this kind of data using the Independent Samples <m>t</m>-test in JASP, which gave us the results in <xref ref="fig-fig16-2"/>. As we obtain a <m>p</m>-value less than <m>0.05</m>, we reject the null hypothesis.</p>
 
       <figure xml:id="fig-fig16-2">
-        <caption>Independent samples <m>t</m>-test result in jamovi</caption>
+        <caption>Independent samples <m>t</m>-test result in JASP</caption>
         <image source="images/fig11-12.png" width="90%">
-          <description>A jamovi screenshot displaying a data set with student grades and a descriptive statistics summary. The data set table lists student IDs and their grades for two tests. The results panel shows descriptive statistics including N, mean, median, standard deviation, minimum, and maximum values.</description>
+          <description>A JASP screenshot displaying a data set with student grades and a descriptive statistics summary. The data set table lists student IDs and their grades for two tests. The results panel shows descriptive statistics including N, mean, median, standard deviation, minimum, and maximum values.</description>
         </image>
       </figure>
 
@@ -571,7 +571,7 @@
       <figure xml:id="fig-fig16-3">
         <caption>Bayes factor analysis alongside independent samples <m>t</m>-test</caption>
         <image source="images/fig16-3.png" width="90%">
-          <description>A jamovi table titled "Independent Samples T-test" shows statistical comparison data for three methods: Student's t, Bayes factor, and Welch's t. Columns include "Statistic," "df," "p," "Mean difference," "SE difference," and "Effect Size".</description>
+          <description>A JASP table titled "Independent Samples T-test" shows statistical comparison data for three methods: Student's t, Bayes factor, and Welch's t. Columns include "Statistic," "df," "p," "Mean difference," "SE difference," and "Effect Size".</description>
         </image>
       </figure>
 
@@ -581,12 +581,12 @@
     <subsection xml:id="subsec-paired-samples-t-test-bayesian">
       <title>Paired samples <m>t</m>-test</title>
 
-      <p>Back in <xref ref="sec-paired-samples-t-test"/> I discussed the <em>chico.csv</em> data set in which student grades were measured on two tests, and we were interested in finding out whether grades went up from test 1 to test 2. Because every student did both tests, the tool we used to analyse the data was a paired samples <m>t</m>-test. <xref ref="fig-fig16-4"/> shows the jamovi results table for the conventional paired <m>t</m>-test alongside the Bayes factor analysis. At this point, I hope you can read this output without any difficulty. The data provide evidence of about 6000:1 in favour of the alternative. We could probably reject the null with some confidence!</p>
+      <p>Back in <xref ref="sec-paired-samples-t-test"/> I discussed the <em>chico.csv</em> data set in which student grades were measured on two tests, and we were interested in finding out whether grades went up from test 1 to test 2. Because every student did both tests, the tool we used to analyse the data was a paired samples <m>t</m>-test. <xref ref="fig-fig16-4"/> shows the JASP results table for the conventional paired <m>t</m>-test alongside the Bayes factor analysis. At this point, I hope you can read this output without any difficulty. The data provide evidence of about 6000:1 in favour of the alternative. We could probably reject the null with some confidence!</p>
 
       <figure xml:id="fig-fig16-4">
-        <caption>Paired samples <m>t</m>-test and Bayes factor result in jamovi</caption>
+        <caption>Paired samples <m>t</m>-test and Bayes factor result in JASP</caption>
         <image source="images/fig16-4.png" width="90%">
-          <description>A jamovi table showing results of a Paired Samples T-Test. It includes the test names, statistics (6.48 for Student's t, 5993.58 for Bayes factor), degrees of freedom (19), p-value (&lt;0.0001), mean difference (1.40), standard error difference (0.22), confidence interval (0.95 to 1.86), and effect size (1.45).</description>
+          <description>A JASP table showing results of a Paired Samples T-Test. It includes the test names, statistics (6.48 for Student's t, 5993.58 for Bayes factor), degrees of freedom (19), p-value (&lt;0.0001), mean difference (1.40), standard error difference (0.22), confidence interval (0.95 to 1.86), and effect size (1.45).</description>
         </image>
       </figure>
     </subsection>
