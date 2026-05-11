@@ -220,7 +220,7 @@
         </image>
       </figure>
 
-      <p>This output is pretty simple to read too. The first row of the table reports a between-group sum of squares (<m>SS</m>) value associated with the drug factor, along with a corresponding between-group <m>df</m> value. It also calculates a mean square value (<m>MS</m>), an <m>F</m>-statistic and a <m>p</m>-value. There are also rows corresponding to the therapy factor and the residuals (i.e., the within groups variation).</p>
+      <p>This output is pretty simple to read too. The first row of the table reports a between-group sum of squares (<m>SS</m>) value associated with the drug factor, along with a corresponding between-group <m>df</m> value. It also calculates a mean square value (<m>MS</m>), an <m>F</m>-statistic and a <m>p</m>-value. Because we have removed the interaction component from this model, the remaining rows correspond to the therapy factor and the residuals (i.e., the within groups variation).</p>
 
       <p>Not only are all of the individual quantities pretty familiar, the relationships between these different quantities have remained unchanged, just like we saw with the original one-way ANOVA. Note that the mean square value is calculated by dividing <m>SS</m> by the corresponding <m>df</m>. That is, it's still true that
       <me>MS=\frac{SS}{df}</me>
@@ -771,7 +771,7 @@
     <subsection xml:id="subsec-equivalence-anova-regression-nonbinary">
       <title>The equivalence between ANOVA and regression for non-binary factors</title>
 
-      <p>Now we have two different versions of the same data set. Our original data in which the drug variable from the <em>clinicaltrial.csv</em> file is expressed as a single three-level factor, and the expanded data <em>clinicaltrial2.omv</em> in which it is expanded into two binary contrasts. Once again, the thing that we want to demonstrate is that our original <m>3 \times 2</m> factorial ANOVA is equivalent to a regression model applied to the contrast variables. Let's start by re-running the ANOVA, with results shown in <xref ref="fig-fig14-20"/>.</p>
+      <p>Now we have two different versions of the same data set. Our original data in which the drug variable from the <em>clinicaltrial.csv</em> file is expressed as a single three-level factor, and the expanded data <em>clinicaltrial2.jasp</em> in which it is expanded into two binary contrasts. Once again, the thing that we want to demonstrate is that our original <m>3 \times 2</m> factorial ANOVA is equivalent to a regression model applied to the contrast variables. Let's start by re-running the ANOVA, with results shown in <xref ref="fig-fig14-20"/>.</p>
 
       <figure xml:id="fig-fig14-20">
         <caption>JASP ANOVA results, without interaction component</caption>
