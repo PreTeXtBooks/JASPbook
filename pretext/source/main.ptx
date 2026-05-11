@@ -13,8 +13,8 @@
   <!-- to some short (non-spaced) description of your book         -->
   <book xml:id="learning-stats-with-jamovi">
     <!-- The book needs a title and can have a subtitle  -->
-    <title>Learning Statistics with jamovi</title>
-    <subtitle>A Tutorial for Beginners in Statistical Analysis</subtitle>
+    <title>Learning Statistics with JASP</title>
+    <subtitle>A Tutorial for Psychology Students and Other Beginners</subtitle>
 
     <!-- Now we include files containing each main division.       -->
 
@@ -33,9 +33,9 @@
       <xi:include href="./ch02-research-design.ptx" />
     </part>
 
-    <!-- Part II: An introduction to jamovi -->
+    <!-- Part II: An introduction to JASP -->
     <part xml:id="part-ii-introduction-to-jamovi">
-      <title>An introduction to jamovi</title>
+      <title>An introduction to JASP</title>
 
       <!-- Chapter 3: Getting started with jamovi -->
       <xi:include href="./ch03-getting-started-jamovi.ptx" />

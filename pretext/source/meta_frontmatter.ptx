@@ -6,21 +6,21 @@
 <frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="meta_frontmatter">
   <titlepage>
     <author>
-      <personname>Danielle Navarro and David Foxcroft</personname>
+      <personname>Danielle Navarro, David Foxcroft, and Thomas J. Faulkenberry</personname>
     </author>
-    <date><today/></date>
+    <date>May 21, 2025</date>
   </titlepage>
 
   <colophon>
 
     <website>
-      <name><c>learnstatswithjamovi.com</c></name>
-      <address>https://www.learnstatswithjamovi.com</address>
+      <name><c>learnstatswithjasp.com</c></name>
+      <address>https://www.learnstatswithjasp.com</address>
     </website>
 
     <copyright>
       <year>2018<ndash/>2025</year>
-      <holder>Danielle Navarro and David Foxcroft</holder>
+      <holder>Danielle Navarro, David Foxcroft, and Thomas J. Faulkenberry</holder>
       <shortlicense>
         This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
         To view a copy of this license, visit
@@ -35,46 +35,48 @@
 
   <preface xml:id="meta_frontmatter-preface">
     <p>
-      In this textbook we cover the contents of an introductory statistics
-      class, as typically taught to undergraduate psychology, health or
-      social science students. The book covers how to get started in jamovi
-      as well as giving an introduction to data manipulation. From a
-      statistical perspective, the book discusses descriptive statistics and
-      graphing first, followed by chapters on probability theory, sampling
-      and estimation, and null hypothesis testing. After introducing the
-      theory, the book covers the analysis of contingency tables,
-      correlation, t-tests, regression, ANOVA and factor analysis. Bayesian
-      statistics are touched on at the end of the book.
+      <em>Learning Statistics with JASP</em> covers the contents of an introductory statistics
+      class, as typically taught to undergraduate psychology students. The book discusses
+      how to get started in JASP as well as giving an introduction to data manipulation.
+      From a statistical perspective, the book discusses descriptive statistics and graphing
+      first, followed by chapters on probability theory, sampling and estimation, and null
+      hypothesis testing. After introducing the theory, the book covers the analysis of
+      contingency tables, correlation, <m>t</m>-tests, regression, ANOVA and factor analysis.
+      Bayesian statistics is covered at the end of the book.
     </p>
     <p>
-      This book is an adaptation of Danielle J. Navarro (2018).
-      <em>Learning statistics with R: A tutorial for psychology students
-      and other beginners</em>. (Version 0.6).
-      <url href="https://learningstatisticswithr.com/" visual="learningstatisticswithr.com">
-        learningstatisticswithr.com</url>.
-      The jamovi version was adapted and extended by David R. Foxcroft, and
-      first released in 2018 as version 0.65.
+      Citation: Navarro, D.J., Foxcroft, D.R., and Faulkenberry, T.J. (2025).
+      <em>Learning Statistics with JASP: A Tutorial for Psychology Students and Other Beginners</em>.
+      (Version 2.0).
+      <url href="https://learnstatswithjasp.com" visual="learnstatswithjasp.com">
+        learnstatswithjasp.com</url>.
     </p>
     <p>
-      This is a PreTeXt version of the book, converted from the original
-      Quarto source. Full details of the book and its history can be found
-      at <url href="https://www.learnstatswithjamovi.com" visual="learnstatswithjamovi.com">
-        learnstatswithjamovi.com</url>.
-      The book is also published in partnership with Open Book Publishers:
-      <url href="https://www.openbookpublishers.com/books/10.11647/obp.0333"
-           visual="openbookpublishers.com/books/10.11647/obp.0333">
-        openbookpublishers.com/books/10.11647/obp.0333</url>.
+      Six years after its initial release, <q>Learning Statistics with JASP</q> continues
+      to be widely used and cited, and I am grateful for the many positive messages I have
+      received. However, the book has been in great need of a refresh, particularly with
+      the many new updates to the JASP software that have happened in the past few years.
+      In mid 2024, my graduate student Kylie Seifert began to help me refresh all the JASP
+      screenshots to reflect the most current version. Thus, the book you're reading now
+      reflects how JASP looks as of version 0.19.3<ellipsis/>much better than the old version
+      from 2019! I am so grateful for her work this year.
     </p>
     <p>
-      If you find any issues with this PreTeXt version of the book, please
-      raise them at
-      <url href="https://github.com/PreTeXtBooks/lsj-book/issues"
-           visual="github.com/PreTeXtBooks/lsj-book/issues">
-        github.com/PreTeXtBooks/lsj-book/issues</url>.
+      I am also grateful to readers who have contributed suggestions and indentified typos,
+      including Michael Katz, Oliver Schultheiss, and Rachel Stephens. As always, I invite
+      readers everywhere to find ways to make this text better (including identiying the
+      ever-present typos). This version builds on the wonderful previous work of Dani Navarro
+      and David Foxcroft, without whose previous efforts a book of this quality would not be possible.
+    </p>
+    <p>
+      If you find any issues with this PreTeXt version of the book, please raise them at
+      <url href="https://github.com/PreTeXtBooks/JASPbook/issues"
+           visual="github.com/PreTeXtBooks/JASPbook/issues">
+        github.com/PreTeXtBooks/JASPbook/issues</url>.
     </p>
     <attribution>
-      <line>David Foxcroft</line>
-      <line>January 1st, 2025</line>
+      <line>Thomas J. Faulkenberry</line>
+      <line>May 21, 2025</line>
     </attribution>
   </preface>
 

@@ -25,7 +25,7 @@
       <title>Omissions within the topics covered</title>
 
       <p>
-        Even within the topics that I have covered in the book, there are a lot of omissions that I'd like to redress in the future version. Just sticking to things that are purely about statistics (rather than things associated with jamovi), the following is a representative but not exhaustive list of topics that I'd like to expand on at some time:
+        Even within the topics that I have covered in the book, there are a lot of omissions that I'd like to redress in future version of the book. Just sticking to things that are purely about statistics (rather than things associated with JASP), the following is a representative but not exhaustive list of topics that I'd like to expand on at some time:
       </p>
 
       <ul>
@@ -188,7 +188,7 @@
   </section>
 
   <section xml:id="sec-learning-the-basics">
-    <title>Learning the basics, and learning them in jamovi</title>
+    <title>Learning the basics, and learning them in JASP</title>
 
     <p>
       Okay, that was a long list. And even that listing is massively incomplete. There really are a lot of big ideas in statistics that I haven't covered in this book. It can seem pretty depressing to finish an almost 500-page textbook only to be told that this is only the beginning, especially when you start to suspect that half of the stuff you've been taught is wrong. For instance, there are a lot of people in the field who would strongly argue against the use of the classical ANOVA model, yet I've devoted two whole chapters to it! Standard ANOVA can be attacked from a Bayesian perspective, or from a robust statistics perspective, or even from a "it's just plain wrong" perspective (people very frequently use ANOVA when they should actually be using mixed models). So why learn it at all?
