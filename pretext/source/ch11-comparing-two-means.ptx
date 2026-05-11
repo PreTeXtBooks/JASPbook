@@ -206,7 +206,11 @@
         </image>
       </figure>
 
-      <p>It is also easy to calculate a 95% confidence interval for our sample mean. If you select the 'Location parameter' and its associated 'Confidence interval' option under 'Additional Statistics', you'll see in the JASP output that the 'Mean difference' is 4.800 with 95% CI equal to [0.344, 9.256]. This simply means that we are 95% confident that our estimate of the difference between our sample and the hypothesized mean of 67.5 is between 0.344 and 9.256. If we add these endpoints to the hypothesized mean, we get a 95% CI of [67.5 + 0.344, 67.5 + 9.256], or said differently, [67.844, 76.756]. If this isn't clear, don't worry. We'll explain a bit more about this in the next section.</p>
+      <p>It is also easy to calculate a 95% confidence interval for our sample mean. If you select the 'Location parameter' and its associated 'Confidence interval' option under 'Additional Statistics', you'll see in the JASP output that the 'Mean difference' is 4.800 with 95% CI equal to [0.344, 9.256].</p>
+
+      <p>This simply means that we are 95% confident that our estimate of the difference between our sample and the hypothesized mean of 67.5 is between 0.344 and 9.256.</p>
+
+      <p>If we add these endpoints to the hypothesized mean, we get a 95% CI of [67.5 + 0.344, 67.5 + 9.256], or said differently, [67.844, 76.756]. If this isn't clear, don't worry. We'll explain a bit more about this in the next section.</p>
 
       <p>Also reported are two other things you might care about: the 95% confidence interval and a measure of effect size (we'll talk more about effect sizes later). So that seems straightforward enough. Now what do we do with this output? Well, since we're pretending that we actually care about my toy example, we're overjoyed to discover that the result is statistically significant (i.e. <m>p</m>-value below .05). We could report the result by saying something like this:</p>
 
