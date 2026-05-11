@@ -17,7 +17,7 @@
     <subsection xml:id="subsec-inference-problem-z">
       <title>The inference problem that the test addresses</title>
 
-      <p>To introduce the idea behind the <em>z</em>-test, let's use a simple example. A friend of mine, Dr Zeppo, grades his introductory statistics class on a curve. Let's suppose that the average grade in his class is <m>67.5</m>, and the standard deviation is <m>9.5</m>. Of his many hundreds of students, it turns out that 20 of them also take psychology classes. Out of curiosity, I find myself wondering if the psychology students tend to get the same grades as everyone else (i.e., mean <m>67.5</m>) or do they tend to score higher or lower? He emails me the <em>zeppo.csv</em> file, which I use to look at the grades of those students, in the jamovi spreadsheet view, and then calculate the mean in 'Exploration' -- 'Descriptives'.<fn>In order to do this I had to change the measurement level for <m>X</m> to 'Continuous', as during the opening / import of the csv file jamovi made this a nominal level variable, which isn't right for my analysis.</fn> The mean value is <m>72.3</m>.</p>
+      <p>To introduce the idea behind the <em>z</em>-test, let's use a simple example. A friend of mine, Dr Zeppo, grades his introductory statistics class on a curve. Let's suppose that the average grade in his class is <m>67.5</m>, and the standard deviation is <m>9.5</m>. Of his many hundreds of students, it turns out that 20 of them also take psychology classes. Out of curiosity, I find myself wondering if the psychology students tend to get the same grades as everyone else (i.e., mean <m>67.5</m>) or do they tend to score higher or lower? He emails me the <em>zeppo.csv</em> file, which I use to look at the grades of those students in JASP (stored in the variable <m>x</m>) and then calculate the mean in 'Descriptives' -- 'Descriptive Statistics'.<fn>In order to do this I had to change the measurement level for <m>x</m> to 'Continuous', as during the opening / import of the csv file JASP made this a nominal level variable, which isn't right for my analysis.</fn> The mean value is <m>72.3</m>.</p>
 
       <blockquote>
         <p>50 60 60 64 66 66 67 69 70 74 76 76 77 79 79 79 81 82 82 89</p>
@@ -126,7 +126,7 @@
     <subsection xml:id="subsec-worked-example-z">
       <title>A worked example, by hand</title>
 
-      <p>Now, as I mentioned earlier, the <em>z</em>-test is almost never used in practice. It's so rarely used in real life that the basic installation of jamovi doesn't have a built in function for it. However, the test is so incredibly simple that it's really easy to do one manually. Let's go back to the data from Dr Zeppo's class. Having loaded the grades data, the first thing I need to do is calculate the sample mean, which I've already done (<m>72.3</m>). We already have the known population standard deviation (<m>\sigma = 9.5</m>), and the value of the population mean that the null hypothesis specifies (<m>\mu_0 = 67.5</m>), and we know the sample size (<m>N=20</m>).</p>
+      <p>Now, as I mentioned earlier, the <em>z</em>-test is almost never used in practice. It's so rarely used in real life that earlier versions of JASP didn't even have a built in function for it. However, the test is so incredibly simple that it's really easy to do one manually. Let's go back to the data from Dr Zeppo's class. Having loaded the grades data, the first thing I need to do is calculate the sample mean, which I've already done (<m>72.3</m>). We already have the known population standard deviation (<m>\sigma = 9.5</m>), and the value of the population mean that the null hypothesis specifies (<m>\mu_0 = 67.5</m>), and we know the sample size (<m>N=20</m>).</p>
 
       <p>Next, let's calculate the (true) standard error of the mean (easily done with a calculator):
       <md>
@@ -195,16 +195,22 @@
     </subsection>
 
     <subsection xml:id="subsec-t-test-in-jamovi">
-      <title>Doing the test in jamovi</title>
+      <title>Doing the test in JASP</title>
 
-      <p>As you might expect, the mechanics of the <m>t</m>-test are almost identical to the mechanics of the <em>z</em>-test. So there's not much point in going through the tedious exercise of showing you how to do the calculations using low level commands. It's pretty much identical to the calculations that we did earlier, except that we use the estimated standard deviation and then we test our hypothesis using the <m>t</m>-distribution rather than the normal distribution. And so instead of going through the calculations in tedious detail for a second time, I'll jump straight to showing you how <m>t</m>-tests are actually done. jamovi comes with a dedicated analysis for <m>t</m>-tests that is very flexible (it can run lots of different kinds of <m>t</m>-tests). It's pretty straightforward to use; all you need to do is specify 'Analyses' -- 'T-Tests' -- 'One Sample T-Test', move the variable you are interested in (<m>X</m>) across into the 'Variables' box, and type in the mean value for the null hypothesis ('67.5') in the 'Hypothesis' -- 'Test value' box. Easy enough. See <xref ref="fig-fig11-6"/>, which, amongst other things that we will get to in a moment, gives you a <m>t</m>-test statistic = 2.25, with 19 degrees of freedom and an associated <m>p</m>-value of <m>0.036</m>.</p>
+      <p>As you might expect, the mechanics of the <m>t</m>-test are almost identical to the mechanics of the <em>z</em>-test. So there's not much point in going through the tedious exercise of showing you how to do the calculations using low level commands. It's pretty much identical to the calculations that we did earlier, except that we use the estimated standard deviation and then we test our hypothesis using the <m>t</m>-distribution rather than the normal distribution. And so instead of going through the calculations in tedious detail for a second time, I'll jump straight to showing you how <m>t</m>-tests are actually done. JASP comes with a dedicated analysis for <m>t</m>-tests that is very flexible (it can run lots of different kinds of <m>t</m>-tests). It's pretty straightforward to use; all you need to do is specify 'T-Tests' -- 'One Sample T-Test', move the variable you are interested in (<m>x</m>) across into the 'Variables' box, and type in the mean value for the null hypothesis ('67.5') in the 'Test value' box. Easy enough. See <xref ref="fig-fig11-6"/>, which, amongst other things that we will get to in a moment, gives you a <m>t</m>-test statistic = 2.25, with 19 degrees of freedom and an associated <m>p</m>-value of <m>0.036</m>.</p>
 
       <figure xml:id="fig-fig11-6">
-        <caption>jamovi does the one-sample <m>t</m>-test</caption>
+        <caption>JASP does the one-sample <m>t</m>-test</caption>
         <image source="images/fig11-6.png" width="90%">
           <description>A statistical analysis software interface displays a one-sample t-test. The screen shows options like Students T-Test, Bayes factor, Wilcoxon rank, and additional statistics selections. The results section includes descriptive statistics, a test table, and a hypothesis test plot.</description>
         </image>
       </figure>
+
+      <p>It is also easy to calculate a 95% confidence interval for our sample mean. If you select the 'Location parameter' and its associated 'Confidence interval' option under 'Additional Statistics', you'll see in the JASP output that the 'Mean difference' is 4.800 with 95% CI equal to [0.344, 9.256].</p>
+
+      <p>This simply means that we are 95% confident that our estimate of the difference between our sample and the hypothesized mean of 67.5 is between 0.344 and 9.256.</p>
+
+      <p>If we add these endpoints to the hypothesized mean, we get a 95% CI of [67.5 + 0.344, 67.5 + 9.256], or said differently, [67.844, 76.756]. If this isn't clear, don't worry. We'll explain a bit more about this in the next section.</p>
 
       <p>Also reported are two other things you might care about: the 95% confidence interval and a measure of effect size (we'll talk more about effect sizes later). So that seems straightforward enough. Now what do we do with this output? Well, since we're pretending that we actually care about my toy example, we're overjoyed to discover that the result is statistically significant (i.e. <m>p</m>-value below .05). We could report the result by saying something like this:</p>
 
@@ -239,9 +245,9 @@
     <subsection xml:id="subsec-independent-t-data">
       <title>The data</title>
 
-      <p>Suppose we have 33 students taking Dr Harpo's statistics lectures, and Dr Harpo doesn't grade to a curve. Actually, Dr Harpo's grading is a bit of a mystery, so we don't really know anything about what the average grade is for the class as a whole. There are two tutors for the class, Anastasia and Bernadette. There are <m>N_1 = 15</m> students in Anastasia's tutorials, and <m>N_2 = 18</m> in Bernadette's tutorials. The research question I'm interested in is whether Anastasia or Bernadette is a better tutor, or if it doesn't make much of a difference. Dr Harpo emails me the course grades, in the <em>harpo.csv</em> file. As usual, I'll load the file into jamovi and have a look at what variables it contains - there are three variables, ID, grade and tutor. The grade variable contains each student's grade, but it is not imported into jamovi with the correct measurement level attribute, so I need to change this so it is regarded as a continuous variable. The tutor variable is a factor that indicates who each student's tutor was - either Anastasia or Bernadette.</p>
+      <p>Suppose we have 33 students taking Dr Harpo's statistics lectures, and Dr Harpo doesn't grade to a curve. Actually, Dr Harpo's grading is a bit of a mystery, so we don't really know anything about what the average grade is for the class as a whole. There are two tutors for the class, Anastasia and Bernadette. There are <m>N_1 = 15</m> students in Anastasia's tutorials, and <m>N_2 = 18</m> in Bernadette's tutorials. The research question I'm interested in is whether Anastasia or Bernadette is a better tutor, or if it doesn't make much of a difference. Dr Harpo emails me the course grades, in the <em>harpo.csv</em> file. As usual, I'll load the file into JASP and have a look at what variables it contains - there are three variables, ID, grade and tutor. The grade variable contains each student's grade, but it is not imported into JASP with the correct measurement level attribute, so I need to change this so it is regarded as a continuous variable. The tutor variable is a factor that indicates who each student's tutor was - either Anastasia or Bernadette.</p>
 
-      <p>We can calculate means and standard deviations, using the 'Exploration' -- 'Descriptives' analysis, and here's a nice little summary table (<xref ref="tbl-tab11-2"/>).</p>
+      <p>We can calculate means and standard deviations, using the 'Descriptives' -- 'Descriptive Statistics' analysis, and here's a nice little summary table (<xref ref="tbl-tab11-2"/>).</p>
 
       <table xml:id="tbl-tab11-2">
         <title>Descriptives summary table</title>
@@ -267,10 +273,10 @@
         </tabular>
       </table>
 
-      <p>To give you a more detailed sense of what's going on here, I've plotted box and violin plots in jamovi, with mean scores added to the plot with a small solid square. These plots show the distribution of grades for both tutors (<xref ref="fig-fig11-7"/>).</p>
+      <p>To give you a more detailed sense of what's going on here, I've plotted box and violin plots in JASP, with mean scores added to the plot with a small solid square. These plots show the distribution of grades for both tutors (<xref ref="fig-fig11-7"/>).</p>
 
       <figure xml:id="fig-fig11-7">
-        <caption>Box and violin plots from jamovi showing the distribution of grades for students in the classes of Anastasia and Bernadette. Visually, these suggest that students in the class of Anastasia may be getting slightly better grades on average, though they also seem a bit more variable</caption>
+        <caption>Box and violin plots from JASP showing the distribution of grades for students in the classes of Anastasia and Bernadette. Visually, these suggest that students in the class of Anastasia may be getting slightly better grades on average, though they also seem a bit more variable</caption>
         <image source="images/fig11-7.png" width="80%">
           <description>Violin plot comparing grades of students tutored by Anastasia and Bernadette. Both plots show distributions with similar means around 75-80 and few outliers. Anastasia's students have a wider grade distribution compared to Bernadette's students.</description>
         </image>
@@ -332,14 +338,14 @@
     </subsection>
 
     <subsection xml:id="subsec-student-t-in-jamovi">
-      <title>Doing the test in jamovi</title>
+      <title>Doing the test in JASP</title>
 
-      <p>Not surprisingly, you can run an independent samples <m>t</m>-test easily in jamovi. The outcome variable for our test is the student grade, and the groups are defined in terms of the tutor for each class. So you probably won't be too surprised that all you have to do in jamovi is go to the relevant analysis ('Analyses' -- 'T-Tests' -- 'Independent Samples T-Test') and move the grade variable across to the 'Dependent Variables' box, and the tutor variable across into the 'Grouping Variable' box, as shown in <xref ref="fig-fig11-9"/>.</p>
+      <p>Not surprisingly, you can run an independent samples <m>t</m>-test easily in JASP. The outcome variable for our test is the student grade, and the groups are defined in terms of the tutor for each class. So you probably won't be too surprised that all you have to do in JASP is go to the relevant analysis ('T-Tests' -- 'Independent Samples T-Test') and move the grade variable across to the 'Variables' box, and the tutor variable across into the 'Grouping Variable' box, as shown in <xref ref="fig-fig11-9"/>.</p>
 
       <figure xml:id="fig-fig11-9">
-        <caption>Independent <m>t</m>-test in jamovi, with options checked for useful results</caption>
+        <caption>Independent <m>t</m>-test in JASP, with options checked for useful results</caption>
         <image source="images/fig11-9.png" width="90%">
-          <description>A jamovi screenshot of the interface for performing an independent samples t-test. The layout includes sections for entering dependent variables, grouping variables, and options for additional statistics, confidence interval, and assumption checks. Statistical output is displayed on the right.</description>
+          <description>A JASP screenshot of the interface for performing an independent samples t-test. The layout includes sections for entering dependent variables, grouping variables, and options for additional statistics, confidence interval, and assumption checks. Statistical output is displayed on the right.</description>
         </image>
       </figure>
 
@@ -362,11 +368,11 @@
       <p>Before moving on to talk about the assumptions of the <m>t</m>-test, there's one additional point I want to make about the use of <m>t</m>-tests in practice. The first one relates to the sign of the <m>t</m>-statistic (that is, whether it is a positive number or a negative one). One very common worry that students have when they start running their first <m>t</m>-test is that they often end up with negative values for the <m>t</m>-statistic and don't know how to interpret it. In fact, it's not at all uncommon for two people working independently to end up with results that are almost identical, except that one person has a negative <m>t</m>-value and the other one has a positive <m>t</m> value. Assuming that you're running a two-sided test then the <m>p</m>-values will be identical. On closer inspection, the students will notice that the confidence intervals also have the opposite signs. This is perfectly okay. Whenever this happens, what you'll find is that the two versions of the results arise from slightly different ways of running the <m>t</m>-test. What's happening here is very simple. The <m>t</m>-statistic that we calculate here is always of the form:
       <me>t=\frac{\text{mean 1} - \text{mean 2}}{SE}</me></p>
 
-      <p>If "mean 1" is larger than "mean 2" the <m>t</m>-statistic will be positive, whereas if "mean 2" is larger then the <m>t</m>-statistic will be negative. Similarly, the confidence interval that jamovi reports is the confidence interval for the difference "(mean 1) minus (mean 2)", which will be the reverse of what you'd get if you were calculating the confidence interval for the difference "(mean 2) minus (mean 1)".</p>
+      <p>If "mean 1" is larger than "mean 2" the <m>t</m>-statistic will be positive, whereas if "mean 2" is larger then the <m>t</m>-statistic will be negative. Similarly, the confidence interval that JASP reports is the confidence interval for the difference "(mean 1) minus (mean 2)", which will be the reverse of what you'd get if you were calculating the confidence interval for the difference "(mean 2) minus (mean 1)".</p>
 
-      <p>Okay, that's pretty straightforward when you think about it, but now consider our <m>t</m>-test comparing Anastasia's class to Bernadette's class. Which one should we call "mean 1" and which one should we call "mean 2"? It's arbitrary. However, you really do need to designate one of them as "mean 1" and the other one as "mean 2". Not surprisingly, the way that jamovi handles this is also pretty arbitrary. Whenever I get a significant <m>t</m>-test result, and I want to figure out which mean is the larger one, I don't try to figure it out by looking at the <m>t</m>-statistic. Why would I bother doing that? It's foolish. It's easier just to look at the actual group means since the jamovi output actually shows them!</p>
+      <p>Okay, that's pretty straightforward when you think about it, but now consider our <m>t</m>-test comparing Anastasia's class to Bernadette's class. Which one should we call "mean 1" and which one should we call "mean 2"? It's arbitrary. However, you really do need to designate one of them as "mean 1" and the other one as "mean 2". Not surprisingly, the way that JASP handles this is also pretty arbitrary. Whenever I get a significant <m>t</m>-test result, and I want to figure out which mean is the larger one, I don't try to figure it out by looking at the <m>t</m>-statistic. Why would I bother doing that? It's foolish. It's easier just to look at the actual group means since the JASP output actually shows them!</p>
 
-      <p>Here's the important thing. Because it really doesn't matter what jamovi shows you, I usually try to report the <m>t</m>-statistic in such a way that the numbers match up with the text. Suppose that what I want to write in my report is: <em>Anastasia's class had higher grades than Bernadette's class</em>. The phrasing here implies that Anastasia's group comes first, so it makes sense to report the <m>t</m>-statistic as if Anastasia's class corresponded to group 1. If so, I would write <em>Anastasia's class had higher grades than Bernadette's class</em> <m>(t(31) = 2.1, p = .04)</m>.</p>
+      <p>Here's the important thing. Because it really doesn't matter what JASP shows you, I usually try to report the <m>t</m>-statistic in such a way that the numbers match up with the text. Suppose that what I want to write in my report is: <em>Anastasia's class had higher grades than Bernadette's class</em>. The phrasing here implies that Anastasia's group comes first, so it makes sense to report the <m>t</m>-statistic as if Anastasia's class corresponded to group 1. If so, I would write <em>Anastasia's class had higher grades than Bernadette's class</em> <m>(t(31) = 2.1, p = .04)</m>.</p>
 
       <p>On the other hand, suppose the phrasing I wanted to use has Bernadette's class listed first. If so, it makes more sense to treat her class as group 1, and if so, the write up looks like this: <em>Bernadette's class had lower grades than Anastasia's class</em> <m>(t(31) = -2.1, p = .04)</m>.</p>
 
@@ -391,7 +397,7 @@
   <section xml:id="sec-the-independent-samples-t-test-welch-test">
     <title>The independent samples <m>t</m>-test (Welch test)</title>
 
-    <p>The biggest problem with using the Student test in practice is the third assumption listed in the previous section. It assumes that both groups have the same standard deviation. This is rarely true in real life. If two samples don't have the same means, why should we expect them to have the same standard deviation? There's really no reason to expect this assumption to be true. We'll talk a little bit about how you can check this assumption later on because it does crop up in a few different places, not just the <m>t</m>-test. But right now I'll talk about a different form of the <m>t</m>-test (<xref ref="Welch1947"/>) that does not rely on this assumption. A graphical illustration of what the Welch <m>t</m>-test assumes about the data is shown in <xref ref="fig-fig11-10"/>, to provide a contrast with the Student test version in <xref ref="fig-fig11-8"/>. I'll admit it's a bit odd to talk about the cure before talking about the diagnosis, but as it happens the Welch test can be specified as one of the 'Independent Samples T-Test' options in jamovi, so this is probably the best place to discuss it.</p>
+    <p>The biggest problem with using the Student test in practice is the third assumption listed in the previous section. It assumes that both groups have the same standard deviation. This is rarely true in real life. If two samples don't have the same means, why should we expect them to have the same standard deviation? There's really no reason to expect this assumption to be true. We'll talk a little bit about how you can check this assumption later on because it does crop up in a few different places, not just the <m>t</m>-test. But right now I'll talk about a different form of the <m>t</m>-test (<xref ref="Welch1947"/>) that does not rely on this assumption. A graphical illustration of what the Welch <m>t</m>-test assumes about the data is shown in <xref ref="fig-fig11-10"/>, to provide a contrast with the Student test version in <xref ref="fig-fig11-8"/>. I'll admit it's a bit odd to talk about the cure before talking about the diagnosis, but as it happens the Welch test can be specified as one of the 'Independent Samples T-Test' options in JASP, so this is probably the best place to discuss it.</p>
 
     <figure xml:id="fig-fig11-10">
       <caption>Graphical illustration of the null and alternative hypotheses assumed by the Welch <m>t</m>-test. Like the Student test (<xref ref="fig-fig11-8"/>) we assume that both samples are drawn from a normal population; but the alternative hypothesis no longer requires the two populations to have equal variance</caption>
@@ -412,14 +418,14 @@
     <p>The second difference between Welch and Student is that the degrees of freedom are calculated in a very different way. In the Welch test, the "degrees of freedom" doesn't have to be a whole number any more, and it doesn't correspond all that closely to the "number of data points minus the number of constraints" heuristic that I've been using up to this point.</p>
 
     <subsection xml:id="subsec-welch-in-jamovi">
-      <title>Doing the Welch test in jamovi</title>
+      <title>Doing the Welch test in JASP</title>
 
       <p>If you tick the check box for the Welch test in the analysis we did above, then this is what it gives you (<xref ref="fig-fig11-11"/>).</p>
 
       <figure xml:id="fig-fig11-11">
-        <caption>Results showing the Welch test alongside the default Student's <m>t</m>-test in jamovi</caption>
+        <caption>Results showing the Welch test alongside the default Student's <m>t</m>-test in JASP</caption>
         <image source="images/fig11-11.png" width="90%">
-          <description>A jamovi screenshot of a table titled "Independent Samples T-Test" showing results for "Independent Samples T-Test" with rows for Student t-test and Welch t-test. Columns include grade, Statistic, df, p, Mean difference, SE difference, and Effect Size.</description>
+          <description>A JASP screenshot of a table titled "Independent Samples T-Test" showing results for "Independent Samples T-Test" with rows for Student t-test and Welch t-test. Columns include grade, Statistic, df, p, Mean difference, SE difference, and Effect Size.</description>
         </image>
       </figure>
 
@@ -449,16 +455,16 @@
 
       <p>The data set that we'll use this time comes from Dr Chico's class.<fn>At this point we have Drs Harpo, Chico and Zeppo. No prizes for guessing who Dr Groucho is.</fn> In her class students take two major tests, one early in the semester and one later in the semester. To hear her tell it, she runs a very hard class, one that most students find very challenging. But she argues that by setting hard assessments students are encouraged to work harder. Her theory is that the first test is a bit of a "wake up call" for students. When they realise how hard her class really is, they'll work harder for the second test and get a better mark. Is she right?</p>
 
-      <p>To test this, let's import the <em>chico.csv</em> file into jamovi. This time jamovi does a good job during the import of attributing measurement levels correctly. The <em>chico</em> data set contains three variables: an id variable that identifies each student in the class, the grade_test1 variable that records the student grade for the first test, and the grade_test2 variable that has the grades for the second test.</p>
+      <p>To test this, let's import the <em>chico.csv</em> file into JASP. This time JASP does a good job during the import of attributing measurement levels correctly. The <em>chico</em> data set contains three variables: an id variable that identifies each student in the class, the grade_test1 variable that records the student grade for the first test, and the grade_test2 variable that has the grades for the second test.</p>
 
-      <p>If we look at the jamovi spreadsheet it does seem like the class is a hard one (most grades are between 50% and 60%), but it does look like there's an improvement from the first test to the second one.</p>
+      <p>If we look at the JASP spreadsheet it does seem like the class is a hard one (most grades are between 50% and 60%), but it does look like there's an improvement from the first test to the second one.</p>
 
       <p>If we take a quick look at the descriptive statistics, in <xref ref="fig-fig11-12"/>, we see that this impression seems to be supported. Across all 20 students the mean grade for the first test is 57%, but this rises to 58% for the second test. Although, given that the standard deviations are 6.6% and 6.4% respectively, it's starting to feel like maybe the improvement is just illusory; maybe just random variation. This impression is reinforced when you see the means and confidence intervals plotted in <xref ref="fig-fig11-13"/>. If we were to rely on this plot alone, looking at how wide those confidence intervals are, we'd be tempted to think that the apparent improvement in student performance is pure chance.</p>
 
       <figure xml:id="fig-fig11-12">
         <caption>Descriptives for the two grade test variables in the <em>chico</em> data set</caption>
         <image source="images/fig11-12.png" width="90%">
-          <description>A jamovi screenshot displaying a data set with student grades and a descriptive statistics summary. The data set table lists student IDs and their grades for two tests. The results panel shows descriptive statistics including N, mean, median, standard deviation, minimum, and maximum values.</description>
+          <description>A JASP screenshot displaying a data set with student grades and a descriptive statistics summary. The data set table lists student IDs and their grades for two tests. The results panel shows descriptive statistics including N, mean, median, standard deviation, minimum, and maximum values.</description>
         </image>
       </figure>
 
@@ -479,7 +485,7 @@
       <p>Once we have computed this new improvement variable we can draw a histogram showing the distribution of these improvement scores, shown in <xref ref="fig-fig11-14"/>. When we look at the histogram, it's very clear that there is a real improvement here. The vast majority of the students scored higher on test 2 than on test 1, reflected in the fact that almost the entire histogram is above zero.</p>
 
       <figure xml:id="fig-fig11-14">
-        <caption>Histogram from jamovi showing the improvement made by each student in Dr Chico's class. Notice that almost the entire distribution is above zero -- the vast majority of students did improve their performance from the first test to the second one</caption>
+        <caption>Histogram from JASP showing the improvement made by each student in Dr Chico's class. Notice that almost the entire distribution is above zero -- the vast majority of students did improve their performance from the first test to the second one</caption>
         <image source="images/fig11-14.png" width="60%">
           <description>A histogram with the x-axis labeled "improvement" and the y-axis labeled "density". The bars represent the frequency of improvements, with the highest peak at approximately 1.5 on the x-axis. The bars are light blue.</description>
         </image>
@@ -507,9 +513,9 @@
     </subsection>
 
     <subsection xml:id="subsec-paired-t-in-jamovi">
-      <title>Doing the test in jamovi</title>
+      <title>Doing the test in JASP</title>
 
-      <p>How do you do a paired samples <m>t</m>-test in jamovi? One possibility is to follow the process I outlined above. That is, create a "difference" variable and then run a one sample <m>t</m>-test on that. Since we've already created a variable called "improvement", let's do that and see what we get, <xref ref="fig-fig11-15"/>.</p>
+      <p>How do you do a paired samples <m>t</m>-test in JASP? One possibility is to follow the process I outlined above. That is, create a "difference" variable and then run a one sample <m>t</m>-test on that. Since we've already created a variable called "improvement", let's do that and see what we get, <xref ref="fig-fig11-15"/>.</p>
 
       <figure xml:id="fig-fig11-15">
         <caption>Results showing a one sample <m>t</m>-test on paired difference scores</caption>
@@ -520,7 +526,7 @@
 
       <p>The output shown in <xref ref="fig-fig11-15"/> is (obviously) formatted exactly the same way as it was the last time we used the one-sample <m>t</m>-test analysis, and it confirms our intuition. There's an average improvement of <m>1.4\%</m> from test 1 to test 2, and this is significantly different from <m>0</m> <m>(t(19) = 6.48, p&lt; .001)</m>.</p>
 
-      <p>However, suppose you're lazy and you don't want to go to all the effort of creating a new variable. Or perhaps you just want to keep the difference between one-sample and paired samples tests clear in your head. If so, you can use the jamovi 'Paired Samples T-Test' analysis, getting the results shown in <xref ref="fig-fig11-16"/>.</p>
+      <p>However, suppose you're lazy and you don't want to go to all the effort of creating a new variable. Or perhaps you just want to keep the difference between one-sample and paired samples tests clear in your head. If so, you can use the JASP 'Paired Samples T-Test' analysis, getting the results shown in <xref ref="fig-fig11-16"/>.</p>
 
       <figure xml:id="fig-fig11-16">
         <caption>Results showing a paired sample <m>t</m>-test. Compare with <xref ref="fig-fig11-15"/></caption>
@@ -538,10 +544,10 @@
 
     <p>When introducing the theory of null hypothesis tests, I mentioned that there are some situations when it's appropriate to specify a one-sided test. So far all of the <m>t</m>-tests have been two-sided tests. For instance, when we specified a one sample <m>t</m>-test for the grades in Dr Zeppo's class the null hypothesis was that the true mean was <m>67.5\%</m>. The alternative hypothesis was that the true mean was greater than or less than <m>67.5\%</m>. Suppose we were only interested in finding out if the true mean is greater than <m>67.5\%</m>, and have no interest whatsoever in testing to find out if the true mean is lower than <m>67.5\%</m>.</p>
 
-    <p>If so, our null hypothesis would be that the true mean is <m>67.5\%</m> or less, and the alternative hypothesis would be that the true mean is greater than <m>67.5\%</m>. In jamovi, for the 'One Sample T-Test' analysis, you can specify this by clicking on the '<m>&gt;</m> Test Value' option, under 'Hypothesis'. When you have done this, you will get the results as shown in <xref ref="fig-fig11-17"/>.</p>
+    <p>If so, our null hypothesis would be that the true mean is <m>67.5\%</m> or less, and the alternative hypothesis would be that the true mean is greater than <m>67.5\%</m>. In JASP, for the 'One Sample T-Test' analysis, you can specify this by clicking on the '<m>&gt;</m> Test Value' option, under 'Alt. Hypothesis'. When you have done this, you will get the results as shown in <xref ref="fig-fig11-17"/>.</p>
 
     <figure xml:id="fig-fig11-17">
-      <caption>jamovi results showing a 'One Sample T-Test' where the actual hypothesis is one-sided, i.e. that the true mean is greater than <m>67.5\%</m></caption>
+      <caption>JASP results showing a 'One Sample T-Test' where the actual hypothesis is one-sided, i.e. that the true mean is greater than <m>67.5\%</m></caption>
       <image source="images/fig11-17.png" width="90%">
         <description>An image of a One Sample T-Test table showing results: Statistic: Student's t = 2.25, df = 19.00, p = 0.01807, Mean difference = 4.80, 95% Confidence Interval Lower = 1.12, Upper = Inf, Effect Size: Cohen's d = 0.50.</description>
       </image>
@@ -549,23 +555,23 @@
 
     <p>Notice that there are a few changes from the output that we saw last time. Most important is the fact that the actual hypothesis has changed, to reflect the different test. The second thing to note is that although the <m>t</m>-statistic and degrees of freedom have not changed, the <m>p</m>-value has. This is because the one-sided test has a different rejection region from the two-sided test. The third thing to note is that the confidence interval is different too: it now reports a one-sided confidence interval rather than a two-sided one.</p>
 
-    <p>In a two-sided confidence interval we're trying to find numbers <m>a</m> and <m>b</m> such that we're confident that, if we were to repeat the study many times, then <m>95\%</m> of the time the mean would lie between <m>a</m> and <m>b</m>. In a one-sided confidence interval, we're trying to find a single number <m>a</m> such that we're confident that <m>95\%</m> of the time the true mean would be greater than <m>a</m> (or less than <m>a</m> if you selected Measure 1 &lt; Measure 2 in the 'Hypothesis' section).</p>
+    <p>In a two-sided confidence interval we're trying to find numbers <m>a</m> and <m>b</m> such that we're confident that, if we were to repeat the study many times, then <m>95\%</m> of the time the mean would lie between <m>a</m> and <m>b</m>. In a one-sided confidence interval, we're trying to find a single number <m>a</m> such that we're confident that <m>95\%</m> of the time the true mean would be greater than <m>a</m> (or less than <m>a</m> if you selected '<m>&lt;</m> Test Value' in the 'Alt. Hypothesis' section).</p>
 
-    <p>So that's how to do a one-sided one sample <m>t</m>-test. However, all versions of the <m>t</m>-test can be one-sided. For an independent samples <m>t</m>-test, you could have a one-sided test if you're only interested in testing to see if group A has higher scores than group B, but have no interest in finding out if group B has higher scores than group A. Let's suppose that, for Dr Harpo's class, you wanted to see if Anastasia's students had higher grades than Bernadette's. For this analysis, in the 'Hypothesis' options, specify that 'Group 1 &gt; Group 2'. You should get the results shown in <xref ref="fig-fig11-18"/>.</p>
+    <p>So that's how to do a one-sided one sample <m>t</m>-test. However, all versions of the <m>t</m>-test can be one-sided. For an independent samples <m>t</m>-test, you could have a one-sided test if you're only interested in testing to see if group A has higher scores than group B, but have no interest in finding out if group B has higher scores than group A. Let's suppose that, for Dr Harpo's class, you wanted to see if Anastasia's students had higher grades than Bernadette's. For this analysis, in the 'Alt. Hypothesis' options, specify that 'Group 1 &gt; Group2'. You should get the results shown in <xref ref="fig-fig11-18"/>.</p>
 
     <p>Again, the output changes in a predictable way. The definition of the alternative hypothesis has changed, the <m>p</m>-value has changed, and it now reports a one-sided confidence interval rather than a two-sided one.</p>
 
     <figure xml:id="fig-fig11-18">
-      <caption>jamovi results showing an 'Independent Samples T-Test' where the actual hypothesis is one-sided, i.e. that Anastasia's students had higher grades than Bernadette's</caption>
+      <caption>JASP results showing an 'Independent Samples T-Test' where the actual hypothesis is one-sided, i.e. that Anastasia's students had higher grades than Bernadette's</caption>
       <image source="images/fig11-18.png" width="90%">
         <description>A table showing the results of an Independent Samples T-Test for grade. The table includes Student's t and Welch's t statistics, degrees of freedom, p-values, mean difference, standard error difference, and Cohen's d effect sizes.</description>
       </image>
     </figure>
 
-    <p>What about the paired samples <m>t</m>-test? Suppose we wanted to test the hypothesis that grades go up from test 1 to test 2 in Dr Zeppo's class, and are not prepared to consider the idea that the grades go down. In jamovi you would do this by specifying, under the 'Hypotheses' option, that grade_test2 ('Measure 1' in jamovi, because we copied this first into the paired variables box) &gt; grade_test1 ('Measure 2' in jamovi). You should get the results shown in <xref ref="fig-fig11-19"/>.</p>
+    <p>What about the paired samples <m>t</m>-test? Suppose we wanted to test the hypothesis that grades go up from test 1 to test 2 in Dr Zeppo's class, and are not prepared to consider the idea that the grades go down. In JASP you would do this by specifying, under the 'Hypotheses' option, that grade_test2 ('Measure 1' in JASP, because we copied this first into the paired variables box) &gt; grade_test1 ('Measure 2' in JASP). You should get the results shown in <xref ref="fig-fig11-19"/>.</p>
 
     <figure xml:id="fig-fig11-19">
-      <caption>jamovi results showing a 'Paired Samples T-Test' where the actual hypothesis is one-sided, i.e. that grade_test2 ('Measure 1') <m>&gt;</m> grade_test1 ('Measure 2')</caption>
+      <caption>JASP results showing a 'Paired Samples T-Test' where the actual hypothesis is one-sided, i.e. that grade_test2 ('Measure 1') <m>&gt;</m> grade_test1 ('Measure 2')</caption>
       <image source="images/fig11-19.png" width="90%">
         <description>A table displaying results of a Paired Samples T-Test indicates a significant difference between two paired tests. Key values include t(19) = 6.49, p &lt; .0001, Cohen's d = 1.45 with a 95% confidence interval of 1.03 to infinity.</description>
       </image>
@@ -608,7 +614,7 @@
 
     <p>As discussed by <xref ref="McGrath2006"/>, there are several different versions in common usage, and each author tends to adopt slightly different notation. For the sake of simplicity (as opposed to accuracy), I'll use <m>d</m> to refer to any statistic that you calculate from the sample, and use <m>\delta</m> to refer to a theoretical population effect. Obviously, that does mean that there are several different things all called <m>d</m>.</p>
 
-    <p>My suspicion is that the only time that you would want Cohen's <m>d</m> is when you're running a <m>t</m>-test, and jamovi has an option to calculate the effect size for all the different flavours of <m>t</m>-test it provides.</p>
+    <p>My suspicion is that the only time that you would want Cohen's <m>d</m> is when you're running a <m>t</m>-test, and JASP has an option to calculate the effect size for all the different flavours of <m>t</m>-test it provides.</p>
 
     <subsection xml:id="subsec-cohens-d-one-sample">
       <title>Cohen's <m>d</m> from one sample</title>
@@ -628,22 +634,22 @@
       <p>where, as usual, <m>\mu_1</m> and <m>\mu_2</m> are the population means corresponding to group 1 and group 2 respectively, and <m>\sigma</m> is the standard deviation (the same for both populations). The obvious way to estimate <m>\delta</m> is to do exactly the same thing that we did in the <m>t</m>-test itself, i.e., use the sample means as the top line and a pooled standard deviation estimate for the bottom line:
       <me>d=\frac{\bar{X}_1-\bar{X}_2}{\hat{\sigma}_p}</me></p>
 
-      <p>where <m>\hat{\sigma}_p</m> is the exact same pooled standard deviation measure that appears in the <m>t</m>-test. This is the most commonly used version of Cohen's <m>d</m> when applied to the outcome of a Student <m>t</m>-test, and is the one provided in jamovi. It is sometimes referred to as Hedges' <m>g</m> statistic (<xref ref="Hedges1981"/>).</p>
+      <p>where <m>\hat{\sigma}_p</m> is the exact same pooled standard deviation measure that appears in the <m>t</m>-test. This is the most commonly used version of Cohen's <m>d</m> when applied to the outcome of a Student <m>t</m>-test, and is the one provided in JASP. It is sometimes referred to as Hedges' <m>g</m> statistic (<xref ref="Hedges1981"/>).</p>
 
       <p>However, there are other possibilities which I'll briefly describe. Firstly, you may have reason to want to use only one of the two groups as the basis for calculating the standard deviation. This approach (often called Glass' <m>\triangle</m>, pronounced delta) only makes most sense when you have good reason to treat one of the two groups as a purer reflection of "natural variation" than the other. This can happen if, for instance, one of the two groups is a control group. Secondly, recall that in the usual calculation of the pooled standard deviation we divide by <m>N - 2</m> to correct for the bias in the sample variance. In one version of Cohen's <m>d</m> this correction is omitted, and instead we divide by <m>N</m>. This version makes sense primarily when you're trying to calculate the effect size in the sample rather than estimating an effect size in the population. Finally, there is a version called Hedge's <m>g</m>, based on <xref ref="Hedges1985"/>, who point out there is a small bias in the usual (pooled) estimation for Cohen's <m>d</m>.<fn>They introduce a small correction by multiplying the usual value of <m>d</m> by <m>\frac{(N - 3)}{(N - 2.25)}</m>.</fn></p>
 
-      <p>In any case, ignoring all those variations that you could make use of if you wanted, let's have a look at the default version in jamovi. In <xref ref="fig-fig11-9"/> Cohen's <m>d = 0.74</m>, indicating that the grade scores for students in Anastasia's class are, on average, <m>0.74</m> standard deviations higher than the grade scores for students in Bernadette's class. For a Welch test, the estimated effect size is the same (<xref ref="fig-fig11-11"/>).</p>
+      <p>In any case, ignoring all those variations that you could make use of if you wanted, let's have a look at the default version in JASP. In <xref ref="fig-fig11-9"/> Cohen's <m>d = 0.74</m>, indicating that the grade scores for students in Anastasia's class are, on average, <m>0.74</m> standard deviations higher than the grade scores for students in Bernadette's class. For a Welch test, the estimated effect size is the same (<xref ref="fig-fig11-11"/>).</p>
     </subsection>
 
     <subsection xml:id="subsec-cohens-d-paired">
       <title>Cohen's <m>d</m> from a paired-samples test</title>
 
-      <p>Finally, what should we do for a paired samples <m>t</m>-test? In this case, the answer depends on what it is you're trying to do. jamovi assumes that you want to measure your effect sizes relative to the distribution of difference scores, and the measure of <m>d</m> that you calculate is:
+      <p>Finally, what should we do for a paired samples <m>t</m>-test? In this case, the answer depends on what it is you're trying to do. JASP assumes that you want to measure your effect sizes relative to the distribution of difference scores, and the measure of <m>d</m> that you calculate is:
       <me>d=\frac{\bar{D}}{\hat{\sigma}_D}</me></p>
 
       <p>where <m>\hat{\sigma}_D</m> is the estimate of the standard deviation of the differences. In <xref ref="fig-fig11-16"/> Cohen's <m>d = 1.45</m>, indicating that the time 2 grade scores are, on average, <m>1.45</m> standard deviations higher than the time 1 grade scores.</p>
 
-      <p>This is the version of Cohen's <m>d</m> that gets reported by the jamovi 'Paired Samples T-Test' analysis. The only wrinkle is figuring out whether this is the measure you want or not. To the extent that you care about the practical consequences of your research, you often want to measure the effect size relative to the <em>original</em> variables, not the <em>difference scores</em> (e.g., the 1% improvement in Dr Chico's class over time is pretty small when measured against the amount of between-student variation in grades), in which case you use the same versions of Cohen's <m>d</m> that you would use for a Student or Welch test. It's not so straightforward to do this in jamovi,<fn>If you are interested, you can look at how this was done in the <em>chico2.omv</em> file.</fn> but the Cohen's <m>d</m> for this perspective is quite different: it is <m>0.22</m> which is quite small when assessed on the scale of the original variables.</p>
+      <p>This is the version of Cohen's <m>d</m> that gets reported by the JASP 'Paired Samples T-Test' analysis. The only wrinkle is figuring out whether this is the measure you want or not. To the extent that you care about the practical consequences of your research, you often want to measure the effect size relative to the <em>original</em> variables, not the <em>difference scores</em> (e.g., the 1% improvement in Dr Chico's class over time is pretty small when measured against the amount of between-student variation in grades), in which case you use the same versions of Cohen's <m>d</m> that you would use for a Student or Welch test. It's not so straightforward to do this in JASP,<fn>If you are interested, you can look at how this was done in the <em>chico2.omv</em> file.</fn> but the Cohen's <m>d</m> for this perspective is quite different: it is <m>0.22</m> which is quite small when assessed on the scale of the original variables.</p>
     </subsection>
   </section>
 
@@ -679,17 +685,17 @@
     <subsection xml:id="subsec-qq-plots-t-tests">
       <title>QQ plots for independent and paired <m>t</m>-tests</title>
 
-      <p>In our previous analyses we showed how to conduct in jamovi an independent <m>t</m>-test (<xref ref="fig-fig11-9"/>) and a paired samples <m>t</m>-test (<xref ref="fig-fig11-16"/>). And for these analyses jamovi provides an option to show a QQ plot for the difference scores (which jamovi calls the 'residuals'), which is a better way of checking the normality assumption. When we select this option for these analyses, we get the QQ plots shown in <xref ref="fig-fig11-22"/> and <xref ref="fig-fig11-23"/>, respectively. My interpretation is that these plots both show that the difference scores are reasonably normally distributed, so we are good to go!</p>
+      <p>In our previous analyses we showed how to conduct in JASP an independent <m>t</m>-test (<xref ref="fig-fig11-9"/>) and a paired samples <m>t</m>-test (<xref ref="fig-fig11-16"/>). And for these analyses JASP provides an option to show a QQ plot for the difference scores (which JASP calls the 'residuals'), which is a better way of checking the normality assumption. When we select this option for these analyses, we get the QQ plots shown in <xref ref="fig-fig11-22"/> and <xref ref="fig-fig11-23"/>, respectively. My interpretation is that these plots both show that the difference scores are reasonably normally distributed, so we are good to go!</p>
 
       <figure xml:id="fig-fig11-22">
-        <caption>jamovi QQ plot for the independent <m>t</m>-test analysis shown in <xref ref="fig-fig11-9"/></caption>
+        <caption>JASP QQ plot for the independent <m>t</m>-test analysis shown in <xref ref="fig-fig11-9"/></caption>
         <image source="images/fig11-22.png" width="80%">
           <description>A Q-Q plot showing standardized residuals versus theoretical quantiles. Data points are scattered along the line y = x, indicating that the residuals follow a normal distribution. The x-axis ranges from -2 to 2, and the y-axis ranges from -2 to 2.</description>
         </image>
       </figure>
 
       <figure xml:id="fig-fig11-23">
-        <caption>jamovi QQ plot for the paired samples <m>t</m>-test analysis shown in <xref ref="fig-fig11-16"/></caption>
+        <caption>JASP QQ plot for the paired samples <m>t</m>-test analysis shown in <xref ref="fig-fig11-16"/></caption>
         <image source="images/fig11-23.png" width="80%">
           <description>A Q-Q plot displays standardized residuals versus theoretical quantiles to assess the normality of a data set. The points mostly follow the diagonal line from bottom left to top right, indicating that the residuals are approximately normally distributed.</description>
         </image>
@@ -699,11 +705,11 @@
     <subsection xml:id="subsec-shapiro-wilk">
       <title>Shapiro-Wilk tests</title>
 
-      <p>QQ plots provide a nice way to informally check the normality of your data, but sometimes you'll want to do something a bit more formal and the <term>Shapiro-Wilk test</term> (<xref ref="Shapiro1965"/>) is probably what you're looking for.<fn>Either that, or the Kolmogorov-Smirnov test, which is probably more traditional than the Shapiro-Wilk. Although most things I've read seem to suggest Shapiro-Wilk is the better test of normality, the Kolmogorov-Smirnov is a general purpose test of distributional equivalence that can be adapted to handle other kinds of distribution tests. In jamovi the Shapiro-Wilk test is preferred.</fn> As you'd expect, the null hypothesis being tested is that a set of <m>N</m> observations is normally distributed.</p>
+      <p>QQ plots provide a nice way to informally check the normality of your data, but sometimes you'll want to do something a bit more formal and the <term>Shapiro-Wilk test</term> (<xref ref="Shapiro1965"/>) is probably what you're looking for.<fn>Either that, or the Kolmogorov-Smirnov test, which is probably more traditional than the Shapiro-Wilk. Although most things I've read seem to suggest Shapiro-Wilk is the better test of normality, the Kolmogorov-Smirnov is a general purpose test of distributional equivalence that can be adapted to handle other kinds of distribution tests. In JASP the Shapiro-Wilk test is preferred.</fn> As you'd expect, the null hypothesis being tested is that a set of <m>N</m> observations is normally distributed.</p>
 
       <p>[Additional technical detail<fn>The test statistic that it calculates is conventionally denoted as <m>W</m>, and it's calculated as follows. First, we sort the observations in order of increasing size, and let <m>\bar{X_1}</m> be the smallest value in the sample, <m>X_2</m> be the second smallest and so on. Then the value of <m>W</m> is given by: <me>W=\frac{(\sum_{i=1}^N a_iX_i)^2}{\sum_{i=1}^N(X_i-\bar{X})^2}</me> where <m>\bar{X}</m> is the mean of the observations, and the <m>a_i</m> values are ...mumble, mumble... something complicated that is a bit beyond the scope of an introductory text.</fn>]</p>
 
-      <p>To get the Shapiro-Wilk statistic in jamovi <m>t</m>-tests, check the option for 'Normality' listed under 'Assumptions'. In the randomly sampled data (<m>N = 100</m>) we used for the QQ plot, the value for the Shapiro-Wilk normality test statistic was <m>W = 0.99</m> with a <m>p</m>-value of <m>0.54</m>. So, not surprisingly, we have no evidence that these data depart from normality. When reporting the results for a Shapiro-Wilk test, you should (as usual) make sure to include the test statistic <m>W</m> and the <m>p</m>-value, though given that the sampling distribution depends so heavily on <m>N</m> it would probably be a politeness to include <m>N</m> as well.</p>
+      <p>To get the Shapiro-Wilk statistic in JASP <m>t</m>-tests, check the option for 'Normality' listed under 'Assumption checks'. In the randomly sampled data (<m>N = 100</m>) we used for the QQ plot, the value for the Shapiro-Wilk normality test statistic was <m>W = 0.99</m> with a <m>p</m>-value of <m>0.54</m>. So, not surprisingly, we have no evidence that these data depart from normality. When reporting the results for a Shapiro-Wilk test, you should (as usual) make sure to include the test statistic <m>W</m> and the <m>p</m>-value, though given that the sampling distribution depends so heavily on <m>N</m> it would probably be a politeness to include <m>N</m> as well.</p>
     </subsection>
 
     <subsection xml:id="subsec-normality-example">
@@ -712,7 +718,7 @@
       <p>In the meantime, it's probably worth showing you an example of what happens to the QQ plot and the Shapiro-Wilk test when the data turn out to be non-normal. For that, let's look at the distribution of our AFL winning margins data, which if you remember back to the descriptive statistics chapter it didn't look like they came from a normal distribution at all. <xref ref="fig-fig11-24"/> shows what happens to the QQ plot. And when we run the Shapiro-Wilk test on the <em>afl.margins</em> data, we get a value for the Shapiro-Wilk normality test statistic of <m>W = 0.94</m>, and <m>p</m>-value <m>= 9.481 \times 10^{-07}</m>. Clearly a significant effect!</p>
 
       <figure xml:id="fig-fig11-24">
-        <caption>jamovi QQ plot showing non-normality from the AFL winning margins data</caption>
+        <caption>JASP QQ plot showing non-normality from the AFL winning margins data</caption>
         <image source="images/fig11-24.png" width="80%">
           <description>A Q-Q plot shows standardized residuals against theoretical quantiles. Data points largely follow a diagonal reference line, indicating normality. Points deviate at the upper and lower ends, suggesting potential departures from a normal distribution at extremes.</description>
         </image>
@@ -802,14 +808,14 @@
         </tabular>
       </table>
 
-      <p>We then count up the number of checkmarks. This is our test statistic, <m>W</m>.<fn>Actually, there are two different versions of the test statistic that differ from each other by a constant value. The version that I've described is the one that jamovi calculates.</fn> The actual sampling distribution for <m>W</m> is somewhat complicated, and I'll skip the details. For our purposes, it's sufficient to note that the interpretation of <m>W</m> is qualitatively the same as the interpretation of <m>t</m> or <m>z</m>. That is, if we want a two-sided test then we reject the null hypothesis when <m>W</m> is very large or very small, but if we have a directional (i.e., one-sided) hypothesis then we only use one or the other.</p>
+      <p>We then count up the number of checkmarks. This is our test statistic, <m>W</m>.<fn>Actually, there are two different versions of the test statistic that differ from each other by a constant value. The version that I've described is the one that JASP calculates.</fn> The actual sampling distribution for <m>W</m> is somewhat complicated, and I'll skip the details. For our purposes, it's sufficient to note that the interpretation of <m>W</m> is qualitatively the same as the interpretation of <m>t</m> or <m>z</m>. That is, if we want a two-sided test then we reject the null hypothesis when <m>W</m> is very large or very small, but if we have a directional (i.e., one-sided) hypothesis then we only use one or the other.</p>
 
-      <p>In jamovi, if we run an 'Independent Samples T-Test' with scores as the dependent variable and group as the grouping variable, and then under the options for 'tests' check the option for 'Mann-Whitney U', we will get results showing that <m>U = 3</m> (i.e., the same number of checkmarks as shown above), and a <m>p</m>-value <m>= 0.05556</m>. See <xref ref="fig-fig11-25"/>. Counting up the tick marks this time we get a test statistic of <m>W = 7</m>. As before, if our test is two-sided, then we reject the null hypothesis when W is very large or very small.</p>
+      <p>In JASP, if we run an 'Independent Samples T-Test' with scores as the dependent variable and group as the grouping variable, and then under the options for 'tests' check the option for 'Mann-Whitney U', we will get results showing that <m>U = 3</m> (i.e., the same number of checkmarks as shown above), and a <m>p</m>-value <m>= 0.05556</m>. See <xref ref="fig-fig11-25"/>. Counting up the tick marks this time we get a test statistic of <m>W = 7</m>. As before, if our test is two-sided, then we reject the null hypothesis when W is very large or very small.</p>
 
       <figure xml:id="fig-fig11-25">
-        <caption>jamovi screen showing results for the Mann-Whitney <m>U</m> test</caption>
+        <caption>JASP screen showing results for the Mann-Whitney <m>U</m> test</caption>
         <image source="images/fig11-25.png" width="90%">
-          <description>A jamovi screenshot showing a Mann-Whitney U test setup on the left and results on the right. The setup includes dependent and grouping variables, while the results section displays statistical values and references.</description>
+          <description>A JASP screenshot showing a Mann-Whitney U test setup on the left and results on the right. The setup includes dependent and grouping variables, while the results section displays statistical values and references.</description>
         </image>
       </figure>
     </subsection>
@@ -900,12 +906,12 @@
         </tabular>
       </table>
 
-      <p>Running this in jamovi is straightforward. For the one sample version, specify the 'Wilcoxon rank' option under 'Tests' in the 'One Sample T-Test' analysis window. This gives a Wilcoxon <m>W = 7</m>, <m>p</m>-value <m>= 0.03711</m>. Evidently, taking a statistics class does have an effect on your happiness. Switching to a paired samples version of the test won't give a different answer, of course; see <xref ref="fig-fig11-26"/>.</p>
+      <p>Running this in JASP is straightforward. For the one sample version, specify the 'Wilcoxon rank' option under 'Tests' in the 'One Sample T-Test' analysis window. This gives a Wilcoxon <m>W = 7</m>, <m>p</m>-value <m>= 0.03711</m>. Evidently, taking a statistics class does have an effect on your happiness. Switching to a paired samples version of the test won't give a different answer, of course; see <xref ref="fig-fig11-26"/>.</p>
 
       <figure xml:id="fig-fig11-26">
-        <caption>jamovi screen showing results for one-sample and paired sample Wilcoxon nonparametric tests</caption>
+        <caption>JASP screen showing results for one-sample and paired sample Wilcoxon nonparametric tests</caption>
         <image source="images/fig11-26.png" width="90%">
-          <description>A jamovi screenshot displaying statistical analysis for Wilcoxon nonparametric tests. The variables listed include "before" and "after." The results section shows outcomes for one sample and paired samples t-tests, including Wilcoxon W and p-values.</description>
+          <description>A JASP screenshot displaying statistical analysis for Wilcoxon nonparametric tests. The variables listed include "before" and "after." The results section shows outcomes for one sample and paired samples t-tests, including Wilcoxon W and p-values.</description>
         </image>
       </figure>
     </subsection>
