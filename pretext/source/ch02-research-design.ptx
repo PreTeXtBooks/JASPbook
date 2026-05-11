@@ -36,7 +36,7 @@
         <li><p>My <em>age</em> is <em>33</em> years.</p></li>
         <li><p>I <em>do not</em> <em>like anchovies.</em></p></li>
         <li><p>My <em>chromosomal gender</em> is <em>male</em>.</p></li>
-        <li><p>My <em>self-identified gender</em> is <em>female</em>.</p></li>
+        <li><p>My <em>self-identified gender</em> is <em>male</em>.<fn>Well... now this is awkward, isn't it? This section is one of the oldest parts of the book, and it's outdated in a rather embarrassing way. I wrote this in 2010, at which point all of those facts <em>were</em> true. Revisiting this in 2018, well I'm not 33 any more, but that's not surprising I suppose. I can't imagine my chromosomes have changed, so I'm going to guess my karyotype was then and is now XY. The self-identified gender, on the other hand...ah. I suppose the fact that the title page now refers to me as Danielle rather than Daniel might possibly be a giveaway, but I don't typically identify as <q>male</q> on a gender questionnaire these days, and I prefer <em>she/her</em> pronouns as a default (it's a long story)! I did think a little about how I was going to handle this in the book, actually. The book has a somewhat distinct authorial voice to it, and I feel like it would be a rather different work if I went back and wrote everything as Danielle and updated all the pronouns in the work. Besides, it would be a lot of work, so I've left my name as <q>Dan</q> throughout the book, and in any case <q>Dan</q> is a perfectly good nickname for <q>Danielle</q>, don't you think? In any case, it's not a big deal. I only wanted to mention it to make life a little easier for readers who aren't sure how to refer to me. I still don't like anchovies though :-)</fn></p></li>
       </ul>
 
       <p>
@@ -253,7 +253,7 @@
       </p>
 
       <p>
-        That said, notice that while we <em>can</em> use the natural ordering of these items to construct sensible groupings, what we can't do is average them. For instance, in my simple example here, the <q>average</q> response to the question is 1.97. If you can tell me what that means I'd love to know, because it seems like gibberish to me!
+        That said, notice that while we <em>can</em> use the natural ordering of these items to construct sensible groupings, what we <em>can't</em> do is average them. For instance, in my simple example here, the <q>average</q> response to the question is 1.97. It is not exactly clear what this average means; certainly, the value 1.97 is not a valid response to the survey.
       </p>
 
     </subsection>
