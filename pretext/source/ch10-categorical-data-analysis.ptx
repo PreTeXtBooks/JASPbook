@@ -43,7 +43,7 @@
 
       <p>That little frequency table is quite helpful. Looking at it, there's a bit of a hint that people might be more likely to select hearts than clubs, but it's not completely obvious just from looking at it whether that's really true, or if this is just due to chance. So we'll probably have to do some kind of statistical analysis to find out, which is what I'm going to talk about in the next section.</p>
 
-      <p>Excellent. From this point on, we'll treat this table as the data that we're looking to analyse. However, since I'm going to have to talk about this data in mathematical terms (sorry!) it might be a good idea to be clear about what the notation is. In mathematical notation, we shorten the human-readable word "observed" to the letter <m>O</m>, and we use subscripts to denote the position of the observation. So the second observation in our table is written as <m>O_2</m> in maths. The relationship between the English descriptions and the mathematical symbols are illustrated in <xref ref="tbl-tab10-2"/>.</p>
+      <p>Excellent. From this point on, we'll treat this table as the data that we're looking to analyze. However, since I'm going to have to talk about this data in mathematical terms (sorry!) it might be a good idea to be clear about what the notation is. In mathematical notation, we shorten the human-readable word "observed" to the letter <m>O</m>, and we use subscripts to denote the position of the observation. So the second observation in our table is written as <m>O_2</m> in maths. The relationship between the English descriptions and the mathematical symbols are illustrated in <xref ref="tbl-tab10-2"/>.</p>
 
       <table xml:id="tbl-tab10-2">
         <title>Relationship between English descriptions and mathematical symbols</title>
@@ -269,7 +269,7 @@
     <subsection xml:id="subsec-gof-in-jamovi">
       <title>Doing the test in JASP</title>
 
-      <p>Not surprisingly, JASP provides an analysis that will do these calculations for you. From the main 'Analyses' toolbar select 'Frequencies' -- 'Multinomial Test'. Then in the analysis window that appears move the variable you want to analyse (choice_1) across into the 'Factor' box. Also, click on the 'Descriptives' check box so that you see the expected counts in the results table. When you have done all this, you should see the analysis results in JASP as in <xref ref="fig-fig10-3"/>. No surprise then that JASP provides the same expected counts and statistics that we calculated by hand above, with a <m>\chi^2</m> value of 8.44 with 3 d.f. and <m>p = 0.038</m>. Note that we don't need to look up a critical <m>p</m>-value threshold value any more, as JASP gives us the actual <m>p</m>-value of the calculated <m>\chi^2</m> for 3 d.f.</p>
+      <p>Not surprisingly, JASP provides an analysis that will do these calculations for you. From the main 'Analyses' toolbar select 'Frequencies' -- 'Multinomial Test'. Then in the analysis window that appears move the variable you want to analyze (choice_1) across into the 'Factor' box. Also, click on the 'Descriptives' check box so that you see the expected counts in the results table. When you have done all this, you should see the analysis results in JASP as in <xref ref="fig-fig10-3"/>. No surprise then that JASP provides the same expected counts and statistics that we calculated by hand above, with a <m>\chi^2</m> value of 8.44 with 3 d.f. and <m>p = 0.038</m>. Note that we don't need to look up a critical <m>p</m>-value threshold value any more, as JASP gives us the actual <m>p</m>-value of the calculated <m>\chi^2</m> for 3 d.f.</p>
 
       <figure xml:id="fig-fig10-3">
         <caption>A <m>\chi^2</m> goodness-of-fit test in JASP, with table showing both observed and expected frequencies.</caption>
@@ -412,7 +412,7 @@ GUARDBOT 1: Choose!</em></p>
     <subsection xml:id="subsec-constructing-hypothesis-test-independence">
       <title>Constructing our hypothesis test</title>
 
-      <p>How do we analyse this data? Specifically, since my research hypothesis is that "humans and robots answer the question in different ways", how can I construct a test of the null hypothesis that "humans and robots answer the question the same way"? As before, we begin by establishing some notation to describe the data (<xref ref="tbl-tab10-9"/>).</p>
+      <p>How do we analyze this data? Specifically, since my research hypothesis is that "humans and robots answer the question in different ways", how can I construct a test of the null hypothesis that "humans and robots answer the question the same way"? As before, we begin by establishing some notation to describe the data (<xref ref="tbl-tab10-9"/>).</p>
 
       <table xml:id="tbl-tab10-9">
         <title>Notation to describe the data</title>
