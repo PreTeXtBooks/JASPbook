@@ -216,7 +216,7 @@
       </ul>
 
       <figure xml:id="fig-fig15-2">
-        <caption>The JASP EFA analysis window</caption>
+        <caption>The JASP exploratory factor analysis window</caption>
         <image source="images/fig15-2.png" width="100%">
           <description>A JASP screenshot of an Exploratory Factor Analysis. The interface shows options and variables for analysis, methods for factor extraction and rotation, assumption checks, factor loadings, and additional output settings like factor summary and scree plot.</description>
         </image>
