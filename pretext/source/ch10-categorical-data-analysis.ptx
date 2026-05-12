@@ -219,7 +219,7 @@
 
       <figure xml:id="fig-fig10-1">
         <caption><m>\chi^2</m> (chi-square) distributions with different values for the "degrees of freedom"</caption>
-        <image source="images/fig-fig10-1-1.png" width="90%">
+        <image source="../../img/fig-fig10-1-1.png" width="90%">
           <description>Three chi-squared distribution curves are plotted with different degrees of freedom (df): solid line (df = 3), dashed line (df = 4), and dotted line (df = 5). The x-axis shows observed values from 0 to 12, and the y-axis indicates the probability density</description>
         </image>
       </figure>
@@ -236,7 +236,7 @@
 
       <figure xml:id="fig-fig10-2">
         <caption>Illustration of how the hypothesis testing works for the <m>\chi^2</m> (chi-square) goodness-of-fit test</caption>
-        <image source="images/fig-fig10-2-1.png" width="90%">
+        <image source="../../img/fig-fig10-2-1.png" width="90%">
           <description>A chi-square distribution graph shows a right-skewed curve. An arrow points to 7.82 on the x-axis, labeled "The critical value is 7.82." Another arrow points to 8.44 with the label "The observed GOF value is 8.44", highlighting an area under the curve beyond the critical value.</description>
         </image>
       </figure>
@@ -273,7 +273,7 @@
 
       <figure xml:id="fig-fig10-3">
         <caption>A <m>\chi^2</m> goodness-of-fit test in JASP, with table showing both observed and expected frequencies.</caption>
-        <image source="images/fig10-3.png" width="90%">
+        <image source="../../img/fig10-3.png" width="90%">
           <description>A JASP screenshot showing a multinomial test analysis. The factor selected is choice_1 with observed and expected counts for clubs, diamonds, hearts, and spades. The chi-square test results are shown below the table.</description>
         </image>
       </figure>
@@ -286,7 +286,7 @@
 
       <figure xml:id="fig-fig10-4">
         <caption>Changing the expected proportions in the <m>\chi^2</m> goodness-of-fit test in JASP</caption>
-        <image source="images/fig10-4.png" width="80%">
+        <image source="../../img/fig10-4.png" width="80%">
           <description>A JASP screenshot showing custom expected proportions for the card-suit multinomial test, with clubs and spades set lower than diamonds and hearts.</description>
         </image>
       </figure>
@@ -501,7 +501,7 @@ GUARDBOT 1: Choose!</em></p>
 
       <figure xml:id="fig-fig10-5">
         <caption>Independent samples <m>\chi^2</m> test in JASP using the <em>Chapek 9</em> data</caption>
-        <image source="images/fig10-5.png" width="90%">
+        <image source="../../img/fig10-5.png" width="90%">
           <description>A JASP screenshot showing contingency tables. The interface includes options to select rows and columns and display statistics and cells, with a table of observed and expected values shown on the right.</description>
         </image>
       </figure>

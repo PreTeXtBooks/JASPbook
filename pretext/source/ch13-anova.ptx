@@ -20,7 +20,7 @@
 
     <figure xml:id="fig-fig13-1">
       <caption>Descriptives for mood gain, and box plots by drug administered</caption>
-      <image source="images/fig13-1.png" width="95%">
+      <image source="../../img/fig13-1.png" width="95%">
         <description>A JASP screenshot displaying clinical trial results. The interface shows variable selection, descriptive statistics with mean and standard deviation for mood gain across three drugs, and a box plot graph comparing the mood gain for each drug.</description>
       </image>
     </figure>
@@ -41,7 +41,7 @@
 
     <figure xml:id="fig-fig13-2">
       <caption>Graphical illustration of "between groups" variation (panel (a)) and "within groups" variation (panel (b)). On the left the arrows show the differences in the group means. On the right the arrows highlight the variability within each group.</caption>
-      <image source="images/fig-fig13-2-1.png" width="90%">
+      <image source="../../img/fig-fig13-2-1.png" width="90%">
         <description>Two graphs. (a) "Between-group variation" shows three overlapping bell curves for groups 1, 2, and 3 with horizontal arrows between peaks. (b) "Within-group variation" has three same-position bell curves with horizontal arrows within each curve's peak.</description>
       </image>
     </figure>
@@ -482,7 +482,7 @@
 
       <figure xml:id="fig-fig13-3">
         <caption>JASP results table for ANOVA of mood gain by drug administered</caption>
-        <image source="images/fig13-3.png" width="95%">
+        <image source="../../img/fig13-3.png" width="95%">
           <description>A table from JASP titled "ANOVA - mood.gain" displays results for an ANOVA test with the columns: "Sum of Squares," "df," "Mean Square," "F," "p," and "η²." The rows present data for "drug" with values (3.45, 2, 1.73, 18.61, 0.00009, 0.71) and "Residuals" with values (1.39, 15, 0.09).</description>
         </image>
       </figure>
@@ -598,7 +598,7 @@
 
       <figure xml:id="fig-fig13-4">
         <caption>Uncorrected pairwise <m>t</m>-tests as post hoc comparisons in JASP</caption>
-        <image source="images/fig13-4.png" width="95%">
+        <image source="../../img/fig13-4.png" width="95%">
           <description>Image showing results of Post Hoc tests for drug comparisons. Table lists the mean differences, standard error (SE), degrees of freedom (df), t-values (t), and p-values (p) for three drug comparisons: anxifree vs. joyzepam, anxifree vs. placebo, and joyzepam vs. placebo. Note states comparisons are based on estimated marginal means.</description>
         </image>
       </figure>
@@ -748,7 +748,7 @@
 
       <figure xml:id="fig-fig13-5">
         <caption>Levene test output for one-way ANOVA in JASP</caption>
-        <image source="images/fig13-5.png" width="70%">
+        <image source="../../img/fig13-5.png" width="70%">
           <description>A table from JASP showing an assumption check for Homogeneity of Variances Test (Levene). The table includes columns labeled F, df1, df2, and p. The values are 1.45, 2, 15, and 0.26569 respectively.</description>
         </image>
       </figure>
@@ -761,7 +761,7 @@
 
       <figure xml:id="fig-fig13-6">
         <caption>Welch test as part of the one-way ANOVA analysis in JASP</caption>
-        <image source="images/fig13-6.png" width="95%">
+        <image source="../../img/fig13-6.png" width="95%">
           <description>A JASP screenshot displaying a one-way ANOVA analysis. The left panel shows input options and variables for the analysis, including variances, missing values, and assumption checks. The right panel shows the analysis results and assumption checks.</description>
         </image>
       </figure>
@@ -776,7 +776,7 @@
 
       <figure xml:id="fig-fig13-7">
         <caption>QQ plot in the one-way ANOVA analysis in JASP</caption>
-        <image source="images/fig13-7.png" width="80%">
+        <image source="../../img/fig13-7.png" width="80%">
           <description>A Q-Q plot comparing standardized residuals to theoretical quantiles, showing dots near a 45-degree reference line, indicating the data points follow a normal distribution closely. The axes are labeled "Standardized Residuals" and "Theoretical Quantiles".</description>
         </image>
       </figure>
@@ -872,7 +872,7 @@
 
       <figure xml:id="fig-fig13-8">
         <caption>Kruskal-Wallis one-way non-parametric ANOVA in JASP</caption>
-        <image source="images/fig13-8.png" width="95%">
+        <image source="../../img/fig13-8.png" width="95%">
           <description>A JASP screenshot showing a One-Way ANOVA (Non-parametric) test in a clinical trial. The interface displays the dependent variable "mood.gain," the grouping variable "drug," analysis results, and a list of references on the right.</description>
         </image>
       </figure>
@@ -956,7 +956,7 @@
 
       <figure xml:id="fig-fig13-9">
         <caption>Repeated measures ANOVA dialogue box in JASP</caption>
-        <image source="images/fig13-9.png" width="80%">
+        <image source="../../img/fig13-9.png" width="80%">
           <description>A JASP screenshot showing the setup for a Repeated Measures ANOVA analysis. The interface includes fields for participants, speech, conceptual, and syntax variables, along with options to define repeated measures factors and cells, between subject factors, and covariates.</description>
         </image>
       </figure>
@@ -974,7 +974,7 @@
 
       <figure xml:id="fig-fig13-10">
         <caption>One-way repeated measures ANOVA output -- Mauchly Test of Sphericity</caption>
-        <image source="images/fig13-10.png" width="95%">
+        <image source="../../img/fig13-10.png" width="95%">
           <description>A JASP results table titled "Tests of Sphericity" shows three columns for Mauchly W, p-value, Greenhouse-Geisser epsilon, and Huynh-Feldt epsilon. Under the task row, the values are 0.85, 0.72009, 0.87, and 1.00, respectively. The heading 'Assumptions' is above the table.</description>
         </image>
       </figure>
@@ -992,7 +992,7 @@
 
       <figure xml:id="fig-fig13-11">
         <caption>One-way repeated measures ANOVA output -- Tests of Within Subjects Effects</caption>
-        <image source="images/fig13-11.png" width="95%">
+        <image source="../../img/fig13-11.png" width="95%">
           <description>A JASP results table displaying repeated measures ANOVA results. The columns include Sphericity Correction (None, Greenhouse-Geisser, Huynh-Feldt), Sum of Squares, degrees of freedom (df), Mean Square, F-values, and p-values for Task and Residual effects. Note: Type 3 Sums of Squares.</description>
         </image>
       </figure>
@@ -1001,7 +1001,7 @@
 
       <figure xml:id="fig-fig13-12">
         <caption>Post hoc tests in repeated measures ANOVA in JASP</caption>
-        <image source="images/fig13-12.png" width="95%">
+        <image source="../../img/fig13-12.png" width="95%">
           <description>A JASP results table titled 'Post Hoc Comparisons -- Task' with columns for Comparison, Mean Difference, SE, df, t, and P_tukey. The tasks compared are Speech vs. Conceptual, Speech vs. Syntax, and Conceptual vs. Syntax. Values for each comparison are provided.</description>
         </image>
       </figure>
@@ -1010,7 +1010,7 @@
 
       <figure xml:id="fig-fig13-13">
         <caption>One-way repeated measures ANOVA output -- Descriptive Statistics</caption>
-        <image source="images/fig13-13.png" width="70%">
+        <image source="../../img/fig13-13.png" width="70%">
           <description>A JASP results table titled 'Estimated Marginal Means - Task' shows the mean, standard error, and 95% confidence intervals for three tasks: Speech (Mean: 7.17, SE: 0.60, CI: 5.62-8.71), Conceptual (Mean: 6.17, SE: 0.60, CI: 4.62-7.71), and Syntax (Mean: 4.33, SE: 0.67, CI: 2.62-6.05).</description>
         </image>
       </figure>
@@ -1026,7 +1026,7 @@
 
     <figure xml:id="fig-fig13-14">
       <caption>The 'Repeated Measures ANOVA (Non-parametric)' dialogue box and results in JASP</caption>
-      <image source="images/fig13-14.png" width="95%">
+      <image source="../../img/fig13-14.png" width="95%">
         <description>A JASP screenshot displaying the results of a Repeated Measures ANOVA (Non-parametric). The sections shown include data from participants, measures (Speech, Conceptual, Syntax), pairwise comparisons, and descriptive statistics.</description>
       </image>
     </figure>

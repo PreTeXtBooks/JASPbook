@@ -15,7 +15,7 @@
 
     <figure xml:id="fig5-1">
       <caption>A stylised redrawing of John Snow's original cholera map. Each small dot represents the location of a cholera case and each large circle shows the location of a well. As the plot makes clear, the cholera outbreak is centred very closely on the Broad St pump.</caption>
-      <image source="images/fig5-1.png" width="100%">
+      <image source="../../img/fig5-1.png" width="100%">
         <description>A stylised redrawing of John Snow's cholera map showing cholera cases and wells.</description>
       </image>
     </figure>
@@ -30,7 +30,7 @@
 
     <figure xml:id="fig5-2">
       <caption>JASP screenshot showing the 'Distribution plots' option and accompanying histogram.</caption>
-      <image source="images/fig5-2.png" width="100%">
+      <image source="../../img/fig5-2.png" width="100%">
         <description>A JASP screenshot showing the Distribution plots option and an accompanying histogram.</description>
       </image>
     </figure>
@@ -39,7 +39,7 @@
 
     <figure xml:id="fig5-3">
       <caption>A density plot of the <em>afl.margins</em> variable plotted in JASP</caption>
-      <image source="images/fig5-3.png" width="70%">
+      <image source="../../img/fig5-3.png" width="70%">
         <description>A density plot of the afl.margins variable plotted in JASP.</description>
       </image>
     </figure>
@@ -54,7 +54,7 @@
 
     <figure xml:id="fig5-4">
       <caption>A box plot of the <em>afl.margins</em> variable plotted in JASP</caption>
-      <image source="images/fig5-4.png" width="70%">
+      <image source="../../img/fig5-4.png" width="70%">
         <description>A box plot of the afl.margins variable plotted in JASP.</description>
       </image>
     </figure>
@@ -68,7 +68,7 @@
 
       <figure xml:id="fig5-5">
         <caption>A violin plot of the <em>afl.margins</em> variable plotted in JASP, also showing a box plot and data points</caption>
-        <image source="images/fig5-5.png" width="70%">
+        <image source="../../img/fig5-5.png" width="70%">
           <description>A violin plot of the afl.margins variable plotted in JASP, also showing a box plot and data points.</description>
         </image>
       </figure>
@@ -83,14 +83,14 @@
 
       <figure xml:id="fig5-6">
         <caption>JASP screenshot showing the 'Split' window</caption>
-        <image source="images/fig5-6.png" width="80%">
+        <image source="../../img/fig5-6.png" width="80%">
           <description>A JASP screenshot showing the Split window for drawing multiple boxplots.</description>
         </image>
       </figure>
 
       <figure xml:id="fig5-7">
         <caption>Multiple boxplots plotted in JASP, for the margin by year variables in the <em>aflsmall2</em> data set</caption>
-        <image source="images/fig5-7.png" width="100%">
+        <image source="../../img/fig5-7.png" width="100%">
           <description>Multiple boxplots plotted in JASP for the margin by year variables in the aflsmall2 data set.</description>
         </image>
       </figure>

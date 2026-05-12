@@ -204,7 +204,7 @@
 
       <figure xml:id="fig-fig7-1">
         <caption>An illustration of how frequentist probability works. If you flip a fair coin over and over again the proportion of heads that you have seen eventually settles down and converges to the true probability of <m>0.5</m>. Each panel shows four different simulated experiments. In each case we pretend we flipped a coin <m>1000</m> times and kept track of the proportion of flips that were heads as we went along. Although none of these sequences actually ended up with an exact value of <m>.5</m>, if we had extended the experiment for an infinite number of coin flips they would have</caption>
-        <image source="images/fig-fig7-1-1.png" width="90%">
+        <image source="../../img/fig-fig7-1-1.png" width="90%">
           <description>Four line plots each showing the proportion of heads versus the number of coin flips, ranging from 0 to 1000 flips. All plots demonstrate convergence towards 0.5 as the number of flips increases, with initial fluctuations stabilizing over time</description>
         </image>
       </figure>
@@ -289,7 +289,7 @@
 
       <figure xml:id="fig-fig7-2">
         <caption>A visual depiction of the "trousers" probability distribution. There are five "elementary events", corresponding to the five pairs of trousers that I own. Each event has some probability of occurring -- this probability is a number between 0 to 1. The sum of these probabilities is 1</caption>
-        <image source="images/fig-fig7-2-1.png" width="80%">
+        <image source="../../img/fig-fig7-2-1.png" width="80%">
           <description>Bar chart showing the probability of different events. Blue jeans have the highest probability at 0.5, followed by grey jeans around 0.3. Black jeans and blue track have the same probability near 0.1, while the black suit has a probability of 0.</description>
         </image>
       </figure>
@@ -354,7 +354,7 @@
 
       <figure xml:id="fig-fig7-3">
         <caption>The binomial distribution with size parameter of <m>N = 20</m> and an underlying success probability of <m>\theta = \frac{1}{6}</m>. Each vertical bar depicts the probability of one specific outcome (i.e., one possible value of <m>X</m>). Because this is a probability distribution, each of the probabilities must be a number between 0 and 1, and the heights of the bars must sum to 1 as well</caption>
-        <image source="images/fig-fig7-3-1.png" width="90%">
+        <image source="../../img/fig-fig7-3-1.png" width="90%">
           <description>A bar graph titled "Number of skulls observed" on the x-axis and "Probability" on the y-axis. The graph has bars with heights decreasing from left to right, peaking around 4-5 skulls, illustrating the probability distribution of observed skulls</description>
         </image>
       </figure>
@@ -363,7 +363,7 @@
 
       <figure xml:id="fig-fig7-4">
         <caption>Two binomial distributions, involving a scenario in which I flip a fair coin so the underlying success probability is <m>\theta = \frac{1}{2}</m>. In panel (a), I flipped the coin <m>N = 20</m> times. In panel (b) the coin was flipped <m>N = 100</m> times</caption>
-        <image source="images/fig-fig7-4-1.png" width="80%">
+        <image source="../../img/fig-fig7-4-1.png" width="80%">
           <description>Two bar graphs show the probability distribution of the number of skulls observed. Graph (a) ranges from 0 to 20 on the x-axis, with peaks around 9-11 skulls. Graph (b) ranges from 0 to 100, with a prominent peak around 50 skulls. Both graphs have "Probability" on the y-axis.</description>
         </image>
       </figure>
@@ -383,7 +383,7 @@
 
     <figure xml:id="fig-fig7-5">
       <caption>The normal distribution with mean <m>\mu = 0</m> and standard deviation <m>\sigma = 1</m>. The x-axis corresponds to the value of some variable, and the y-axis tells us something about how likely we are to observe that value. However, notice that the y-axis is labelled <em>Probability Density</em> and not <em>Probability</em></caption>
-      <image source="images/fig-fig7-5-1.png" width="90%">
+      <image source="../../img/fig-fig7-5-1.png" width="90%">
         <description>A line graph displaying a bell-shaped curve, representing a normal distribution. The x-axis is labeled "Observed Value," ranging from -3 to 3, and the y-axis is labeled "Probability Density," ranging from 0.0 to 0.4. The peak of the curve is at 0</description>
       </image>
     </figure>
@@ -398,28 +398,28 @@
 
     <figure xml:id="fig-fig7-6">
       <caption>An illustration of what happens when you change the mean of a normal distribution. The solid line depicts a normal distribution with a mean of <m>\mu = 4</m>. The dashed line shows a normal distribution with a mean of <m>\mu = 7</m>. In both cases, the standard deviation is <m>\sigma = 1</m>. Not surprisingly, the two distributions have the same shape, but the dashed line is shifted to the right</caption>
-      <image source="images/fig-fig7-6-1.png" width="90%">
+      <image source="../../img/fig-fig7-6-1.png" width="90%">
         <description>Line graph showing two overlapping probability density curves. The solid line curve peaks at an observed value of 3, and the dashed line curve peaks at an observed value of 6. The x-axis is labeled "Observed Value" and the y-axis is labeled "Probability Density"</description>
       </image>
     </figure>
 
     <figure xml:id="fig-fig7-7">
       <caption>An illustration of what happens when you change the the standard deviation of a normal distribution. Both distributions plotted in this figure have a mean of <m>\mu = 5</m>, but they have different standard deviations. The solid line plots a distribution with standard deviation <m>\sigma = 1</m>, and the dashed line shows a distribution with standard deviation <m>\sigma = 2</m>. As a consequence, both distributions are "centred" on the same spot, but the dashed line is wider than the solid one</caption>
-      <image source="images/fig-fig7-7-1.png" width="90%">
+      <image source="../../img/fig-fig7-7-1.png" width="90%">
         <description>A probability density plot showing two curves. The solid line represents a normal distribution centered at 5 with higher peak, while the dashed line represents a broader distribution also centered at 5. The x-axis is labeled "Observed Value" and the y-axis is labeled "Probability Density"</description>
       </image>
     </figure>
 
     <figure xml:id="fig-fig7-8">
       <caption>The area under the curve tells you the probability that an observation falls within a particular range. The solid lines plot normal distributions with mean <m>\mu = 0</m> and standard deviation <m>\sigma = 1</m>. The shaded areas illustrate "areas under the curve" for two important cases. In panel (a), we can see that there is a 68.3% chance that an observation will fall within one standard deviation of the mean. In panel (b), we see that there is a 95.4% chance that an observation will fall within two standard deviations of the mean</caption>
-      <image source="images/fig-fig7-8-1.png" width="90%">
+      <image source="../../img/fig-fig7-8-1.png" width="90%">
         <description>Two normal distribution curves are shown. The left graph is labeled "(a)" with a shaded area of 68.3% under the curve, while the right graph is labeled "(b)" with a shaded area of 95.4% under the curve. The shaded areas are centered around the mean.</description>
       </image>
     </figure>
 
     <figure xml:id="fig-fig7-9">
       <caption>Two more examples of the "area under the curve idea". There is a 15.9% chance that an observation is one standard deviation below the mean or smaller (panel (a)), and a 34.1% chance that the observation is somewhere between one standard deviation below the mean and the mean (panel (b)). Notice that if you add these two numbers together you get 15.9% + 34.1% = 50%. For normally distributed data, there is a 50% chance that an observation falls below the mean. And of course that also implies that there is a 50% chance that it falls above the mean</caption>
-      <image source="images/fig-fig7-9-1.png" width="90%">
+      <image source="../../img/fig-fig7-9-1.png" width="90%">
         <description>Two bell curve graphs:- "a" shows a normal distribution with a shaded area under the curve extending from negative infinity to approximately -1, marked as 15.9%. "b" shows a normal distribution with the shaded area extending from -1 to 1, marked as 34.1%</description>
       </image>
     </figure>
@@ -450,21 +450,21 @@
 
     <figure xml:id="fig-fig7-10">
       <caption>A <m>t</m> distribution with 3 degrees of freedom (solid line). It looks similar to a normal distribution, but it is not quite the same. For comparison purposes I have plotted a standard normal distribution as the dashed line</caption>
-      <image source="images/fig-fig7-10-1.png" width="90%">
+      <image source="../../img/fig-fig7-10-1.png" width="90%">
         <description>A plot showing two probability density functions. The solid blue line represents one distribution, while the dashed gray line shows another distribution with a wider spread. The x-axis is labeled "Observed Value" and the y-axis is labeled "Probability Density</description>
       </image>
     </figure>
 
     <figure xml:id="fig-fig7-11">
       <caption><m>\chi^2</m> distribution with 3 degrees of freedom. Notice that the observed values must always be greater than zero, and that the distribution is pretty skewed. These are the key features of a chi-square distribution</caption>
-      <image source="images/fig-fig7-11-1.png" width="90%">
+      <image source="../../img/fig-fig7-11-1.png" width="90%">
         <description>A line graph displays a probability density function with "Observed Value" on the x-axis (0 to 10) and "Probability Density" on the y-axis (0 to 0.25). The curve peaks near "Observed Value" 1.5 and decreases asymptotically towards the x-axis on both sides</description>
       </image>
     </figure>
 
     <figure xml:id="fig-fig7-12">
       <caption>An <m>F</m> distribution with 3 and 5 degrees of freedom. Qualitatively speaking, it looks pretty similar to a chi-square distribution, but they are not quite the same in general</caption>
-      <image source="images/fig-fig7-12-1.png" width="90%">
+      <image source="../../img/fig-fig7-12-1.png" width="90%">
         <description>A probability density function graph showing a curve that peaks sharply near the y-axis and then gradually decreases, approaching the x-axis as it moves to the right. The x-axis is labeled "Observed Value" and the y-axis is labeled "Probability Density"</description>
       </image>
     </figure>

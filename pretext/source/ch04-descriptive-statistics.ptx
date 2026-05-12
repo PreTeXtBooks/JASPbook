@@ -8,7 +8,7 @@
 
     <figure xml:id="fig4-1">
       <caption>A screenshot of JASP showing the variables stored in the <em>aflsmall_margins.csv</em> file</caption>
-      <image source="images/fig4-1.png" width="80%">
+      <image source="../../img/fig4-1.png" width="80%">
         <description>A JASP screenshot shows a data analysis interface with a column of numerical data labeled <q>afl.margins.</q> The navigation bar includes options like Exploration, T-Tests, ANOVA, Regression, Frequencies, and Factor under the Analyses tab.</description>
       </image>
     </figure>
@@ -19,7 +19,7 @@
 
     <figure xml:id="fig4-2">
       <caption>A histogram of the AFL 2010 winning margin data (the <em>afl.margins</em> variable). As you might expect, the larger the winning margin the less frequently you tend to see it</caption>
-      <image source="images/fig4-2.png" width="80%">
+      <image source="../../img/fig4-2.png" width="80%">
         <description>Histogram depicting the distribution of <q>afl.margins</q> against density. The horizontal axis (x-axis) ranges from 0 to 120, and the vertical axis (y-axis) shows density. Bars are varying in height, indicating the frequency of data within specific margin intervals.</description>
       </image>
     </figure>
@@ -86,7 +86,7 @@
 
       <figure xml:id="fig4-3">
         <caption>Default descriptives for the AFL 2010 winning margin data (the <em>afl.margins</em> variable)</caption>
-        <image source="images/fig4-3.png" width="90%">
+        <image source="../../img/fig4-3.png" width="90%">
           <description>A screenshot from JASP displaying descriptive analysis results. The interface includes sections for selecting variables and splitting data. The results section shows descriptive statistics for <q>afl.margins</q> with N, Missing, Mean, Median, Standard deviation, Minimum, and Maximum values.</description>
         </image>
       </figure>
@@ -112,10 +112,10 @@
       <figure xml:id="fig4-4">
         <caption>An illustration of the difference between how the mean and the median should be interpreted. The mean is basically the 'centre of gravity' of the data set (a). In contrast, the median is the middle observation, with half of the observations smaller and half of the observations larger (b)</caption>
         <sidebyside widths="48% 48%">
-          <image source="images/fig4-4a.png">
+          <image source="../../img/fig4-4a.png">
             <description>A bar chart with 48 observations resembles a stair-step pattern with decreasing heights from left to right. The text reads, <q>The mean is the centre of mass of the data.</q> Below the chart, there is a horizontal line labeled <q>balancing point</q> with a triangular fulcrum symbolizing balance.</description>
           </image>
-          <image source="images/fig4-4b.png">
+          <image source="../../img/fig4-4b.png">
             <description>The same bar chart with the data split into two groups of 24 observations. The left group is shaded light gray, and the right group is shaded dark gray. An arrow points to the 24th observation with the text <q>The median is the middle observation in the data set.</q></description>
           </image>
         </sidebyside>
@@ -173,7 +173,7 @@
 
       <figure xml:id="fig4-5">
         <caption>A screenshot of JASP showing the variables stored in the aflsmall_finalists.csv file</caption>
-        <image source="images/fig4-5.png" width="80%">
+        <image source="../../img/fig4-5.png" width="80%">
           <description>A JASP screenshot of a spreadsheet labeled <q>AFL Finalists</q> with 18 rows. The first column lists various Australian Football League teams, including Hawthorn, Melbourne, and Carlton. The JASP spreadsheet menu shows options like Variables, Data, and Analyses.</description>
         </image>
       </figure>
@@ -182,7 +182,7 @@
 
       <figure xml:id="fig4-6">
         <caption>A screenshot of JASP showing the frequency table for the <em>afl.finalists</em> variable</caption>
-        <image source="images/fig4-6.png" width="90%">
+        <image source="../../img/fig4-6.png" width="90%">
           <description>A JASP screenshot focusing on analyzing AFL finalists. The left panel includes options to select variables and split data. The right panel displays results: Descriptives and Frequencies for AFL finalists by region, including percentages.</description>
         </image>
       </figure>
@@ -195,7 +195,7 @@
 
       <figure xml:id="fig4-7">
         <caption>A screenshot of JASP showing the modal value for the <em>afl.margins</em> variable</caption>
-        <image source="images/fig4-7.png" width="90%">
+        <image source="../../img/fig4-7.png" width="90%">
           <description>A JASP screenshot showing the analysis of <q>afl.margins.</q> The main sections include Descriptives, Variables, and Results. Descriptive statistics like mean, median, and standard deviation are displayed on the right.</description>
         </image>
       </figure>
@@ -226,7 +226,7 @@
 
       <figure xml:id="fig4-8">
         <caption>A screenshot of JASP showing the Quartiles for the <em>afl.margins</em> variable</caption>
-        <image source="images/fig4-8.png" width="60%">
+        <image source="../../img/fig4-8.png" width="60%">
           <description>A JASP screenshot of a table titled <q>Descriptives</q> showing statistical data for <q>afl.margins</q> with N=176, Missing=0, Mean=35.301, Median=30.50, Mode=3.00, Standard deviation=26.07, Minimum=0.00, Maximum=116.00, 25th percentile=12.75, 50th percentile=30.50, and 75th percentile=50.50.</description>
         </image>
       </figure>
@@ -371,7 +371,7 @@
 
       <figure xml:id="fig4-9">
         <caption>A screenshot of JASP showing the Variance for the first 5 values of the afl.margins variable</caption>
-        <image source="images/fig4-9.png" width="90%">
+        <image source="../../img/fig4-9.png" width="90%">
           <description>A JASP screenshot displaying descriptive statistics. The interface is divided into sections for selecting variables, splitting data, viewing results, and references. A data table shows the variance and other descriptive statistics like mean, median, standard deviation, etc.</description>
         </image>
       </figure>
@@ -402,7 +402,7 @@
 
       <figure xml:id="fig-fig4-10-1">
         <caption>An illustration of the standard deviation from the AFL winning margins data. The shaded bars in the histogram show how much of the data fall within one standard deviation of the mean. In this case, 65.3% of the data set lies within this range, which is pretty consistent with the <q>approximately 68% rule</q> discussed in the main text</caption>
-        <image source="images/fig-fig4-10-1.png" width="80%">
+        <image source="../../img/fig-fig4-10-1.png" width="80%">
           <description>A bar graph depicting the standard deviation from the AFL winning margins data. Bars one standard deviation to the left and right of the mean are blue, other bars are white. Horizontal axis labels include <q>Mean - s.d.</q>, <q>Mean</q> and <q>Mean + s.d.</q></description>
         </image>
       </figure>
@@ -436,7 +436,7 @@
 
     <figure xml:id="fig-fig4-11-1">
       <caption>An illustration of skewness. On the left we have a negatively skewed data set, in the middle we have a data set with no skew, and on the right we have a positively skewed data set</caption>
-      <image source="images/fig-fig4-11-1.png" width="100%">
+      <image source="../../img/fig-fig4-11-1.png" width="100%">
         <description>Three bar charts demonstrate negative skew, no skew, and positive skew, respectively. The chart on the left shows a longer tail on the left, the middle chart is symmetrical, and the chart on the right shows a longer tail on the right.</description>
       </image>
     </figure>
@@ -447,7 +447,7 @@
 
     <figure xml:id="fig-fig4-12-1">
       <caption>An illustration of kurtosis. On the left, we have a <q>platykurtic</q> distribution (kurtosis = -.95) meaning that the distribution has <q>thin</q> or flat tails. In the middle we have a <q>mesokurtic</q> distribution (kurtosis is almost exactly 0) which means that the tails are neither thin or fat. Finally, on the right, we have a <q>leptokurtic</q> distribution (kurtosis = 2.12) indicating that the distribution has <q>fat</q> tails. Note that kurtosis is measured with respect to a normal curve (black line)</caption>
-      <image source="images/fig-fig4-12-1.png" width="100%">
+      <image source="../../img/fig-fig4-12-1.png" width="100%">
         <description>A comparison of three types of distribution curves: Platykurtic (thin tails) on the left, Mesokurtic in the center, and Leptokurtic (fat tails) on the right, each with corresponding bar graphs in blue and overlaid black curves.</description>
       </image>
     </figure>
@@ -493,7 +493,7 @@
 
     <figure xml:id="fig4-13">
       <caption>A screenshot of JASP showing the variables stored in the <em>clinicaltrial.csv</em> file</caption>
-      <image source="images/fig4-13.png" width="60%">
+      <image source="../../img/fig4-13.png" width="60%">
         <description>A JASP screenshot with columns for ID, drug, therapy, and mood gain, with data for each field. The top menu bar includes options such as Variables, Data, Analyses, and Edit, with sub-options like Exploration, T-Tests, ANOVA, and Regression.</description>
       </image>
     </figure>
@@ -504,7 +504,7 @@
 
     <figure xml:id="fig4-14">
       <caption>A screenshot of JASP showing Descriptives split by therapy type</caption>
-      <image source="images/fig4-14.png" width="90%">
+      <image source="../../img/fig4-14.png" width="90%">
         <description>A JASP screenshot displaying a clinical trial study. The interface includes sections for variables, descriptives, and analyses, focusing on mood gain, therapy type, central tendency measures, and a descriptive statistics table on the right.</description>
       </image>
     </figure>
