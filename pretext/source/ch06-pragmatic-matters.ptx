@@ -34,44 +34,21 @@
 
       <p>'speaker' variable: upsy-daisy upsy-daisy upsy-daisy upsy-daisy tombliboo tombliboo makka-pakka makka-pakka makka-pakka makka-pakka 'utterance' variable: pip pip onk onk ee oo pip pip onk onk</p>
 
-      <p>Looking at this it becomes very clear what happened to my sanity! With these as my data, one task I might find myself needing to do is construct a frequency count of the number of words each character speaks during the show. The JASP 'Descriptives' screen has a check box called 'Frequency tables' which does just this, see <xref ref="tbl-tab6-1"/>.</p>
+      <p>Looking at this it becomes very clear what happened to my sanity! With these as my data, one task I might find myself needing to do is construct a frequency count of the number of words each character speaks during the show. The jamovi 'Descriptives' screen has a check box called 'Frequency tables' which does just this, see <xref ref="fig-fig6-0"/>.</p>
 
-      <table xml:id="tbl-tab6-1">
-        <title>Frequency table for the speaker variable</title>
-        <tabular halign="left">
-          <row header="yes">
-            <cell>Levels</cell>
-            <cell>Counts</cell>
-            <cell><m>\%</m> of Total</cell>
-            <cell>Cumulative <m>\%</m></cell>
-          </row>
-          <row>
-            <cell>makka-pakka</cell>
-            <cell>4</cell>
-            <cell><m>40\%</m></cell>
-            <cell><m>40\%</m></cell>
-          </row>
-          <row>
-            <cell>tombliboo</cell>
-            <cell>2</cell>
-            <cell><m>20\%</m></cell>
-            <cell><m>60\%</m></cell>
-          </row>
-          <row>
-            <cell>upsy-daisy</cell>
-            <cell>4</cell>
-            <cell><m>40\%</m></cell>
-            <cell><m>100\%</m></cell>
-          </row>
-        </tabular>
-      </table>
+      <figure xml:id="fig-fig6-0">
+        <caption>Frequency table for the <c>speaker</c> variable</caption>
+        <image source="../../img/mechanics/freqtable.png" width="70%">
+          <description>A frequency table in jamovi for the speaker variable.</description>
+        </image>
+      </figure>
 
       <p>The output here tells us on the first line that what we're looking at is a tabulation of the speaker variable. In the 'Levels' column it lists all the different speakers that exist in the data, and in the 'Counts' column it tells you how many times that speaker appears in the data. In other words, it's a frequency table.</p>
 
       <p>In JASP, the 'Frequency tables' check box will only produce a table for single variables. For a table of two variables, for example combining speaker and utterance so that we can see how many times each speaker said a particular utterance, we need a cross-tabulation or contingency table. In JASP you can do this by selecting the 'Frequencies' -- 'Contingency Tables' -- 'Independent Samples' analysis, and moving the speaker variable into the 'Rows' box, and the utterances variable into the 'Columns' box. You then should have a contingency table like the one shown in <xref ref="fig-fig6-1"/>.</p>
 
       <figure xml:id="fig-fig6-1">
-        <caption>Contingency table for the speaker and utterances variables</caption>
+        <caption>Contingency table for the <c>speaker</c> and <c>utterances</c> variables</caption>
         <image source="../../img/fig6-1.png" width="95%">
           <description>A JASP screenshot displaying a contingency table analysis. The left panel shows options to select rows, columns, counts, and layers with "speaker" and "utterance" selected. The right panel displays the resulting contingency table and test results.</description>
         </image>
@@ -86,7 +63,7 @@
       <p>The contingency table shown in <xref ref="fig-fig6-1"/> shows a table of raw frequencies. That is, a count of the total number of cases for different combinations of levels of the specified variables. However, often you want your data to be organised in terms of percentages as well as counts. You can find the check boxes for different percentages under the 'Cells' option in the 'Contingency Tables' window. First, click on the 'Row' check box and the Contingency Table in the output window will change to the one in <xref ref="fig-fig6-2"/>.</p>
 
       <figure xml:id="fig-fig6-2">
-        <caption>Contingency table for the speaker and utterances variables, with row percentages</caption>
+        <caption>Contingency table for the <c>speaker</c> and <c>utterances</c> variables, with row percentages</caption>
         <image source="../../img/fig6-2.png" width="95%">
           <description>A JASP contingency table shows the relationship between speakers (makka-pakka, tombliboo, and upsy-daisy) and utterances (ee, onk, oo, pip). Each cell lists the observed frequency and percentage within the row. Totals for rows and columns are also provided.</description>
         </image>
@@ -95,7 +72,7 @@
       <p>What we're looking at here is the percentage of utterances made by each character. In other words, 50% of Makka-Pakka's utterances are "pip", and the other 50% are "onk". Let's contrast this with the table we get when we calculate column percentages (uncheck 'Row' and check 'Column' in the Cells options window), see <xref ref="fig-fig6-3"/>. In this version, what we're seeing is the percentage of characters associated with each utterance. For instance, whenever the utterance "ee" is made (in this data set), 100% of the time it's a Tombliboo saying it.</p>
 
       <figure xml:id="fig-fig6-3">
-        <caption>Contingency table for the speaker and utterances variables, with column percentages</caption>
+        <caption>Contingency table for the <c>speaker</c> and <c>utterances</c> variables, with column percentages</caption>
         <image source="../../img/fig6-3.png" width="95%">
           <description>A JASP contingency table displays the utterances ('ee', 'onk', 'oo', 'pip') of three speakers ('makka-pakka', 'tombliboo', 'upsy-daisy'). Observed values for each utterance by speaker, percentages within columns, and totals are included.</description>
         </image>
@@ -397,7 +374,7 @@
       <p>Now let's load and look at the data. The data file <em>likert.omv</em> contains a single variable that contains raw Likert-scale responses for these 10 people. However, if you think about it, this isn't the best way to represent these responses. Because of the fairly symmetric way that we set up the response scale, there's a sense in which the midpoint of the scale should have been coded as 0 (no opinion), and the two endpoints should be "+3 (strongly agree)" and "-3 (strongly disagree)". By recoding the data in this way it's a bit more reflective of how we really think about the responses. The recoding here is pretty straightforward, we just subtract 4 from the raw scores. In JASP you can do this by computing a new variable: click on the 'Data' -- 'Compute' button and you will see that a new variable has been added to the spreadsheet. Let's call this new variable 'likert.centred' (go ahead and type that in) and then add the following in the formula box, like in <xref ref="fig-fig6-4"/>: 'likert.raw - 4'.</p>
 
       <figure xml:id="fig-fig6-4">
-        <caption>Creating a new computed variable in JASP</caption>
+        <caption>Creating a new computed variable in jamovi</caption>
         <image source="../../img/fig6-4.png" width="95%">
           <description>A JASP screenshot showing a computed variable setup. The main formula shown is "= likert.raw - 4". The interface includes menu options like Variables, Data, Analyses, Edit, and a table displaying data set values with labels "likert.raw" and "likert.cent"</description>
         </image>
@@ -449,7 +426,7 @@
       <p>Note that there are three left parentheses used during the nesting, so the whole statement has to end with three right parentheses otherwise you will get an error message. The JASP screenshot for this data manipulation, along with an accompanying frequency table, is shown in <xref ref="fig-fig6-6"/>.</p>
 
       <figure xml:id="fig-fig6-6">
-        <caption>Collapsing a variable into a smaller number of discrete levels using the JASP 'IF' function</caption>
+        <caption>Collapsing a variable into a smaller number of discrete levels using the jamovi 'IF' function</caption>
         <image source="../../img/fig6-6.png" width="95%">
           <description>A JASP screenshot is shown. The "COMPUTED VARIABLE" section shows variable creation for "AgeCats" with custom age groupings. Below, a table with two columns labeled "Age" and "AgeCats" shows age data grouped into new categories</description>
         </image>
@@ -472,14 +449,14 @@
       <p>Note that instead of using the variable label in the expression, we have instead used '<m>\$</m>source'. This is so that we can then use the same transformation with as many different variables as we like -- JASP requires you to use '<m>\$</m>source' to refer to the source variable you are transforming. Your transformation has also been saved and can be re-used any time you like (providing you save the data set as an '.omv' file, otherwise you'll lose it!).</p>
 
       <figure xml:id="fig-fig6-7">
-        <caption>Creating a new variable transformation using the JASP 'Transform' command</caption>
+        <caption>Creating a new variable transformation using the jamovi 'Transform' command</caption>
         <image source="../../img/fig6-7.png" width="95%">
           <description>A JASP screenshot is shown. The "Data" tab is selected, displaying options like Paste, Clipboard, Setup, and Compute. The "Transform Variable" menu is open, showing configuration for the variable "opinion.strength" with source and using transform fields</description>
         </image>
       </figure>
 
       <figure xml:id="fig-fig6-8">
-        <caption>Specifying a transformation in JASP, to be saved as the imaginatively named 'Transform 1'</caption>
+        <caption>Specifying a transformation in jamovi, to be saved as the imaginatively named 'Transform 1'</caption>
         <image source="../../img/fig6-8.png" width="95%">
           <description>A JASP screenshot showing a transformation window. The "Transform" tab is open, and a box prompting "Add recode condition" with math functions such as "ABS" and "LOG10." A variables list with "opinion.strength" is on the right</description>
         </image>
@@ -488,7 +465,7 @@
       <p>You can also create a transformation with the second example we looked at, the age distribution of people at a social gathering. Go on, you know you want to! Remember that we collapsed this variable into three groups: younger, adult and older. This time we will achieve the same thing, but using the JASP 'Transform' -- 'Add condition' button. With this data set (go back to it or create it again if you didn't save it) set up a new variable transformation. Call the transformed variable 'AgeCats' and the transformation you will create 'Agegroupings'. Then click on the big <m>+</m> sign next to the function box. This is the 'Add condition' button and I've stuck a big red arrow onto <xref ref="fig-fig6-9"/> so you can see exactly where this is.</p>
 
       <figure xml:id="fig-fig6-9">
-        <caption>JASP transformation into three age categories, using the 'Add condition' button</caption>
+        <caption>jamovi transformation into three age categories, using the 'Add condition' button</caption>
         <image source="../../img/fig6-9.png" width="95%">
           <description>A JASP screenshot is showing the "TRANSFORM VARIABLE" dialog box. The variable "Agegroupings" is being edited with recode conditions: if source &lt;= 20, use "young"; if source &lt;= 40, use "adult"; else, use "older". A red arrow points to "Add recode condition"</description>
         </image>
@@ -585,7 +562,7 @@
     <p>When you have done this, you will see that a new column has been added to the spreadsheet window (see <xref ref="fig-fig6-10"/>), labelled 'Filter 1', with the cases where speaker is <em>not</em> 'makka-pakka' greyed-out (i.e., filtered out) and, conversely, the cases where speaker <em>is</em> 'makka-pakka' have a green check mark indicating they are filtered in. You can test this by running 'Exploration' -- 'Descriptives' -- 'Frequency tables' for the speaker variable and seeing what that shows. Go on, try it!</p>
 
     <figure xml:id="fig-fig6-10">
-      <caption>Creating a subset of the nightgarden data using the JASP 'Filters' option</caption>
+      <caption>Creating a subset of the <c>nightgarden.csv</c> data set using the jamovi 'Filters' option</caption>
       <image source="../../img/fig6-10.png" width="95%">
         <description>A JASP screenshot showing the "Row Filters" section. The filter is set to display rows where "speaker" matches "makka_paka". Below, a table reflects filtered data and a "Results" pane on the right presents descriptive statistics for the "speaker" column.</description>
       </image>

@@ -9,7 +9,7 @@
       <attribution>Edward Tufte<fn>The origin of this quote is Tufte's lovely book <em>The Visual Display of Quantitative Information</em>.</fn></attribution>
     </blockquote>
 
-    <p>Visualising data is one of the most important tasks facing the data analyst. It's important for two distinct but closely related reasons. Firstly, there's the matter of drawing <q>presentation graphics</q>, displaying your data in a clean, visually appealing fashion makes it easier for your reader to understand what you're trying to tell them. Equally important, perhaps even more important, is the fact that drawing graphs helps <em>you</em> to understand the data. To that end, it's important to draw <q>exploratory graphics</q> that help you learn about the data as you go about analysing it.</p>
+    <p>Visualising data is one of the most important tasks facing the data analyst. It's important for two distinct but closely related reasons. Firstly, there's the matter of drawing <q>presentation graphics</q>, displaying your data in a clean, visually appealing fashion makes it easier for your reader to understand what you're trying to tell them. Equally important, perhaps even more important, is the fact that drawing graphs helps <em>you</em> to understand the data. To that end, it's important to draw <q>exploratory graphics</q> that help you learn about the data as you go about analysing it. These points might seem pretty obvious but I cannot count the number of times I've seen people forget them.</p>
 
     <p>To give a sense of the importance of this chapter, I want to start with a classic illustration of just how powerful a good graph can be. To that end, <xref ref="fig5-1"/> shows a redrawing of one of the most famous data visualisations of all time. This is John Snow's 1854 map of cholera deaths. The map is elegant in its simplicity. In the background we have a street map which helps orient the viewer. Over the top we see a large number of small dots, each one representing the location of a cholera case. The larger symbols show the location of water pumps, labelled by name. Even the most casual inspection of the graph makes it very clear that the source of the outbreak is almost certainly the Broad Street pump. Upon viewing this graph Dr Snow arranged to have the handle removed from the pump and ended the outbreak that had killed over 500 people. Such is the power of a good data visualisation.</p>
 
@@ -38,7 +38,7 @@
     <p>One additional feature that JASP provides is the ability to plot a 'Density' curve on top of this histogram. You can do this by clicking the 'Display density' check box under the 'Plots' options, and this gives us the plot shown in <xref ref="fig5-3"/>. A density plot visualises the distribution of data over a continuous interval or time period. This chart is a variation of a histogram that uses <term>kernel smoothing</term> to plot values, allowing for smoother distributions by smoothing out the noise. The peaks of a density plot help display where values are concentrated over the interval. An advantage density plots have over histograms is that they are better at determining the distribution shape because they're not affected by the number of bins used (each bar used in a typical histogram). A histogram comprising of only 4 bins wouldn't produce a distinguishable enough shape of distribution as a 20-bin histogram would. However, with density plots, this isn't an issue.</p>
 
     <figure xml:id="fig5-3">
-      <caption>A density plot of the <em>afl.margins</em> variable plotted in JASP</caption>
+      <caption>A density plot of the <c>afl.margins</c> variable plotted in JASP</caption>
       <image source="../../img/fig5-3.png" width="70%">
         <description>A density plot of the afl.margins variable plotted in JASP.</description>
       </image>
@@ -53,7 +53,7 @@
     <p>Another alternative to histograms is a <term>boxplot</term>, sometimes called a <q>box and whiskers</q> plot. Like histograms they're most suited to interval or ratio scale data. The idea behind a boxplot is to provide a simple visual depiction of the median, the interquartile range, and the range of the data. And because they do so in a fairly compact way boxplots have become a very popular statistical graphic, especially during the exploratory stage of data analysis when you're trying to understand the data yourself. Let's have a look at how they work, again using the <em>afl.margins</em> data as our example.</p>
 
     <figure xml:id="fig5-4">
-      <caption>A box plot of the <em>afl.margins</em> variable plotted in JASP</caption>
+      <caption>A box plot of the <c>afl.margins</c> variable plotted in JASP</caption>
       <image source="../../img/fig5-4.png" width="70%">
         <description>A box plot of the afl.margins variable plotted in JASP.</description>
       </image>
@@ -67,7 +67,7 @@
       <p>A variation to the traditional box plot is the violin plot. Violin plots are similar to box plots except that they also show the kernel probability density of the data at different values. Typically, violin plots will include a marker for the median of the data and a box indicating the interquartile range, as in standard box plots. In JASP you can achieve this sort of functionality by checking both the 'Violin element' and the 'Boxplot element' check boxes. See <xref ref="fig5-5"/>, which also has the data plotted (select the 'Jitter element' check box to show the actual data points on the plot).</p>
 
       <figure xml:id="fig5-5">
-        <caption>A violin plot of the <em>afl.margins</em> variable plotted in JASP, also showing a box plot and data points</caption>
+        <caption>A violin plot of the <c>afl.margins</c> variable plotted in JASP, also showing a box plot and data points</caption>
         <image source="../../img/fig5-5.png" width="70%">
           <description>A violin plot of the afl.margins variable plotted in JASP, also showing a box plot and data points.</description>
         </image>
@@ -89,7 +89,7 @@
       </figure>
 
       <figure xml:id="fig5-7">
-        <caption>Multiple boxplots plotted in JASP, for the margin by year variables in the <em>aflsmall2</em> data set</caption>
+        <caption>Multiple boxplots plotted in JASP, for the <c>margin</c> by <c>year</c> variables in the <c>aflsmall2</c> data set</caption>
         <image source="../../img/fig5-7.png" width="100%">
           <description>Multiple boxplots plotted in JASP for the margin by year variables in the aflsmall2 data set.</description>
         </image>
