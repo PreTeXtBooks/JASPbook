@@ -11,7 +11,7 @@
 
   <!-- The <book> tags wrap all the content.  Change the @xml:id   -->
   <!-- to some short (non-spaced) description of your book         -->
-  <book xml:id="learning-stats-with-jamovi">
+  <book xml:id="learning-stats-with-jasp">
     <!-- The book needs a title and can have a subtitle  -->
     <title>Learning Statistics with JASP</title>
     <subtitle>A Tutorial for Psychology Students and Other Beginners</subtitle>
@@ -34,10 +34,10 @@
     </part>
 
     <!-- Part II: An introduction to JASP -->
-    <part xml:id="part-ii-introduction-to-jamovi">
+    <part xml:id="part-ii-introduction-to-jasp">
       <title>An introduction to JASP</title>
 
-      <!-- Chapter 3: Getting started with jamovi -->
+      <!-- Chapter 3: Getting started with JASP -->
       <xi:include href="./ch03-getting-started-jamovi.ptx" />
     </part>
 
