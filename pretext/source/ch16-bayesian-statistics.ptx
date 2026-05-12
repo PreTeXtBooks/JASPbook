@@ -520,7 +520,7 @@
 
       <figure xml:id="fig-fig16-1">
         <caption>Probability of type I error in an experiment with target <m>N</m> of 1000 per group and <em>peeking</em> at different intervals:- things can go badly wrong if you <em>peek</em> at your data and re-run your tests as new data arrives. If you are a frequentist, this is <em>very wrong</em> (blue circles and solid line). If you are a Bayesian, it is not so bad (green triangles and dashed line). The alpha level was set at <m>0.05</m> (red dotted line) in this simulation.</caption>
-        <image source="images/fig-fig16-1-1.png" width="90%">
+        <image source="../../img/fig-fig16-1-1.png" width="90%">
           <description>A scatter plot graph showing the probability of type I error versus the 'Peeking' interval with new data points. Blue circles represent p &lt; 0.05 and green triangles represent BF &gt; 3. A red dashed line at alpha = 0.05 denotes the null hypothesis rejection threshold.</description>
         </image>
       </figure>
@@ -561,7 +561,7 @@
 
       <figure xml:id="fig-fig16-2">
         <caption>Bayesian Independent samples <m>t</m>-test result in JASP</caption>
-        <image source="images/fig11-12.png" width="90%">
+        <image source="../../img/fig11-12.png" width="90%">
           <description>A JASP screenshot displaying a data set with student grades and a descriptive statistics summary. The data set table lists student IDs and their grades for two tests. The results panel shows descriptive statistics including N, mean, median, standard deviation, minimum, and maximum values.</description>
         </image>
       </figure>
@@ -571,7 +571,7 @@ This gives the results shown in the table in <xref ref="fig-fig16-3"/>. What we 
 
       <figure xml:id="fig-fig16-3">
         <caption>Bayes factor analysis alongside independent samples <m>t</m>-test</caption>
-        <image source="images/fig16-3.png" width="90%">
+        <image source="../../img/fig16-3.png" width="90%">
           <description>A JASP table titled "Independent Samples T-test" shows statistical comparison data for three methods: Student's t, Bayes factor, and Welch's t. Columns include "Statistic," "df," "p," "Mean difference," "SE difference," and "Effect Size".</description>
         </image>
       </figure>
@@ -586,7 +586,7 @@ This gives the results shown in the table in <xref ref="fig-fig16-3"/>. What we 
 
       <figure xml:id="fig-fig16-4">
         <caption>Paired samples <m>t</m>-test and Bayes factor result in JASP</caption>
-        <image source="images/fig16-4.png" width="90%">
+        <image source="../../img/fig16-4.png" width="90%">
           <description>A JASP table showing results of a Paired Samples T-Test. It includes the test names, statistics (6.48 for Student's t, 5993.58 for Bayes factor), degrees of freedom (19), p-value (&lt;0.0001), mean difference (1.40), standard error difference (0.22), confidence interval (0.95 to 1.86), and effect size (1.45).</description>
         </image>
       </figure>
