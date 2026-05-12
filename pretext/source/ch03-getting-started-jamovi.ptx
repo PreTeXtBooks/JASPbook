@@ -42,7 +42,7 @@
         </image>
       </figure>
 
-      <p>Users of earlier versions of JASP were often a bit dismayed to see that there was no place to begin entering data. This was a deliberate decision on the part of the JASP developers.<fn>See <url href="https://jasp-stats.org/2018/05/15/data-editing-in-jasp/">https://jasp-stats.org/2018/05/15/data-editing-in-jasp/</url> for a discussion of this very issue.</fn> However, starting with version 0.18.0, JASP now includes a data editor. Even so, the preferred method for getting data into JASP is still to load a CSV file (<filename>.csv</filename>), which is a text-based data format that can be created by (and opened in) any spreadsheet program. We'll talk more about this a bit later.</p>
+      <p>Users of earlier versions of JASP were often a bit dismayed to see that there was no place to begin entering data. This was a deliberate decision on the part of the JASP developers; their philosophy was that users should be allowed to use the editor they are most comfortable with.<fn>See <url href="https://jasp-stats.org/2018/05/15/data-editing-in-jasp/">https://jasp-stats.org/2018/05/15/data-editing-in-jasp/</url> for a discussion of this very issue.</fn> However, starting with version 0.18.0, JASP now includes a data editor. Even so, the preferred method for getting data into JASP is still to load a CSV file (<filename>.csv</filename>), which is a text-based data format that can be created by (and opened in) any spreadsheet program. We'll talk more about this a bit later.</p>
     </subsection>
   </section>
 
