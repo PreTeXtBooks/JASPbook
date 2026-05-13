@@ -567,7 +567,7 @@
       </figure>
 
 <p>What does the Bayesian version of the <m>t</m>-test look like? We can get the Bayes factor analysis by selecting the 'T-Tests' - 'Bayesian Independent Samples T-Test' option.  The dialog is similar to the conventional <m>t</m>-test from earlier, so you should already know what to do!  For now, just accept the defaults that JASP provides.
-This gives the results shown in the table in <xref ref="fig-fig16-3"/>. What we get in this table is a Bayes factor statistic of 1.75, meaning that the evidence provided by these data are about 1.8:1 in favour of the alternative hypothesis.</p>
+This gives the results shown in the table in <xref ref="fig-fig16-3"/>. What we get in this table is a Bayes factor statistic of 1.755, meaning that the evidence provided by these data are about 1.8:1 in favour of the alternative hypothesis.</p>
 
       <figure xml:id="fig-fig16-3">
         <caption>Bayes factor analysis alongside independent samples <m>t</m>-test</caption>
