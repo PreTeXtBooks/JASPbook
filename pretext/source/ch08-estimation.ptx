@@ -39,6 +39,7 @@
         <li><p>Australians of similar ages to my sample?</p></li>
         <li><p>Anyone currently alive?</p></li>
         <li><p>Any human being, past, present or future?</p></li>
+        <li><p>Any biological organism with a sufficient degree of intelligence operating in a terrestrial environment?</p></li>
         <li><p>Any intelligent being?</p></li>
       </ul>
 
@@ -409,7 +410,7 @@
 
       <p>In this example estimating the unknown population parameter is straightforward. I calculate the sample mean and I use that as my <term>estimate of the population mean</term>. It's pretty simple, and in the next section I'll explain the statistical justification for this intuitive answer. However, for the moment what I want to do is make sure you recognise that the sample statistic and the estimate of the population parameter are conceptually different things. A sample statistic is a description of your data, whereas the estimate is a guess about the population. With that in mind, statisticians often use different notation to refer to them.</p>
 
-      <p>For instance, if the true population mean is denoted <m>\mu</m>, then we would use <m>\hat{\mu}</m> to refer to our estimate of the population mean. In contrast, the sample mean is denoted <m>\bar{X}</m> or sometimes m. However, in simple random samples the estimate of the population mean is identical to the sample mean. If I observe a sample mean of <m>\bar{X}=98.5</m> then my estimate of the population mean is also <m>\hat{\mu}=98.5</m>. To help keep the notation clear, here's a handy table (<xref ref="tbl-tab8-2"/>).</p>
+      <p>For instance, if the true population mean is denoted <m>\mu</m>, then we would use <m>\hat{\mu}</m> to refer to our estimate of the population mean. In contrast, the sample mean is denoted <m>\bar{X}</m> or sometimes <m>m</m>. However, in simple random samples the estimate of the population mean is identical to the sample mean. If I observe a sample mean of <m>\bar{X}=98.5</m> then my estimate of the population mean is also <m>\hat{\mu}=98.5</m>. To help keep the notation clear, here's a handy table (<xref ref="tbl-tab8-2"/>).</p>
 
       <table xml:id="tbl-tab8-2">
         <tabular halign="center">
@@ -419,7 +420,7 @@
             <cell>Do we know what it is?</cell>
           </row>
           <row>
-            <cell><m>\hat{X}</m></cell>
+            <cell><m>\bar{X}</m></cell>
             <cell>Sample mean</cell>
             <cell>Yes, calculated from the raw data</cell>
           </row>
