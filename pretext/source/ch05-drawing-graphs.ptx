@@ -9,7 +9,7 @@
       <attribution>Edward Tufte<fn>The origin of this quote is Tufte's lovely book <em>The Visual Display of Quantitative Information</em>.</fn></attribution>
     </blockquote>
 
-    <p>Visualising data is one of the most important tasks facing the data analyst. It's important for two distinct but closely related reasons. Firstly, there's the matter of drawing <q>presentation graphics</q>, displaying your data in a clean, visually appealing fashion makes it easier for your reader to understand what you're trying to tell them. Equally important, perhaps even more important, is the fact that drawing graphs helps <em>you</em> to understand the data. To that end, it's important to draw <q>exploratory graphics</q> that help you learn about the data as you go about analysing it.</p>
+    <p>Visualising data is one of the most important tasks facing the data analyst. It's important for two distinct but closely related reasons. Firstly, there's the matter of drawing <q>presentation graphics</q>, displaying your data in a clean, visually appealing fashion makes it easier for your reader to understand what you're trying to tell them. Equally important, perhaps even more important, is the fact that drawing graphs helps <em>you</em> to understand the data. To that end, it's important to draw <q>exploratory graphics</q> that help you learn about the data as you go about analysing it. These points might seem pretty obvious but I cannot count the number of times I've seen people forget them.</p>
 
     <p>To give a sense of the importance of this chapter, I want to start with a classic illustration of just how powerful a good graph can be. To that end, <xref ref="fig5-1"/> shows a redrawing of one of the most famous data visualisations of all time. This is John Snow's 1854 map of cholera deaths. The map is elegant in its simplicity. In the background we have a street map which helps orient the viewer. Over the top we see a large number of small dots, each one representing the location of a cholera case. The larger symbols show the location of water pumps, labelled by name. Even the most casual inspection of the graph makes it very clear that the source of the outbreak is almost certainly the Broad Street pump. Upon viewing this graph Dr Snow arranged to have the handle removed from the pump and ended the outbreak that had killed over 500 people. Such is the power of a good data visualisation.</p>
 
@@ -59,7 +59,7 @@
       </image>
     </figure>
 
-    <p>The easiest way to describe what a boxplot looks like is just to draw one. Click on the 'Box plot' check box and you will get the plot shown in <xref ref="fig5-4"/>. By default, JASP has drawn the most basic boxplot possible. When you look at this plot this is how you should interpret it: the thick line in the middle of the box is the median; the box itself spans the range from the 25th percentile to the 75th percentile; and the <q>whiskers</q> go out to the most extreme data point that doesn't exceed a certain bound. By default, this value is 1.5 times the interquartile range (IQR), calculated as 25th percentile <m>- (1.5 \times \text{IQR})</m> for the lower boundary, and 75th percentile <m>+ (1.5 \times \text{IQR})</m> for the upper boundary. Any observation whose value falls outside this range is plotted as a circle or dot instead of being covered by the whiskers, and is commonly referred to as an <term>outlier</term>. For our AFL margins data there are two observations that fall outside this range, and these observations are plotted as dots (the upper boundary is 107, and looking over the data column in the spreadsheet there are two observations with values higher than this, 108 and 116, so these are the dots).</p>
+    <p>The easiest way to describe what a boxplot looks like is just to draw one. Click on the 'Boxplots' check box and you will get the plot shown in <xref ref="fig5-4"/>. By default, JASP has drawn the most basic boxplot possible. When you look at this plot this is how you should interpret it: the thick line in the middle of the box is the median; the box itself spans the range from the 25th percentile to the 75th percentile; and the <q>whiskers</q> go out to the most extreme data point that doesn't exceed a certain bound. By default, this value is 1.5 times the interquartile range (IQR), calculated as 25th percentile <m>- (1.5 \times \text{IQR})</m> for the lower boundary, and 75th percentile <m>+ (1.5 \times \text{IQR})</m> for the upper boundary. Any observation whose value falls outside this range is plotted as a circle or dot instead of being covered by the whiskers, and is commonly referred to as an <term>outlier</term>. For our AFL margins data there are two observations that fall outside this range, and these observations are plotted as dots (the upper boundary is 107, and looking over the data column in the spreadsheet there are two observations with values higher than this, 108 and 116, so these are the dots).</p>
 
     <subsection xml:id="subsec-violin-plots">
       <title>Violin plots</title>
@@ -81,13 +81,6 @@
 
       <p>The result is shown in <xref ref="fig5-7"/>. This version of the box plot, split by year, gives a sense of why it's sometimes useful to choose box plots instead of histograms. It's possible to get a good sense of what the data look like from year to year without getting overwhelmed with too much detail. Now imagine what would have happened if I'd tried to cram 24 histograms into this space: no chance at all that the reader is going to learn anything useful.</p>
 
-      <figure xml:id="fig5-6">
-        <caption>JASP screenshot showing the 'Split' window</caption>
-        <image source="../../img/fig5-6.png" width="80%">
-          <description>A JASP screenshot showing the Split window for drawing multiple boxplots.</description>
-        </image>
-      </figure>
-
       <figure xml:id="fig5-7">
         <caption>Multiple boxplots plotted in JASP, for the margin by year variables in the <em>aflsmall2</em> data set</caption>
         <image source="../../img/fig5-7.png" width="100%">
@@ -97,7 +90,7 @@
     </subsection>
   </section>
 
-  <section xml:id="sec-saving-image-files-using-jamovi">
+  <section xml:id="sec-saving-image-files-using-jasp">
     <title>Saving image files using JASP</title>
 
     <p>Hold on, you might be thinking. What's the good of being able to draw pretty pictures in JASP if I can't save them and send them to friends to brag about how awesome my data is? How do I save the picture? Simples. Just click on the triangle beside the header of your plot and select 'Save Image As'. You can save it in one of several formats, including 'png', 'pdf', 'eps', or 'tif'. These formats all produce nice images that you can then send to your friends, or (perhaps more importantly) include in your assignments or papers.</p>
@@ -110,7 +103,7 @@
 
     <ul>
       <li><p><em>Common plots</em>. Much of the chapter was focused on some of the standard graphs that statisticians like to produce: <xref ref="sec-histograms" text="title"/> and <xref ref="sec-boxplots" text="title"/>.</p></li>
-      <li><p><xref ref="sec-saving-image-files-using-jamovi" text="title"/>. Importantly, we also covered how to export your pictures.</p></li>
+      <li><p><xref ref="sec-saving-image-files-using-jasp" text="title"/>. Importantly, we also covered how to export your pictures.</p></li>
     </ul>
 
     <p>One final thing to point out. While JASP produces some really neat default graphics, editing the plots is currently not possible. For more advanced graphics and plotting capability the packages available in R are much more powerful. One of the most popular graphics systems is provided by the ggplot2 package (see <url href="http://ggplot2.org/">http://ggplot2.org/</url>), which is loosely based on <em>The grammar of graphics</em> <xref ref="Wilkinson2006"/>. It's not for novices. You need to have a pretty good grasp of R before you can start using it, and even then it takes a while to really get the hang of it. But when you're ready it's worth taking the time to teach yourself, because it's a much more powerful and cleaner system.</p>
