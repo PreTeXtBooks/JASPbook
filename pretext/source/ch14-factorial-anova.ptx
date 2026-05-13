@@ -197,7 +197,7 @@
       <me>\text{Alternative hypothesis, } H_1 \text{: column means are different, i.e., } \mu_{.1} \neq \mu_{.2}</me></p>
     </subsection>
 
-    <subsection xml:id="subsec-running-analysis-jamovi">
+    <subsection xml:id="subsec-running-analysis-jasp">
       <title>Running the analysis in JASP</title>
 
       <p>The null and alternative hypotheses that I described in the last section should seem awfully familiar. They're basically the same as the hypotheses that we were testing in our simpler one-way ANOVAs in <xref ref="ch-anova"/>. So you're probably expecting that the hypothesis tests that are used in factorial ANOVA will be essentially the same as the <m>F</m>-test from <xref ref="ch-anova"/>. You're expecting to see references to sums of squares (<m>SS</m>), mean squares (<m>MS</m>), degrees of freedom (<m>df</m>), and finally an <m>F</m>-statistic that we can convert into a <m>p</m>-value, right? Well, you're absolutely and completely right. So much so that I'm going to depart from my usual approach. Throughout this book, I've generally taken the approach of describing the logic (and to an extent the mathematics) that underpins a particular analysis first and only then introducing the analysis in JASP. This time I'm going to do it the other way around and show you how to do it in JASP first. The reason for doing this is that I want to highlight the similarities between the simple one-way ANOVA tool that we discussed in <xref ref="ch-anova"/>, and the more complicated approach that we're going to use in this chapter.</p>
@@ -358,7 +358,7 @@
       <p>What about the residual degrees of freedom? Because we've added interaction terms which absorb some degrees of freedom, there are fewer residual degrees of freedom left over. Specifically, note that if the model with interaction has a total of <m>(R \times C) - 1</m>, and there are <m>N</m> observations in your data set that are constrained to satisfy 1 grand mean, your residual degrees of freedom now become <m>N - (R \times C) - 1 + 1</m>, or just <m>N - (R \times C)</m>.</p>
     </subsection>
 
-    <subsection xml:id="subsec-running-anova-jamovi">
+    <subsection xml:id="subsec-running-anova-jasp">
       <title>Running the ANOVA in JASP</title>
 
       <p>Adding interaction terms to the ANOVA model in JASP is straightforward. In fact it is more than straightforward because it is the default option for ANOVA. This means that when you specify an ANOVA with two factors, e.g., drug and therapy then the interaction component -- drug <m>\times</m> therapy -- is added automatically to the model.<fn>You may have spotted this already when looking at the main effects analysis in JASP that we described earlier. For the purpose of the explanation in this book I removed the interaction component from the earlier model to keep things clean and simple.</fn> When we run the ANOVA with the interaction term included, then we get the results shown in <xref ref="fig-fig14-7"/>.</p>
@@ -522,7 +522,7 @@
       </image>
     </figure>
 
-    <subsection xml:id="subsec-running-ancova-in-jamovi">
+    <subsection xml:id="subsec-running-ancova-in-jasp">
       <title>Running ANCOVA in JASP</title>
 
       <p>A health psychologist was interested in the effect of routine cycling and stress on happiness levels, with age as a covariate. You can find the data set in the file <em>ancova.csv</em>. Open this file in JASP and then, to undertake an ANCOVA, select Analyses -- ANOVA -- ANCOVA to open the ANCOVA analysis window (<xref ref="fig-fig14-12"/>). Highlight the dependent variable 'happiness' and transfer it into the 'Dependent Variable' text box. Highlight the independent variables 'stress' and 'commute' and transfer them into the 'Fixed Factors' text box. Highlight the covariate 'age' and transfer it into the 'Covariates' text box. Then click on Estimated Marginal Means to bring up the plots and tables options.</p>
@@ -928,7 +928,7 @@
       <p>Much like Helmert contrasts, we see that each column sums to zero, which means that the intercept term corresponds to the grand mean when ANOVA is treated as a regression model. When interpreting these contrasts, the thing to recognise is that each of these contrasts is a pairwise comparison between group 1 and one of the other four groups. Specifically, contrast 1 corresponds to a "group 2 minus group 1" comparison, contrast 2 corresponds to a "group 3 minus group 1" comparison, and so on.<fn>What's the difference between treatment and simple contrasts, I hear you ask? Well, as a basic example consider a gender main effect, with <m>m=0</m> and <m>f=1</m>. The coefficient corresponding to the treatment contrast will measure the difference in mean between females and males, and the intercept would be the mean of the males. However, with a simple contrast, i.e., <m>m=-1</m> and <m>f=1</m>, the intercept is the average of the means and the main effect is the difference of each group mean from the intercept.</fn></p>
     </subsection>
 
-    <subsection xml:id="subsec-optional-contrasts-jamovi">
+    <subsection xml:id="subsec-optional-contrasts-jasp">
       <title>Optional contrasts in JASP</title>
 
       <p>There are options in JASP that can generate different kinds of contrasts in ANOVA. See the 'Contrasts' option in the main ANOVA analysis window; <xref ref="tbl-tab14-15"/> lists these contrast options.</p>
