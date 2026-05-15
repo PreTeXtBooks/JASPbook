@@ -31,7 +31,7 @@
 
       <figure xml:id="fig-fig11-1">
         <caption>The theoretical distribution (solid line) from which the psychology student grades (bars) are supposed to have been generated</caption>
-        <image source="../../img/fig-fig11-1-1.png" width="80%">
+        <image source="fig-fig11-1-1.png" width="80%">
           <description>A bar histogram displays the distribution of grades with a curve overlay. The x-axis is labeled "Grades" ranging from 50 to 90, and the y-axis is unlabeled. Bars show peaks near grades 70 and 80, with the curve indicating a normal distribution.</description>
         </image>
       </figure>
@@ -47,7 +47,7 @@
 
       <figure xml:id="fig-fig11-2">
         <caption>Graphical illustration of the null and alternate hypotheses assumed by the one sample <em>z</em>-test (the two-sided version, that is). The null and alternate hypotheses both assume that the population distribution is normal, and additionally assumes that the population standard deviation is known (fixed at some value <m>\sigma_0</m>). The null hypothesis (left) is that the population mean <m>\mu</m> is equal to some specified value <m>\mu_0</m>. The alternative hypothesis (right) is that the population mean differs from this value, <m>\mu \neq \mu_0</m></caption>
-        <image source="../../img/fig-fig11-2-1.png" width="90%">
+        <image source="fig-fig11-2-1.png" width="90%">
           <description>Two side-by-side bell curve graphs comparing the null hypothesis and alternative hypothesis. The left graph shows the null hypothesis with mean equal to mu-zero and sigma equal to sigma-zero. The right graph shows the alternative hypothesis with mean not equal to mu-zero and sigma equal to sigma-zero. The x-axis is labeled "Value of X".</description>
         </image>
       </figure>
@@ -82,7 +82,7 @@
 
       <figure xml:id="fig-fig11-3">
         <caption>Rejection regions for the two-sided <em>z</em>-test (a) and the one-sided <em>z</em>-test (b)</caption>
-        <image source="../../img/fig-fig11-3-1.png" width="90%">
+        <image source="fig-fig11-3-1.png" width="90%">
           <description>Two bell curves comparing statistical tests: (a) Two-Sided Test with shaded tails beyond -1.96 and 1.96 z-values, and (b) One-Sided Test with a shaded tail beyond 1.64 z-value. Both graphs show standard normal distributions with z-statistic values on the x-axis.</description>
         </image>
       </figure>
@@ -173,7 +173,7 @@
 
     <figure xml:id="fig-fig11-4">
       <caption>Graphical illustration of the null and alternative hypotheses assumed by the (two-sided) one sample <m>t</m>-test. Note the similarity to the <em>z</em>-test (<xref ref="fig-fig11-2"/>). The null hypothesis is that the population mean <m>\mu</m> is equal to some specified value <m>\mu_0</m>, and the alternative hypothesis is that it is not. Like the <em>z</em>-test, we assume that the data are normally distributed, but we do not assume that the population standard deviation <m>\sigma</m> is known in advance</caption>
-      <image source="../../img/fig-fig11-4-1.png" width="90%">
+      <image source="fig-fig11-4-1.png" width="90%">
         <description>Two graphs compare the null and alternative hypotheses. The left graph shows a normal distribution curve with mean equal to mu-zero and sigma unknown. The right graph shows a normal distribution curve with mean not equal to mu-zero and sigma unknown. Both graphs have "Value of X" on the x-axis.</description>
       </image>
     </figure>
@@ -188,7 +188,7 @@
 
       <figure xml:id="fig-fig11-5">
         <caption>The <m>t</m>-distribution with 2 degrees of freedom (left) and 10 degrees of freedom (right), with a standard normal distribution (i.e., mean 0 and std dev 1) plotted as dotted lines for comparison purposes. Notice that the <m>t</m>-distribution has heavier tails (leptokurtic, higher kurtosis) than the normal distribution; this effect is quite exaggerated when the degrees of freedom are very small, but negligible for larger values. In other words, for large <m>df</m> the <m>t</m>-distribution is essentially identical to a normal distribution</caption>
-        <image source="../../img/fig-fig11-5-1.png" width="90%">
+        <image source="fig-fig11-5-1.png" width="90%">
           <description>Two line graphs show t-distribution curves for different degrees of freedom. The left graph, labeled "df = 2," depicts a curve slightly wider and shorter with dashed lines representing the standard normal distribution. The right graph, labeled "df = 10," shows a taller, narrower curve. Both graphs have "Value of t-statistic" on the x-axis.</description>
         </image>
       </figure>
@@ -201,7 +201,7 @@
 
       <figure xml:id="fig-fig11-6">
         <caption>JASP does the one-sample <m>t</m>-test</caption>
-        <image source="../../img/fig11-6.png" width="90%">
+        <image source="fig11-6.png" width="90%">
           <description>A statistical analysis software interface displays a one-sample t-test. The screen shows options like Students T-Test, Bayes factor, Wilcoxon rank, and additional statistics selections. The results section includes descriptive statistics, a test table, and a hypothesis test plot.</description>
         </image>
       </figure>
@@ -277,7 +277,7 @@
 
       <figure xml:id="fig-fig11-7">
         <caption>Box and violin plots from JASP showing the distribution of grades for students in the classes of Anastasia and Bernadette. Visually, these suggest that students in the class of Anastasia may be getting slightly better grades on average, though they also seem a bit more variable</caption>
-        <image source="../../img/fig11-7.png" width="80%">
+        <image source="fig11-7.png" width="80%">
           <description>Violin plot comparing grades of students tutored by Anastasia and Bernadette. Both plots show distributions with similar means around 75-80 and few outliers. Anastasia's students have a wider grade distribution compared to Bernadette's students.</description>
         </image>
       </figure>
@@ -297,7 +297,7 @@
 
       <figure xml:id="fig-fig11-8">
         <caption>Graphical illustration of the null and alternative hypotheses assumed by the Student <m>t</m>-test. The null hypothesis assumes that both groups have the same mean <m>\mu</m>, whereas the alternative assumes that they have different means <m>\mu_1</m> and <m>\mu_2</m>. Notice that it is assumed that the population distributions are normal, and that, although the alternative hypothesis allows the group to have different means, it assumes they have the same standard deviation</caption>
-        <image source="../../img/fig-fig11-8-1.png" width="90%">
+        <image source="fig-fig11-8-1.png" width="90%">
           <description>Two graphs depict hypothesis testing. The left graph shows a single normal distribution curve labeled "null hypothesis" with mu. The right graph shows two overlapping normal distribution curves labeled "alternative hypothesis" with mu-1 and mu-2. Both graphs have "Value of X" on the x-axis.</description>
         </image>
       </figure>
@@ -344,7 +344,7 @@
 
       <figure xml:id="fig-fig11-9">
         <caption>Independent <m>t</m>-test in JASP, with options checked for useful results</caption>
-        <image source="../../img/fig11-9.png" width="90%">
+        <image source="fig11-9.png" width="90%">
           <description>A JASP screenshot of the interface for performing an independent samples t-test. The layout includes sections for entering dependent variables, grouping variables, and options for additional statistics, confidence interval, and assumption checks. Statistical output is displayed on the right.</description>
         </image>
       </figure>
@@ -401,7 +401,7 @@
 
     <figure xml:id="fig-fig11-10">
       <caption>Graphical illustration of the null and alternative hypotheses assumed by the Welch <m>t</m>-test. Like the Student test (<xref ref="fig-fig11-8"/>) we assume that both samples are drawn from a normal population; but the alternative hypothesis no longer requires the two populations to have equal variance</caption>
-      <image source="../../img/fig-fig11-10-1.png" width="90%">
+      <image source="fig-fig11-10-1.png" width="90%">
         <description>Two bell curves depicted side by side. The graph on the left represents the null hypothesis with a single peak labeled mu. The graph on the right represents the alternative hypothesis with two overlapping peaks labeled mu-1 and mu-2, showing different means.</description>
       </image>
     </figure>
@@ -424,7 +424,7 @@
 
       <figure xml:id="fig-fig11-11">
         <caption>Results showing the Welch test alongside the default Student's <m>t</m>-test in JASP</caption>
-        <image source="../../img/fig11-11.png" width="90%">
+        <image source="fig11-11.png" width="90%">
           <description>A JASP screenshot of a table titled "Independent Samples T-Test" showing results for "Independent Samples T-Test" with rows for Student t-test and Welch t-test. Columns include grade, Statistic, df, p, Mean difference, SE difference, and Effect Size.</description>
         </image>
       </figure>
@@ -463,7 +463,7 @@
 
       <figure xml:id="fig-fig11-12">
         <caption>Descriptives for the two grade test variables in the <em>chico</em> data set</caption>
-        <image source="../../img/fig11-12.png" width="90%">
+        <image source="fig11-12.png" width="90%">
           <description>A JASP screenshot displaying a data set with student grades and a descriptive statistics summary. The data set table lists student IDs and their grades for two tests. The results panel shows descriptive statistics including N, mean, median, standard deviation, minimum, and maximum values.</description>
         </image>
       </figure>
@@ -473,10 +473,10 @@
       <figure xml:id="fig-fig11-13">
         <caption>Mean grade for test 1 and test 2, with associated 95% confidence intervals (a). Scatterplot showing the individual grades for test 1 and test 2 (b)</caption>
         <sidebyside widths="48% 48%">
-          <image source="../../img/fig11-13a.png">
+          <image source="fig11-13a.png">
             <description>A graph comparing two variables, grade_test1 and grade_test2, shows mean and median values with their respective error bars representing 95% confidence intervals. The mean values are represented by circles, and the median values by squares.</description>
           </image>
-          <image source="../../img/fig11-13b.png">
+          <image source="fig11-13b.png">
             <description>A scatter plot showing the relationship between scores on two tests, grade_test1 (x-axis) and grade_test2 (y-axis). Data points are clustered around a diagonal line, indicating a positive correlation between the two test scores.</description>
           </image>
         </sidebyside>
@@ -486,7 +486,7 @@
 
       <figure xml:id="fig-fig11-14">
         <caption>Histogram from JASP showing the improvement made by each student in Dr Chico's class. Notice that almost the entire distribution is above zero -- the vast majority of students did improve their performance from the first test to the second one</caption>
-        <image source="../../img/fig11-14.png" width="60%">
+        <image source="fig11-14.png" width="60%">
           <description>A histogram with the x-axis labeled "improvement" and the y-axis labeled "density". The bars represent the frequency of improvements, with the highest peak at approximately 1.5 on the x-axis. The bars are light blue.</description>
         </image>
       </figure>
@@ -519,7 +519,7 @@
 
       <figure xml:id="fig-fig11-15">
         <caption>Results showing a one sample <m>t</m>-test on paired difference scores</caption>
-        <image source="../../img/fig11-15.png" width="90%">
+        <image source="fig11-15.png" width="90%">
           <description>An image of a table showcasing results from a One Sample T-Test. The table includes columns for the statistic (Student's t), degrees of freedom (df), p-value, mean difference, 95% confidence interval (lower and upper bounds), and effect size (Cohen's d). The mean difference is 1.40, confidence interval ranges from 0.95 to 1.86, t-value is 6.48, df is 19.00, p-value is less than 0.0001, and Cohen's d is 1.45.</description>
         </image>
       </figure>
@@ -530,7 +530,7 @@
 
       <figure xml:id="fig-fig11-16">
         <caption>Results showing a paired sample <m>t</m>-test. Compare with <xref ref="fig-fig11-15"/></caption>
-        <image source="../../img/fig11-16.png" width="90%">
+        <image source="fig11-16.png" width="90%">
           <description>An image of a table displaying results from a paired samples t-test. It includes columns for statistic, df, p, Mean difference, SE difference, 95% Confidence Interval (Lower and Upper), and Effect Size. Example data for grade_test2 and grade_test1 is provided.</description>
         </image>
       </figure>
@@ -548,7 +548,7 @@
 
     <figure xml:id="fig-fig11-17">
       <caption>JASP results showing a 'One Sample T-Test' where the actual hypothesis is one-sided, i.e. that the true mean is greater than <m>67.5\%</m></caption>
-      <image source="../../img/fig11-17.png" width="90%">
+      <image source="fig11-17.png" width="90%">
         <description>An image of a One Sample T-Test table showing results: Statistic: Student's t = 2.25, df = 19.00, p = 0.01807, Mean difference = 4.80, 95% Confidence Interval Lower = 1.12, Upper = Inf, Effect Size: Cohen's d = 0.50.</description>
       </image>
     </figure>
@@ -563,7 +563,7 @@
 
     <figure xml:id="fig-fig11-18">
       <caption>JASP results showing an 'Independent Samples T-Test' where the actual hypothesis is one-sided, i.e. that Anastasia's students had higher grades than Bernadette's</caption>
-      <image source="../../img/fig11-18.png" width="90%">
+      <image source="fig11-18.png" width="90%">
         <description>A table showing the results of an Independent Samples T-Test for grade. The table includes Student's t and Welch's t statistics, degrees of freedom, p-values, mean difference, standard error difference, and Cohen's d effect sizes.</description>
       </image>
     </figure>
@@ -572,7 +572,7 @@
 
     <figure xml:id="fig-fig11-19">
       <caption>JASP results showing a 'Paired Samples T-Test' where the actual hypothesis is one-sided, i.e. that grade_test2 ('Measure 1') <m>&gt;</m> grade_test1 ('Measure 2')</caption>
-      <image source="../../img/fig11-19.png" width="90%">
+      <image source="fig11-19.png" width="90%">
         <description>A table displaying results of a Paired Samples T-Test indicates a significant difference between two paired tests. Key values include t(19) = 6.49, p &lt; .0001, Cohen's d = 1.45 with a 95% confidence interval of 1.03 to infinity.</description>
       </image>
     </figure>
@@ -667,7 +667,7 @@
 
       <figure xml:id="fig-fig11-20">
         <caption>Histogram (panel (a)) and normal QQ plot (panel (b)) of normal.data, a normally distributed sample with <m>100</m> observations. The Shapiro-Wilk statistic associated with these data is <m>W = .99</m>, indicating that no significant departures from normality were detected (<m>p = .54</m>)</caption>
-        <image source="../../img/fig-fig11-20-1.png" width="90%">
+        <image source="fig-fig11-20-1.png" width="90%">
           <description>The image features two graphs. The left graph is a histogram titled "Normally Distributed Data" showing frequency vs. value. The right graph is a Q-Q plot titled "Normal Q-Q Plot" showing standardized residuals vs. sample quantiles, with points following a straight line.</description>
         </image>
       </figure>
@@ -676,7 +676,7 @@
 
       <figure xml:id="fig-fig11-21">
         <caption>In the top row, a histogram and a normal QQ plot of the <m>100</m> observations in a skewed data set. The skewness of the data here is <m>1.88</m>, and is reflected in a QQ plot that curves upwards. As a consequence, the Shapiro-Wilk statistic is <m>W = .80</m>, reflecting a significant departure from normality (<m>p &lt; .001</m>). The bottom row shows the same plots for a heavy tailed data set, again consisting of 100 observations. In this case the heavy tails in the data produce a high kurtosis (<m>6.57</m>), and cause the QQ plot to flatten in the middle, and curve away sharply on either side. The resulting Shapiro-Wilk statistic is <m>W = .75</m>, again reflecting significant non-normality (<m>p &lt; .001</m>)</caption>
-        <image source="../../img/fig-fig11-21-1.png" width="90%">
+        <image source="fig-fig11-21-1.png" width="90%">
           <description>Two sets of graphs show differently distributed data. The left column displays histograms for skewed distribution (top) and heavy-tailed distribution (bottom). The right column contains Normal Q-Q plots for each data set, indicating deviations from normality.</description>
         </image>
       </figure>
@@ -689,14 +689,14 @@
 
       <figure xml:id="fig-fig11-22">
         <caption>JASP QQ plot for the independent <m>t</m>-test analysis shown in <xref ref="fig-fig11-9"/></caption>
-        <image source="../../img/fig11-22.png" width="80%">
+        <image source="fig11-22.png" width="80%">
           <description>A Q-Q plot showing standardized residuals versus theoretical quantiles. Data points are scattered along the line y = x, indicating that the residuals follow a normal distribution. The x-axis ranges from -2 to 2, and the y-axis ranges from -2 to 2.</description>
         </image>
       </figure>
 
       <figure xml:id="fig-fig11-23">
         <caption>JASP QQ plot for the paired samples <m>t</m>-test analysis shown in <xref ref="fig-fig11-16"/></caption>
-        <image source="../../img/fig11-23.png" width="80%">
+        <image source="fig11-23.png" width="80%">
           <description>A Q-Q plot displays standardized residuals versus theoretical quantiles to assess the normality of a data set. The points mostly follow the diagonal line from bottom left to top right, indicating that the residuals are approximately normally distributed.</description>
         </image>
       </figure>
@@ -719,7 +719,7 @@
 
       <figure xml:id="fig-fig11-24">
         <caption>JASP QQ plot showing non-normality from the AFL winning margins data</caption>
-        <image source="../../img/fig11-24.png" width="80%">
+        <image source="fig11-24.png" width="80%">
           <description>A Q-Q plot shows standardized residuals against theoretical quantiles. Data points largely follow a diagonal reference line, indicating normality. Points deviate at the upper and lower ends, suggesting potential departures from a normal distribution at extremes.</description>
         </image>
       </figure>
@@ -814,7 +814,7 @@
 
       <figure xml:id="fig-fig11-25">
         <caption>JASP screen showing results for the Mann-Whitney <m>U</m> test</caption>
-        <image source="../../img/fig11-25.png" width="90%">
+        <image source="fig11-25.png" width="90%">
           <description>A JASP screenshot showing a Mann-Whitney U test setup on the left and results on the right. The setup includes dependent and grouping variables, while the results section displays statistical values and references.</description>
         </image>
       </figure>
@@ -910,7 +910,7 @@
 
       <figure xml:id="fig-fig11-26">
         <caption>JASP screen showing results for one-sample and paired sample Wilcoxon nonparametric tests</caption>
-        <image source="../../img/fig11-26.png" width="90%">
+        <image source="fig11-26.png" width="90%">
           <description>A JASP screenshot displaying statistical analysis for Wilcoxon nonparametric tests. The variables listed include "before" and "after." The results section shows outcomes for one sample and paired samples t-tests, including Wilcoxon W and p-values.</description>
         </image>
       </figure>

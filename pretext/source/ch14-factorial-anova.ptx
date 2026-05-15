@@ -17,7 +17,7 @@
 
     <figure xml:id="fig-fig14-1">
       <caption>JASP contingency table of drug by therapy</caption>
-      <image source="../../img/fig14-1.png" width="90%">
+      <image source="fig14-1.png" width="90%">
         <description>A JASP results table titled "Contingency Tables" with data on 'drug' types (anxifree, joyzepam, placebo) and 'therapy' types (CBT, no. therapy, Total). Each drug type has equal counts for both therapy types: 3 CBT, 3 no therapy, totaling to 6 for each drug. Total counts are 9 for CBT, 9 for no therapy, and 18 overall.</description>
       </image>
     </figure>
@@ -206,7 +206,7 @@
 
       <figure xml:id="fig-fig14-2">
         <caption>JASP one-way ANOVA of mood.gain by drug</caption>
-        <image source="../../img/fig14-2.png" width="90%">
+        <image source="fig14-2.png" width="90%">
           <description>A JASP results table showing ANOVA results for mood gain with columns for Sum of Squares, df (degrees of freedom), Mean Square, F, p-value, and η² (eta squared). For "drug," Sum of Squares is 3.45, df is 2, Mean Square is 1.73, F is 18.61, p is 0.00009, and η² is 0.71. Residuals have a Sum of Squares of 1.39, df of 15, and Mean Square of 0.09.</description>
         </image>
       </figure>
@@ -215,7 +215,7 @@
 
       <figure xml:id="fig-fig14-3">
         <caption>JASP two-way ANOVA of mood.gain by drug and therapy</caption>
-        <image source="../../img/fig14-3.png" width="90%">
+        <image source="fig14-3.png" width="90%">
           <description>A JASP results table showing ANOVA test results for mood gain with factors "drug," "therapy," and their interaction. Includes Sum of Squares, df, Mean Square, F, p-values, η², η²p, and ω². Key results indicate significant effects for "drug" and "therapy," but not their interaction.</description>
         </image>
       </figure>
@@ -313,7 +313,7 @@
 
     <figure xml:id="fig-fig14-4">
       <caption>The four different outcomes for a <m>2 \times 2</m> ANOVA when no interactions are present. In panel (a) we see a main effect of Factor A and no effect of Factor B. Panel (b) shows a main effect of Factor B but no effect of Factor A. Panel (c) shows main effects of both Factor A and Factor B. Finally, panel (d) shows no effect of either factor.</caption>
-      <image source="../../img/fig-fig14-4-1.png" width="90%">
+      <image source="fig-fig14-4-1.png" width="90%">
         <description>Four graphs showing the interaction of two factors (A and B) on group means. Graph (a): Factor A has an effect, B does not. Graph (b): Factor B has an effect, A does not. Graph (c): Both A and B have an effect. Graph (d): Neither A nor B have an effect.</description>
       </image>
     </figure>
@@ -322,7 +322,7 @@
 
     <figure xml:id="fig-fig14-5">
       <caption>Qualitatively different interactions for a <m>2 \times 2</m> ANOVA.</caption>
-      <image source="../../img/fig-fig14-5-1.png" width="90%">
+      <image source="fig-fig14-5-1.png" width="90%">
         <description>Four line graphs (a-d) depict interactions between two factors (A and B) at two levels (1 and 2). The y-axis in each graph is labeled "Group mean" and the x-axis "Factor B." Graph (a) shows a crossover interaction. Graphs (b), (c), and (d) highlight different effects for one level of Factor A or B, or one differing cell.</description>
       </image>
     </figure>
@@ -331,7 +331,7 @@
 
     <figure xml:id="fig-fig14-6">
       <caption>JASP screen showing how to generate a descriptive interaction plot in ANOVA using the clinical trial data</caption>
-      <image source="../../img/fig14-6.png" width="90%">
+      <image source="fig14-6.png" width="90%">
         <description>A JASP screenshot of the interface for analyzing clinical trial data is shown. The screen features ANOVA outputs, with a graph displaying estimated marginal means of mood gain across different drug therapies. Therapy options are CBT and no therapy, with axes for mood gain and types of drugs.</description>
       </image>
     </figure>
@@ -365,7 +365,7 @@
 
       <figure xml:id="fig-fig14-7">
         <caption>Results for the full factorial model, including the interaction component drug <m>\times</m> therapy</caption>
-        <image source="../../img/fig14-7.png" width="90%">
+        <image source="fig14-7.png" width="90%">
           <description>A JASP table summarizing the results of an ANOVA test on mood gain. It shows Sum of Squares, degrees of freedom (df), Mean Square, F-value, p-value, η², η²p, and ω² for drug, therapy, their interaction, and residuals.</description>
         </image>
       </figure>
@@ -461,7 +461,7 @@
 
       <figure xml:id="fig-fig14-8">
         <caption>JASP screenshot showing the marginal means for the saturated model, i.e. including the interaction component, with the clinical trial data set</caption>
-        <image source="../../img/fig14-8.png" width="90%">
+        <image source="fig14-8.png" width="90%">
           <description>A JASP screenshot of a clinical trial analysis software interface displaying an ANOVA analysis. The screen shows sections for Assumptions Checks, Estimates, and Estimated Marginal Means. Data tables illustrate the ANOVA results and Estimated Marginal Means for drug therapy.</description>
         </image>
       </figure>
@@ -474,7 +474,7 @@
 
       <figure xml:id="fig-fig14-9">
         <caption>JASP screenshot showing the marginal means for the unsaturated model, i.e. without the interaction component, with the clinical trial data set</caption>
-        <image source="../../img/fig14-9.png" width="90%">
+        <image source="fig14-9.png" width="90%">
           <description>ANOVA table and Estimated Marginal Means table for mood gain analysis. The ANOVA table shows a significant drug effect with F(3,14) = 7.08, p = 0.01866. The Estimated Marginal Means table lists means and confidence intervals for interactions between therapy and drug.</description>
         </image>
       </figure>
@@ -499,7 +499,7 @@
 
       <figure xml:id="fig-fig14-10">
         <caption>Checking assumptions in an ANOVA model</caption>
-        <image source="../../img/fig14-10.png" width="90%">
+        <image source="fig14-10.png" width="90%">
           <description>An image shows assumption checks for statistical analysis. It includes results for the Levene test (F = 0.22, df1 = 5, df2 = 12, p = 0.94731) and Shapiro-Wilk test (Statistic = 0.96, p = 0.53290). Below is a Q-Q plot of standardized residuals versus theoretical quantiles.</description>
         </image>
       </figure>
@@ -517,7 +517,7 @@
 
     <figure xml:id="fig-fig14-11">
       <caption>Plot of Statistics anxiety against age for two distinct groups</caption>
-      <image source="../../img/fig14-11.png" width="90%">
+      <image source="fig14-11.png" width="90%">
         <description>A scatter plot shows 'Statistics anxiety' on the Y-axis versus 'Age' on the X-axis. Data points for 'Scientists' cluster lower on the Y-axis and at younger ages on the X-axis, while 'Artists' cluster higher on the Y-axis and at older ages on the X-axis.</description>
       </image>
     </figure>
@@ -529,7 +529,7 @@
 
       <figure xml:id="fig-fig14-12">
         <caption>The JASP ANCOVA analysis window</caption>
-        <image source="../../img/fig14-12.png" width="75%">
+        <image source="fig14-12.png" width="75%">
           <description>A JASP screenshot showing an ANCOVA setup. The window has options for adding dependent variables, fixed factors, and covariates. "Happiness" is selected as the dependent variable, with "stress" and "commute" as fixed factors, and "age" as a covariate.</description>
         </image>
       </figure>
@@ -538,21 +538,21 @@
 
       <figure xml:id="fig-fig14-13">
         <caption>JASP ANCOVA output for happiness as a function of stress and commuting method, with age as a covariate</caption>
-        <image source="../../img/fig14-13.png" width="90%">
+        <image source="fig14-13.png" width="90%">
           <description>An ANCOVA table titled 'happiness' displays statistical results including Sum of Squares, degrees of freedom (df), Mean Square, F-ratio (F), p-values (p), eta squared (η²), partial eta squared (ηp²), and omega squared (ω²) for various factors like stress, commute, age, and interactions.</description>
         </image>
       </figure>
 
       <figure xml:id="fig-fig14-14">
         <caption>Table of mean happiness level as a function of stress and commuting method (adjusted for the covariate age) with 95% confidence intervals</caption>
-        <image source="../../img/fig14-14.png" width="85%">
+        <image source="fig14-14.png" width="85%">
           <description>A JASP results table titled "Estimated Marginal Means - stress × commute" showing mean stress levels with standard errors (SE) and 95% Confidence Intervals for different commuting methods (drive, cycle) and stress levels (high, low).</description>
         </image>
       </figure>
 
       <figure xml:id="fig-fig14-15">
         <caption>Plot of mean happiness level as a function of stress and commuting method</caption>
-        <image source="../../img/fig14-15.png" width="90%">
+        <image source="fig14-15.png" width="90%">
           <description>A line graph compares happiness levels based on stress levels (high and low) and commute type (drive or cycle). The "cycle" line shows a steeper increase in happiness from high to low stress compared to the "drive" line. Error bars are present.</description>
         </image>
       </figure>
@@ -607,7 +607,7 @@
 
       <figure xml:id="fig-fig14-16">
         <caption>JASP descriptives for the <em>rtfm.csv</em> data set</caption>
-        <image source="../../img/fig14-16.png" width="90%">
+        <image source="fig14-16.png" width="90%">
           <description>A JASP screenshot showing various tabs at the top, including Variables, Data, Analyses, and Edit. The current screen displays options for descriptives analysis with variables such as "grade." The "Results" section includes a table of descriptive statistics like mean and standard deviation. The "References" section at the bottom cites software and packages used.</description>
         </image>
       </figure>
@@ -622,7 +622,7 @@
 
       <figure xml:id="fig-fig14-17">
         <caption>ANOVA of the <em>rtfm.csv</em> data set in JASP, without the interaction term</caption>
-        <image source="../../img/fig14-17.png" width="90%">
+        <image source="fig14-17.png" width="90%">
           <description>ANOVA table presenting the results for "grade" with variables "attend" and "reading." It includes columns for Sum of Squares, df, Mean Square, F, p, η², η²p, and ω². Notable values include "attend" with an F of 21.60, p of 0.00559, and "reading" with an F of 52.27, p of 0.00079.</description>
         </image>
       </figure>
@@ -691,7 +691,7 @@
 
       <figure xml:id="fig-fig14-18">
         <caption>Regression analysis of the <em>rtfm.csv</em> data set in JASP, without the interaction term</caption>
-        <image source="../../img/fig14-18.png" width="80%">
+        <image source="fig14-18.png" width="80%">
           <description>A JASP results table titled "Model Coefficients - grade" displays the estimate, standard error (SE), t-value, and p-value for three predictors: Intercept, attend, and reading. The Intercept values are 43.50, 3.35, 12.97, 0.00005. Attend: 18.00, 3.87, 4.65, 0.00559. Reading: 28.00, 3.87, 7.23, 0.00079.</description>
         </image>
       </figure>
@@ -704,7 +704,7 @@
 
       <figure xml:id="fig-fig14-19">
         <caption>Omnibus ANOVA Test results from the JASP regression analysis</caption>
-        <image source="../../img/fig14-19.png" width="80%">
+        <image source="fig14-19.png" width="80%">
           <description>A JASP results table titled "Omnibus ANOVA Test" showing values for Sum of Squares, df, Mean Square, F, and p across three rows: attend, reading, and Residuals. Note indicates "Type 3 sum of squares".</description>
         </image>
       </figure>
@@ -775,7 +775,7 @@
 
       <figure xml:id="fig-fig14-20">
         <caption>JASP ANOVA results, without interaction component</caption>
-        <image source="../../img/fig14-20.png" width="90%">
+        <image source="fig14-20.png" width="90%">
           <description>ANOVA table displaying the sum of squares, degrees of freedom (df), mean square, F-value, p-value, eta squared (η²), partial eta squared (η²p), and omega squared (ω²) for factors 'drug' and 'therapy' in relation to the residuals for mood gain.</description>
         </image>
       </figure>
@@ -784,7 +784,7 @@
 
       <figure xml:id="fig-fig14-21">
         <caption>JASP regression results, with contrast variables druganxifree and drugjoyzepam</caption>
-        <image source="../../img/fig14-21.png" width="70%">
+        <image source="fig14-21.png" width="70%">
           <description>A JASP results table displays the model coefficients for mood.gain. Predictors include Intercept, druganxifree, drugjoyzepam, and CBTherapy, with respective estimates, standard errors, t-values, and p-values. Notably, drugjoyzepam has a highly significant p-value (&lt;.00001).</description>
         </image>
       </figure>
@@ -795,7 +795,7 @@
 
       <figure xml:id="fig-fig14-22">
         <caption>Model comparison in JASP regression, null model 1 versus contrasts model 2</caption>
-        <image source="../../img/fig14-22.png" width="90%">
+        <image source="fig14-22.png" width="90%">
           <description>An image displaying JASP results from a linear regression analysis for a clinical trial. The screen shows model measures, comparisons, and specific results, with variables including 'drug' and 'CBTherapy'.</description>
         </image>
       </figure>
@@ -806,7 +806,7 @@
 
       <figure xml:id="fig-fig14-23">
         <caption>Regression analysis with factors and contrasts in JASP, including omnibus ANOVA test results</caption>
-        <image source="../../img/fig14-23.png" width="90%">
+        <image source="fig14-23.png" width="90%">
           <description>A JASP screenshot displaying linear regression analysis within a software interface. The interface shows data inputs and settings on the left, while the right side displays output results including ANOVA and model coefficients. Sections for data, analyses, edit, and more are visible.</description>
         </image>
       </figure>
@@ -993,7 +993,7 @@
 
     <figure xml:id="fig-fig14-24">
       <caption>Tukey HSD post hoc test in JASP factorial ANOVA, without an interaction term</caption>
-      <image source="../../img/fig14-24.png" width="90%">
+      <image source="fig14-24.png" width="90%">
         <description>A JASP screenshot showing ANOVA results. The interface has sections for setting variables and analyzing data, with specific fields selected for "drug" and "therapy." A window on the right shows detailed ANOVA test results and post hoc comparisons.</description>
       </image>
     </figure>
@@ -1010,7 +1010,7 @@
 
     <figure xml:id="fig-fig14-25">
       <caption>Tukey HSD post hoc test in JASP factorial ANOVA with an interaction term</caption>
-      <image source="../../img/fig14-25.png" width="90%">
+      <image source="fig14-25.png" width="90%">
         <description>A JASP table showing post hoc test results for drug and therapy comparisons. The table includes columns for drug, therapy, comparison, mean difference, SE, df, t-value, and p-value, with values provided for each comparison.</description>
       </image>
     </figure>
@@ -1038,7 +1038,7 @@
 
       <figure xml:id="fig-fig14-26">
         <caption>The <em>coffee.csv</em> data set in JASP, with descriptive information aggregated by factor levels</caption>
-        <image source="../../img/fig14-26.png" width="90%">
+        <image source="fig14-26.png" width="90%">
           <description>A JASP screenshot with the left side showing raw data in a table format with columns like 'milk,' 'sugar,' and 'bubble.' The right side shows the analysis results, including descriptive statistics like the mean and standard deviation.</description>
         </image>
       </figure>
@@ -1105,7 +1105,7 @@
 
       <figure xml:id="fig-fig14-27">
         <caption>ANOVA results table using type I sum of squares in JASP</caption>
-        <image source="../../img/fig14-27.png" width="90%">
+        <image source="fig14-27.png" width="90%">
           <description>ANOVA table showing data for the effects of sugar and milk on a dependent variable. Columns include Sum of Squares, df, Mean Square, F, and p-values for sugar, milk, their interaction (sugar * milk), and residuals with respective values.</description>
         </image>
       </figure>
@@ -1114,7 +1114,7 @@
 
       <figure xml:id="fig-fig14-28">
         <caption>ANOVA results table using type I sum of squares in JASP, but with factors entered in a different order (milk first)</caption>
-        <image source="../../img/fig14-28.png" width="90%">
+        <image source="fig14-28.png" width="90%">
           <description>A JASP table displaying ANOVA results with columns labeled Sum of Squares, df (degrees of freedom), Mean Square, F, and p. Rows correspond to milk, sugar, milk × sugar interaction, and residuals. Values are provided for each entry.</description>
         </image>
       </figure>
@@ -1229,7 +1229,7 @@
 
       <figure xml:id="fig-fig14-29">
         <caption>ANOVA results table using type III sum of squares in JASP</caption>
-        <image source="../../img/fig14-29.png" width="90%">
+        <image source="fig14-29.png" width="90%">
           <description>A JASP table titled "ANOVA - babble" shows statistical data with columns: Sum of Squares, df, Mean Square, F, and p. Rows include milk, sugar, milk * sugar, and Residuals. Notable values include F = 11.28 for milk * sugar, and p = 0.00175 for the same interaction.</description>
         </image>
       </figure>
@@ -1366,7 +1366,7 @@
 
       <figure xml:id="fig-fig14-30">
         <caption>ANOVA results table using type II sum of squares in JASP</caption>
-        <image source="../../img/fig14-30.png" width="90%">
+        <image source="fig14-30.png" width="90%">
           <description>Table displaying ANOVA results for an interaction between milk and sugar. Columns include Sum of Squares, df, Mean Square, F, p, η², η²p, and ω² for milk, sugar, milk * sugar, and residuals. The interaction shows significant results.</description>
         </image>
       </figure>

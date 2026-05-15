@@ -149,7 +149,7 @@
 
     <figure xml:id="fig-fig9-1">
       <caption>The sampling distribution for our test statistic <m>X</m> when the null hypothesis is true. For our ESP scenario this is a binomial distribution. Not surprisingly, since the null hypothesis says that the probability of a correct response is <m>\theta = .5</m>, the sampling distribution says that the most likely value is 50 (out of 100) correct responses. Most of the probability mass lies between 40 and 60</caption>
-      <image source="../../img/fig9-1.png" width="90%">
+      <image source="fig9-1.png" width="90%">
         <description>A bar graph titled "Sampling Distribution for X if the Null is True" shows the probability (y-axis) versus the number of correct responses (X) (x-axis). The distribution is bell-shaped, peaking around 50 correct responses</description>
       </image>
     </figure>
@@ -177,7 +177,7 @@
 
       <figure xml:id="fig-fig9-2">
         <caption>The critical region associated with the hypothesis test for the ESP study, for a hypothesis test with a significance level of <m>\alpha = .05</m>. The plot shows the sampling distribution of <m>X</m> under the null hypothesis (i.e., same as <xref ref="fig-fig9-1"/>). The grey bars correspond to those values of <m>X</m> for which we would retain the null hypothesis. The blue (darker shaded) bars show the critical region, those values of <m>X</m> for which we would reject the null. Because the alternative hypothesis is two-sided (i.e., allows both <m>\theta &lt; .5</m> and <m>\theta > .5</m>), the critical region covers both tails of the distribution. To ensure an <m>\alpha</m> level of <m>.05</m>, we need to ensure that each of the two regions encompasses <m>2.5\%</m> of the sampling distribution</caption>
-        <image source="../../img/fig9-2.png" width="90%">
+        <image source="fig9-2.png" width="90%">
           <description>A graph depicting the critical regions for a two-sided test. The x-axis represents the number of correct responses (X) ranging from 0 to 100. The lower critical region (2.5% of the distribution) and upper critical region (2.5% of the distribution) are highlighted in blue</description>
         </image>
       </figure>
@@ -220,7 +220,7 @@
 
       <figure xml:id="fig-fig9-3">
         <caption>The critical region for a one-sided test. In this case, the alternative hypothesis is that <m>\theta \geq .5</m> so we would only reject the null hypothesis for large values of <m>X</m>. As a consequence, the critical region only covers the upper tail of the sampling distribution, specifically the upper <m>5\%</m> of the distribution. Contrast this to the two-sided version in <xref ref="fig-fig9-2"/></caption>
-        <image source="../../img/fig9-3.png" width="90%">
+        <image source="fig9-3.png" width="90%">
           <description>A histogram displaying a normal distribution of the number of correct responses (X) with a highlighted critical region on the right side, representing 5% of the distribution. The x-axis ranges from 0 to 100 correct responses. Text reads "critical region (5% of the distribution)"</description>
         </image>
       </figure>
@@ -352,7 +352,7 @@
 
     <figure xml:id="fig-fig9-4">
       <caption>Binomial test analysis and results in JASP</caption>
-      <image source="../../img/fig9-4.png" width="90%">
+      <image source="fig9-4.png" width="90%">
         <description>A JASP screenshot of a proportion test with two outcomes. The interface includes sections for selecting variables, adjusting hypotheses, viewing results, and displaying references. The results section shows tabulated proportions and confidence intervals.</description>
       </image>
     </figure>
@@ -372,7 +372,7 @@
 
       <figure xml:id="fig-fig9-5">
         <caption>Sampling distribution under the alternative hypothesis for a population parameter value of <m>\theta = 0.55</m>. A reasonable proportion of the distribution lies in the rejection region.</caption>
-        <image source="../../img/fig9-5.png" width="90%">
+        <image source="fig9-5.png" width="90%">
           <description>A histogram titled "Sampling Distribution for X if theta = 0.55" shows the number of correct responses (X) on the x-axis (ranging from 0 to 100). The lower and upper critical regions (2.5% each) are shaded in blue, with labels indicating their positions.</description>
         </image>
       </figure>
@@ -381,7 +381,7 @@
 
       <figure xml:id="fig-fig9-6">
         <caption>Sampling distribution under the <em>alternative</em> hypothesis for a population parameter value of <m>\theta = 0.70</m>. Almost all of the distribution lies in the rejection region.</caption>
-        <image source="../../img/fig9-6.png" width="90%">
+        <image source="fig9-6.png" width="90%">
           <description>A bar graph titled "Sampling Distribution for X if theta = 0.70" showing a distribution of the number of correct responses (X) from 0 to 100. The lower and upper critical regions, each 2.5% of the distribution, are highlighted on the left and right tails respectively.</description>
         </image>
       </figure>
@@ -390,7 +390,7 @@
 
       <figure xml:id="fig-fig9-7">
         <caption>The probability that we will reject the null hypothesis, plotted as a function of the true value of <m>\theta</m>. Obviously, the test is more powerful (greater chance of correct rejection) if the true value of <m>\theta</m> is very different from the value that the null hypothesis specifies (i.e., <m>\theta = .5</m>). Notice that when <m>\theta</m> actually is equal to <m>.5</m> (plotted as a black dot), the null hypothesis is in fact true and rejecting the null hypothesis in this instance would be a type I error.</caption>
-        <image source="../../img/fig9-7.png" width="90%">
+        <image source="fig9-7.png" width="90%">
           <description>A graph titled "Power function for the Test (N=100)" showing the probability of rejecting the null hypothesis (y-axis) plotted against the true value of theta (x-axis). The curve dips sharply to a minimum at theta=0.5, marked by a black dot, and rises symmetrically on either side to a maximum at both ends.</description>
         </image>
       </figure>
@@ -443,7 +443,7 @@
 
       <figure xml:id="fig-fig9-8">
         <caption>The power of our test plotted as a function of the sample size <m>N</m>. In this case, the true value of <m>\theta</m> is 0.7 but the null hypothesis is that <m>\theta = 0.5</m>. Overall, larger <m>N</m> means greater power. (The small zig-zags in this function occur because of some odd interactions between <m>\theta</m>, <m>\alpha</m> and the fact that the binomial distribution is discrete; it does not matter for any serious purpose.)</caption>
-        <image source="../../img/fig9-8.png" width="90%">
+        <image source="fig9-8.png" width="90%">
           <description>A line graph showing the probability of rejecting the null hypothesis as a function of sample size (N). The x-axis represents the sample size ranging from 0 to 100, and the y-axis shows the probability from 0 to 1. The line increases and fluctuates upwards.</description>
         </image>
       </figure>

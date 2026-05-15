@@ -66,21 +66,21 @@
 
       <figure xml:id="fig-fig8-1">
         <caption>Simple random sampling without replacement from a finite population</caption>
-        <image source="../../img/fig8-1.png" width="95%">
+        <image source="fig8-1.png" width="95%">
           <description>A diagram shows a population consisting of 10 circles labeled a to j. Arrows point from this population to three groups of circles, demonstrating simple random samples without replacement. The groups are labeled 'a, c, j, b,' 'i, e, a, f,' and 'g, c, f, d.'</description>
         </image>
       </figure>
 
       <figure xml:id="fig-fig8-2">
         <caption>Biased sampling without replacement from a finite population</caption>
-        <image source="../../img/fig8-2.png" width="95%">
+        <image source="fig8-2.png" width="95%">
           <description>A diagram shows biased sampling (without replacement) from a population of 10 items labeled a to j. Three sample sets of four items each are drawn: {a, b, g, h}, {g, b, h, a}, and {a, h, b, g}. Black circles denote selected items; white circles denote unselected items</description>
         </image>
       </figure>
 
       <figure xml:id="fig-fig8-3">
         <caption>Simple random sampling <em>with</em> replacement from a finite population</caption>
-        <image source="../../img/fig8-3.png" width="95%">
+        <image source="fig8-3.png" width="95%">
           <description>A diagram illustrating simple random sampling with replacement. The population, represented by 10 black-and-white circles labeled 'a' to 'j', is shown on the left. Three samples, each containing four circles, are shown on the right with arrows pointing from the population</description>
         </image>
       </figure>
@@ -133,7 +133,7 @@
 
       <figure xml:id="fig-fig8-4">
         <caption>The population distribution of IQ scores (panel (a)) and two samples drawn randomly from it. In panel (b) we have a sample of 100 observations, and panel (c) we have a sample of 10,000 observations</caption>
-        <image source="../../img/fig-fig8-4-1.png" width="95%">
+        <image source="fig-fig8-4-1.png" width="95%">
           <description>The image contains three graphs of IQ scores. The left graph is a probability density curve, the middle graph is a histogram with frequencies, and the right graph is another histogram with higher frequencies. All charts show IQ scores on the x-axis.</description>
         </image>
       </figure>
@@ -159,7 +159,7 @@
 
     <figure xml:id="fig-fig8-5">
       <caption>A random sample drawn from a normal distribution using JASP</caption>
-      <image source="../../img/fig8-5.png" width="95%">
+      <image source="fig8-5.png" width="95%">
         <description>A JASP screenshot is shown. It includes menus for variable manipulation and data analysis. A computed variable "IQsim" is displayed with a formula. A table lists numeric IQsim values, and a histogram with descriptive statistics is shown on the right</description>
       </image>
     </figure>
@@ -322,7 +322,7 @@
 
       <figure xml:id="fig-fig8-6">
         <caption>The sampling distribution of the mean for the "five IQ scores experiment". If you sample 5 people at random and calculate their average IQ you will almost certainly get a number between 80 and 120, even though there are quite a lot of individuals who have IQs above 120 or below 80. For comparison, the black line plots the population distribution of IQ scores</caption>
-        <image source="../../img/fig-fig8-6-1.png" width="90%">
+        <image source="fig-fig8-6-1.png" width="90%">
           <description>A histogram of IQ scores with a superimposed normal distribution curve. The x-axis ranges from 60 to 140, with a peak around 100. The y-axis shows frequency. The histogram bars are blue, and the normal distribution curve is black</description>
         </image>
       </figure>
@@ -341,7 +341,7 @@
 
       <figure xml:id="fig-fig8-7">
         <caption>The sampling distribution of the maximum for the "five IQ scores experiment". If you sample 5 people at random and select the one with the highest IQ score you will probably see someone with an IQ between 100 and 140</caption>
-        <image source="../../img/fig-fig8-7-1.png" width="90%">
+        <image source="fig-fig8-7-1.png" width="90%">
           <description>A histogram of IQ scores is displayed with blue bars indicating the frequency of each score range. A black bell curve overlay represents the normal distribution, with scores ranging from 60 to 140 on the x-axis</description>
         </image>
       </figure>
@@ -356,7 +356,7 @@
 
       <figure xml:id="fig-fig8-8">
         <caption>An illustration of the how sampling distribution of the mean depends on sample size. In each panel I generated 10,000 samples of IQ data and calculated the mean IQ observed within each of these data sets. The histograms in these plots show the distribution of these means (i.e., the sampling distribution of the mean). Each individual IQ score was drawn from a normal distribution with mean 100 and standard deviation 15, which is shown as the solid black line.</caption>
-        <image source="../../img/fig-fig8-8-1.png" width="100%">
+        <image source="fig-fig8-8-1.png" width="100%">
           <description>Three histograms show the distribution of IQ scores with varying sample sizes. (a) Sample size of 1: broad distribution. (b) Sample size of 2: narrower distribution. (c) Sample size of 10: most narrow distribution. All have normal distribution curves overlaid.</description>
         </image>
       </figure>
@@ -385,7 +385,7 @@
 
       <figure xml:id="fig-fig8-9">
         <caption>A demonstration of the central limit theorem. In panel (a), we have a non-normal population distribution, and panels (b)-(d) show the sampling distribution of the mean for samples of size 2,4 and 8 for data drawn from the distribution in panel (a). As you can see, even though the original population distribution is non-normal the sampling distribution of the mean becomes pretty close to normal by the time you have a sample of even four observations</caption>
-        <image source="../../img/fig-fig8-9-1.png" width="95%">
+        <image source="fig-fig8-9-1.png" width="95%">
           <description>Four histograms displaying sample means with increasing sample sizes: (a) 1, (b) 2, (c) 4, and (d) 8. Each has a superimposed curve transitioning from a right-skewed to a normal distribution shape as sample size increases. All x-axes are labeled "Sample Mean"</description>
         </image>
       </figure>
@@ -473,14 +473,14 @@
 
       <figure xml:id="fig-fig8-10">
         <caption>The sampling distribution of the sample standard deviation for a "two IQ scores" experiment. The true population standard deviation is 15 (dashed line), but as you can see from the histogram the vast majority of experiments will produce a much smaller sample standard deviation than this</caption>
-        <image source="../../img/fig-fig8-10-1.png" width="95%">
+        <image source="fig-fig8-10-1.png" width="95%">
           <description>A histogram with a right-skewed distribution shows the sample standard deviation on the x-axis ranging from 0 to 60, and frequency on the y-axis. A vertical dashed line labeled "Population Standard deviation" is positioned around the value of 16 on the x-axis</description>
         </image>
       </figure>
 
       <figure xml:id="fig-fig8-11">
         <caption>An illustration of the fact that the sample mean is an unbiased estimator of the population mean (panel a), but the sample standard deviation is a biased estimator of the population standard deviation (panel b)</caption>
-        <image source="../../img/fig-fig8-11-1.png" width="95%">
+        <image source="fig-fig8-11-1.png" width="95%">
           <description>Two line charts. Chart (a) shows the Average Sample Mean vs. Sample Size with values around 102-104. Chart (b) shows the Average Sample Standard Deviation vs. Sample Size, increasing steeply initially and leveling off near 15 around sample size 8</description>
         </image>
       </figure>
@@ -586,7 +586,7 @@
 
       <figure xml:id="fig-fig8-12">
         <caption>95% confidence intervals. The top panel (a) shows 50 simulated replications of an experiment in which we measure the IQs of 10 people. The dot marks the location of the sample mean and the line shows the 95% confidence interval. Most of the 50 confidence intervals do contain the true mean (i.e., 100), but a few -- in blue and marked with asterisks -- do not. The lower graph (panel b) shows a similar simulation, but this time we simulate replications of an experiment that measures the IQs of 25 people</caption>
-        <image source="../../img/fig-fig8-12-1.png" width="95%">
+        <image source="fig-fig8-12-1.png" width="95%">
           <description>Two bar graphs are shown vertically. The top graph (a) has "Sample Size = 10" and the bottom graph (b) has "Sample Size = 25." Both graphs have replication numbers on the x-axis and IQ mean values with error bars on the y-axis. Blue data points are marked with asterisks</description>
         </image>
       </figure>
