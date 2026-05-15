@@ -457,7 +457,8 @@ pi, which is the analogue of the letter P).</fn>.
 
     <p>Perhaps more helpfully, you can use JASP to calculate skewness: it's a check box in the 'Statistics' options under 'Descriptives' - 'Descriptive Statistics'. For the <em>afl.margins</em> variable, the skewness figure is <m>0.780</m>. If you divide the skewness estimate by the Std. error for skewness you have an indication of how skewed the data is. Especially in small samples (N <m>\lt</m> 50), one rule of thumb suggests that a value of 2 or less can mean that the data is not very skewed, and a value of over 2 that there is sufficient skew in the data to possibly limit its use in some statistical analyses. Though there is no clear agreement on this interpretation. That said, this does indicate that the AFL winning margins data is somewhat skewed (<m>\frac{0.780}{0.183} = 4.262</m>, which is certainly greater than 2).</p>
 
-    <p>The final measure that is sometimes referred to, though very rarely in practice, is the kurtosis of a data set. Put simply, kurtosis is a measure of how thin or fat the tails of a distribution are, as illustrated in <xref ref="fig-fig4-12-1"/>.</p>
+    <p>The final measure that is sometimes referred to, though very rarely in practice, is the kurtosis of a data set. Put simply, kurtosis is a measure of how thin or fat the tails of a distribution are, as illustrated in <xref ref="fig-fig4-12-1"/>.
+By convention, we say that the <q>normal curve</q> (black lines) has zero kurtosis, so the degree of kurtosis is assessed relative to this curve.</p>
 
     <figure xml:id="fig-fig4-12-1">
       <caption>An illustration of kurtosis. On the left, we have a <q>platykurtic</q> distribution (kurtosis = -.95) meaning that the distribution has <q>thin</q> or flat tails. In the middle we have a <q>mesokurtic</q> distribution (kurtosis is almost exactly 0) which means that the tails are neither thin or fat. Finally, on the right, we have a <q>leptokurtic</q> distribution (kurtosis = 2.12) indicating that the distribution has <q>fat</q> tails. Note that kurtosis is measured with respect to a normal curve (black line)</caption>
@@ -466,7 +467,7 @@ pi, which is the analogue of the letter P).</fn>.
       </image>
     </figure>
 
-    <p>By convention, we say that the <q>normal curve</q> (black lines) has zero kurtosis, so the degree of kurtosis is assessed relative to this curve. In this Figure, the data on the left have a pretty flat distribution, with thin tails, so the kurtosis is negative and we call the data platykurtic. The data on the right have a distribution with fat tails, so the kurtosis is positive and we say that the data is leptokurtic. But the data in the middle have neither thin or fat tails, so we say that it is mesokurtic and has kurtosis zero. This is summarised in <xref ref="tbl-tab4-4"/>.</p>
+    <p>In this Figure, the data on the left have a pretty flat distribution, with thin tails, so the kurtosis is negative and we call the data platykurtic. The data on the right have a distribution with fat tails, so the kurtosis is positive and we say that the data is leptokurtic. But the data in the middle have neither thin or fat tails, so we say that it is mesokurtic and has kurtosis zero. This is summarised in <xref ref="tbl-tab4-4"/>.</p>
 
     <table xml:id="tbl-tab4-4">
       <title>Thin to fat tails to illustrate kurtosis</title>
