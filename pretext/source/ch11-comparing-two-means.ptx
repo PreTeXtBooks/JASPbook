@@ -164,7 +164,7 @@
     </subsection>
   </section>
 
-  <section xml:id="sec-The-one-sample-t-test">
+  <section xml:id="sec-the-one-sample-t-test">
     <title>The one-sample <m>t</m>-test</title>
 
     <p>After some thought, I decided that it might not be safe to assume that the psychology student grades necessarily have the same standard deviation as the other students in Dr Zeppo's class (<xref ref="fig-fig11-4"/>). After all, if I'm entertaining the hypothesis that they don't have the same mean, then why should I believe that they absolutely have the same standard deviation? In view of this, I should really stop assuming that I know the true value of <m>\sigma</m>. This violates the assumptions of my <em>z</em>-test, so in one sense I'm back to square one. However, it's not like I'm completely bereft of options. After all, I've still got my raw data, and those raw data give me an estimate of the population standard deviation, which is 9.52. In other words, while I can't say that I know that <m>\sigma = 9.5</m>, I can say that <m>\hat{\sigma}</m> = 9.52.</p>
@@ -194,7 +194,7 @@
       </figure>
     </subsection>
 
-    <subsection xml:id="subsec-t-test-in-jamovi">
+    <subsection xml:id="subsec-t-test-in-jasp">
       <title>Doing the test in JASP</title>
 
       <p>As you might expect, the mechanics of the <m>t</m>-test are almost identical to the mechanics of the <em>z</em>-test. So there's not much point in going through the tedious exercise of showing you how to do the calculations using low level commands. It's pretty much identical to the calculations that we did earlier, except that we use the estimated standard deviation and then we test our hypothesis using the <m>t</m>-distribution rather than the normal distribution. And so instead of going through the calculations in tedious detail for a second time, I'll jump straight to showing you how <m>t</m>-tests are actually done. JASP comes with a dedicated analysis for <m>t</m>-tests that is very flexible (it can run lots of different kinds of <m>t</m>-tests). It's pretty straightforward to use; all you need to do is specify 'T-Tests' -- 'One Sample T-Test', move the variable you are interested in (<m>x</m>) across into the 'Variables' box, and type in the mean value for the null hypothesis ('67.5') in the 'Test value' box. Easy enough. See <xref ref="fig-fig11-6"/>, which, amongst other things that we will get to in a moment, gives you a <m>t</m>-test statistic = 2.25, with 19 degrees of freedom and an associated <m>p</m>-value of <m>0.036</m>.</p>
@@ -337,7 +337,7 @@
       <p>Just as we saw with our one-sample test, the sampling distribution of this <m>t</m>-statistic is a <m>t</m>-distribution (shocking, isn't it?) as long as the null hypothesis is true and all of the assumptions of the test are met. The degrees of freedom, however, is slightly different. As usual, we can think of the degrees of freedom to be equal to the number of data points minus the number of constraints. In this case, we have <m>N</m> observations (<m>N_1</m> in sample 1, and <m>N_2</m> in sample 2), and 2 constraints (the sample means). So the total degrees of freedom for this test are <m>N - 2</m>.</p>
     </subsection>
 
-    <subsection xml:id="subsec-student-t-in-jamovi">
+    <subsection xml:id="subsec-student-t-in-jasp">
       <title>Doing the test in JASP</title>
 
       <p>Not surprisingly, you can run an independent samples <m>t</m>-test easily in JASP. The outcome variable for our test is the student grade, and the groups are defined in terms of the tutor for each class. So you probably won't be too surprised that all you have to do in JASP is go to the relevant analysis ('T-Tests' -- 'Independent Samples T-Test') and move the grade variable across to the 'Variables' box, and the tutor variable across into the 'Grouping Variable' box, as shown in <xref ref="fig-fig11-9"/>.</p>
@@ -417,7 +417,7 @@
 
     <p>The second difference between Welch and Student is that the degrees of freedom are calculated in a very different way. In the Welch test, the "degrees of freedom" doesn't have to be a whole number any more, and it doesn't correspond all that closely to the "number of data points minus the number of constraints" heuristic that I've been using up to this point.</p>
 
-    <subsection xml:id="subsec-welch-in-jamovi">
+    <subsection xml:id="subsec-welch-in-jasp">
       <title>Doing the Welch test in JASP</title>
 
       <p>If you tick the check box for the Welch test in the analysis we did above, then this is what it gives you (<xref ref="fig-fig11-11"/>).</p>
@@ -512,7 +512,7 @@
       <p>where <m>\hat{\sigma}_D</m> is the standard deviation of the difference scores. Since this is just an ordinary, one-sample <m>t</m>-test, with nothing special about it, the degrees of freedom are still <m>N - 1</m>. And that's it. The paired samples <m>t</m>-test really isn't a new test at all. It's a one-sample <m>t</m>-test, but applied to the difference between two variables. It's actually very simple. The only reason it merits a discussion as long as the one we've just gone through is that you need to be able to recognise <em>when</em> a paired samples test is appropriate, and to understand <em>why</em> it's better than an independent samples <m>t</m>-test.</p>
     </subsection>
 
-    <subsection xml:id="subsec-paired-t-in-jamovi">
+    <subsection xml:id="subsec-paired-t-in-jasp">
       <title>Doing the test in JASP</title>
 
       <p>How do you do a paired samples <m>t</m>-test in JASP? One possibility is to follow the process I outlined above. That is, create a "difference" variable and then run a one sample <m>t</m>-test on that. Since we've already created a variable called "improvement", let's do that and see what we get, <xref ref="fig-fig11-15"/>.</p>

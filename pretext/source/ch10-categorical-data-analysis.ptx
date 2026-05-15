@@ -266,7 +266,7 @@
       <p>So, if our calculated <m>\chi^2</m> statistic is bigger than the critical value of <m>7.815</m>, then we can reject the null hypothesis (remember that the null hypothesis, <m>H_0</m>, is that all four suits are chosen with equal probability). Since we actually already calculated that before (i.e., <m>\chi^2 = 8.44</m>) we can reject the null hypothesis. And that's it, basically. You now know "Pearson's <m>\chi^2</m> test for the goodness-of-fit".<fn>There is a closely related test known as the <m>G</m>-test (see <xref ref="Sokal1994"/>), in which the test statistic is written as <m>G</m>. As it happens, the Pearson goodness-of-fit test and the <m>G</m>-test both test the same null hypothesis, and the sampling distribution is exactly the same (i.e., chi-square with <m>k - 1</m> degrees of freedom).</fn> Lucky you.</p>
     </subsection>
 
-    <subsection xml:id="subsec-gof-in-jamovi">
+    <subsection xml:id="subsec-gof-in-jasp">
       <title>Doing the test in JASP</title>
 
       <p>Not surprisingly, JASP provides an analysis that will do these calculations for you. From the main 'Analyses' toolbar select 'Frequencies' -- 'Multinomial Test'. Then in the analysis window that appears move the variable you want to analyze (choice_1) across into the 'Factor' box. Also, click on the 'Descriptives' check box so that you see the expected counts in the results table. When you have done all this, you should see the analysis results in JASP as in <xref ref="fig-fig10-3"/>. No surprise then that JASP provides the same expected counts and statistics that we calculated by hand above, with a <m>\chi^2</m> value of 8.44 with 3 df and <m>p = 0.038</m>. Note that we don't need to look up a critical <m>p</m>-value threshold value any more, as JASP gives us the actual <m>p</m>-value of the calculated <m>\chi^2</m> for 3 df.</p>
@@ -490,7 +490,7 @@ GUARDBOT 1: Choose!</em></p>
       <p>Amazing.</p>
     </subsection>
 
-    <subsection xml:id="subsec-independence-in-jamovi">
+    <subsection xml:id="subsec-independence-in-jasp">
       <title>Doing the test in JASP</title>
 
       <p>Okay, now that we know how the test works let's have a look at how it's done in JASP. As tempting as it is to lead you through the tedious calculations so that you're forced to learn it the long way, I figure there's no point. I already showed you how to do it the long way for the goodness-of-fit test in the last section, and since the test of independence isn't conceptually any different, you won't learn anything new by doing it the long way. So instead I'll go straight to showing you the easy way.</p>

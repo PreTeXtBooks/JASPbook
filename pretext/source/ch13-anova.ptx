@@ -6,7 +6,7 @@
   <introduction>
     <p>This chapter introduces one of the most widely used tools in psychological statistics, known as "the analysis of variance", but usually referred to as ANOVA. The basic technique was developed by Sir Ronald Fisher in the early 20th century and it is to him that we owe the rather unfortunate terminology. The term ANOVA is a little misleading, in two respects. Firstly, although the name of the technique refers to variances, ANOVA is concerned with investigating differences in means. Secondly, there are several different things out there that are all referred to as ANOVAs, some of which have only a very tenuous connection to one another. Later on in the book we'll encounter a range of different ANOVA methods that apply in quite different situations, but for the purposes of this chapter we'll only consider the simplest form of ANOVA, in which we have several different groups of observations, and we're interested in finding out whether those groups differ in terms of some outcome variable of interest. This is the question that is addressed by a one-way ANOVA.</p>
 
-    <p>The structure of this chapter is as follows: first I'll introduce a fictitious data set that we'll use as a running example throughout the chapter. After introducing the data, I'll describe the mechanics of how a one-way ANOVA actually works (<xref ref="sec-how-anova-works"/>) and then focus on how you can run one in JASP (<xref ref="sec-running-anova-jamovi"/>). These two sections are the core of the chapter.</p>
+    <p>The structure of this chapter is as follows: first I'll introduce a fictitious data set that we'll use as a running example throughout the chapter. After introducing the data, I'll describe the mechanics of how a one-way ANOVA actually works (<xref ref="sec-how-anova-works"/>) and then focus on how you can run one in JASP (<xref ref="sec-running-anova-jasp"/>). These two sections are the core of the chapter.</p>
 
     <p>The remainder of the chapter discusses a range of important topics that inevitably arise when running an ANOVA, namely how to calculate effect sizes, post hoc tests and corrections for multiple comparisons and the assumptions that ANOVA relies upon. We'll also talk about how to check those assumptions and some of the things you can do if the assumptions are violated. Then we'll cover repeated measures ANOVA.</p>
   </introduction>
@@ -470,12 +470,12 @@
     </subsection>
   </section>
 
-  <section xml:id="sec-running-anova-jamovi">
+  <section xml:id="sec-running-anova-jasp">
     <title>Running an ANOVA in JASP</title>
 
     <p>I'm pretty sure I know what you're thinking after reading the last section, especially if you followed my advice and did all of that by pencil and paper (i.e., in a spreadsheet) yourself. Doing the ANOVA calculations yourself sucks. There's quite a lot of calculations that we needed to do along the way, and it would be tedious to have to do this over and over again every time you wanted to do an ANOVA.</p>
 
-    <subsection xml:id="subsec-using-jamovi-anova">
+    <subsection xml:id="subsec-using-jasp-anova">
       <title>Using JASP to specify your ANOVA</title>
 
       <p>To make life easier for you, JASP can do ANOVA...hurrah! Go to the 'ANOVA' -- 'ANOVA' analysis, and move the mood.gain variable across so it is in the 'Dependent Variable' box, and then move the drug variable across so it is in the 'Fixed Factors' box. This should give the results as shown in <xref ref="fig-fig13-3"/>.<fn>The JASP results are more accurate than the ones in the text above, due to rounding errors.</fn> Note I have also checked the <m>\eta^2</m> checkbox, pronounced "eta" squared, under the 'Effect Size' option and this is also shown on the results table. We will come back to effect sizes a bit later.</p>
@@ -741,7 +741,7 @@
       <p>Regardless of whether you're doing the standard Levene test or the Brown-Forsythe test, the test statistic, which is sometimes denoted <m>F</m> but also sometimes written as <m>W</m>, is calculated in exactly the same way that the <m>F</m>-statistic for the regular ANOVA is calculated, just using a <m>Z_{ik}</m> rather than <m>Y_{ik}</m>. With that in mind, we can go on to look at how to run the test in JASP.</p>
     </subsection>
 
-    <subsection xml:id="subsec-levene-test-jamovi">
+    <subsection xml:id="subsec-levene-test-jasp">
       <title>Running the Levene test in JASP</title>
 
       <p>Okay, so how do we run the Levene test? Simple really -- under the ANOVA 'Assumption Checks' option, just click on the 'Homogeneity tests' checkbox. If we look at the output, shown in <xref ref="fig-fig13-5"/>, we see that the test is non-significant (<m>F_{2,15} = 1.45, p = .266</m>), so it looks like the homogeneity of variance assumption is fine. However, looks can be deceptive! If your sample size is pretty big, then the Levene test could show up a significant effect (i.e. <m>p &lt; .05</m>) even when the homogeneity of variance assumption is not violated to an extent which troubles the robustness of ANOVA. This was the point George Box was making in the quote above. Similarly, if your sample size is quite small, then the homogeneity of variance assumption might not be satisfied and yet a Levene test could be non-significant (i.e. <m>p > .05</m>). What this means is that, alongside any statistical test of the assumption being met, you should always plot the standard deviation around the means for each group / category in the analysis...just to see if they look fairly similar (i.e. homogeneity of variance) or not.</p>
@@ -757,7 +757,7 @@
     <subsection xml:id="subsec-removing-homogeneity-variance">
       <title>Removing the homogeneity of variance assumption</title>
 
-      <p>In our example, the homogeneity of variance assumption turned out to be a pretty safe one: the Levene test came back non-significant (notwithstanding that we should also look at the plot of standard deviations), so we probably don't need to worry. However, in real life we aren't always that lucky. How do we save our ANOVA when the homogeneity of variance assumption is violated? If you recall from our discussion of <m>t</m>-tests, we've seen this problem before. The Student <m>t</m>-test assumes equal variances, so the solution was to use the Welch <m>t</m>-test, which does not. In fact, <xref ref="Welch1951"/> also showed how we can solve this problem for ANOVA too (the <term>Welch one-way test</term>). It's implemented in JASP using the One-Way ANOVA analysis. This is a specific analysis approach just for one-way ANOVA, and to run the Welch one-way ANOVA for our example, we would re-run the analysis as previously, but this time use the JASP ANOVA - one-way ANOVA analysis command, and check the option for Welch's test (see <xref ref="fig-fig13-6"/>). To understand what's happening here, let's compare these numbers to what we got earlier when <xref ref="subsec-using-jamovi-anova"/> originally. To save you the trouble of flicking back, this is what we got last time: <m>F(2, 15) = 18.611, p = .00009</m>, also shown as the Fisher's test in the One-Way ANOVA shown in <xref ref="fig-fig13-6"/>.</p>
+      <p>In our example, the homogeneity of variance assumption turned out to be a pretty safe one: the Levene test came back non-significant (notwithstanding that we should also look at the plot of standard deviations), so we probably don't need to worry. However, in real life we aren't always that lucky. How do we save our ANOVA when the homogeneity of variance assumption is violated? If you recall from our discussion of <m>t</m>-tests, we've seen this problem before. The Student <m>t</m>-test assumes equal variances, so the solution was to use the Welch <m>t</m>-test, which does not. In fact, <xref ref="Welch1951"/> also showed how we can solve this problem for ANOVA too (the <term>Welch one-way test</term>). It's implemented in JASP using the One-Way ANOVA analysis. This is a specific analysis approach just for one-way ANOVA, and to run the Welch one-way ANOVA for our example, we would re-run the analysis as previously, but this time use the JASP ANOVA - one-way ANOVA analysis command, and check the option for Welch's test (see <xref ref="fig-fig13-6"/>). To understand what's happening here, let's compare these numbers to what we got earlier when <xref ref="subsec-using-jasp-anova"/> originally. To save you the trouble of flicking back, this is what we got last time: <m>F(2, 15) = 18.611, p = .00009</m>, also shown as the Fisher's test in the One-Way ANOVA shown in <xref ref="fig-fig13-6"/>.</p>
 
       <figure xml:id="fig-fig13-6">
         <caption>Welch test as part of the one-way ANOVA analysis in JASP</caption>
@@ -865,7 +865,7 @@
       <p>And so JASP uses a tie-correction factor to calculate the tie-corrected Kruskall-Wallis statistic. And at long last, we're actually finished with the theory of the Kruskal-Wallis test. I'm sure you're all terribly relieved that I've cured you of the existential anxiety that naturally arises when you realise that you don't know how to calculate the tie-correction factor for the Kruskal-Wallis test. Right?</p>
     </subsection>
 
-    <subsection xml:id="subsec-kruskal-wallis-jamovi">
+    <subsection xml:id="subsec-kruskal-wallis-jasp">
       <title>How to run the Kruskal-Wallis test in JASP</title>
 
       <p>Despite the horror that we've gone through in trying to understand what the Kruskal-Wallis test actually does, it turns out that running the test is pretty painless, since JASP has an analysis as part of the ANOVA analysis set called 'Non-Parametric' -- 'one-way ANOVA (Kruskal-Wallis)' Most of the time you'll have data like the <em>clinicaltrial.csv</em> data set, in which you have your outcome variable mood.gain and a grouping variable drug. If so, you can just go ahead and run the analysis in JASP. What this gives us is a Kruskal-Wallis <m>\chi^2 = 12.076, df = 2, p = 0.00239</m>, as in <xref ref="fig-fig13-8"/>.</p>
@@ -897,7 +897,7 @@
 
     <p>This change in <m>SS_{error}</m> term often leads to a more powerful statistical test, but this does depend on whether the reduction in the <m>SS_{error}</m> more than compensates for the reduction in degrees of freedom for the error term (as degrees of freedom go from <m>(n - k)</m><fn><m>(n - k)</m>: (number of subjects - number of groups)</fn> to <m>(n - 1)(k - 1)</m> (remembering that there are more subjects in the independent ANOVA design).</p>
 
-    <subsection xml:id="subsec-repeated-measures-jamovi">
+    <subsection xml:id="subsec-repeated-measures-jasp">
       <title>Repeated measures ANOVA in JASP</title>
 
       <p>First, we need some data. Geschwind (<xref ref="Geschwind1972"/>) has suggested that the exact nature of a patient's language deficit following a stroke can be used to diagnose the specific region of the brain that has been damaged. A researcher is concerned with identifying the specific communication difficulties experienced by six patients suffering from Broca's Aphasia (a language deficit commonly experienced following a stroke) (<xref ref="tbl-tab13-12"/>).</p>
@@ -1052,7 +1052,7 @@
     <p>There's a fair bit covered in this chapter, but there's still a lot missing.<fn>As with all of the chapters in this book, there are quite a few different sources that I've relied upon, but the one stand-out text that I've been most heavily influenced by is <xref ref="Sahai2000"/>. It's not a good book for beginners, but it's an excellent book for more advanced readers who are interested in understanding the mathematics behind ANOVA.</fn> Most obviously, I haven't discussed how to run an ANOVA when you are interested in more than one grouping variable, but that will be discussed in a lot of detail in <xref ref="ch-factorial-anova"/>. In terms of what we have discussed, the key topics were:</p>
 
     <ul>
-      <li><p>The basic logic behind <xref ref="sec-how-anova-works"/> and <xref ref="sec-running-anova-jamovi"/>.</p></li>
+      <li><p>The basic logic behind <xref ref="sec-how-anova-works"/> and <xref ref="sec-running-anova-jasp"/>.</p></li>
       <li><p>How to compute an <xref ref="sec-anova-effect-size"/> for an ANOVA.</p></li>
       <li><p><xref ref="sec-multiple-comparisons-post-hoc"/> for multiple testing.</p></li>
       <li><p><xref ref="sec-anova-assumptions"/>.</p></li>

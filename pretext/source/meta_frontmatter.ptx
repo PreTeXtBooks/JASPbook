@@ -52,6 +52,13 @@
         learnstatswithjasp.com</url>.
     </p>
     <p>
+      The JASP-specific revisions to the original book by Navarro and Foxcroft were made
+      possible by a generous grant to Tom Faulkenberry from the Tarleton State University
+      Center for Instructional Innovation in 2019. Also, many thanks to Kristen Bowman for
+      creating the beautiful front and back cover art for the book. In early 2025, updates
+      to the figures containing JASP screenshots were created by Kylie Seifert.
+    </p>
+    <p>
       Six years after its initial release, <q>Learning Statistics with JASP</q> continues
       to be widely used and cited, and I am grateful for the many positive messages I have
       received. However, the book has been in great need of a refresh, particularly with
@@ -62,17 +69,11 @@
       from 2019! I am so grateful for her work this year.
     </p>
     <p>
-      I am also grateful to readers who have contributed suggestions and identified typos,
+      I am also grateful to readers who have contributed suggestions and indentified typos,
       including Michael Katz, Oliver Schultheiss, and Rachel Stephens. As always, I invite
-      readers everywhere to find ways to make this text better (including identifying the
-      ever-present typos). This version builds on the wonderful previous work of Dani Navarro
-      and David Foxcroft, without whose previous efforts a book of this quality would not be possible.
-    </p>
-    <p>
-      If you find any issues with this PreTeXt version of the book, please raise them at
-      <url href="https://github.com/PreTeXtBooks/JASPbook/issues"
-           visual="github.com/PreTeXtBooks/JASPbook/issues">
-        github.com/PreTeXtBooks/JASPbook/issues</url>.
+      readers everywhere to find ways to make this text better (including identiying the
+      ever-present typos). Please send me an email if you'd like to contribute (or even
+      better, go to my Github page and raise an issue there).
     </p>
     <attribution>
       <line>Thomas J. Faulkenberry</line>

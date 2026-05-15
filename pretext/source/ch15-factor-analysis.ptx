@@ -53,7 +53,7 @@
       <p>But let's not get ahead of ourselves; what we should really focus on now is how to do an EFA in JASP.</p>
     </subsection>
 
-    <subsection xml:id="subsec-efa-in-jamovi">
+    <subsection xml:id="subsec-efa-in-jasp">
       <title>EFA in JASP</title>
 
       <p>First, we need some data. Twenty-five personality self-report items (see <xref ref="tbl-tab15-1"/>) taken from the International Personality Item Pool (<url href="http://ipip.ori.org">http://ipip.ori.org</url>) were included as part of the Synthetic Aperture Personality Assessment (SAPA) web-based personality assessment (<url href="http://sapa-project.org">http://sapa-project.org</url>) project. The 25 items are organized by five putative factors: Agreeableness, Conscientiousness, Extraversion, Neuroticism, and Openness.</p>
@@ -384,7 +384,7 @@
 
     <p>Right, let's take a look at how we set this CFA analysis up in JASP.</p>
 
-    <subsection xml:id="subsec-cfa-in-jamovi">
+    <subsection xml:id="subsec-cfa-in-jasp">
       <title>CFA in JASP</title>
 
       <p>Open up the <em>bfi_sample2.csv</em> file, check that the 25 variables are coded as ordinal (or continuous; it won't make any difference for this analysis). To perform CFA in JASP:</p>
@@ -593,7 +593,7 @@
 
     <p>Whilst a basic CFA model like the one shown in <xref ref="fig-fig15-20"/> could be tested against our observed data, we have in fact come up with a more sophisticated model, as shown in the diagram in <xref ref="fig-fig15-21"/>. This more sophisticated CFA model is known as a <term>Multi-Trait Multi-Method (MTMM)</term> model, and it is the one we will test in JASP.</p>
 
-    <subsection xml:id="subsec-mtmm-cfa-in-jamovi">
+    <subsection xml:id="subsec-mtmm-cfa-in-jasp">
       <title>MTMM CFA in JASP</title>
 
       <p>Open up the <em>ASQ.csv</em> file and check that the 18 variables (six "Internality", six "Stability" and six "Globality" variables) are specified as continuous variables.</p>
@@ -663,7 +663,7 @@
 
     <p>Can <m>\alpha</m> be too high? Probably: if you are getting an <m>\alpha</m> coefficient above <m>0.95</m> then this indicates high inter-correlations between the items and that there might be too much overly redundant specificity in the measurement, with a risk that the construct being measured is perhaps overly narrow.</p>
 
-    <subsection xml:id="subsec-reliability-analysis-in-jamovi">
+    <subsection xml:id="subsec-reliability-analysis-in-jasp">
       <title>Reliability analysis in JASP</title>
 
       <p>We have a third sample of personality data to use to undertake reliability analysis: in the <em>bfi_sample3.csv</em> file. Once again, check that the 25 personality item variables are coded as continuous. To perform reliability analysis in JASP:</p>

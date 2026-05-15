@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<chapter xml:id="ch-getting-started-jamovi" xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xml:id="ch-getting-started-jasp" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Getting started with JASP</title>
   <introduction>
     <blockquote>
@@ -19,7 +19,7 @@
     </ul>
   </introduction>
 
-  <section xml:id="sec-installing-jamovi">
+  <section xml:id="sec-installing-jasp">
     <title>Installing JASP</title>
 
     <p>Okay, enough with the sales pitch. Let's get started. Just as with any piece of software, JASP needs to be installed on a computer. Fortunately, JASP is freely distributed online and you can download it from the JASP homepage, which is:</p>
@@ -30,7 +30,7 @@
 
     <p>At the top of the page, you'll click on the heading <q>Download</q>. Then, you'll see separate links for Windows users, Mac users, and Linux users. If you follow the relevant link you'll see that the online instructions are pretty self-explanatory. As of this writing<fn>Version 2.0, May 21, 2025</fn>, the current version of JASP is 0.19.3, but they usually issue updates every few months, so you'll probably have a newer version.<fn>Although JASP is updated frequently it doesn't usually make much of a difference for the sort of work we'll do in this book. In fact, during the writing of the book I upgraded several times and it didn't make much difference at all to what is in this book.</fn></p>
 
-    <subsection xml:id="subsec-starting-up-jamovi">
+    <subsection xml:id="subsec-starting-up-jasp">
       <title>Starting up JASP</title>
 
       <p>One way or another, regardless of what operating system you're using, it's time to open JASP and get started. When first starting JASP you will be presented with a user interface which looks something like <xref ref="fig-fig3-1"/>.</p>
@@ -42,7 +42,7 @@
         </image>
       </figure>
 
-      <p>Users of earlier versions of JASP were often a bit dismayed to see that there was no place to begin entering data. This was a deliberate decision on the part of the JASP developers.<fn>See <url href="https://jasp-stats.org/2018/05/15/data-editing-in-jasp/">https://jasp-stats.org/2018/05/15/data-editing-in-jasp/</url> for a discussion of this very issue.</fn> However, starting with version 0.18.0, JASP now includes a data editor. Even so, the preferred method for getting data into JASP is still to load a CSV file (<filename>.csv</filename>), which is a text-based data format that can be created by (and opened in) any spreadsheet program. We'll talk more about this a bit later.</p>
+      <p>Users of earlier versions of JASP were often a bit dismayed to see that there was no place to begin entering data. This was a deliberate decision on the part of the JASP developers; their philosophy was that users should be allowed to use the editor they are most comfortable with.<fn>See <url href="https://jasp-stats.org/2018/05/15/data-editing-in-jasp/">https://jasp-stats.org/2018/05/15/data-editing-in-jasp/</url> for a discussion of this very issue.</fn> However, starting with version 0.18.0, JASP now includes a data editor. Even so, the preferred method for getting data into JASP is still to load a CSV file (<filename>.csv</filename>), which is a text-based data format that can be created by (and opened in) any spreadsheet program. We'll talk more about this a bit later.</p>
     </subsection>
   </section>
 
@@ -56,7 +56,7 @@
     <p>If you decide you no longer need a particular analysis, you can remove it with the results context menu. Clicking on the header of a specific results header (or clicking on the <m>\blacktriangledown</m> symbol) will bring up a menu and by selecting ‘Remove Analysis’, the analysis can be removed. But more on this later. First, let's get some data into JASP.</p>
   </section>
 
-  <section xml:id="sec-loading-data-jamovi">
+  <section xml:id="sec-loading-data-jasp">
     <title>Loading data in JASP</title>
 
     <p>There are several different types of files that are likely to be relevant to us when doing data analysis. There are two in particular that are especially important from the perspective of this book:</p>
@@ -131,7 +131,7 @@
     <p>In <xref ref="sec-the-spreadsheet"/> we saw how to specify different variable levels, and if you want to change a variable's measurement level then you can do this in the JASP data view for that variable. Just click the check box for the measurement level you want -- continuous, ordinal, or nominal.</p>
   </section>
 
-  <section xml:id="sec-quitting-jamovi">
+  <section xml:id="sec-quitting-jasp">
     <title>Quitting JASP</title>
 
     <p>There's one last thing I should cover in this chapter: how to quit JASP. It's not hard, just close the program the same way you would any other program. However, what you might want to do before you quit is save your work! There are two parts to this: saving any changes to the data set, and saving the analyses that you ran.</p>
@@ -147,12 +147,12 @@
     <p>Every book that tries to teach a new statistical software program to novices has to cover roughly the same topics, and in roughly the same order. Ours is no exception, and so in the grand tradition of doing it just the same way everyone else did it, this chapter covered the following topics:</p>
 
     <ul>
-      <li><p><xref ref="sec-installing-jamovi"/>. We downloaded and installed JASP, and started it up.</p></li>
+      <li><p><xref ref="sec-installing-jasp"/>. We downloaded and installed JASP, and started it up.</p></li>
       <li><p><xref ref="sec-analyses"/>. We very briefly oriented to the part of JASP where analyses are done and results appear, but then deferred this until later in the book.</p></li>
-      <li><p><xref ref="sec-loading-data-jamovi"/>. We saw how to load data files (formatted as <filename>.csv</filename> files) in JASP.</p></li>
+      <li><p><xref ref="sec-loading-data-jasp"/>. We saw how to load data files (formatted as <filename>.csv</filename> files) in JASP.</p></li>
       <li><p><xref ref="sec-the-spreadsheet"/>. We spent more time looking at the spreadsheet part of JASP, and considered different variable types, and briefly mentioned how to compute new variables.</p></li>
       <li><p><xref ref="sec-changing-data-level"/>. And saw that sometimes we need to coerce data from one type to another.</p></li>
-      <li><p><xref ref="sec-quitting-jamovi"/>. Finally, we looked at good practice in terms of saving your data set and analyses when you have finished and are about to quit JASP.</p></li>
+      <li><p><xref ref="sec-quitting-jasp"/>. Finally, we looked at good practice in terms of saving your data set and analyses when you have finished and are about to quit JASP.</p></li>
     </ul>
 
     <p>We still haven't arrived at anything that resembles data analysis. Maybe the next chapter will get us a bit closer!</p>

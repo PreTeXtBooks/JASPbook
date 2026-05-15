@@ -205,7 +205,7 @@
       <p>A very brief digression is in order at this point, regarding the word "significant". The concept of statistical significance is actually a very simple one, but has a very unfortunate name. If the data allow us to reject the null hypothesis, we say that "the result is statistically significant", which is often shortened to "the result is significant". This terminology is rather old and dates back to a time when "significant" just meant something like "indicated", rather than its modern meaning which is much closer to "important". As a result, a lot of modern readers get very confused when they start learning statistics because they think that a "significant result" must be an important one. It doesn't mean that at all. All that "statistically significant" means is that the data allowed us to reject a null hypothesis. Whether or not the result is actually important in the real world is a very different question, and depends on all sorts of other things.</p>
     </subsection>
 
-    <subsection xml:id="sec-The-difference-between-one-sided-and-two-sided-tests">
+    <subsection xml:id="subsec-the-difference-between-one-sided-and-two-sided-tests">
       <title>The difference between one-sided and two-sided tests</title>
 
       <p>There's one more thing I want to point out about the hypothesis test that I've just constructed. If we take a moment to think about the statistical hypotheses I've been using:
@@ -227,7 +227,7 @@
     </subsection>
   </section>
 
-  <section xml:id="sec-The-p-value-of-a-test">
+  <section xml:id="sec-the-p-value-of-a-test">
     <title>The <m>p</m>-value of a test</title>
 
     <p>In one sense, our hypothesis test is complete. We've constructed a test statistic, figured out its sampling distribution if the null hypothesis is true, and then constructed the critical region for the test. Nevertheless, I've actually omitted the most important number of all, <term>the <m>p</m>-value</term>. It is to this topic that we now turn. There are two somewhat different ways of interpreting a <m>p</m>-value, one proposed by Sir Ronald Fisher and the other by Jerzy Neyman. Both versions are legitimate, though they reflect very different ways of thinking about hypothesis tests. Most introductory textbooks tend to give Fisher's version only, but I think that's a bit of a shame. To my mind, Neyman's version is cleaner and actually better reflects the logic of the null hypothesis test. You might disagree though, so I've included both. I'll start with Neyman's version.</p>
@@ -360,7 +360,7 @@
     <p>Right now, this output looks pretty unfamiliar to you, but you can see that it's telling you more or less the right things. Specifically, the <m>p</m>-value of <m>0.02</m> is less than the usual choice of <m>\alpha = .05</m>, so you can reject the null. We'll talk a lot more about how to read this sort of output as we go along, and after a while you'll hopefully find it quite easy to read and understand.</p>
   </section>
 
-  <section xml:id="sec-Effect-size-sample-size-and-power">
+  <section xml:id="sec-effect-size-sample-size-and-power">
     <title>Effect size, sample size and power</title>
 
     <p>In previous sections I've emphasised the fact that the major design principle behind statistical hypothesis testing is that we try to control our type I error rate. When we fix <m>\alpha = .05</m> we are attempting to ensure that only <m>5\%</m> of true null hypotheses are incorrectly rejected. However, this doesn't mean that we don't care about type II errors. In fact, from the researcher's perspective, the error of failing to reject the null when it is actually false is an extremely annoying one. With that in mind, a secondary goal of hypothesis testing is to try to minimise <m>\beta</m>, the type II error rate, although we don't usually talk in terms of minimising type II errors. Instead, we talk about maximising the power of the test. Since power is defined as <m>1 - \beta</m>, this is the same thing.</p>

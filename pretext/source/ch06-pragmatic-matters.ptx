@@ -9,11 +9,11 @@
       <attribution>Roger Zelazny<fn>The quote comes from <em>Home is the Hangman</em>, published in 1975.</fn></attribution>
     </blockquote>
 
-    <p>This is a somewhat strange chapter, even by my standards. My goal in this chapter is to talk a bit more honestly about the realities of working with data than you'll see anywhere else in the book. The problem with real world data sets is that they are <em>messy</em>. Very often the data file that you start out with doesn't have the variables stored in the right format for the analysis you want to do. Sometimes there might be a lot of missing values in your data set. Sometimes you only want to analyse a subset of the data. Et cetera. In other words, there's a lot of <term>data manipulation</term> that you need to do just to get the variables in your data set into the format that you need it. The purpose of this chapter is to provide a basic introduction to these pragmatic topics. Although the chapter is motivated by the kinds of practical issues that arise when manipulating real data, I'll stick with the practice that I've adopted throughout most of the book and rely on very small, toy data sets that illustrate the underlying issue. Because this chapter is essentially a collection of techniques and doesn't tell a single coherent story, it may be useful to start with a list of topics:</p>
+    <p>This is a somewhat strange chapter, even by my standards. My goal in this chapter is to talk a bit more honestly about the realities of working with data than you'll see anywhere else in the book. The problem with real world data sets is that they are <em>messy</em>. Very often the data file that you start out with doesn't have the variables stored in the right format for the analysis you want to do. Sometimes there might be a lot of missing values in your data set. Sometimes you only want to analyse a subset of the data. Et cetera. In other words, there's a lot of <term>data manipulation</term> that you need to do just to get the variables in your data set into the format that you need it. The purpose of this chapter is to provide a basic introduction to these pragmatic topics. Although the chapter is motivated by the kinds of practical issues that arise when manipulating real data, I'll stick with the practice that I've adopted through most of the book and rely on very small, toy data sets that illustrate the underlying issue. Because this chapter is essentially a collection of techniques and doesn't tell a single coherent story, it may be useful to start with a list of topics:</p>
 
     <ul>
       <li><p><xref ref="sec-tabulating-and-cross-tabulating-data" text="title"/>.</p></li>
-      <li><p><xref ref="sec-logical-expressions-in-JASP" text="title"/>.</p></li>
+      <li><p><xref ref="sec-logical-expressions-in-jasp" text="title"/>.</p></li>
       <li><p><xref ref="sec-transforming-and-recoding-a-variable" text="title"/>.</p></li>
       <li><p><xref ref="sec-more-mathematical-functions-and-operations" text="title"/>.</p></li>
       <li><p><xref ref="sec-extracting-a-subset-of-the-data" text="title"/>.</p></li>
@@ -103,7 +103,7 @@
     </subsection>
   </section>
 
-  <section xml:id="sec-logical-expressions-in-JASP">
+  <section xml:id="sec-logical-expressions-in-jasp">
     <title>Logical expressions in JASP</title>
 
     <p>A key concept that a lot of data transformations in JASP rely on is the idea of a <term>logical value</term>. A logical value is an assertion about whether something is true or false. This is implemented in JASP in a pretty straightforward way. There are two logical values, namely TRUE and FALSE. Despite the simplicity, logical values are very useful things. Let's see how they work.</p>
@@ -118,7 +118,7 @@
       <p>What I've done here is use the <term>equality operator</term>, <m>==</m>, to force JASP to make a "true or false" judgement.<fn>Note that this is a very different operator to the equals operator <m>=</m>. A common typo that people make when trying to write logical commands in JASP (or other languages, since the "<m>=</m> versus <m>==</m>" distinction is important in many computer and statistical programs) is to accidentally type <m>=</m> when you really mean <m>==</m>. Be especially cautious with this, I've been programming in various languages since I was a teenager and I still screw this up a lot.</fn> Okay, let's see what JASP thinks of the Party slogan, so type this into the compute new variable 'formula' box:
       <me>2 + 2 == 5</me></p>
 
-      <p>And what do you get? It should be a whole set of 'false' values in the spreadsheet column for your newly computed variable. It was worth having a look at what happens if I try to force JASP to believe that two plus two is five by making a statement like <m>2 + 2 = 5</m>. I know that if I do this in another program, say R, then it throws up an error message. But wait, if you do this in JASP you get a whole set of 'false' values. So what is going on? Well, it seems that JASP is being pretty smart and realises that you are testing whether it is TRUE or FALSE that <m>2 + 2 = 5</m>, regardless of whether you use the correct <term>equality operator</term> <m>==</m>, or the equals sign <m>=</m>.</p>
+      <p>And what do you get? It should be a whole set of 'false' values in the spreadsheet column for your newly computed variable. Booyah! Freedom and ponies for all! Or something like that. Anyway, it was worth having a look at what happens if I try to force JASP to believe that two plus two is five by making a statement like <m>2 + 2 = 5</m>. I know that if I do this in another program, say R, then it throws up an error message. But wait, if you do this in JASP you get a whole set of 'false' values. So what is going on? Well, it seems that JASP is being pretty smart and realises that you are testing whether it is TRUE or FALSE that <m>2 + 2 = 5</m>, regardless of whether you use the correct <term>equality operator</term> <m>==</m>, or the equals sign <m>=</m>.</p>
     </subsection>
 
     <subsection xml:id="subsec-logical-operations">
@@ -605,7 +605,7 @@
 
     <ul>
       <li><p><xref ref="sec-tabulating-and-cross-tabulating-data" text="title"/>.</p></li>
-      <li><p><xref ref="sec-logical-expressions-in-JASP" text="title"/>.</p></li>
+      <li><p><xref ref="sec-logical-expressions-in-jasp" text="title"/>.</p></li>
       <li><p><xref ref="sec-transforming-and-recoding-a-variable" text="title"/>.</p></li>
       <li><p><xref ref="sec-more-mathematical-functions-and-operations" text="title"/>.</p></li>
       <li><p><xref ref="sec-extracting-a-subset-of-the-data" text="title"/>.</p></li>

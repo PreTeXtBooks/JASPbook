@@ -152,7 +152,7 @@
       <p>By standardising the covariance, not only do we keep all of the nice properties of the covariance discussed earlier, but the actual values of r are on a meaningful scale: r = 1 implies a perfect positive relationship and <m>r = -1</m> implies a perfect negative relationship. I'll expand a little more on this point later, in the section on interpreting a correlation. But before I do, let's look at how to calculate correlations in JASP.</p>
     </subsection>
 
-    <subsection xml:id="subsec-correlations-jamovi">
+    <subsection xml:id="subsec-correlations-jasp">
       <title>Calculating correlations in JASP</title>
 
       <p>Calculating correlations in JASP can be done by clicking on the 'Regression' — 'Correlation Matrix' button. Transfer all four continuous variables across into the box on the right to get the output in <xref ref="fig-fig12-5"/>.</p>
@@ -421,7 +421,7 @@
 
     <p>Instead of showing you the long and tedious way first and then "revealing" the wonderful shortcut that JASP provides, let's cut straight to the chase and just use JASP to do all the heavy lifting.</p>
 
-    <subsection xml:id="subsec-linear-regression-jamovi">
+    <subsection xml:id="subsec-linear-regression-jasp">
       <title>Linear regression in JASP</title>
 
       <p>To run my linear regression, open up the 'Regression' — 'Linear Regression' analysis in JASP, using the <em>parenthood.csv</em> data file. Then specify dan.grump as the 'Dependent Variable' and dan.sleep as the variable entered in the 'Covariates' box. This gives the results shown in <xref ref="fig-fig12-13"/>, showing an intercept <m>\hat{b}_0 = 125.96</m> and the slope <m>\hat{b}_1 = -8.94</m>. In other words, the best fitting regression line that I plotted in <xref ref="fig-fig12-11"/> has this formula:
@@ -458,7 +458,7 @@
 
     <p>However, although the number of coefficients that need to be estimated has changed, the basic idea of how the estimation works is unchanged: our estimated coefficients <m>\hat{b}_0</m>, <m>\hat{b}_1</m> and <m>\hat{b}_2</m> are those that minimise the sum squared residuals.</p>
 
-    <subsection xml:id="subsec-multiple-regression-jamovi">
+    <subsection xml:id="subsec-multiple-regression-jasp">
       <title>Doing it in JASP</title>
 
       <p>Multiple regression in JASP is no different to simple regression. All we have to do is add additional variables to the 'Covariates' box in JASP. For example, if we want to use both dan.sleep and baby.sleep as predictors in our attempt to explain why I'm so grumpy, then move baby.sleep across into the 'Covariates' box alongside dan.sleep.</p>
@@ -597,7 +597,7 @@
       <p>In any case, this <m>t</m>-statistic can be interpreted in the same way as the <m>t</m>-statistics that we discussed previously. Assuming that you have a two-sided alternative (i.e., you don't really care if <m>b > 0</m> or <m>b &lt; 0</m>), then it's the extreme values of t (i.e., a lot less than zero or a lot greater than zero) that suggest that you should reject the null hypothesis.</p>
     </subsection>
 
-    <subsection xml:id="subsec-hypothesis-tests-jamovi">
+    <subsection xml:id="subsec-hypothesis-tests-jasp">
       <title>Running the hypothesis tests in JASP</title>
 
       <p>To compute all of the statistics that we have talked about so far, all you need to do is make sure the relevant options are checked in JASP and then run the regression. If we do that, as in <xref ref="fig-fig12-15"/>, we get a whole bunch of useful output.</p>
