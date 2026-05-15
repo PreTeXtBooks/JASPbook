@@ -540,7 +540,7 @@ enough.</p>
     <p>However, all is not lost. A different approach is to convert my grumpiness score into a <term>standard score</term>, also referred to as a <em>z</em>-score. The standard score is defined as the number of standard deviations above the mean that my grumpiness score lies. To phrase it in <q>pseudomaths</q> the standard score is calculated like this:
     <me>\text{standard score} = \frac{\text{raw score} - \text{mean}}{\text{standard deviation}}</me></p>
 <p>In actual maths, the equation for the z-score is:</p>
-    <me>z_i = \frac{X_i - \bar{X}}{\hat{\sigma}}</me></p>
+    <me>z_i = \frac{X_i - \bar{X}}{\hat{\sigma}}</me>
 
 <assemblage>
     <p>In actual maths, the equation for the <em>z</em>-score is: <me>z_i =\frac{X_i - \bar{X}}{\hat{\sigma}}</me></p>
