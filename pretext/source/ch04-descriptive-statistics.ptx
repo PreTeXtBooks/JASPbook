@@ -478,17 +478,17 @@ pi, which is the analogue of the letter P).</fn>.
           <cell>kurtosis value</cell>
         </row>
         <row>
-          <cell><q>tails too thin</q></cell>
+          <cell><q>too flat</q></cell>
           <cell>platykurtic</cell>
           <cell>negative</cell>
         </row>
         <row>
-          <cell><q>tails neither thin or fat</q></cell>
+          <cell><q>just pointy enough</q></cell>
           <cell>mesokurtic</cell>
           <cell>zero</cell>
         </row>
         <row>
-          <cell><q>tails too fat</q></cell>
+          <cell><q>too pointy</q></cell>
           <cell>leptokurtic</cell>
           <cell>positive</cell>
         </row>
@@ -498,8 +498,12 @@ pi, which is the analogue of the letter P).</fn>.
 <assemblage>
     <p>The equation for kurtosis is pretty similar in spirit to the formulas we've seen already for the variance and the skewness. Except that where the variance involved squared deviations and the skewness involved cubed deviations, the kurtosis involves raising the deviations to the fourth power: <me>kurtosis(X)=\frac{1}{N \hat{\sigma}^4} \sum_{i=1}^{N} ( X_i - \bar{X} )^4 - 3</me> I know, it's not terribly interesting to me either. The <q>-3</q> part is something that statisticians tack on to ensure that the normal curve has kurtosis zero. It looks a bit stupid, just sticking a <q>-3</q> at the end of the formula, but there are good mathematical reasons for doing this.</p>
 </assemblage>
-    <p>More to the point, JASP has a check box for kurtosis just below the check box for skewness, and this gives a value for kurtosis of <m>0.101</m> with a standard error of <m>0.364</m>. This means that the AFL winning margins data has only a small kurtosis, which is ok.</p>
-  </section>
+    <p>More to the point, JASP has a check box for kurtosis just below the check box for skewness, and this gives a value for kurtosis of <m>0.101</m> with a standard error of <m>0.364</m>. 
+Using the same idea as before
+where we divide the kurtosis by the standard error of the kurtosis, we note that this value is much
+less than 2 (<m>0.101/0.364 = 0.277</m>). This means that the AFL winning margins data are just pointy
+enough.</p>
+</section>
 
   <section xml:id="sec-descriptive-statistics-by-group">
     <title>Descriptive statistics separately for each group</title>
@@ -523,8 +527,6 @@ pi, which is the analogue of the letter P).</fn>.
         <description>A JASP screenshot displaying a clinical trial study. The interface includes sections for variables, descriptives, and analyses, focusing on mood gain, therapy type, central tendency measures, and a descriptive statistics table on the right.</description>
       </image>
     </figure>
-
-    <p>What if you have multiple grouping variables? Suppose you want to look at the average mood gain separately for all possible combinations of drug and therapy. It is possible to do this by adding another variable, drug, into the 'Split by' box. Easy peasy, though sometimes if you split too much there isn't enough data in each breakdown combination to make meaningful calculations. In this case JASP tells you this by stating something like 'NaN' or 'Inf'.<fn>Sometimes JASP will also present numbers in an unusual way. If a number is very small, or very large, then JASP switches to an exponential form for numbers. For example 6.51e-4 is the same as saying that the decimal point is moved 4 places to the left, so the actual number is 0.000651. If there is a plus sign (i.e. 6.51e+4) then the decimal point is moved to the right, i.e. 65,100.00. Usually only very small or very large numbers are expressed in this way, for example 6.51e-16, which would be quite unwieldy to write out in the normal way.</fn></p>
   </section>
 
   <section xml:id="sec-standard-scores">
@@ -536,6 +538,8 @@ pi, which is the analogue of the letter P).</fn>.
 
     <p>However, all is not lost. A different approach is to convert my grumpiness score into a <term>standard score</term>, also referred to as a <em>z</em>-score. The standard score is defined as the number of standard deviations above the mean that my grumpiness score lies. To phrase it in <q>pseudomaths</q> the standard score is calculated like this:
     <me>\text{standard score} = \frac{\text{raw score} - \text{mean}}{\text{standard deviation}}</me></p>
+<p>In actual maths, the equation for the z-score is:</p>
+    <me>z_i = \frac{X_i - \bar{X}}{\hat{\sigma}}</me></p>
 
 <assemblage>
     <p>In actual maths, the equation for the <em>z</em>-score is: <me>z_i =\frac{X_i - \bar{X}}{\hat{\sigma}}</me></p>
@@ -564,6 +568,74 @@ pi, which is the analogue of the letter P).</fn>.
     </ul>
 
     <p>In the next chapter we'll move on to a discussion of how to draw pictures! Everyone loves a pretty picture, right? But before we do, I want to end on an important point. A traditional first course in statistics spends only a small proportion of the class on descriptive statistics, maybe one or two lectures at most. The vast majority of the lecturer's time is spent on inferential statistics because that's where all the hard stuff is. That makes sense, but it hides the practical everyday importance of choosing good descriptives.</p>
-  </section>
+  
+<subsection xml:id="subsec-epilogue-descriptive-statistics">
+  <title>Epilogue: Good Descriptive Statistics are Descriptive!</title>
+
+  <blockquote>
+    <p>
+      <em>The death of one man is a tragedy.
+      The death of millions is a statistic.</em>
+    </p>
+    <attribution>Josef Stalin, Potsdam 1945</attribution>
+  </blockquote>
+
+  <blockquote>
+    <p>
+      <em>950,000 <ndash/> 1,200,000</em>
+    </p>
+    <attribution>
+      Estimate of Soviet repression deaths, 1937<ndash/>1938 
+      <xref ref="Ellman2002"/>
+    </attribution>
+  </blockquote>
+
+  <p>
+    Stalin's infamous quote about the statistical character of the deaths of millions 
+    is worth giving some thought. The clear intent of his statement is that the death 
+    of an individual touches us personally and its force cannot be denied, but that the 
+    deaths of a multitude are incomprehensible and as a consequence are mere statistics 
+    and more easily ignored. I'd argue that Stalin was half right. A statistic is an 
+    abstraction, a description of events beyond our personal experience, and so hard to 
+    visualise. Few if any of us can imagine what the deaths of millions is <q>really</q> 
+    like, but we can imagine one death and this gives the lone death its feeling of 
+    immediate tragedy, a feeling that is missing from Ellman's cold statistical 
+    description.
+  </p>
+
+  <p>
+    Yet it is not so simple. Without numbers, without counts, without a description of 
+    what happened, we have <em>no chance</em> of understanding what really happened, no 
+    opportunity even to try to summon the missing feeling. And in truth, as I write this 
+    sitting in comfort on a Saturday morning half a world and a whole lifetime away from 
+    the Gulags, when I put the Ellman estimate next to the Stalin quote a dull dread 
+    settles in my stomach and a chill settles over me. The Stalinist repression is 
+    something truly beyond my experience, but with a combination of statistical data and 
+    those recorded personal histories that have come down to us, it is not entirely 
+    beyond my comprehension. Because what Ellman's numbers tell us is this: over a two 
+    year period Stalinist repression wiped out the equivalent of every man, woman and 
+    child currently alive in the city where I live. Each one of those deaths had its own 
+    story, was its own tragedy, and only some of those are known to us now. Even so, 
+    with a few carefully chosen statistics, the scale of the atrocity starts to come 
+    into focus.
+  </p>
+
+  <p>
+    Thus it is no small thing to say that the first task of the statistician and the 
+    scientist is to summarise the data, to find some collection of numbers that can 
+    convey to an audience a sense of what has happened. This is the job of descriptive 
+    statistics, but it's not a job that can be done solely using the numbers. You are a 
+    data analyst, and not a statistical software package. Part of your job is to take 
+    these <em>statistics</em> and turn them into a <em>description</em>. When you 
+    analyse data it is not sufficient to list off a collection of numbers. Always 
+    remember that what you're really trying to do is communicate with a human audience. 
+    The numbers are important, but they need to be put together into a meaningful story 
+    that your audience can interpret. That means you need to think about framing. You 
+    need to think about context. And you need to think about the individual events that 
+    your statistics are summarising.
+  </p>
+
+</subsection>
+</section>
 
 </chapter>
