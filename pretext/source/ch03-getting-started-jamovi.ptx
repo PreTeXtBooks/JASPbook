@@ -37,7 +37,7 @@
 
       <figure xml:id="fig-fig3-1">
         <caption>JASP looks like this when you start it.</caption>
-        <image source="../../img/fig3-1.png">
+        <image source="fig3-1.png">
           <description>A screenshot of the JASP interface when the program is first opened.</description>
         </image>
       </figure>
@@ -73,7 +73,7 @@
 
       <figure xml:id="fig-fig3-4">
         <caption>The <filename>booksales.csv</filename> data file. On the left I've opened the file using a spreadsheet program, which shows that the file is basically a table. On the right the same file is open in a standard text editor (the TextEdit program on a Mac), which shows how the file is formatted. The entries in the table are separated by commas.</caption>
-        <image source="../../img/fig3-4.png" width="90%">
+        <image source="fig3-4.png" width="90%">
           <description>A screenshot of the booksales.csv data file shown in both a spreadsheet program and a text editor.</description>
         </image>
       </figure>
@@ -82,7 +82,7 @@
 
       <figure xml:id="fig-fig3-5">
         <caption>A dialog box on a Mac asking you to select the CSV file JASP should try to import. Mac users will recognise this immediately -- it's the usual way in which a Mac asks you to find a file. Windows users won't see this, but instead will see the usual explorer window that Windows always gives you when it wants you to select a file.</caption>
-        <image source="../../img/fig3-5.png" width="90%">
+        <image source="fig3-5.png" width="90%">
           <description>A file selection dialog used to choose a CSV file to open in JASP.</description>
         </image>
       </figure>
