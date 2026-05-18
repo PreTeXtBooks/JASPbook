@@ -52,7 +52,7 @@
       <xi:include href="./ch05-drawing-graphs.ptx" />
 
       <!-- Chapter 6: Pragmatic matters -->
-      <xi:include href="./ch06-pragmatic-matters.ptx" />
+      <!-- <xi:include href="./ch06-pragmatic-matters.ptx" /> -->
     </part>
 
     <!-- Part IV: Statistical theory -->
