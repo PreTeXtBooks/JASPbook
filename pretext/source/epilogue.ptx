@@ -45,7 +45,7 @@
 
         <li>
           <p>
-            <em>Dealing with violated assumptions.</em> In a number of places in the book I've talked about some things you can do when you find that the assumptions of your test (or model) are violated, but I think that I ought to say more about this. In particular, I think it would have been nice to talk in a lot more detail about how you can tranform variables to fix problems. I talked a bit about this in <xref ref="ch-pragmatic-matters"/>, but the discussion isn't detailed enough I think.
+            <em>Dealing with violated assumptions.</em> In a number of places in the book I've talked about some things you can do when you find that the assumptions of your test (or model) are violated, but I think that I ought to say more about this. In particular, I think it would have been nice to talk in a lot more detail about how you can tranform variables to fix problems.
           </p>
         </li>
 
