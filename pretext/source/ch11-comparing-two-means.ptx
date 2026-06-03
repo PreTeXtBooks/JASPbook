@@ -417,6 +417,10 @@
 
     <p>The second difference between Welch and Student is that the degrees of freedom are calculated in a very different way. In the Welch test, the "degrees of freedom" doesn't have to be a whole number any more, and it doesn't correspond all that closely to the "number of data points minus the number of constraints" heuristic that I've been using up to this point.</p>
 
+    <p>[Additional technical detail<fn>The degrees of freedom are, in fact
+    <me>\text{df}=\frac{(\hat{\sigma}_1^2 / N_1 + \hat{\sigma}_2^2 / N_2)^2}{(\hat{\sigma}_1^2 / N_1)^2 / (N_1 - 1) + (\hat{\sigma}_2^2 / N_2)^2 / (N_2 - 1)}</me>
+    which is all pretty straightforward and obvious, right? Well, perhaps not. It doesn't really matter for our purposes. What matters is that you'll see that the "df" value that pops out of a Welch test tends to be a little bit smaller than the one used for the Student test, and it doesn't have to be a whole number.</fn>]</p>
+
     <subsection xml:id="subsec-welch-in-jasp">
       <title>Doing the Welch test in JASP</title>
 
@@ -540,7 +544,7 @@
   </section>
 
   <section xml:id="sec-one-sided-tests">
-    <title>One-sided tests</title>
+    <title>One sided tests</title>
 
     <p>When introducing the theory of null hypothesis tests, I mentioned that there are some situations when it's appropriate to specify a one-sided test. So far all of the <m>t</m>-tests have been two-sided tests. For instance, when we specified a one sample <m>t</m>-test for the grades in Dr Zeppo's class the null hypothesis was that the true mean was <m>67.5\%</m>. The alternative hypothesis was that the true mean was greater than or less than <m>67.5\%</m>. Suppose we were only interested in finding out if the true mean is greater than <m>67.5\%</m>, and have no interest whatsoever in testing to find out if the true mean is lower than <m>67.5\%</m>.</p>
 
@@ -727,7 +731,7 @@
   </section>
 
   <section xml:id="sec-testing-non-normal">
-    <title>Testing non-normal data</title>
+    <title>Testing non-normal data with Wilcoxon tests</title>
 
     <p>Okay, suppose your data turn out to be pretty substantially non-normal, but you still want to run something like a <m>t</m>-test? This situation occurs a lot in real life. For the AFL winning margins data, for instance, the Shapiro-Wilk test made it very clear that the normality assumption is violated. This is the situation where you want to use Wilcoxon tests. Like the <m>t</m>-test, the Wilcoxon test comes in two forms, one-sample and two-sample, and they're used in more or less the exact same situations as the corresponding <m>t</m>-tests. Unlike the <m>t</m>-test, the Wilcoxon test doesn't assume normality, which is nice. In fact, they don't make any assumptions about what kind of distribution is involved. In statistical jargon, this makes them <term>nonparametric tests</term>. While avoiding the normality assumption is nice, there's a drawback: the Wilcoxon test is usually less powerful than the <m>t</m>-test (i.e., higher type II error rate). I won't discuss the Wilcoxon tests in as much detail as the <m>t</m>-tests, but I'll give you a brief overview.</p>
 
@@ -924,7 +928,7 @@
       <li><p>The one-sample <m>t</m>-test is used to compare a single sample mean against a hypothesised value for the population mean.</p></li>
       <li><p>An independent samples <m>t</m>-test is used to compare the means of two groups, and tests the null hypothesis that they have the same mean. It comes in two forms: the Student test (see <xref ref="sec-the-independent-samples-t-test-student-test"/>) assumes that the groups have the same standard deviation, the Welch test (see <xref ref="sec-the-independent-samples-t-test-welch-test"/>) does not.</p></li>
       <li><p>The paired-samples <m>t</m>-test (see <xref ref="sec-paired-samples-t-test"/>) is used when you have two scores from each person, and you want to test the null hypothesis that the two scores have the same mean.</p></li>
-      <li><p>One-sided tests (see <xref ref="sec-one-sided-tests"/>) are legitimate as long as they are pre-planned (like all tests!).</p></li>
+      <li><p>One sided tests (see <xref ref="sec-one-sided-tests"/>) are perfectly legitimate as long as they are pre-planned.</p></li>
       <li><p>Effect size calculations for the difference between means can be calculated via the Cohen's <m>d</m> statistic (see <xref ref="sec-effect-size-t-tests"/>).</p></li>
       <li><p>Checking the normality of a sample (see <xref ref="sec-checking-normality"/>) using QQ plots and the Shapiro-Wilk test.</p></li>
       <li><p>If your data are non-normal, you can use Mann-Whitney or Wilcoxon tests instead of <m>t</m>-tests for testing non-normal data (see <xref ref="sec-testing-non-normal"/>).</p></li>

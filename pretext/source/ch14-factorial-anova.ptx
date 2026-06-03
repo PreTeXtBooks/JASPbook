@@ -13,7 +13,7 @@
 
     <p>When we discussed analysis of variance in <xref ref="ch-anova"/>, we assumed a fairly simple experimental design. Each person is in one of several groups and we want to know whether these groups have different mean scores on some outcome variable. In this section, I'll discuss a broader class of experimental designs known as <term>factorial designs</term>, in which we have more than one grouping variable. I gave one example of how this kind of design might arise above. Another example appears in <xref ref="ch-anova"/> in which we were looking at the effect of different drugs on the mood.gain experienced by each person. In that chapter we did find a significant effect of drug, but at the end of the chapter we also ran an analysis to see if there was an effect of therapy. We didn't find one, but there's something a bit worrying about trying to run two separate analyses trying to predict the same outcome. Maybe there actually is an effect of therapy on mood gain, but we couldn't find it because it was being "hidden" by the effect of drug? In other words, we're going to want to run a single analysis that includes both drug and therapy as predictors. For this analysis each person is cross-classified by the drug they were given (a factor with 3 levels) and what therapy they received (a factor with 2 levels). We refer to this as a <m>3 \times 2</m> factorial design.</p>
 
-    <p>If we cross-tabulate drug by therapy, using the 'Frequencies' -- 'Contingency Tables' analysis in JASP, we get the table shown in <xref ref="fig-fig14-1"/>.</p>
+    <p>If we cross-tabulate drug by therapy, using the 'Frequencies' -- 'Contingency Tables' analysis in JASP (see <xref ref="sec-chi-square-test-for-association"/>), we get the table shown in <xref ref="fig-fig14-1"/>.</p>
 
     <figure xml:id="fig-fig14-1">
       <caption>JASP contingency table of drug by therapy</caption>
@@ -70,7 +70,7 @@
         </tabular>
       </table>
 
-      <p>Now, the next Table (<xref ref="tbl-tab14-2"/>) shows a list of the group means for all possible combinations of the two factors (e.g., people who received the placebo and no therapy, people who received the placebo while getting CBT, etc.). It is helpful to organise all these numbers, plus the marginal and grand means, into a single table.</p>
+      <p>Now, this output shows a list of the group means for all possible combinations of the two factors (e.g., people who received the placebo and no therapy, people who received the placebo while getting CBT, etc.). It is helpful to organise all these numbers, plus the row and column means and the overall mean, into a single table shown in <xref ref="tbl-tab14-2"/>.</p>
 
       <table xml:id="tbl-tab14-2">
         <title>Group and total means for drug and therapy groups in the <em>clinicaltrial.csv</em> data</title>
@@ -205,7 +205,7 @@
       <p>If the data you're trying to analyse correspond to a balanced factorial design then running your analysis of variance is easy. To see how easy it is, let's start by reproducing the original analysis from <xref ref="ch-anova"/>. In case you've forgotten, for that analysis we were using only a single factor (i.e., drug) to predict our outcome variable (i.e., mood.gain), and we got the results shown in <xref ref="fig-fig14-2"/>.</p>
 
       <figure xml:id="fig-fig14-2">
-        <caption>JASP one-way ANOVA of mood.gain by drug</caption>
+        <caption>JASP one way ANOVA of mood.gain by drug</caption>
         <image source="fig14-2.png" width="90%">
           <description>A JASP results table showing ANOVA results for mood gain with columns for Sum of Squares, df (degrees of freedom), Mean Square, F, p-value, and η² (eta squared). For "drug," Sum of Squares is 3.45, df is 2, Mean Square is 1.73, F is 18.61, p is 0.00009, and η² is 0.71. Residuals have a Sum of Squares of 1.39, df of 15, and Mean Square of 0.09.</description>
         </image>
@@ -214,15 +214,15 @@
       <p>Now, suppose I'm also curious to find out if therapy has a relationship to mood.gain. In light of what we've seen from our discussion of multiple regression in <xref ref="ch-correlation-regression"/>, you probably won't be surprised that all we have to do is add therapy as a second 'Fixed Factor' in the analysis, see <xref ref="fig-fig14-3"/>.</p>
 
       <figure xml:id="fig-fig14-3">
-        <caption>JASP two-way ANOVA of mood.gain by drug and therapy</caption>
+        <caption>JASP two way ANOVA of mood.gain by drug and therapy</caption>
         <image source="fig14-3.png" width="90%">
           <description>A JASP results table showing ANOVA test results for mood gain with factors "drug," "therapy," and their interaction. Includes Sum of Squares, df, Mean Square, F, p-values, η², η²p, and ω². Key results indicate significant effects for "drug" and "therapy," but not their interaction.</description>
         </image>
       </figure>
 
-      <p>This output is pretty simple to read too. The first row of the table reports a between-group sum of squares (<m>SS</m>) value associated with the drug factor, along with a corresponding between-group <m>df</m> value. It also calculates a mean square value (<m>MS</m>), an <m>F</m>-statistic and a <m>p</m>-value. Because we have removed the interaction component from this model, the remaining rows correspond to the therapy factor and the residuals (i.e., the within groups variation).</p>
+      <p>This output is pretty simple to read too. The first row of the table reports a between-group sum of squares (<m>SS</m>) value associated with the drug factor, along with a corresponding between-group <m>df</m> value. It also calculates a mean square value (<m>MS</m>), an <m>F</m>-statistic and a <m>p</m>-value. There is also a row corresponding to the therapy factor and a row corresponding to the residuals (i.e., the within groups variation).</p>
 
-      <p>Not only are all of the individual quantities pretty familiar, the relationships between these different quantities have remained unchanged, just like we saw with the original one-way ANOVA. Note that the mean square value is calculated by dividing <m>SS</m> by the corresponding <m>df</m>. That is, it's still true that
+      <p>Not only are all of the individual quantities pretty familiar, the relationships between these different quantities has remained unchanged, just like we saw with the original one-way ANOVA. Note that the mean square value is calculated by dividing <m>SS</m> by the corresponding <m>df</m>. That is, it's still true that
       <me>MS=\frac{SS}{df}</me>
       regardless of whether we're talking about drug, therapy or the residuals. To see this, let's not worry about how the sums of squares values are calculated. Instead, let's take it on faith that JASP has calculated the <m>SS</m> values correctly, and try to verify that all the rest of the numbers make sense. First, note that for the drug factor, we divide <m>3.453</m> by <m>2</m> and end up with a mean square value of about <m>1.727</m>. For the therapy factor, there's only 1 degree of freedom, so our calculations are even simpler: dividing <m>0.467</m> (the <m>SS</m> value) by 1 gives us an answer of <m>0.467</m> (the <m>MS</m> value). The values displayed here are rounded for presentation.</p>
 

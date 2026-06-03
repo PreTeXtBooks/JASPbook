@@ -87,7 +87,7 @@
       </ul>
 
       <p>
-        Now, suppose that people really are perfectly able to set aside their pre-existing biases about what is true and what isn't, and purely evaluate an argument on its logical merits. We'd expect 100% of people to say that the valid arguments are valid, and 0% of people to say that the invalid arguments are valid. So if you ran an experiment looking at this, you'd expect to see data as in <xref ref="tbl-tab1-1"/>.
+        Now, suppose that people really are perfectly able to set aside their pre-existing biases about what is true and what isn't, and purely evaluate an argument on its logical merits. We'd expect 100% of people to say that the valid arguments are valid, and 0% of people to say that the invalid arguments are valid. So if you ran an experiment looking at this, you'd expect to see data like this <xref ref="tbl-tab1-1"/>.
       </p>
 
       <table xml:id="tbl-tab1-1">
@@ -141,7 +141,7 @@
       </table>
 
       <p>
-        Not perfect, but that's pretty good. But look what happens when our intuitive feelings about the truth of the conclusion run against the logical structure of the argument, see (<xref ref="tbl-tab1-3"/>).
+        Not perfect, but that's pretty good. But look what happens when our intuitive feelings about the truth of the conclusion run against the logical structure of the argument (<xref ref="tbl-tab1-3"/>):
       </p>
 
       <table xml:id="tbl-tab1-3">
@@ -206,7 +206,7 @@
     </table>
 
     <p>
-      Given this, they were worried about being sued!<fn>Earlier versions of these notes incorrectly suggested that they actually were sued. But that's not true. There's a nice commentary on this by Alex Reinhart here: <url href="https://www.refsmmat.com/posts/2016-05-08-simpsons-paradox-berkeley.html">https://www.refsmmat.com/posts/2016-05-08-simpsons-paradox-berkeley.html</url> A big thank you to Wilfried Van Hirtum for pointing this out to me.</fn> Given that there were nearly 13,000 applicants, a difference of 9% in admission rates between males and females is just way too big to be a coincidence. Pretty compelling data, right? And if I were to say to you that these data <em>actually</em> reflect a weak bias in favour of women (sort of!), you'd probably think that I was either crazy or sexist.
+      Given this, they were worried about being sued!<fn>Earlier versions of these notes incorrectly suggested that they actually were sued. But that's not true. There's a nice commentary on this here: <url href="https://www.refsmmat.com/posts/2016-05-08-simpsons-paradox-berkeley.html">https://www.refsmmat.com/posts/2016-05-08-simpsons-paradox-berkeley.html</url> A big thank you to Wilfried Van Hirtum for pointing this out to me.</fn> Given that there were nearly 13,000 applicants, a difference of 9% in admission rates between males and females is just way too big to be a coincidence. Pretty compelling data, right? And if I were to say to you that these data <em>actually</em> reflect a weak bias in favour of women (sort of!), you'd probably think that I was either crazy or sexist.
     </p>
 
     <p>
