@@ -81,8 +81,8 @@
         </tabular>
       </table>
 
-      <p>It's also worth noting that mathematicians prefer to talk about general rather than specific things, so you'll also see the notation <m>O_i</m>, which refers to the number of observations that fall within the <m>i</m>-th category (where <m>i</m> could be 1, 2, 3 or 4). Finally, if we want to refer to the set of all observed frequencies, statisticians group all observed values into a vector,<fn>A vector is a sequence of data elements of the same basic type.</fn> which I'll refer to as <m>O</m>:
-      <me>O = (O_1, O_2, O_3, O_4)</me>
+      <p>It's also worth noting that mathematicians prefer to talk about general rather than specific things, so you'll also see the notation <m>O_i</m>, which refers to the number of observations that fall within the <m>i</m>-th category (where <m>i</m> could be 1, 2, 3 or 4). Finally, if we want to refer to the set of all observed frequencies, statisticians group all observed values into a vector,<fn>A vector is a sequence of data elements of the same basic type.</fn> which I'll refer to using boldface type as <m>\mathbf{O}</m>.
+      <me>\mathbf{O} = (O_1, O_2, O_3, O_4)</me>
       Again, this is nothing new or interesting. It's just notation. If I say that <m>O = (35, 51, 64, 50)</m> all I'm doing is describing the table of observed frequencies (i.e., observed), but I'm referring to it using mathematical notation.</p>
     </subsection>
 
